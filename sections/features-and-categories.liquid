@@ -1,0 +1,190 @@
+<section class="features-and-categories">
+  <div class="page-width">
+
+    <!-- Feature Icons Row -->
+    <div class="features-row">
+      {% for block in section.blocks %}
+        {% if block.type == 'feature' %}
+          <div class="feature-item">
+            {% if block.settings.icon %}
+              <img src="{{ block.settings.icon | image_url: width: 80 }}" alt="{{ block.settings.title }}">
+            {% endif %}
+            <div>
+              <h4>{{ block.settings.title }}</h4>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="feature-divider"></div>
+
+    <!-- Shop by Category -->
+    <div class="categories-wrapper">  <!-- NEW: aligns heading with features row -->
+      <h2 class="categories-heading">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="categories-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'category' %}
+          <a href="{{ block.settings.link }}" class="category-cards">
+            <div class="category-image" style="background-image:url('{{ block.settings.image | image_url: width: 900 }}');">
+              <div class="category-overlay"></div>
+              <span class="category-title">{{ block.settings.title }}</span>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+/* --- Shared sizing so left edges line up --- */
+.features-and-categories {
+  --content-max: 1000px;     /* controls both the icons row and heading alignment */
+  --teal: #46b3b8;
+  background:#2c3c5e;
+  color:#fff;
+  padding: 3.5rem 0 4rem;
+  text-align:center;
+}
+
+/* Top icons row — centered group with the same left edge as heading */
+.features-row{
+  max-width:var(--content-max);
+  margin:0 auto 1.75rem;
+  display:flex;flex-wrap:wrap;
+  gap:3.5rem;
+  justify-content:center;
+  align-items:flex-start;
+}
+.feature-item{display:flex;gap:.9rem;align-items:center;text-align:left}
+.feature-item img{width:70px}
+.feature-item h4{font:700 1.15rem/1 "Bebas Neue",sans-serif;letter-spacing:.4px;text-transform:uppercase;margin:0}
+.feature-item p{font:400 .95rem/1.4 "Heebo",sans-serif;color:#dfe6f2;margin:0}
+
+/* Short, thick, centered divider with same outer width as content */
+.feature-divider{
+  height:3px;width:65%;
+  max-width:var(--content-max);
+  margin:1.25rem auto 2.25rem;
+  background:var(--teal);
+  border-radius:3px;
+}
+
+/* Heading sits in the same max-width box as the icons row, left-aligned */
+.categories-wrapper{
+  max-width:var(--content-max);
+  margin:0 auto 1.75rem;
+  padding:0 0;
+  text-align:left;
+}
+.categories-heading{
+  font-family:"League Spartan",sans-serif;
+  font-weight:800;
+  letter-spacing:3px;
+  font-size:3rem;
+  margin:0;
+  text-transform:uppercase;
+}
+
+/* Categories grid — centered, evenly spaced, and aligned with heading */
+.categories-grid {
+  display: flex;
+  justify-content: center;        /* keeps the cards centered */
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 3rem;                      /* increased from 2rem → adds more space between cards */
+  max-width: var(--content-max);  /* keeps alignment with heading */
+  margin: 0 auto;
+  padding-top: 0.5rem;            /* a little breathing room below heading */
+}
+
+/* Individual category cards */
+.category-cards {
+  flex: 0 1 320px !important;               /* fixed card width */
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin: 0 1rem;                 /* extra spacing between each card group */
+}
+
+
+.category-image{
+  height:320px;background-size:cover;background-position:center;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  border: none !important;
+  padding:1rem;position:relative;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  transition:transform .3s ease;
+}
+.category-cards:hover .category-image{transform:scale(1.02)}
+.category-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,60,94,.55),rgba(44,60,94,.25))}
+.category-title{
+  position:relative;z-index:1;
+  font:700 1rem/1 "League Spartan",sans-serif;
+  letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:.6rem;text-shadow:0 2px 6px rgba(0,0,0,.35)
+}
+
+/* Responsive */
+@media (max-width:1100px){
+  .categories-grid{grid-template-columns:repeat(2, 320px)}
+}
+@media (max-width:700px){
+  .features-row{gap:2rem}
+  .categories-heading{font-size:2.2rem;letter-spacing:2px}
+  .categories-grid{grid-template-columns:320px}
+  .category-image{height:280px}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Features & Categories",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Category Heading", "default": "Shop by Category" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Item",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Feature Icon" },
+        { "type": "text", "id": "title", "label": "Feature Title", "default": "Wake Approved" },
+        { "type": "text", "id": "text", "label": "Feature Description", "default": "Use your Bimini while moving up to 15 mph." }
+      ]
+    },
+    {
+      "type": "category",
+      "name": "Category Item",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Category Image" },
+        { "type": "text", "id": "title", "label": "Category Title", "default": "Shade Solutions" },
+        { "type": "url", "id": "link", "label": "Category Link" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Features & Categories",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "category" },
+        { "type": "category" },
+        { "type": "category" }
+      ]
+    }
+  ]
+}
+{% endschema %}

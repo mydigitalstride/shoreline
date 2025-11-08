@@ -1,0 +1,233 @@
+<section class="shoreline-reviews"
+  {% if section.settings.bg_image_left %}
+    style="background-image:url('{{ section.settings.bg_image_left | image_url: width: 1800 }}');"
+  {% endif %}
+>
+  <div class="reviews-wrapper">
+
+    <!-- LEFT COLUMN -->
+    <div class="reviews-left">
+      <div class="page-width">
+        <div class="left-inner">
+          <h2 class="reviews-heading">{{ section.settings.heading }}</h2>
+          <div class="reviews-divider"></div>
+          <p>{{ section.settings.left_text }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="reviews-right"
+      {% if section.settings.bg_image_right %}
+        style="background-image:url('{{ section.settings.bg_image_right | image_url: width: 1800 }}');"
+      {% endif %}
+    >
+      <div class="right-inner">
+        <div class="stars">
+          {% for i in (1..5) %}
+            <img src="{{ section.settings.star_logo | image_url: width: 40 }}" alt="Star" class="star-icon">
+          {% endfor %}
+        </div>
+        <p class="review-text">{{ section.settings.right_text }}</p>
+        <p class="review-author">- {{ section.settings.author }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+/* ------------------------------
+   SHORELINE REVIEWS SECTION
+------------------------------ */
+.shoreline-reviews {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* --- GRID LAYOUT --- */
+.reviews-wrapper {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  align-items: stretch;
+  width: 100%;
+  min-height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- LEFT SIDE --- */
+.reviews-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.reviews-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 140%;
+  height: 100%;
+  background: rgba(15, 25, 50, 0.55);
+  z-index: 1;
+}
+
+.reviews-left .page-width {
+  width: 100%;
+  padding: 6rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.left-inner {
+  max-width: 720px;
+  text-align: left;
+}
+
+.reviews-heading {
+  font-family: "League Spartan", sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.reviews-divider {
+  height: 6px;
+  width: 80%;
+  max-width: 700px;
+  background: linear-gradient(to right, #47b3b8, #98cceb, transparent);
+  border-radius: 2px;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.reviews-left p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.93);
+}
+
+/* --- RIGHT SIDE --- */
+.reviews-right {
+  position: relative;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6rem 4rem;
+  clip-path: polygon(8% 0, 101% 0, 101% 100%, 0 100%);
+  transform: translateX(-15px); /* ✅ overlaps left */
+  color: #0e1b34;
+  z-index: 5;
+  width: 105%; /* ✅ ensures no right edge gap */
+  overflow: hidden;
+}
+
+/* ✅ seamless right background */
+.reviews-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle at 1px 1px, #e4edea 1px, transparent 0);
+  background-size: 60px 60px;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.right-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+/* Stars */
+.stars {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.star-icon {
+  width: 34px;
+  height: auto;
+}
+
+/* Review Text */
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.review-author {
+  font-weight: 800;
+  color: #1a2950;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 989px) {
+  .reviews-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-left .page-width,
+  .reviews-right {
+    padding: 3.5rem 2rem;
+  }
+
+  .reviews-right {
+    clip-path: none;
+    transform: none;
+    width: 100%;
+  }
+
+  .reviews-left::before {
+    left: 0;
+    width: 100%;
+  }
+
+  .right-inner {
+    margin-left: 0;
+  }
+
+  .reviews-divider {
+    width: 70%;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Shoreline Reviews",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Shoreline Reviews" },
+    { "type": "textarea", "id": "left_text", "label": "Left Text", "default": "Real feedback from real boaters who trust Shoreline Brands for lasting shade and performance." },
+    { "type": "textarea", "id": "right_text", "label": "Review Text", "default": "Great product! Their customer service worked directly with me to ensure I had the proper mounts for the sun shade ... I couldn't be happier!" },
+    { "type": "text", "id": "author", "label": "Author", "default": "Happy Customer" },
+    { "type": "image_picker", "id": "bg_image_left", "label": "Left Background Image" },
+    { "type": "image_picker", "id": "bg_image_right", "label": "Right Background Image" },
+    { "type": "image_picker", "id": "star_logo", "label": "Star Logo" }
+  ],
+  "presets": [
+    { "name": "Shoreline Reviews" }
+  ]
+}
+{% endschema %}

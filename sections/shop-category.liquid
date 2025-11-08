@@ -1,0 +1,181 @@
+<section class="shop-category-grid">
+  <div class="page-width">
+    <!-- HEADING -->
+    {% if section.settings.heading != blank %}
+      <h2 class="categories-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <!-- CATEGORY GRID -->
+    <div class="categories-grid">
+      {% for block in section.blocks %}
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}" class="category-card">
+            <div class="category-image" style="background-image:url('{{ block.settings.image | image_url: width: 800 }}');">
+              <div class="category-overlay"></div>
+              <span class="category-title">{{ block.settings.title }}</span>
+            </div>
+          </a>
+        {% else %}
+          <div class="category-card no-link">
+            <div class="category-image" style="background-image:url('{{ block.settings.image | image_url: width: 800 }}');">
+              <div class="category-overlay"></div>
+              <span class="category-title">{{ block.settings.title }}</span>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+/* === SHOP CATEGORY GRID === */
+.shop-category-grid {
+  background: #1c2b47; /* deep navy */
+  padding: 4rem 2rem;
+  color: #fff;
+  text-align: left;
+}
+
+.categories-heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* GRID */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* CARD */
+.category-card {
+  display: block; /* make the whole card clickable */
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.category-card:hover {
+  transform: scale(1.03);
+}
+
+/* IMAGE */
+.category-image {
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.25rem;
+  position: relative;
+}
+
+/* OVERLAY */
+.category-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(70, 179, 184, 0.8), rgba(70, 179, 184, 0.4));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* ✅ ensure clicks go through */
+}
+
+.category-card:hover .category-overlay {
+  opacity: 1;
+}
+
+/* TITLE */
+.category-title {
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Bebas Neue";
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 989px) {
+  .categories-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Shop Category Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by Category"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Category Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Title",
+          "default": "Shade Solutions"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Category Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Shop Category Grid",
+      "blocks": [
+        { "type": "category" },
+        { "type": "category" },
+        { "type": "category" },
+        { "type": "category" }
+      ]
+    }
+  ]
+}
+{% endschema %}

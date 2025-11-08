@@ -1,0 +1,123 @@
+<section class="image-gallery-three">
+  <div class="gallery-wrapper page-width">
+    {% if section.settings.section_heading != blank %}
+      <h2 class="gallery-heading">{{ section.settings.section_heading }}</h2>
+    {% endif %}
+    <div class="gallery-grid">
+      {% for block in section.blocks %}
+        {% if block.settings.image %}
+          <div class="gallery-item" {{ block.shopify_attributes }}>
+            <img
+              src="{{ block.settings.image | image_url: width: 1200 }}"
+              alt="{{ block.settings.alt_text | escape }}"
+              loading="lazy"
+            >
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+.image-gallery-three {
+  background-color: #fff;
+}
+
+.gallery-wrapper {
+  text-align: center;
+}
+
+.gallery-heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: #1c2b47;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.gallery-item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Image Gallery (3 Columns)",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Gallery"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Upload Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text",
+          "default": "Gallery image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "3-Column Image Gallery",
+      "category": "Image",
+      "blocks": [
+        { "type": "image_block" },
+        { "type": "image_block" },
+        { "type": "image_block" }
+      ]
+    }
+  ]
+}
+{% endschema %}

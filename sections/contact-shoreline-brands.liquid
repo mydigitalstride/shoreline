@@ -1,0 +1,168 @@
+<section class="contact-shoreline">
+  <style>
+    .contact-shoreline {
+      background: linear-gradient(90deg, #dee1e7 0%, #f0f2f6 100%);
+      padding: 60px 0;
+      color: #1c2a49;
+    }
+
+    .contact-shoreline__wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .contact-shoreline__info {
+      flex: 1 1 40%;
+    }
+
+    .contact-shoreline__info h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .contact-shoreline__info p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-shoreline__info a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .contact-shoreline__info h3 {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .contact-shoreline__buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .contact-btn {
+      background: #e76a3b;
+      color: #fff;
+      padding: 12px 28px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      opacity: 0.85;
+    }
+
+    /* Form styles */
+    .contact-shoreline__form {
+      flex: 1 1 50%;
+    }
+
+    .contact-shoreline__form input,
+    .contact-shoreline__form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 1rem;
+      border: none;
+      background-color: #b7bfd8;
+      color: #1c2a49;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+
+    .contact-shoreline__row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .file-upload label {
+      background-color: #b7bfd8;
+      color: #1c2a49;
+      font-weight: 600;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    .file-upload input[type="file"] {
+      display: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #b7bfd8;
+      color: #1c2a49;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+
+  <div class="contact-shoreline__wrapper">
+    <div class="contact-shoreline__info">
+      <h2>Contact Shoreline Brands</h2>
+      <p><strong>Email:</strong> <a href="mailto:Info@Shorelinebrands.com">Info@Shorelinebrands.com</a></p>
+      <p><strong>Phone:</strong> +1-123-456-7890</p>
+
+      <h3>Quick Links:</h3>
+      <div class="contact-shoreline__buttons">
+        <a href="/pages/faq" class="contact-btn">FAQ</a>
+        <a href="/pages/warranty" class="contact-btn">Warranty</a>
+      </div>
+    </div>
+
+    <div class="contact-shoreline__form">
+      <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" enctype="multipart/form-data">
+        <input type="hidden" name="form_type" value="contact" />
+
+        <div class="contact-shoreline__row">
+          <input type="text" name="contact[name]" placeholder="Name" required>
+          <input type="text" name="contact[phone]" placeholder="Number">
+        </div>
+
+        <input type="email" name="contact[email]" placeholder="Email" required>
+        <textarea name="contact[body]" rows="5" placeholder="Message"></textarea>
+
+        <div class="file-upload">
+          <label for="contact_file">Upload File</label>
+          <input type="file" id="contact_file" name="contact[file]">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact Shoreline Brands",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Contact Shoreline Brands"
+    }
+  ]
+}
+{% endschema %}

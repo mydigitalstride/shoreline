@@ -1,0 +1,157 @@
+<section class="from-boat-to-shore">
+  <div class="boat-wrapper">
+    <div class="boat-content">
+      <div class="boat-text">
+        <h2 class="boat-heading">{{ section.settings.heading }}</h2>
+        <p class="boat-description">{{ section.settings.description }}</p>
+        {% if section.settings.button_label != blank %}
+          <a href="{{ section.settings.button_link }}" class="boat-btn">{{ section.settings.button_label }}</a>
+        {% endif %}
+      </div>
+
+      {% if section.settings.badge_image %}
+        <div class="boat-badge">
+          <img src="{{ section.settings.badge_image | image_url: width: 400 }}" alt="Badge">
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+/* === BASE SECTION === */
+.from-boat-to-shore {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #1c2b47;
+  padding: 6rem 2rem;
+  {% if section.settings.background_image %}
+    background-image: url('{{ section.settings.background_image | image_url: width: 1600 }}');
+  {% endif %}
+}
+
+/* INNER BOX */
+.boat-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #d2f3f4;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* TEXT CONTENT */
+.boat-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 650px;
+}
+
+.boat-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #1c2b47;
+  margin-bottom: 1.5rem;
+}
+
+.boat-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #1c2b47;
+  margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.boat-btn {
+  display: inline-block;
+  background: #f15a29;
+  color: #fff;
+  font-weight: 800;
+  text-transform: capitalize;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.boat-btn:hover {
+  background: #d94e21;
+}
+
+/* BADGE IMAGE */
+.boat-badge {
+  flex: 0 0 auto;
+}
+
+.boat-badge img {
+  max-width: 250px;
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .boat-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .boat-badge img {
+    max-width: 200px;
+  }
+
+  .boat-text {
+    max-width: 100%;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Boat to Shore",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "From Boat to Shore"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "From sun protection to performance gear, Shoreline products are built to help you enjoy every moment on the water. Don’t stop at apparel, check out our full range of shade extensions, accessories, and more."
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_image",
+      "label": "Badge Image (Right Side)"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop All Products"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Boat to Shore"
+    }
+  ]
+}
+{% endschema %}

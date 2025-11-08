@@ -1,0 +1,197 @@
+<section class="easy-design-split"
+  {% if section.settings.bg_image_left %}
+    style="background-image:url('{{ section.settings.bg_image_left | image_url: width: 1800 }}');"
+  {% endif %}
+>
+  <div class="easy-design-wrapper">
+
+    <!-- LEFT TEXT CONTENT -->
+    <div class="easy-design-left">
+      <div class="left-inner">
+        <h2 class="easy-heading">{{ section.settings.heading }}</h2>
+        <div class="easy-text">{{ section.settings.text }}</div>
+
+        <div class="easy-buttons">
+          {% if section.settings.button_1_text != blank %}
+            <a href="{{ section.settings.button_1_link }}" class="easy-btn">{{ section.settings.button_1_text }}</a>
+          {% endif %}
+          {% if section.settings.button_2_text != blank %}
+            <a href="{{ section.settings.button_2_link }}" class="easy-btn">{{ section.settings.button_2_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE OVERLAY -->
+    <div class="easy-design-right"
+      {% if section.settings.bg_image_right %}
+        style="background-image:url('{{ section.settings.bg_image_right | image_url: width: 1800 }}');"
+      {% endif %}
+    ></div>
+  </div>
+</section>
+
+{% stylesheet %}
+/* === SECTION WRAPPER === */
+.easy-design-split {
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === GRID STRUCTURE === */
+.easy-design-wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: stretch;
+}
+
+/* === LEFT SIDE CONTENT === */
+.easy-design-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+  color: #0f233d;
+}
+
+.left-inner {
+  max-width: 650px;
+}
+
+.easy-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #1c2b47;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.easy-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+  color: #0f233d;
+}
+
+.easy-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.easy-btn {
+  display: inline-block;
+  background: #f15a29;
+  color: #fff;
+  font-weight: 800;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 1.1rem;
+}
+
+.easy-btn:hover {
+  background: #d94e21;
+}
+
+/* === RIGHT IMAGE COLUMN === */
+.easy-design-right {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.easy-design-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 989px) {
+  .easy-design-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .easy-design-right {
+    clip-path: none;
+    min-height: 400px;
+  }
+
+  .easy-design-left {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+
+  .easy-buttons {
+    justify-content: center;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Easy Design Split",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image_left",
+      "label": "Left Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_right",
+      "label": "Right Background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Easy-to-Use Design"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Description",
+      "default": "<p>Our Bimini Extensions are easy to use and deploy in less than 60 seconds. The use of our product takes only a fraction of the time compared to traditional bimini products. The Shoreline Shade Sails offer 7 feet of additional coverage, ensuring comfort and protection for all passengers. Our shade products are designed to be used up to 15 mph and can be used while surfing.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "First Button Text",
+      "default": "FAQ"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "First Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Second Button Text",
+      "default": "Instructions"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Second Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Easy Design Split"
+    }
+  ]
+}
+{% endschema %}

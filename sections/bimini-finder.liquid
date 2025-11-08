@@ -1,0 +1,238 @@
+<section class="bimini-finder-section">
+  <div class="page-width bimini-finder-wrapper">
+    {% if section.settings.heading != blank %}
+      <h2 class="bimini-finder-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% assign year_list = section.settings.year_options | split: "," %}
+    {% assign make_list = section.settings.make_options | split: "," %}
+    {% assign manu_list = section.settings.manufacturer_options | split: "," %}
+
+    <!-- Finder Form -->
+    <form id="biminiFinderForm" class="bimini-finder-form" onsubmit="return false;">
+      <div class="bimini-finder-selects">
+        <select id="yearSelect" class="bimini-select">
+          <option selected disabled>Select Year</option>
+          {% for year in year_list %}
+            <option value="{{ year | strip }}">{{ year | strip }}</option>
+          {% endfor %}
+        </select>
+
+        <select id="makeSelect" class="bimini-select">
+          <option selected disabled>Select Make</option>
+          {% for make in make_list %}
+            <option value="{{ make | strip }}">{{ make | strip }}</option>
+          {% endfor %}
+        </select>
+
+        <select id="manufacturerSelect" class="bimini-select">
+          <option selected disabled>Select Manufacturer</option>
+          {% for manu in manu_list %}
+            <option value="{{ manu | strip }}">{{ manu | strip }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="bimini-finder-buttons">
+        <button type="button" id="clearBtn" class="bimini-btn clear">{{ section.settings.clear_text }}</button>
+        <button type="button" id="searchBtn" class="bimini-btn search">{{ section.settings.search_text }}</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+/* ==============================
+   BIMINI FINDER SECTION
+   ============================== */
+/* ==============================
+   BIMINI FINDER SECTION
+   ============================== */
+.bimini-finder-section {
+  background: #1c2b47;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 0;
+}
+
+/* Proper container width */
+.page-width {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.bimini-finder-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.bimini-finder-heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Dropdown Row */
+.bimini-finder-selects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Dropdowns */
+.bimini-select {
+  background: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  width: 280px;
+  text-align: center;
+  text-transform: capitalize;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bimini-select:hover {
+  border-color: #46b3b8;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bimini-select option {
+  color: #0f1f3d;
+  background-color: #fff;
+}
+
+/* Buttons */
+.bimini-finder-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ✅ Orange default, transparent hover */
+.bimini-btn {
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 1rem 2.5rem;
+  border: 3px solid #f15a29;
+  background: #f15a29;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bimini-btn:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bimini-select {
+    width: 100%;
+    max-width: 320px;
+  }
+  .bimini-finder-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const yearSelect = document.getElementById('yearSelect');
+  const makeSelect = document.getElementById('makeSelect');
+  const manuSelect = document.getElementById('manufacturerSelect');
+  const clearBtn = document.getElementById('clearBtn');
+  const searchBtn = document.getElementById('searchBtn');
+
+  // ✅ Clear button resets dropdowns
+  clearBtn.addEventListener('click', () => {
+    yearSelect.selectedIndex = 0;
+    makeSelect.selectedIndex = 0;
+    manuSelect.selectedIndex = 0;
+  });
+
+  // ✅ Search button redirects to collection page
+  searchBtn.addEventListener('click', () => {
+    const year = yearSelect.value !== 'Select Year' ? yearSelect.value : '';
+    const make = makeSelect.value !== 'Select Make' ? makeSelect.value : '';
+    const manu = manuSelect.value !== 'Select Manufacturer' ? manuSelect.value : '';
+
+    // Example: redirect with query params
+    const params = new URLSearchParams();
+    if (year) params.append('year', year);
+    if (make) params.append('make', make);
+    if (manu) params.append('manufacturer', manu);
+
+    // Change this to your target collection or page
+    const baseUrl = '/collections/bimini-extensions';
+
+    window.location.href = params.toString() ? `${baseUrl}?${params}` : baseUrl;
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Bimini Finder Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find Your Shoreline Shade Bimini Extension"
+    },
+    {
+      "type": "text",
+      "id": "year_options",
+      "label": "Year Options (comma separated)",
+      "default": "2024, 2023, 2022, 2021"
+    },
+    {
+      "type": "text",
+      "id": "make_options",
+      "label": "Make Options (comma separated)",
+      "default": "Mastercraft, Malibu, Nautique, Axis"
+    },
+    {
+      "type": "text",
+      "id": "manufacturer_options",
+      "label": "Manufacturer Options (comma separated)",
+      "default": "Shoreline, Hyperlite, Ronix"
+    },
+    {
+      "type": "text",
+      "id": "clear_text",
+      "label": "Clear Button Text",
+      "default": "Clear"
+    },
+    {
+      "type": "text",
+      "id": "search_text",
+      "label": "Search Button Text",
+      "default": "Search"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bimini Finder Section"
+    }
+  ]
+}
+{% endschema %}

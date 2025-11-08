@@ -1,0 +1,208 @@
+<section class="customer-reviews"
+  {% if section.settings.bg_image %}
+    style="background-image:url('{{ section.settings.bg_image | image_url: width: 2000 }}');"
+  {% endif %}
+>
+  <div class="page-width">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="reviews-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="reviews-grid">
+      {% for block in section.blocks %}
+        <div class="review-card">
+          <div class="review-header">
+            <span class="review-name">{{ block.settings.name }}</span>
+            <span class="review-date">{{ block.settings.date }}</span>
+          </div>
+
+          <div class="review-stars">
+            {% for i in (1..5) %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="#46b3b8">
+                <path d="M12 2l2.9 6.9L22 10l-5 4.9 1.2 7.1L12 18l-6.2 4 1.2-7.1L2 10l7.1-1.1L12 2z"/>
+              </svg>
+            {% endfor %}
+          </div>
+
+          <h3 class="review-title">{{ block.settings.product_title }}</h3>
+          <p class="review-text">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+/* === SECTION BASE === */
+.customer-reviews {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem 6rem;
+  color: #0f1f3d;
+  text-align: center;
+  position: relative;
+}
+
+/* Optional overlay */
+.customer-reviews::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.5);
+  z-index: 0;
+}
+
+/* Heading */
+.reviews-heading {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  text-align: left;
+  color: #1a294a;
+}
+
+/* Grid Layout */
+.reviews-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Review Card */
+.review-card {
+  background: #fff;
+  border: 2px solid #46b3b8;
+  padding: 2rem;
+  position: relative;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 380px;
+  width: 100%;
+}
+
+/* Speech Bubble Pointer (centered fix) */
+.review-card::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 20px 20px 0 20px;
+  border-style: solid;
+  border-color: #46b3b8 transparent transparent transparent;
+}
+
+/* White inner fill for arrow */
+.review-card::before {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 17px 17px 0 17px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  z-index: 1;
+}
+
+/* Header: name + date */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a294a;
+}
+
+/* Stars */
+.review-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.review-title {
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #1a294a;
+}
+
+/* Text */
+.review-text {
+  color: #333;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 989px) {
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    max-width: 100%;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Customer Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Reviews"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Customer Name", "default": "Name" },
+        { "type": "text", "id": "date", "label": "Date", "default": "Date" },
+        { "type": "text", "id": "product_title", "label": "Product Title", "default": "Product Being Reviewed" },
+        { "type": "textarea", "id": "text", "label": "Review Text", "default": "We are so happy this product was created..." }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Customer Reviews",
+      "blocks": [
+        { "type": "review" },
+        { "type": "review" },
+        { "type": "review" }
+      ]
+    }
+  ]
+}
+{% endschema %}

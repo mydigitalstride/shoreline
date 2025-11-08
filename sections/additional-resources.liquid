@@ -1,0 +1,205 @@
+<section class="additional-resources">
+  <div class="resources-wrapper">
+
+    <!-- LEFT SIDE CONTENT -->
+    <div class="resources-left">
+      <h2 class="resources-heading">{{ section.settings.heading }}</h2>
+
+      {% if section.settings.text != blank %}
+        <p class="resources-text">{{ section.settings.text }}</p>
+      {% endif %}
+
+      <div class="resources-grid">
+        {% for block in section.blocks %}
+          <a href="{{ block.settings.link }}" class="resource-btn">
+            {{ block.settings.title }}
+          </a>
+        {% endfor %}
+      </div>
+
+      <div class="resources-divider"></div>
+    </div>
+
+    <!-- RIGHT SIDE IMAGE -->
+    <div class="resources-right"
+      {% if section.settings.right_image %}
+        style="background-image:url('{{ section.settings.right_image | image_url: width: 1600 }}');"
+      {% endif %}
+    ></div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+/* === SECTION CONTAINER === */
+.additional-resources {
+  background: #1c2b47;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* WRAPPER LAYOUT */
+.resources-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: stretch;
+  position: relative;
+}
+
+/* LEFT SIDE */
+.resources-left {
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resources-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* TEXT AREA */
+.resources-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e1e6f0;
+  max-width: 550px;
+  margin-bottom: 3rem;
+}
+
+/* BUTTON GRID */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  max-width: 450px;
+}
+
+.resource-btn {
+  display: inline-block;
+  text-align: center;
+  border: 3px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.resource-btn:hover {
+  background: #46b3b8;
+  border-color: #46b3b8;
+  color: #fff;
+}
+
+/* TEAL DIVIDER LINE */
+.resources-divider {
+  height: 4px;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 3rem;
+  background: linear-gradient(to right, #46b3b8, #7fd1c4, transparent);
+  border-radius: 2px;
+}
+
+/* RIGHT IMAGE SIDE */
+.resources-right {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* RESPONSIVE */
+@media (max-width: 989px) {
+  .resources-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-right {
+    clip-path: none;
+    height: 300px;
+  }
+
+  .resources-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resources-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Additional Resources",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Additional Resources"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Section Text",
+      "default": "Enter your description here. You can edit this text in the theme editor."
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Side Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Resource Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Button Title",
+          "default": "FAQ"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Additional Resources",
+      "blocks": [
+        { "type": "link", "settings": { "title": "FAQ" } },
+        { "type": "link", "settings": { "title": "Instructions" } },
+        { "type": "link", "settings": { "title": "Returns" } },
+        { "type": "link", "settings": { "title": "Warranty" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

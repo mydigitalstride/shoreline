@@ -1,0 +1,160 @@
+<section class="mission-vision-goal page-width">
+  {% if section.settings.section_heading != blank %}
+    <h2 class="mvg-heading">{{ section.settings.section_heading }}</h2>
+  {% endif %}
+<div class= "page-width">
+  <div class="mvg-horizontal">
+    {% for block in section.blocks %}
+      <div class="mvg-item" {{ block.shopify_attributes }}>
+        {% if block.settings.icon %}
+          <div class="mvg-logo">
+            <img src="{{ block.settings.icon | image_url: width: 100 }}" alt="{{ block.settings.title | escape }}">
+          </div>
+        {% endif %}
+        <div class="mvg-text-group">
+          <h3 class="mvg-title">{{ block.settings.title }}</h3>
+          <p class="mvg-text">{{ block.settings.text }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+</section>
+
+<style>
+.mission-vision-goal {
+  background-color: #fff;
+  padding: 100px 3rem; /* ✅ increased top/bottom + side padding */
+  text-align: center;
+}
+
+.mvg-heading {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #1c2b47;
+  margin-bottom: 70px; /* ✅ slightly more space below heading */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mvg-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px; /* ✅ more even spacing between items */
+  text-align: left;
+}
+
+.mvg-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  flex: 1 1 30%;
+  padding: 20px; /* ✅ new internal padding for breathing room */
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvg-item:hover {
+  transform: translateY(-5px);
+}
+
+.mvg-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.mvg-text-group {
+  flex: 1;
+}
+
+.mvg-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #1c2b47;
+  margin-bottom: 10px;
+}
+
+.mvg-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #364a63;
+  margin: 0;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 900px) {
+  .mission-vision-goal {
+    padding: 80px 1.5rem;
+  }
+
+  .mvg-horizontal {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .mvg-item {
+    max-width: 90%;
+  }
+
+  .mvg-logo img {
+    width: 70px;
+    height: 70px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Mission Vision Goal",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Our Mission, Vision & Goal"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Logo / Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Mission"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Mission Vision Goal",
+      "category": "Text",
+      "blocks": [
+        { "type": "item", "settings": { "title": "Mission" } },
+        { "type": "item", "settings": { "title": "Vision" } },
+        { "type": "item", "settings": { "title": "Goal" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

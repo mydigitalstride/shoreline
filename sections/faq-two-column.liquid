@@ -1,0 +1,172 @@
+<section
+  class="faq-section"
+  {% if section.settings.bg_image != blank %}
+    style="background-image: url('{{ section.settings.bg_image | image_url: width: 1600 }}');"
+  {% endif %}
+>
+  <div class="page-width">
+    <div class="faq-wrapper">
+      <!-- Left Column -->
+      <div class="faq-left">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.subtext }}</p>
+        <a href="{{ section.settings.button_link }}" class="faq-btn">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+
+      <!-- Right Column -->
+      <div class="faq-right">
+        {% for block in section.blocks %}
+          <details class="faq-item" {{ block.shopify_attributes }}>
+            <summary class="faq-question">{{ block.settings.question }}</summary>
+            <div class="faq-answer">
+              {{ block.settings.answer }}
+            </div>
+          </details>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+/* ------------------------------
+   FAQ SECTION
+------------------------------ */
+
+.faq-section {
+  position: relative;
+  padding: 4rem 2rem;
+  color: #fff;
+  background-color: #2c3c5e !important; /* ✅ consistent background color */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.faq-wrapper {
+  background-color: #2c3c5e; /* ✅ match background */
+  padding: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: 3rem; /* ✅ better spacing between columns */
+}
+
+/* LEFT SIDE */
+.faq-left h2 {
+  font-size: 2.4rem;
+  font-family: "League Spartan", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.faq-left p {
+  margin-bottom: 2.5rem; /* ✅ more padding before dropdowns */
+  font-family: "Heebo", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 550px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.faq-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Heebo", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.faq-btn:hover {
+  background: #fff;
+  color: #2c3c5e;
+}
+
+/* RIGHT SIDE */
+.faq-right {
+  font-family: "Heebo", sans-serif; /* ✅ use body font */
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border: none;
+  background: transparent;
+}
+
+.faq-question {
+  padding: 1rem 1.25rem;
+  background: #fff;
+  color: #2c3c5e;
+  font-weight: 700;
+  font-family: "Heebo", sans-serif; /* ✅ consistent body font */
+  font-size: 1.1rem; /* ✅ larger font */
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.2s ease;
+}
+
+.faq-question:hover {
+  background: #b4f3f5;
+}
+
+.faq-answer {
+  padding: 1.25rem 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0);
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Heebo", sans-serif;
+  line-height: 1.6;
+}
+
+.faq-item[open] .faq-question {
+  background: #b4f3f5;
+  color: #1f2d50;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 749px) {
+  .faq-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .faq-left p {
+    margin-bottom: 2rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "FAQ Two Column",
+  "settings": [
+    { "type": "image_picker", "id": "bg_image", "label": "Background Image" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Frequently Asked Questions" },
+    { "type": "textarea", "id": "subtext", "label": "Subtext", "default": "Add supporting text here." },
+    { "type": "text", "id": "button_text", "label": "Button text", "default": "Contact Us" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Sample question" },
+        { "type": "textarea", "id": "answer", "label": "Answer", "default": "Sample answer text." }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    { "name": "FAQ Two Column" }
+  ]
+}
+{% endschema %}

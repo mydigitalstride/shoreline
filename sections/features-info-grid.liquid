@@ -1,0 +1,181 @@
+<section class="features-info-grid"
+  {% if section.settings.bg_image %}
+    style="background-image:url('{{ section.settings.bg_image | image_url: width: 2000 }}');"
+  {% endif %}
+>
+  <div class="features-overlay"></div>
+
+  <div class="page-width features-wrapper">
+    <div class="features-grid">
+      {% for block in section.blocks %}
+        <div class=".feature-items" {{ block.shopify_attributes }}>
+          {% if block.settings.icon %}
+            <div class="feature-icon">
+              <img src="{{ block.settings.icon | image_url: width: 120 }}" alt="{{ block.settings.title | escape }}">
+            </div>
+          {% endif %}
+          <div class="feature-content">
+            <h3 class="feature-title">{{ block.settings.title }}</h3>
+            <p class="feature-text">{{ block.settings.text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+/* === SECTION === */
+.features-info-grid {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  color: #0f1f3d;
+  overflow: hidden;
+}
+
+.features-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.92)
+  );
+  z-index: 1;
+}
+
+/* Inner wrapper so text sits above overlay */
+.features-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* === GRID LAYOUT === */
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers fewer than 3 */
+  gap: 60px 80px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Feature Items */
+..feature-items {
+  flex: 0 1 calc(33.333% - 40px);
+  min-width: 300px;
+  max-width: 420px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Icon Styling */
+.feature-icon img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Text Styles */
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0d2248; /* darker navy for better contrast */
+  margin: 0 0 10px;
+  letter-spacing: 0.02em;
+}
+
+.feature-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight:500;
+  color: #1c2b47; !important
+  margin: 0;
+  max-width: 380px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 989px) {
+  ..feature-items {
+    flex: 0 1 calc(50% - 30px);
+  }
+}
+
+@media (max-width: 700px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  ..feature-items {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .feature-icon img {
+    width: 80px;
+    height: 80px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Features Info Grid",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image (optional)",
+      "info": "Upload a bright or textured background like waves."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Feature Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Title",
+          "default": "Wakesurf Rated"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Feature Description",
+          "default": "For wakesurfing with the Bimini Extension deployed, simply pass the rope underneath the shade."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Features Info Grid",
+      "blocks": [
+        { "type": "feature", "settings": { "title": "Wakesurf Rated" } },
+        { "type": "feature", "settings": { "title": "Fully Customizable" } },
+        { "type": "feature", "settings": { "title": "60 Second Deployment" } },
+        { "type": "feature", "settings": { "title": "Premium Carbon Fiber" } },
+        { "type": "feature", "settings": { "title": "UV Performance Fabric" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

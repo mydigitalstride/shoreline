@@ -1,0 +1,299 @@
+<section class="shade-finder-section">
+  <div class="page-width">
+
+    <!-- === TOP 3 PRODUCT CARDS === -->
+    <div class="extensions-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'extension_card' %}
+          <div class="extension-card">
+            <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title }}">
+            <div class="card-content">
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- === FINDER === -->
+    <div class="finder-area">
+      <h2 class="finder-heading">{{ section.settings.heading }}</h2>
+
+      <div class="finder-layout">
+        <!-- LEFT FILTERS -->
+        <div class="finder-filters">
+          {% assign year_list = section.settings.year_options | split: ',' %}
+          {% assign make_list = section.settings.make_options | split: ',' %}
+          {% assign manufacturer_list = section.settings.manufacturer_options | split: ',' %}
+
+          <select id="yearSelect" class="finder-select">
+            <option value="">Select Year</option>
+            {% for year in year_list %}
+              <option value="{{ year | strip }}">{{ year | strip }}</option>
+            {% endfor %}
+          </select>
+
+          <select id="makeSelect" class="finder-select">
+            <option value="">Select Make</option>
+            {% for make in make_list %}
+              <option value="{{ make | strip }}">{{ make | strip }}</option>
+            {% endfor %}
+          </select>
+
+          <select id="manufacturerSelect" class="finder-select">
+            <option value="">Select Manufacturer</option>
+            {% for manu in manufacturer_list %}
+              <option value="{{ manu | strip }}">{{ manu | strip }}</option>
+            {% endfor %}
+          </select>
+
+          <div class="finder-buttons">
+            <button id="clearBtn" class="clear-btn">CLEAR</button>
+            <button id="searchBtn" class="search-btn">SEARCH</button>
+          </div>
+        </div>
+
+        <!-- RIGHT RESULTS -->
+        <div class="finder-results" id="resultsContainer"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchBtn = document.getElementById('searchBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const resultsContainer = document.getElementById('resultsContainer');
+
+  const data = [
+    { year: '2002', make: 'Tige Boats Inc', model: '2000V LTD', link: '#' },
+    { year: '2002', make: 'Tige Boats Inc', model: '21i Limited', link: '#' },
+    { year: '2004', make: 'Yamaha', model: 'FX Cruiser', link: '#' },
+    { year: '2006', make: 'Malibu', model: 'Sunsetter LX', link: '#' }
+  ];
+
+  searchBtn.addEventListener('click', () => {
+    const year = document.getElementById('yearSelect').value;
+    const make = document.getElementById('makeSelect').value;
+    const manu = document.getElementById('manufacturerSelect').value;
+
+    const filtered = data.filter(item =>
+      (!year || item.year === year) &&
+      (!make || item.make === make) &&
+      (!manu || item.make.includes(manu))
+    );
+
+    displayResults(filtered);
+  });
+
+  clearBtn.addEventListener('click', () => {
+    document.getElementById('yearSelect').selectedIndex = 0;
+    document.getElementById('makeSelect').selectedIndex = 0;
+    document.getElementById('manufacturerSelect').selectedIndex = 0;
+    resultsContainer.innerHTML = '';
+  });
+
+  function displayResults(results) {
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<p class="no-results">No results found.</p>';
+      return;
+    }
+
+    resultsContainer.innerHTML = results.map(item => `
+      <div class="result-row">
+        <span>${item.year}</span>
+        <span>${item.make}</span>
+        <span>${item.model}</span>
+      </div>
+    `).join('');
+  }
+});
+</script>
+
+{% stylesheet %}
+/* === BACKGROUND === */
+.shade-finder-section {
+  background: linear-gradient(180deg, #6bb5b8 0%, #1c2b47 100%);
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+/* === EXTENSION CARDS === */
+.extensions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.extension-card {
+  background: #1c2b47;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+.extension-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1.5rem;
+}
+.card-content h3 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.card-content p {
+  font-family: "Heebo", sans-serif;
+  color: #dcdcdc;
+  font-size: 0.9rem;
+}
+
+/* === FINDER === */
+.finder-area {
+  background: transparent;
+  padding: 2rem 0;
+}
+.finder-heading {
+  font-family: "League Spartan", sans-serif;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+.finder-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* LEFT FILTERS */
+.finder-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.finder-select {
+  padding: 1rem;
+  border: 3px solid #1c2b47;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #fff;
+  color: #1c2b47;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.finder-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.search-btn,
+.clear-btn {
+  flex: 1;
+  padding: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "League Spartan", sans-serif;
+}
+.search-btn { background: #f15a29; }
+.search-btn:hover { background: #d94e21; }
+.clear-btn { background: #f15a29; opacity: 0.9; }
+.clear-btn:hover { opacity: 1; }
+
+/* RIGHT RESULTS */
+.finder-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.result-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: linear-gradient(90deg, #c3edf0 0%, #e0e3e5 100%);
+  color: #1c2b47;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Heebo", sans-serif;
+}
+.no-results {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 989px) {
+  .extensions-grid { grid-template-columns: 1fr 1fr; }
+  .finder-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .extensions-grid { grid-template-columns: 1fr; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Shade Finder Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Finder Heading",
+      "default": "Find Your Shoreline Shade Bimini Extension"
+    },
+    {
+      "type": "text",
+      "id": "year_options",
+      "label": "Year Options (comma separated)",
+      "default": "2002,2003,2004,2005,2006"
+    },
+    {
+      "type": "text",
+      "id": "make_options",
+      "label": "Make Options (comma separated)",
+      "default": "Tige Boats Inc,Yamaha,Malibu,Mastercraft"
+    },
+    {
+      "type": "text",
+      "id": "manufacturer_options",
+      "label": "Manufacturer Options (comma separated)",
+      "default": "Tige,Yamaha,Malibu,Mastercraft"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "extension_card",
+      "name": "Extension Card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Card Image" },
+        { "type": "text", "id": "title", "label": "Card Title" },
+        { "type": "text", "id": "text", "label": "Card Description" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shade Finder Section",
+      "blocks": [
+        { "type": "extension_card" },
+        { "type": "extension_card" },
+        { "type": "extension_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

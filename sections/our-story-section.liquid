@@ -1,0 +1,147 @@
+<section class="our-story-section"
+  {% if section.settings.left_image %}
+    style="background-image: url('{{ section.settings.left_image | image_url: width: 2000 }}');"
+  {% endif %}
+>
+  <div class="page-width">
+  <div class="our-story-wrapper">
+
+    <!-- LEFT CONTENT -->
+    <div class="our-story-left">
+      {% if section.settings.heading %}
+        <h2 class="our-story-heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="our-story-divider"></div>
+      {% if section.settings.text %}
+        <div class="our-story-text">
+          {{ section.settings.text }}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="our-story-right"
+      {% if section.settings.right_image %}
+        style="background-image: url('{{ section.settings.right_image | image_url: width: 1600 }}');"
+      {% endif %}
+    ></div>
+</div>
+  </div>
+</section>
+
+<style>
+/* Entire Section Background */
+.our-story-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  color: #1a243d;
+}
+
+/* Layout */
+.our-story-wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: stretch;
+  min-height: 550px;
+}
+
+/* LEFT SIDE TEXT */
+.our-story-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 3rem;
+  
+}
+
+.our-story-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #1c2b47;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.our-story-divider {
+  width: 100px;
+  height: 3px;
+  background-color: #46b3b8;
+  margin-bottom: 1.5rem;
+}
+
+.our-story-text {
+  font-size: 1.05rem;
+  color: #1a243d;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+/* RIGHT SIDE IMAGE */
+.our-story-right {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.our-story-right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 989px) {
+  .our-story-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .our-story-right {
+    clip-path: none;
+    min-height: 400px;
+  }
+  .our-story-left {
+    padding: 2.5rem 1.5rem;
+    {% comment %} background: rgba(255, 255, 255, 0.95); {% endcomment %}
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Our Story Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Full Background Image (Left Image)",
+      "info": "This image covers the entire section background."
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Angled Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Story"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Story Text",
+      "default": "<p>Shoreline Brands was created in 2022 after our first daughter was born. Our family needed extra sun protection when we were on the boat. We were not going to let the birth of our baby girl stop us from enjoying this activity with family and friends...</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Story Section"
+    }
+  ]
+}
+{% endschema %}

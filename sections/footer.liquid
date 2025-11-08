@@ -1,0 +1,195 @@
+<section class="custom-footer">
+  <div class="footer-wrapper page-width">
+    <!-- Left Logo -->
+    <div class="footer-logo">
+      {% if section.settings.left_logo %}
+        <img src="{{ section.settings.left_logo | image_url: width: 200 }}" alt="Left Logo">
+      {% endif %}
+    </div>
+
+    <!-- Navigation Columns -->
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="/collections/wakesurf">Wakesurf</a></li>
+          <li><a href="/collections/sails">Sails</a></li>
+          <li><a href="/collections/apparel">Apparel</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/warranty">Warranty</a></li>
+          <li><a href="/pages/returns">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul>
+          {% if section.settings.contact_email %}
+            <li><a href="mailto:{{ section.settings.contact_email }}">Email</a></li>
+          {% endif %}
+          <li class="social-icons">
+            {% if section.settings.instagram %}
+              <a href="{{ section.settings.instagram }}" target="_blank" aria-label="Instagram">
+                <!-- Instagram SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 
+                  2.243 5 5 5h10c2.757 0 5-2.243 
+                  5-5V7c0-2.757-2.243-5-5-5H7zm0 
+                  2h10c1.654 0 3 1.346 3 
+                  3v10c0 1.654-1.346 3-3 
+                  3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
+                  1.346-3 3-3zm5 2c-2.757 
+                  0-5 2.243-5 5s2.243 5 5 
+                  5 5-2.243 5-5-2.243-5-5-5zm0 
+                  2c1.654 0 3 1.346 3 
+                  3s-1.346 3-3 3-3-1.346-3-3 
+                  1.346-3 3-3zm4.5-.5a1.5 1.5 
+                  0 100 3 1.5 1.5 0 000-3z"/>
+                </svg>
+              </a>
+            {% endif %}
+            {% if section.settings.contact_email %}
+              <a href="mailto:{{ section.settings.contact_email }}" aria-label="Email">
+                <!-- Email SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.103 
+                  0-2 .897-2 2v12c0 1.103.897 
+                  2 2 2h16c1.103 0 2-.897 
+                  2-2V6c0-1.103-.897-2-2-2zm0 
+                  2v.511l-8 5.333-8-5.333V6h16zM4 
+                  18V8.489l8 5.333 8-5.333V18H4z"/>
+                </svg>
+              </a>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Logo -->
+    <div class="footer-badge">
+      {% if section.settings.right_logo %}
+        <img src="{{ section.settings.right_logo | image_url: width: 120 }}" alt="Right Logo">
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="footer-divider"></div>
+
+  <!-- Payment Icons -->
+  <div class="footer-payments">
+    {% for block in section.blocks %}
+      {% if block.type == 'payment' %}
+        <img src="{{ block.settings.payment_icon | image_url: width: 80 }}" alt="Payment Icon" class="payment-icon">
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% stylesheet %}
+.custom-footer {
+  background: #fff;
+  padding: 3rem 2rem 1rem;
+}
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.footer-logo img,
+.footer-badge img {
+  max-height: 120px;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.footer-column h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-column a {
+  text-decoration: none;
+  color: #2c3c5e;
+  transition: color 0.2s ease;
+}
+.footer-column a:hover {
+  color: #f15a29;
+}
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  fill: #1f2d50;
+  transition: fill 0.2s ease;
+}
+.social-icons svg:hover {
+  fill: #f15a29;
+}
+
+.footer-divider {
+  height: 2px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: linear-gradient(to right, #448b8d, #98cceb, transparent);
+  border-radius: 1px;
+}
+
+
+.footer-payments {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;
+  flex-wrap: wrap;           /* allows wrapping on mobile */
+  gap: 1rem;                 /* space between icons */
+}
+
+.footer-payments img {
+  height: 28px;              /* smaller consistent size */
+  width: auto;               /* keep proportions */
+  display: inline-block;
+}
+
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "settings": [
+    { "type": "image_picker", "id": "left_logo", "label": "Left Logo" },
+    { "type": "image_picker", "id": "right_logo", "label": "Right Logo" },
+    { "type": "text", "id": "contact_email", "label": "Contact Email" },
+    { "type": "url", "id": "instagram", "label": "Instagram Link" }
+  ],
+  "blocks": [
+    {
+      "type": "payment",
+      "name": "Payment Icon",
+      "settings": [
+        { "type": "image_picker", "id": "payment_icon", "label": "Payment Logo" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Custom Footer" }
+  ]
+}
+{% endschema %}

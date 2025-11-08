@@ -1,0 +1,246 @@
+<section class="best-sellers-story"
+  {% if section.settings.bg_image_left %}
+    style="background-image:url('{{ section.settings.bg_image_left | image_url: width: 1600 }}');"
+  {% endif %}
+>
+  <div class="best-sellers-wrapper">
+
+    <!-- LEFT CONTENT (text + products) -->
+    <div class="best-sellers-left">
+      <div class="left-inner">
+        <h2 class="bestsellers-heading">{{ section.settings.heading }}</h2>
+
+        <div class="best-sellers-grid">
+          {% for product in section.settings.products %}
+            {% if product %}
+              <article class="product-card">
+                <h3 class="product-title">{{ product.title }}</h3>
+
+                {% assign card_img = product.featured_media.preview_image | default: product.featured_image %}
+                {% if card_img %}
+                  {{ card_img | image_url: width: 400 | image_tag: alt: product.title, loading: 'lazy' }}
+                {% endif %}
+
+                <form method="post" action="/cart/add">
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                  <button type="submit" class="add-to-cart">Add to Cart</button>
+                </form>
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT OVERLAY BLOCK -->
+    <div class="best-sellers-right"
+      {% if section.settings.bg_image_right %}
+        style="background-image:url('{{ section.settings.bg_image_right | image_url: width: 1600 }}');"
+      {% endif %}
+    >
+      <div class="right-inner">
+        {% if section.settings.logo %}
+          {{ section.settings.logo | image_url: width: 220 | image_tag: alt: 'Story Logo', class: 'story-logo', loading: 'lazy' }}
+        {% endif %}
+        <h2 class="story-heading">{{ section.settings.story_heading }}</h2>
+        <a href="{{ section.settings.button_link }}" class="story-btn">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+
+/* Section with full left background */
+.best-sellers-story {
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Layout */
+.best-sellers-wrapper {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+
+.best-sellers-left {
+  color: #0f233d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 3rem;
+}
+
+.left-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ 1. Drop shadow on Header */
+.bestsellers-heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ 2. Increase width of products */
+.best-sellers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem; 
+}
+
+.product-card {
+  text-align: left;
+  background: transparent !important; 
+  padding: 1rem;
+  transform: scale(1.05);
+  box-shadow: none !important;
+  border: none !important; 
+}
+
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem 0;
+}
+
+/* ✅ 3. Product title - Oswald font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
+
+.product-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0 0 .75rem 0;
+  line-height: 1.2;
+}
+
+/* Add to cart button */
+.add-to-cart {
+  background: #f15a29;
+  border: none;
+  color: #fff;
+  padding: .85rem 1.25rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.add-to-cart:hover { background:#d94e21; transform: translateY(-2px); }
+
+/* ✅ 4. Center "About Shoreline" button */
+.right-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ 5. Add overlay to the Shoreline Story section */
+.best-sellers-right {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding: 2.5rem 2rem;
+  color: #fff;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+.best-sellers-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+  z-index: 0;
+}
+
+.right-inner { position: relative; z-index: 1; }
+
+.story-logo {
+  max-width: 180px;
+  margin: 0 auto 1rem;
+  display:block;
+}
+
+.story-heading {
+  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: .5rem 0 1rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+
+/* Centered "About Shoreline" button */
+.story-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .85rem 1.5rem;
+  border: 3px solid #fff;
+  color: #fff;
+  font-family: "League Spartan";
+  text-decoration: none;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+.story-btn:hover {
+  background: #fff;
+  color: #1f2d50;
+}
+.bestsellers-heading {
+  font-family: "League Spartan";
+  color: #2c3c5e; /* blue tone for Best Sellers only */
+}
+
+/* Keep all other h2s normal (white or default) */
+.story-heading {
+  font-family: "League Spartan";
+  color: #fff; /* ensure the story heading stays white */
+}
+
+
+/* Responsive */
+@media (max-width: 989px) {
+  .best-sellers-wrapper { grid-template-columns: 1fr; }
+  .best-sellers-right { clip-path: none; }
+  .product-card { transform: none; }
+}
+
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Best Sellers with Story",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Best Sellers" },
+    { "type": "product_list", "id": "products", "label": "Select Products" },
+    { "type": "image_picker", "id": "bg_image_left", "label": "Left Background Image" },
+    { "type": "image_picker", "id": "bg_image_right", "label": "Right Background Image" },
+    { "type": "image_picker", "id": "logo", "label": "Right Logo" },
+    { "type": "text", "id": "story_heading", "label": "Right Heading", "default": "The Shoreline Story" },
+    { "type": "text", "id": "button_text", "label": "Right Button Text", "default": "About Shoreline" },
+    { "type": "url", "id": "button_link", "label": "Right Button Link" }
+  ],
+  "presets": [
+    { "name": "Best Sellers with Story" }
+  ]
+}
+{% endschema %}

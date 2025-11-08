@@ -1,0 +1,263 @@
+<section class="find-your-shoreline">
+  <div class="page-width">
+
+    <!-- HEADING -->
+    <h2 class="find-heading">{{ section.settings.heading }}</h2>
+
+    <div class="finder-layout">
+      <!-- LEFT SIDE: FILTER FORM -->
+      <div class="finder-filters">
+        {% assign year_list = section.settings.year_options | split: ',' %}
+        {% assign make_list = section.settings.make_options | split: ',' %}
+        {% assign manufacturer_list = section.settings.manufacturer_options | split: ',' %}
+
+        <select id="yearSelect" class="finder-select">
+          <option value="">Select Year</option>
+          {% for year in year_list %}
+            <option value="{{ year | strip }}">{{ year | strip }}</option>
+          {% endfor %}
+        </select>
+
+        <select id="makeSelect" class="finder-select">
+          <option value="">Select Make</option>
+          {% for make in make_list %}
+            <option value="{{ make | strip }}">{{ make | strip }}</option>
+          {% endfor %}
+        </select>
+
+        <select id="manufacturerSelect" class="finder-select">
+          <option value="">Select Manufacturer</option>
+          {% for manu in manufacturer_list %}
+            <option value="{{ manu | strip }}">{{ manu | strip }}</option>
+          {% endfor %}
+        </select>
+
+        <div class="finder-buttons">
+          <button id="clearBtn" class="clear-btn">Clear</button>
+          <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: RESULTS -->
+      <div class="finder-results" id="resultsContainer">
+        <!-- dynamically populated -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchBtn = document.getElementById('searchBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const resultsContainer = document.getElementById('resultsContainer');
+
+  // Sample static data
+  const data = [
+    { year: '2002', make: 'Tige Boats Inc', model: '2000V LTD', link: '#' },
+    { year: '2002', make: 'Tige Boats Inc', model: '21i Limited', link: '#' },
+    { year: '2004', make: 'Yamaha', model: 'FX Cruiser', link: '#' },
+    { year: '2006', make: 'Malibu', model: 'Sunsetter LX', link: '#' },
+  ];
+
+  searchBtn.addEventListener('click', function() {
+    const year = document.getElementById('yearSelect').value;
+    const make = document.getElementById('makeSelect').value;
+    const manu = document.getElementById('manufacturerSelect').value;
+
+    const filtered = data.filter(item =>
+      (!year || item.year === year) &&
+      (!make || item.make === make) &&
+      (!manu || item.make.includes(manu))
+    );
+
+    displayResults(filtered);
+  });
+
+  clearBtn.addEventListener('click', function() {
+    document.getElementById('yearSelect').selectedIndex = 0;
+    document.getElementById('makeSelect').selectedIndex = 0;
+    document.getElementById('manufacturerSelect').selectedIndex = 0;
+    resultsContainer.innerHTML = '';
+  });
+
+  function displayResults(results) {
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<p class="no-results">No results found.</p>';
+      return;
+    }
+
+    resultsContainer.innerHTML = results.map(item => `
+      <div class="result-card">
+        <div class="result-info">
+          <span>${item.year}</span>
+          <span>${item.make}</span>
+          <span>${item.model}</span>
+        </div>
+        <a href="${item.link}" class="view-btn">View Details</a>
+      </div>
+    `).join('');
+  }
+});
+</script>
+
+{% stylesheet %}
+/* === SECTION STYLING === */
+.find-your-shoreline {
+  background: #f8f9fb;
+  padding: 4rem 2rem;
+  color: #1c2b47;
+}
+
+.find-heading {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #1c2b47;
+  margin-bottom: 3rem;
+}
+
+.finder-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* LEFT FILTER FORM */
+.finder-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.finder-select {
+  padding: 1rem;
+  border: 3px solid #1c2b47;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #fff;
+  color: #1c2b47;
+  text-align: center;
+  /* border-radius: 4px; */
+  cursor: pointer;
+}
+
+.finder-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.search-btn,
+.clear-btn {
+  flex: 1;
+  padding: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: none; 
+  cursor: pointer;
+}
+
+.search-btn {
+  background: #f15a29;
+}
+
+.search-btn:hover {
+  background: #d94e21; 
+  color: #f15a29;
+}
+
+.clear-btn {
+  background: #f15a29;
+  /* opacity: 0.9; */
+}
+
+
+
+/* RIGHT RESULTS */
+.finder-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.result-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #c3edf0 0%, #e0e3e5 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+}
+
+.result-info {
+  display: flex;
+  gap: 3rem;
+  font-weight: 700;
+  color: #1c2b47;
+}
+
+.view-btn {
+  background: #1c2b47;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.view-btn:hover {
+  background: #15223d;
+}
+
+.no-results {
+  text-align: center;
+  color: #1c2b47;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 989px) {
+  .finder-layout {
+    grid-template-columns: 1fr;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Find Shoreline Shade",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Find Your Shoreline Shade Bimini Extension"
+    },
+    {
+      "type": "text",
+      "id": "year_options",
+      "label": "Year Options (comma separated)",
+      "default": "2002,2003,2004,2005,2006"
+    },
+    {
+      "type": "text",
+      "id": "make_options",
+      "label": "Make Options (comma separated)",
+      "default": "Tige Boats Inc,Yamaha,Malibu,Mastercraft"
+    },
+    {
+      "type": "text",
+      "id": "manufacturer_options",
+      "label": "Manufacturer Options (comma separated)",
+      "default": "Tige,Yamaha,Malibu,Mastercraft"
+    }
+  ],
+  "presets": [
+    { "name": "Find Shoreline Shade" }
+  ]
+}
+{% endschema %}

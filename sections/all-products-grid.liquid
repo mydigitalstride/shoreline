@@ -1,0 +1,226 @@
+<section class="all-products-grid">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="products-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="products-grid">
+      {% for product in section.settings.products %}
+        <div class="product-card">
+          <!-- PRODUCT TITLE ON TOP -->
+          <h3 class="product-title-top">
+            <a href="{{ product.url }}">{{ product.title }}</a>
+          </h3>
+
+          <!-- PRODUCT IMAGE -->
+          {% if product.featured_image %}
+            <a href="{{ product.url }}" class="product-image">
+              <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title }}">
+            </a>
+          {% endif %}
+
+          <!-- PRODUCT DETAILS BELOW -->
+          <div class="product-content">
+            {% if product.price %}
+              <p class="product-price">{{ product.price | money }}</p>
+            {% endif %}
+
+            <div class="product-stars">
+              {% for i in (1..5) %}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#46b3b8">
+                  <path d="M12 2l2.9 6.9L22 10l-5 4.9 1.2 7.1L12 18l-6.2 4 1.2-7.1L2 10l7.1-1.1L12 2z"/>
+                </svg>
+              {% endfor %}
+            </div>
+
+            <form method="post" action="/cart/add">
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+/* === SECTION CONTAINER === */
+.all-products-grid {
+  background: #ffffff;
+  padding: 4rem 2rem;
+  color: #0f1f3d;
+}
+
+.products-heading {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 800;
+  color: #0f1f3d;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+/* === GRID === */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* === PRODUCT CARD === */
+.product-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+  border: none;
+}
+
+/* PRODUCT TITLE ABOVE IMAGE */
+.product-title-top {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0f1f3d;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  min-height: 32px;
+}
+
+.product-title-top a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.product-title-top a:hover {
+  color: #46b3b8;
+}
+
+/* PRODUCT IMAGE */
+.product-image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border: none;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PRODUCT CONTENT */
+.product-content {
+  padding: 0.75rem 0 0;
+  flex-grow: 1;
+}
+
+.product-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f1f3d;
+  margin-bottom: 0.5rem;
+}
+
+.product-stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+/* ADD TO CART BUTTON */
+.add-to-cart-btn {
+  background: #f15a29;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  width: 100%;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #d94e21;
+}
+.product-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Ensures consistent square images */
+  overflow: hidden;
+  border: none;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops without distortion */
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-title-top {
+    font-size: 0.8rem;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "All Products Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "All Products"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "Select Products to Display"
+    }
+  ],
+  "presets": [
+    {
+      "name": "All Products Grid"
+    }
+  ]
+}
+{% endschema %}
