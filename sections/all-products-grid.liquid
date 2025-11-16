@@ -1,13 +1,31 @@
 <section class="all-products-grid">
   <div class="page-width">
-    {% if section.settings.heading != blank %}
-      <h2 class="products-heading">{{ section.settings.heading }}</h2>
-    {% endif %}
 
+    <!-- === HEADER WITH FILTER BUTTON === -->
+    <div class="products-header">
+      {% if section.settings.heading != blank %}
+        <h2 class="products-heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      <!-- === FILTER DROPDOWN === -->
+      <div class="product-filter-dropdown">
+        <button class="filter-toggle">Filter by Product Type</button>
+        <ul class="filter-menu">
+          <li data-filter="all" class="active">All Products</li>
+          <li data-filter="apparel">Apparel</li>
+          <li data-filter="best-sellers">Best Sellers</li>
+          <li data-filter="shade-extension-kits">Shade Extension Kits</li>
+          <li data-filter="wakesurf">Wakesurf</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- === PRODUCT GRID === -->
     <div class="products-grid">
       {% for product in section.settings.products %}
-        <div class="product-card">
-          <!-- PRODUCT TITLE ON TOP -->
+        {% assign product_tags = product.tags | join: ' ' | downcase %}
+        <div class="product-card" data-tags="{{ product_tags }}" data-title="{{ product.title | downcase }}">
+          <!-- PRODUCT TITLE -->
           <h3 class="product-title-top">
             <a href="{{ product.url }}">{{ product.title }}</a>
           </h3>
@@ -19,7 +37,7 @@
             </a>
           {% endif %}
 
-          <!-- PRODUCT DETAILS BELOW -->
+          <!-- PRODUCT DETAILS -->
           <div class="product-content">
             {% if product.price %}
               <p class="product-price">{{ product.price | money }}</p>
@@ -44,6 +62,50 @@
   </div>
 </section>
 
+<!-- === FILTER SCRIPT === -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.filter-toggle');
+  const menu = document.querySelector('.filter-menu');
+  const items = document.querySelectorAll('.filter-menu li');
+  const cards = document.querySelectorAll('.product-card');
+
+  // Toggle dropdown open/close
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  // Handle filtering
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const filter = item.dataset.filter;
+
+      items.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      toggle.textContent = item.textContent;
+      menu.classList.remove('open');
+
+      cards.forEach(card => {
+        const tags = card.dataset.tags;
+        const title = card.dataset.title;
+        if (filter === 'all' || tags.includes(filter) || title.includes(filter)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.product-filter-dropdown')) {
+      menu.classList.remove('open');
+    }
+  });
+});
+</script>
+
 {% stylesheet %}
 /* === SECTION CONTAINER === */
 .all-products-grid {
@@ -52,17 +114,84 @@
   color: #0f1f3d;
 }
 
+/* === HEADER WITH HEADING + FILTER BUTTON === */
+.products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5rem 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .products-heading {
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 800;
   color: #0f1f3d;
-  text-align: left;
-  margin-bottom: 2.5rem;
+  margin: 0;
+}
+
+/* === FILTER DROPDOWN === */
+.product-filter-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+}
+
+.filter-toggle {
+  background: #e76c3c;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "League Spartan", sans-serif;
+  padding: 0.8rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.filter-toggle:hover {
+  background: #d45c2c;
+}
+
+.filter-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #e76c3c;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-top: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.filter-menu.open {
+  display: block;
+}
+
+.filter-menu li {
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Heebo", sans-serif;
+  transition: background 0.2s ease;
+}
+
+.filter-menu li:hover,
+.filter-menu li.active {
+  background: #d45c2c;
 }
 
 /* === GRID === */
 .products-grid {
   display: grid;
+  padding: 4rem 5rem;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   justify-items: center;
@@ -80,16 +209,14 @@
   border: none;
 }
 
-/* PRODUCT TITLE ABOVE IMAGE */
 .product-title-top {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #0f1f3d;
   margin-bottom: 0.5rem;
   line-height: 1.1;
-  min-height: 32px;
 }
 
 .product-title-top a {
@@ -102,13 +229,12 @@
   color: #46b3b8;
 }
 
-/* PRODUCT IMAGE */
+/* PRODUCT IMAGE — 1:1 Ratio */
 .product-image {
   display: block;
   width: 100%;
-  height: 260px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  border: none;
 }
 
 .product-image img {
@@ -120,7 +246,6 @@
 /* PRODUCT CONTENT */
 .product-content {
   padding: 0.75rem 0 0;
-  flex-grow: 1;
 }
 
 .product-price {
@@ -130,6 +255,7 @@
   margin-bottom: 0.5rem;
 }
 
+/* STARS */
 .product-stars {
   display: flex;
   justify-content: center;
@@ -143,60 +269,64 @@
   font-weight: 700;
   text-transform: uppercase;
   padding: 0.6rem 1rem;
-  border: none;
+  border: 2px solid #f15a29;
   cursor: pointer;
-  border-radius: 0;
   width: 100%;
   font-size: 0.8rem;
   letter-spacing: 0.5px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .add-to-cart-btn:hover {
-  background: #d94e21;
-}
-.product-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1; /* Ensures consistent square images */
-  overflow: hidden;
-  border: none;
+  background: #fff;
+  color: #46b3b8;
+  border-color: #46b3b8;
 }
 
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Crops without distortion */
-  object-position: center;
-  transition: transform 0.3s ease;
-}
-
-.product-image:hover img {
-  transform: scale(1.05);
-}
-
-/* RESPONSIVE */
-@media (max-width: 1200px) {
-  .products-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+/* === RESPONSIVE === */
 @media (max-width: 900px) {
+  .products-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-filter-dropdown {
+    margin-top: 1rem;
+  }
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
   }
 }
+
 @media (max-width: 600px) {
   .products-grid {
     grid-template-columns: 1fr;
+    padding: 0;
+    gap: 1.5rem;
   }
 
-  .product-title-top {
-    font-size: 0.8rem;
+  .product-card {
+    max-width: 100%;
   }
 
-  .product-image {
-    height: 220px;
+  .products-heading {
+    text-align: center;
+  }
+
+  .product-filter-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .filter-toggle {
+    width: 80%;
+  }
+
+  .filter-menu {
+    width: 80%;
   }
 }
 {% endstylesheet %}
@@ -219,7 +349,7 @@
   ],
   "presets": [
     {
-      "name": "All Products Grid"
+      "name": "All Products Grid with Filter beside Heading"
     }
   ]
 }

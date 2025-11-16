@@ -1,35 +1,20 @@
 <section class="find-your-shoreline">
   <div class="page-width">
-
-    <!-- HEADING -->
     <h2 class="find-heading">{{ section.settings.heading }}</h2>
 
     <div class="finder-layout">
-      <!-- LEFT SIDE: FILTER FORM -->
+      <!-- LEFT FILTER FORM -->
       <div class="finder-filters">
-        {% assign year_list = section.settings.year_options | split: ',' %}
-        {% assign make_list = section.settings.make_options | split: ',' %}
-        {% assign manufacturer_list = section.settings.manufacturer_options | split: ',' %}
-
         <select id="yearSelect" class="finder-select">
           <option value="">Select Year</option>
-          {% for year in year_list %}
-            <option value="{{ year | strip }}">{{ year | strip }}</option>
-          {% endfor %}
         </select>
 
         <select id="makeSelect" class="finder-select">
           <option value="">Select Make</option>
-          {% for make in make_list %}
-            <option value="{{ make | strip }}">{{ make | strip }}</option>
-          {% endfor %}
         </select>
 
-        <select id="manufacturerSelect" class="finder-select">
-          <option value="">Select Manufacturer</option>
-          {% for manu in manufacturer_list %}
-            <option value="{{ manu | strip }}">{{ manu | strip }}</option>
-          {% endfor %}
+        <select id="modelSelect" class="finder-select" disabled>
+          <option value="">Select Model</option>
         </select>
 
         <div class="finder-buttons">
@@ -39,70 +24,138 @@
       </div>
 
       <!-- RIGHT SIDE: RESULTS -->
-      <div class="finder-results" id="resultsContainer">
-        <!-- dynamically populated -->
-      </div>
+      <div class="finder-results" id="resultsContainer"></div>
     </div>
   </div>
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const searchBtn = document.getElementById('searchBtn');
-  const clearBtn = document.getElementById('clearBtn');
-  const resultsContainer = document.getElementById('resultsContainer');
+document.addEventListener("DOMContentLoaded", function() {
+  const yearSelect = document.getElementById("yearSelect");
+  const makeSelect = document.getElementById("makeSelect");
+  const modelSelect = document.getElementById("modelSelect");
+  const searchBtn = document.getElementById("searchBtn");
+  const clearBtn = document.getElementById("clearBtn");
+  const resultsContainer = document.getElementById("resultsContainer");
 
-  // Sample static data
-  const data = [
-    { year: '2002', make: 'Tige Boats Inc', model: '2000V LTD', link: '#' },
-    { year: '2002', make: 'Tige Boats Inc', model: '21i Limited', link: '#' },
-    { year: '2004', make: 'Yamaha', model: 'FX Cruiser', link: '#' },
-    { year: '2006', make: 'Malibu', model: 'Sunsetter LX', link: '#' },
-  ];
+  let data = [];
 
-  searchBtn.addEventListener('click', function() {
-    const year = document.getElementById('yearSelect').value;
-    const make = document.getElementById('makeSelect').value;
-    const manu = document.getElementById('manufacturerSelect').value;
+  // Load boats.json
+  fetch('{{ "boats.json" | asset_url }}')
+    .then(res => res.json())
+    .then(json => {
+      data = json;
+      console.log("Loaded boat data:", data);
+
+      // Unique Years and Makes
+      const years = [...new Set(data.map(item => String(item.Year)))].sort();
+      const makes = [...new Set(data.map(item => item.Make))].sort();
+
+      populateSelect(yearSelect, years);
+      populateSelect(makeSelect, makes);
+    })
+    .catch(err => console.error("Error loading boats.json:", err));
+
+  function populateSelect(select, values) {
+    select.innerHTML += values.map(v => `<option value="${v}">${v}</option>`).join("");
+  }
+
+  // When Year or Make changes → update Models
+  function updateModels() {
+    const selectedYear = yearSelect.value;
+    const selectedMake = makeSelect.value;
+
+    if (!selectedYear && !selectedMake) {
+      modelSelect.innerHTML = `<option value="">Select Model</option>`;
+      modelSelect.disabled = true;
+      return;
+    }
+
+    const filteredModels = data
+      .filter(item =>
+        (!selectedYear || String(item.Year) === selectedYear) &&
+        (!selectedMake || item.Make?.toLowerCase() === selectedMake.toLowerCase())
+      )
+      .map(item => item.Model);
+
+    const uniqueModels = [...new Set(filteredModels)].sort();
+
+    modelSelect.innerHTML = `<option value="">Select Model</option>`;
+    modelSelect.innerHTML += uniqueModels.map(m => `<option value="${m}">${m}</option>`).join("");
+    modelSelect.disabled = uniqueModels.length === 0;
+  }
+
+  yearSelect.addEventListener("change", updateModels);
+  makeSelect.addEventListener("change", updateModels);
+
+  // SEARCH
+  searchBtn.addEventListener("click", function() {
+    const year = yearSelect.value;
+    const make = makeSelect.value;
+    const model = modelSelect.value;
 
     const filtered = data.filter(item =>
-      (!year || item.year === year) &&
-      (!make || item.make === make) &&
-      (!manu || item.make.includes(manu))
+      (!year || String(item.Year) === year) &&
+      (!make || item.Make?.toLowerCase() === make.toLowerCase()) &&
+      (!model || item.Model?.toLowerCase() === model.toLowerCase())
     );
 
     displayResults(filtered);
   });
 
-  clearBtn.addEventListener('click', function() {
-    document.getElementById('yearSelect').selectedIndex = 0;
-    document.getElementById('makeSelect').selectedIndex = 0;
-    document.getElementById('manufacturerSelect').selectedIndex = 0;
-    resultsContainer.innerHTML = '';
+  // CLEAR
+  clearBtn.addEventListener("click", function() {
+    yearSelect.value = "";
+    makeSelect.value = "";
+    modelSelect.value = "";
+    modelSelect.disabled = true;
+    resultsContainer.innerHTML = "";
   });
 
+  // DISPLAY RESULTS
   function displayResults(results) {
-    if (results.length === 0) {
-      resultsContainer.innerHTML = '<p class="no-results">No results found.</p>';
+    if (!results.length) {
+      resultsContainer.innerHTML = `<p class="no-results">No results found.</p>`;
       return;
     }
 
     resultsContainer.innerHTML = results.map(item => `
       <div class="result-card">
         <div class="result-info">
-          <span>${item.year}</span>
-          <span>${item.make}</span>
-          <span>${item.model}</span>
+          <span>${item.Year || ""}</span>
+          <span>${item.Make || ""}</span>
+          <span>${item.Model || ""}</span>
         </div>
-        <a href="${item.link}" class="view-btn">View Details</a>
+        <a href="${item.link && item.link.startsWith('http') ? item.link : '#'}"
+           class="view-btn" target="_blank" rel="noopener">View Details</a>
       </div>
-    `).join('');
+    `).join("");
   }
 });
 </script>
 
+{% schema %}
+{
+  "name": "Find Shoreline Shade",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Find Your Shoreline Shade Bimini Extension"
+    }
+  ],
+  "presets": [
+    { "name": "Find Shoreline Shade" }
+  ]
+}
+{% endschema %}
+
+
 {% stylesheet %}
-/* === SECTION STYLING === */
+/* ------------------------------
+   BASE STYLING
+------------------------------ */
 .find-your-shoreline {
   background: #f8f9fb;
   padding: 4rem 2rem;
@@ -115,10 +168,13 @@ document.addEventListener('DOMContentLoaded', function() {
   font-weight: 800;
   color: #1c2b47;
   margin-bottom: 3rem;
+  font-family: "League Spartan", sans-serif;
 }
 
+/* Layout */
 .finder-layout {
   display: grid;
+  padding: 4rem 5rem;
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
   align-items: start;
@@ -139,8 +195,8 @@ document.addEventListener('DOMContentLoaded', function() {
   background: #fff;
   color: #1c2b47;
   text-align: center;
-  /* border-radius: 4px; */
   cursor: pointer;
+  font-family: "Heebo", sans-serif;
 }
 
 .finder-buttons {
@@ -157,25 +213,27 @@ document.addEventListener('DOMContentLoaded', function() {
   text-transform: uppercase;
   color: #fff;
   border: none;
-  border-radius: none; 
   cursor: pointer;
+  font-family: "League Spartan", sans-serif;
 }
 
 .search-btn {
   background: #f15a29;
+  transition: all 0.25s ease;
 }
 
 .search-btn:hover {
-  background: #d94e21; 
-  color: #f15a29;
+  background: #d94e21;
 }
 
 .clear-btn {
-  background: #f15a29;
-  /* opacity: 0.9; */
+  background: #1c2b47;
+  transition: all 0.25s ease;
 }
 
-
+.clear-btn:hover {
+  background: #15223d;
+}
 
 /* RIGHT RESULTS */
 .finder-results {
@@ -191,13 +249,16 @@ document.addEventListener('DOMContentLoaded', function() {
   background: linear-gradient(90deg, #c3edf0 0%, #e0e3e5 100%);
   padding: 1rem 1.5rem;
   border-radius: 4px;
+  flex-wrap: wrap;
 }
 
 .result-info {
   display: flex;
-  gap: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   font-weight: 700;
   color: #1c2b47;
+  font-family: "Heebo", sans-serif;
 }
 
 .view-btn {
@@ -207,6 +268,8 @@ document.addEventListener('DOMContentLoaded', function() {
   text-decoration: none;
   font-weight: 700;
   border-radius: 3px;
+  transition: all 0.25s ease;
+  font-family: "League Spartan", sans-serif;
 }
 
 .view-btn:hover {
@@ -217,47 +280,120 @@ document.addEventListener('DOMContentLoaded', function() {
   text-align: center;
   color: #1c2b47;
   font-weight: 700;
+  margin-top: 1rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 989px) {
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+
+/* --- Tablet --- */
+@media (max-width: 1024px) {
   .finder-layout {
     grid-template-columns: 1fr;
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+
+  .finder-filters {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .finder-results {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* --- Mobile --- */
+@media (max-width: 749px) {
+  .find-your-shoreline {
+    padding: 3rem 1rem;
+  }
+
+  .find-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .finder-layout {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .finder-filters {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .finder-select {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .finder-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .search-btn,
+  .clear-btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.9rem;
+    border-radius: 4px;
+  }
+
+  .finder-results {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .result-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .result-info {
+    gap: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .view-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Extra Small Phones --- */
+@media (max-width: 480px) {
+  .find-heading {
+    font-size: 1.7rem;
+  }
+
+  .finder-select {
+    font-size: 0.9rem;
+  }
+
+  .search-btn,
+  .clear-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .result-card {
+    padding: 0.9rem;
+  }
+
+  .view-btn {
+    font-size: 0.9rem;
   }
 }
 {% endstylesheet %}
 
-{% schema %}
-{
-  "name": "Find Shoreline Shade",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Section Heading",
-      "default": "Find Your Shoreline Shade Bimini Extension"
-    },
-    {
-      "type": "text",
-      "id": "year_options",
-      "label": "Year Options (comma separated)",
-      "default": "2002,2003,2004,2005,2006"
-    },
-    {
-      "type": "text",
-      "id": "make_options",
-      "label": "Make Options (comma separated)",
-      "default": "Tige Boats Inc,Yamaha,Malibu,Mastercraft"
-    },
-    {
-      "type": "text",
-      "id": "manufacturer_options",
-      "label": "Manufacturer Options (comma separated)",
-      "default": "Tige,Yamaha,Malibu,Mastercraft"
-    }
-  ],
-  "presets": [
-    { "name": "Find Shoreline Shade" }
-  ]
-}
-{% endschema %}

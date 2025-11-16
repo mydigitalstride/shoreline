@@ -74,7 +74,7 @@
 {% endcapture %}
 
 <div id="Hero-{{ section.id }}" class="hero color-{{ section.settings.color_scheme }}">
-   <div class="page-width">
+   <div class="page-widthh">
   <div class="hero__media-wrapper">
     {{ media }}
   </div>
@@ -108,6 +108,49 @@
   overflow: hidden;
   min-height: var(--hero-min-height, 90vh);
 }
+/* ===== HERO UNDERLINE BELOW FIRST LINE (CLEAN, CENTERED, TAPERED) ===== */
+.hero__text-block .text-block.h1 {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.25em; /* space between text and underline */
+}
+
+/* Line styling */
+.hero__text-block .text-block.h1::after {
+  content: "";
+  position: absolute;
+  left: 37%;
+  bottom: 0;
+  transform: translateX(-50%);
+  
+  width: 65%; /* shorten to fit text width */
+  height: 3px; /* thinner line */
+  
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.85) 70%,
+    rgba(255,255,255,0) 100%
+  );
+  
+  border-radius: 999px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 50%,
+    calc(100% - 12px) 100%,
+    0 100%
+  );
+}
+
+/* Smaller + centered for mobile */
+@media (max-width: 989px) {
+  .hero__text-block .text-block.h1::after {
+    width: 80%;
+    height: 2px;
+  }
+}
+
 .h1,
 .h1.h1,
 .text-block.h1 > * {
@@ -116,18 +159,25 @@
   font-weight: 700;
 }
 
-
-.hero__media-wrapper { position: absolute; inset: 0; }
+.hero__media-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
 
 .hero__image,
-.hero__video { width: 100%; height: 100%; object-fit: cover; }
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Readability overlay */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(44,60,94,0.55), rgba(44,60,94,0.25));
+  background: linear-gradient(rgba(44, 60, 94, 0.55), rgba(44, 60, 94, 0.25));
   z-index: 1;
 }
 
@@ -135,62 +185,170 @@
   position: relative;
   z-index: 2;
 
-  /* flex layout */
   display: flex;
   flex-direction: column;
-  justify-content: center;       /* vertically center */
-  align-items: flex-start;       /* left align */
+  justify-content: center;
+  align-items: flex-start;
 
-  /* spacing */
-  padding: 10rem 3rem 4rem;       /* pushes down slightly */
-
-
-  text-align: left;              /* ensures text stays left aligned */
+  padding: 3rem 3rem 4rem !important;
+  text-align: left;
 }
 
+.hero__logo-block {
+  margin-bottom: 1rem;
+}
+.hero__text-block {
+  max-width: 600px;
+}
 
-
-.hero__logo-block { margin-bottom: 1rem; }
-.hero__text-block { max-width: 600px; }
-
-/* ---------- BUTTONS: keep size stable, orange border visible ---------- */
+/* --- Buttons --- */
 button,
 .button,
 .shopify-button {
   font-size: 16px !important;
-  /* font-weight: 600; */
   line-height: 1.2;
   padding: 12px 28px;
-  border: 2px solid #f26522;          /* persistent border */
+  border: 2px solid #f26522;
   background-color: #f26522;
   color: #fff;
   font-family: "League Spartan";
-  transition: background-color .25s ease, color .25s ease;
-  transform: translateZ(0);
-  backface-visibility: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
   display: inline-block;
   margin-right: 1rem;
+  text-transform: none !important;
 }
-button,
-.button,
-.shopify-button {
-  text-transform: none !important; /* ✅ turns off all caps */
-}
-
 
 button:hover,
 .button:hover,
 .shopify-button:hover {
-  color:white;
-  border-color: #f26522;             /* same width -> no jump */
+  color: white;
+  border-color: #f26522;
 }
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 989px) {
-  .hero__content-wrapper { padding-left: 1.5rem; padding-right: 1.5rem; }
-}
-{% endstylesheet %}
 
+/* --- Tablet --- */
+@media (max-width: 989px) {
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero__content-wrapper {
+    padding: 6rem 2rem 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__text-block {
+    max-width: 90%;
+  }
+
+  button,
+  .button,
+  .shopify-button {
+    margin: 0.5rem auto;
+  }
+}
+/* Keep the first button orange */
+.hero__text-block .button:first-of-type {
+  background-color: #f26522;
+  color: #fff;
+  border-color: #f26522;
+}
+
+/* Make the second button transparent with white border */
+.hero__text-block .button:nth-of-type(2) {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Hover effects */
+.hero__text-block .button:first-of-type:hover {
+  background-color: transparent;
+  color: #f26522;
+  border-color: #f26522;
+}
+
+.hero__text-block .button:nth-of-type(2):hover {
+  background-color: #fff;
+  color: #f26522;
+}
+
+/* --- Mobile --- */
+@media (max-width: 749px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero__content-wrapper {
+    padding: 4rem 1.5rem 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__logo-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__text-block {
+    max-width: 95%;
+  }
+
+  .h1,
+  .hero__text-block h1,
+  .hero__text-block .h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  .hero__text-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.75rem;
+  }
+
+  /* Fix buttons layout */
+  .hero__text-block .button {
+    display: block;
+    width: 85%;
+    max-width: 260px;
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem !important;
+    margin: 0.8rem auto;
+    text-align: center;
+  }
+
+  /* Button 1 (orange) */
+  .hero__text-block .button:nth-child(1) {
+    background-color: #f26522;
+    color: #fff;
+    border-color: #f26522;
+  }
+
+  .hero__text-block .button:nth-child(1):hover {
+    background-color: transparent;
+    color: #f26522;
+  }
+
+  /* Button 2 (transparent with white border/text) */
+  .hero__text-block .button:nth-child(2) {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  .hero__text-block .button:nth-child(2):hover {
+    background-color: #ffffff;
+    color: #f26522;
+  }
+}
+
+{% endstylesheet %}
 
 {% schema %}
 {

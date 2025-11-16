@@ -162,6 +162,22 @@
   gap: 0.4rem;
   margin-bottom: 1.5rem;
 }
+/* Stars */
+.stars {
+  display: flex;
+  justify-content: flex-start; /* ✅ aligns stars to the left */
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0; /* ✅ ensures no indent */
+  text-align: left; /* ✅ enforces alignment */
+}
+
+.star-icon {
+  width: 34px;
+  height: auto;
+  display: inline-block;
+}
 
 .star-icon {
   width: 34px;
@@ -173,11 +189,12 @@
   font-size: 1.1rem;
   line-height: 1.75;
   margin-bottom: 1rem;
+  color:#1a2950 !important;
 }
 
 .review-author {
   font-weight: 800;
-  color: #1a2950;
+  color: #1a2950 !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }

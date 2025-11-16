@@ -808,7 +808,8 @@ body,
   line-height: var(--font-paragraph--line-height);
   text-transform: var(--font-paragraph--case);
   -webkit-font-smoothing: antialiased;
-  color: var(--color, var(--color-foreground));
+  color:white;
+  /* color: var(--color, var(--color-foreground)); */
 }
 
 /* Ensure inputs with type presets maintain minimum 16px on mobile to prevent iOS zoom */
@@ -1353,7 +1354,9 @@ button.shopify-payment-button__button--unbranded {
   padding-block: var(--button-padding-block);
   padding-inline: var(--button-padding-inline);
 }
-
+.button,.button{
+  background-color:none !important;
+}
 .button:hover {
   background-color: transparent;
   /* color:rgb(255, 255, 255); */

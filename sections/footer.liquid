@@ -1,73 +1,78 @@
 <section class="custom-footer">
   <div class="footer-wrapper page-width">
+
     <!-- Left Logo -->
     <div class="footer-logo">
       {% if section.settings.left_logo %}
-        <img src="{{ section.settings.left_logo | image_url: width: 200 }}" alt="Left Logo">
+        <a href="/" class="footer-logo-button" aria-label="Home">
+          <img src="{{ section.settings.left_logo | image_url: width: 200 }}" alt="Left Logo">
+        </a>
       {% endif %}
     </div>
 
     <!-- Navigation Columns -->
     <div class="footer-links">
-      <div class="footer-column">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="/collections/wakesurf">Wakesurf</a></li>
-          <li><a href="/collections/sails">Sails</a></li>
-          <li><a href="/collections/apparel">Apparel</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>About</h4>
-        <ul>
-          <li><a href="/pages/faq">FAQ</a></li>
-          <li><a href="/pages/warranty">Warranty</a></li>
-          <li><a href="/pages/returns">Returns</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <ul>
-          {% if section.settings.contact_email %}
-            <li><a href="mailto:{{ section.settings.contact_email }}">Email</a></li>
-          {% endif %}
-          <li class="social-icons">
-            {% if section.settings.instagram %}
-              <a href="{{ section.settings.instagram }}" target="_blank" aria-label="Instagram">
-                <!-- Instagram SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 
-                  2.243 5 5 5h10c2.757 0 5-2.243 
-                  5-5V7c0-2.757-2.243-5-5-5H7zm0 
-                  2h10c1.654 0 3 1.346 3 
-                  3v10c0 1.654-1.346 3-3 
-                  3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
-                  1.346-3 3-3zm5 2c-2.757 
-                  0-5 2.243-5 5s2.243 5 5 
-                  5 5-2.243 5-5-2.243-5-5-5zm0 
-                  2c1.654 0 3 1.346 3 
-                  3s-1.346 3-3 3-3-1.346-3-3 
-                  1.346-3 3-3zm4.5-.5a1.5 1.5 
-                  0 100 3 1.5 1.5 0 000-3z"/>
-                </svg>
-              </a>
+      {% for block in section.blocks %}
+        {% if block.type == 'footer_column' %}
+          <div class="footer-column">
+            {% if block.settings.heading %}
+              <h4>
+                {% if block.settings.heading_link != blank %}
+                  <a href="{{ block.settings.heading_link }}">{{ block.settings.heading }}</a>
+                {% else %}
+                  {{ block.settings.heading }}
+                {% endif %}
+              </h4>
             {% endif %}
-            {% if section.settings.contact_email %}
-              <a href="mailto:{{ section.settings.contact_email }}" aria-label="Email">
-                <!-- Email SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 4H4c-1.103 
-                  0-2 .897-2 2v12c0 1.103.897 
-                  2 2 2h16c1.103 0 2-.897 
-                  2-2V6c0-1.103-.897-2-2-2zm0 
-                  2v.511l-8 5.333-8-5.333V6h16zM4 
-                  18V8.489l8 5.333 8-5.333V18H4z"/>
-                </svg>
-              </a>
+            <ul>
+              {% for i in (1..5) %}
+                {% capture link_text_key %}link_text_{{ i }}{% endcapture %}
+                {% capture link_url_key %}link_url_{{ i }}{% endcapture %}
+                {% assign link_text = block.settings[link_text_key] %}
+                {% assign link_url = block.settings[link_url_key] %}
+                {% if link_text != blank %}
+                  <li><a href="{{ link_url | default: '#' }}">{{ link_text }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+
+            {% if block.settings.heading contains 'Contact' %}
+              <div class="contact-icons">
+                {% if section.settings.contact_email %}
+                  <a href="mailto:{{ section.settings.contact_email }}" aria-label="Email" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 
+                      1.103.897 2 2 2h16c1.103 0 2-.897 
+                      2-2V6c0-1.103-.897-2-2-2zm0 
+                      2v.511l-8 5.333-8-5.333V6h16zM4 
+                      18V8.489l8 5.333 8-5.333V18H4z"/>
+                    </svg>
+                  </a>
+                {% endif %}
+                {% if section.settings.instagram %}
+                  <a href="{{ section.settings.instagram }}" target="_blank" aria-label="Instagram" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7 2C4.243 2 2 4.243 2 7v10c0 
+                      2.757 2.243 5 5 5h10c2.757 0 5-2.243 
+                      5-5V7c0-2.757-2.243-5-5-5H7zm0 
+                      2h10c1.654 0 3 1.346 3 
+                      3v10c0 1.654-1.346 3-3 
+                      3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
+                      1.346-3 3-3zm5 2c-2.757 
+                      0-5 2.243-5 5s2.243 5 5 
+                      5 5-2.243 5-5-2.243-5-5-5zm0 
+                      2c1.654 0 3 1.346 3 
+                      3s-1.346 3-3 3-3-1.346-3-3 
+                      1.346-3 3-3zm4.5-.5a1.5 1.5 
+                      0 100 3 1.5 1.5 0 000-3z"/>
+                    </svg>
+                  </a>
+                {% endif %}
+              </div>
             {% endif %}
-          </li>
-        </ul>
-      </div>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
 
     <!-- Right Logo -->
@@ -96,25 +101,38 @@
   background: #fff;
   padding: 3rem 2rem 1rem;
 }
+
+/* Layout */
 .footer-wrapper {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 2rem;
   align-items: flex-start;
 }
-.footer-logo img,
-.footer-badge img {
-  max-height: 120px;
-}
+
+/* Logos */
+.footer-logo a { display: inline-block; transition: transform 0.2s ease; }
+.footer-logo a:hover { transform: scale(1.05); }
+
+/* Columns */
 .footer-links {
   display: flex;
   justify-content: center;
   gap: 4rem;
+  flex-wrap: wrap;
 }
 .footer-column h4 {
   font-weight: 700;
   margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
+.footer-column h4 a {
+  color: #1c2b47;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-column h4 a:hover { color: #f15a29; }
+
 .footer-column ul {
   list-style: none;
   margin: 0;
@@ -125,24 +143,21 @@
   color: #2c3c5e;
   transition: color 0.2s ease;
 }
-.footer-column a:hover {
-  color: #f15a29;
-}
-.social-icons {
+.footer-column a:hover { color: #f15a29; }
+
+/* Contact Icons */
+.contact-icons {
   display: flex;
   gap: 0.75rem;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
-.social-icons svg {
-  width: 24px;
-  height: 24px;
+.contact-icons a svg {
   fill: #1f2d50;
   transition: fill 0.2s ease;
 }
-.social-icons svg:hover {
-  fill: #f15a29;
-}
+.contact-icons a:hover svg { fill: #f15a29; }
 
+/* Divider & Payments */
 .footer-divider {
   height: 2px;
   width: 100%;
@@ -151,23 +166,29 @@
   background: linear-gradient(to right, #448b8d, #98cceb, transparent);
   border-radius: 1px;
 }
-
-
 .footer-payments {
   margin-top: 1rem;
   display: flex;
-  justify-content: center;   /* centers horizontally */
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;           /* allows wrapping on mobile */
-  gap: 1rem;                 /* space between icons */
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-
 .footer-payments img {
-  height: 28px;              /* smaller consistent size */
-  width: auto;               /* keep proportions */
-  display: inline-block;
+  height: 28px;
+  width: auto;
 }
 
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-wrapper { grid-template-columns: 1fr 1fr; }
+  .footer-logo,
+  .footer-badge { grid-column: 1 / -1; justify-content: center; }
+}
+@media (max-width: 768px) {
+  .footer-wrapper { grid-template-columns: 1fr; text-align: center; }
+  .footer-links { flex-direction: column; align-items: center; gap: 2rem; }
+}
 {% endstylesheet %}
 
 {% schema %}
@@ -181,6 +202,24 @@
   ],
   "blocks": [
     {
+      "type": "footer_column",
+      "name": "Footer Column",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Column Heading (e.g. Shop, About, Contact)" },
+        { "type": "url", "id": "heading_link", "label": "Heading Link (optional)" },
+        { "type": "text", "id": "link_text_1", "label": "Link 1 Text" },
+        { "type": "url", "id": "link_url_1", "label": "Link 1 URL" },
+        { "type": "text", "id": "link_text_2", "label": "Link 2 Text" },
+        { "type": "url", "id": "link_url_2", "label": "Link 2 URL" },
+        { "type": "text", "id": "link_text_3", "label": "Link 3 Text" },
+        { "type": "url", "id": "link_url_3", "label": "Link 3 URL" },
+        { "type": "text", "id": "link_text_4", "label": "Link 4 Text" },
+        { "type": "url", "id": "link_url_4", "label": "Link 4 URL" },
+        { "type": "text", "id": "link_text_5", "label": "Link 5 Text" },
+        { "type": "url", "id": "link_url_5", "label": "Link 5 URL" }
+      ]
+    },
+    {
       "type": "payment",
       "name": "Payment Icon",
       "settings": [
@@ -189,7 +228,14 @@
     }
   ],
   "presets": [
-    { "name": "Custom Footer" }
+    {
+      "name": "Custom Footer",
+      "blocks": [
+        { "type": "footer_column" },
+        { "type": "footer_column" },
+        { "type": "footer_column" }
+      ]
+    }
   ]
 }
 {% endschema %}

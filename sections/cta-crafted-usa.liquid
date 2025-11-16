@@ -3,35 +3,34 @@
     style="background-image:url('{{ section.settings.bg_image | image_url: width: 2000 }}');"
   {% endif %}
 >
-  <!-- Overlay -->
-  <div class=page-width>
-  <div class="cta-overlay"></div>
+  <div class="page-width">
+    <div class="cta-overlay"></div>
 
-  <div class="cta-wrapper">
-    <!-- LEFT COLUMN -->
-    <div class="cta-col cta-left">
-      <h2 class="cta-heading">{{ section.settings.left_heading }}</h2>
-      <p class="cta-text">{{ section.settings.left_text }}</p>
+    <div class="cta-wrapper">
+      <!-- LEFT COLUMN -->
+      <div class="cta-col cta-left">
+        <h2 class="cta-heading">{{ section.settings.left_heading }}</h2>
+        <p class="cta-text">{{ section.settings.left_text }}</p>
 
-      {% if section.settings.left_logo %}
-        <div class="cta-logo">
-          <img src="{{ section.settings.left_logo | image_url: width: 200 }}" alt="{{ section.settings.left_heading | escape }}">
-        </div>
-      {% endif %}
+        {% if section.settings.left_logo %}
+          <div class="cta-logo">
+            <img src="{{ section.settings.left_logo | image_url: width: 200 }}" alt="{{ section.settings.left_heading | escape }}">
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="cta-col cta-right">
+        <h2 class="cta-heading">{{ section.settings.right_heading }}</h2>
+        <p class="cta-text">{{ section.settings.right_text }}</p>
+
+        {% if section.settings.button_text != blank %}
+          <a href="{{ section.settings.button_link }}" class="cta-btn">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
     </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="cta-col cta-right">
-      <h2 class="cta-heading">{{ section.settings.right_heading }}</h2>
-      <p class="cta-text">{{ section.settings.right_text }}</p>
-
-      {% if section.settings.button_text != blank %}
-        <a href="{{ section.settings.button_link }}" class="cta-btn">
-          {{ section.settings.button_text }}
-        </a>
-      {% endif %}
-    </div>
-  </div>
   </div>
 </section>
 
@@ -41,31 +40,32 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 3rem;
-  color: #fff;
+  padding: 3rem 0;
+  color: #1c2b47 !important;
   overflow: hidden;
 }
 
-/* ✅ Overlay layer */
+/* ✅ Soft white overlay */
 .cta-crafted-usa::before,
 .cta-overlay {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* darker overlay for contrast */
+  background: rgb(255 255 255 / 49%);
   z-index: 1;
 }
 
-/* ✅ Keep content above overlay */
+/* ✅ Content above overlay */
 .cta-wrapper {
   position: relative;
   z-index: 2;
   display: grid;
+  padding: 4rem 5rem;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px;
   align-items: start;
   justify-content: center;
-  color: #fff;
+  color: #1c2b47 !important;
 }
 
 /* Columns */
@@ -76,7 +76,7 @@
 .cta-heading {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 800;
-  color: #ffffff;
+  color: #1c2b47;
   margin-bottom: 1rem;
 }
 
@@ -84,14 +84,14 @@
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 2rem;
-  color: #f5f5f5;
+  color: #333 !important;
   max-width: 550px;
 }
 
 .cta-logo img {
   width: 160px;
   height: auto;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
 }
 
 /* Button */
@@ -100,10 +100,11 @@
   background: #f15a29;
   color: #fff;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   padding: 1rem 2rem;
   text-decoration: none;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   transition: background 0.25s ease, transform 0.25s ease;
 }
@@ -118,6 +119,7 @@
   .cta-wrapper {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 3rem 1.5rem;
   }
   .cta-col {
     text-align: center;
@@ -136,7 +138,7 @@
       "type": "image_picker",
       "id": "bg_image",
       "label": "Background Image",
-      "info": "Upload the soft water background"
+      "info": "Upload the background image"
     },
     {
       "type": "text",
@@ -180,9 +182,7 @@
     }
   ],
   "presets": [
-    {
-      "name": "Crafted in USA CTA"
-    }
+    { "name": "Crafted in USA CTA" }
   ]
 }
 {% endschema %}

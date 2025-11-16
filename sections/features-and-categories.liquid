@@ -43,11 +43,10 @@
 {% stylesheet %}
 /* --- Shared sizing so left edges line up --- */
 .features-and-categories {
-  --content-max: 1000px;     /* controls both the icons row and heading alignment */
   --teal: #46b3b8;
   background:#2c3c5e;
   color:#fff;
-  padding: 3.5rem 0 4rem;
+  padding: 4rem 5rem !important;
   text-align:center;
 }
 
@@ -63,8 +62,12 @@
 .feature-item{display:flex;gap:.9rem;align-items:center;text-align:left}
 .feature-item img{width:70px}
 .feature-item h4{font:700 1.15rem/1 "Bebas Neue",sans-serif;letter-spacing:.4px;text-transform:uppercase;margin:0}
-.feature-item p{font:400 .95rem/1.4 "Heebo",sans-serif;color:#dfe6f2;margin:0}
-
+.feature-item p{font:400 .95rem/1.4 "Heebo",sans-serif;
+  color:white !important;
+  margin:0}
+p {
+  color: white !important;
+}
 /* Short, thick, centered divider with same outer width as content */
 .feature-divider{
   height:3px;width:65%;
@@ -116,16 +119,21 @@
 }
 
 
-.category-image{
-  height:320px;background-size:cover;background-position:center;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
+.category-image {
+  aspect-ratio: 1 / 1; /* makes images perfectly square */
+  height: auto; /* auto height to respect aspect ratio */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   border: none !important;
-  padding:1rem;position:relative;
-  box-shadow:0 8px 24px rgba(0,0,0,.25);
-  transition:transform .3s ease;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  transition: transform .3s ease;
 }
+
 .category-cards:hover .category-image{transform:scale(1.02)}
 .category-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,60,94,.55),rgba(44,60,94,.25))}
 .category-title{
@@ -134,16 +142,146 @@
   letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:.6rem;text-shadow:0 2px 6px rgba(0,0,0,.35)
 }
 
-/* Responsive */
-@media (max-width:1100px){
-  .categories-grid{grid-template-columns:repeat(2, 320px)}
+/* ---------- RESPONSIVE ---------- */
+
+/* --- Tablet --- */
+@media (max-width: 1024px) {
+  .features-and-categories {
+    padding: 3rem 2rem !important;
+  }
+
+  .features-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .feature-item {
+    flex: 1 1 45%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .feature-item img {
+    width: 60px;
+  }
+
+  .categories-heading {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .categories-grid {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .category-cards {
+    flex: 0 1 280px !important;
+  }
+
+  .category-image {
+    height: 280px;
+  }
 }
-@media (max-width:700px){
-  .features-row{gap:2rem}
-  .categories-heading{font-size:2.2rem;letter-spacing:2px}
-  .categories-grid{grid-template-columns:320px}
-  .category-image{height:280px}
+
+/* --- Mobile --- */
+@media (max-width: 749px) {
+  .features-and-categories {
+    padding: 3rem 1.5rem !important;
+  }
+
+  /* Stack feature icons vertically */
+  .features-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .feature-item img {
+    width: 55px;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .feature-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* Divider */
+  .feature-divider {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  /* Categories heading */
+  .categories-wrapper {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .categories-heading {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  /* Categories grid - single column */
+  .categories-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .category-cards {
+    flex: 0 1 100% !important;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .category-image {
+    height: 250px;
+  }
+
+  .category-title {
+    font-size: 0.95rem;
+  }
 }
+
+/* --- Extra Small Phones --- */
+@media (max-width: 480px) {
+  .features-and-categories {
+    padding: 2.5rem 1rem !important;
+  }
+
+  .feature-item img {
+    width: 50px;
+  }
+
+  .categories-heading {
+    font-size: 1.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  .category-image {
+    height: 220px;
+  }
+
+  .category-title {
+    font-size: 0.9rem;
+  }
+}
+
 {% endstylesheet %}
 
 {% schema %}

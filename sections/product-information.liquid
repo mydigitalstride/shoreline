@@ -122,6 +122,22 @@
       grid-column: 2 / 3;
     }
   }
+/* Remove orange background from videos */
+.product-information__media video,
+.product-information__media .media,
+.media-gallery--main video,
+.media-gallery video {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Optional: make sure thumbnails and video frames look consistent */
+.media-gallery img,
+.media-gallery video {
+  background-color: #000 !important; /* gives videos a clean black background */
+  object-fit: cover;
+}
 
   /* Desktop styles */
   @media screen and (min-width: 750px) {
@@ -255,6 +271,227 @@
       }
     }
   }
+/* ---------------------------------
+   PRODUCT PAGE VISUAL ENHANCEMENT
+   (Match screenshot layout)
+---------------------------------- */
+
+/* Base container */
+.product-information__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* LEFT: Main image + small thumbnails */
+.product-information__media {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.media-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.media-gallery img,
+.media-gallery video {
+  border-radius: 0;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.media-gallery img:hover {
+  opacity: 0.7;
+}
+
+.media-gallery--main {
+  flex: 1;
+}
+
+.media-gallery--main img,
+.media-gallery--main video {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* RIGHT: Product details */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Heebo", sans-serif;
+}
+
+.product-details h1 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1c2b47;
+  margin: 0;
+}
+
+.product-details .price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1c2b47;
+}
+
+/* Feature circles */
+.product-details .feature-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.feature-icons .icon-circle {
+  border: 2px solid #1c2b47;
+  border-radius: 50%;
+  width: 95px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1c2b47;
+}
+
+/* Description */
+.product-details .product__description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Quantity and Add to Cart */
+.shopify-buy__quantity,
+.shopify-buy__buttons {
+  margin-top: 1rem;
+}
+
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid #1c2b47;
+}
+
+.qty-btn {
+  background: #1c2b47;
+  color: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  background: #15223d;
+}
+
+.quantity-controls input {
+  width: 50px;
+  text-align: center;
+  border: none;
+}
+
+/* Add to Cart button */
+button.shopify-buy__button,
+.product-form [type="submit"] {
+  background: none !important;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button.shopify-buy__button:hover,
+.product-form [type="submit"]:hover {
+  background: none !important;
+}
+
+/* Payment icons */
+.payment-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.payment-icons img {
+  height: 25px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.payment-icons img:hover {
+  opacity: 1;
+}
+
+/* ---------------------------------
+   RESPONSIVE (MOBILE)
+---------------------------------- */
+@media (max-width: 768px) {
+  .product-information__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .product-information__media {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .media-gallery {
+    flex-direction: row;
+    justify-content: center;
+    order: 2;
+  }
+
+  .media-gallery img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .media-gallery--main {
+    order: 1;
+  }
+
+  .product-details h1 {
+    font-size: 1.6rem;
+  }
+
+  .feature-icons {
+    justify-content: center;
+  }
+
+  .feature-icons .icon-circle {
+    width: 85px;
+    height: 85px;
+  }
+}
 
   /* Wider sidebar for large screens */
   @media screen and (min-width: 1200px) {

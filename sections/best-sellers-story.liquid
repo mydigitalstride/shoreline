@@ -54,7 +54,9 @@
 
 {% stylesheet %}
 
-/* Section with full left background */
+/* ------------------------------
+   BASE SECTION
+------------------------------ */
 .best-sellers-story {
   padding: 0;
   background-size: cover;
@@ -66,10 +68,13 @@
 .best-sellers-wrapper {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
-  gap: 0;
   align-items: stretch;
+  gap: 0;
 }
 
+/* ------------------------------
+   LEFT SIDE (Text + Products)
+------------------------------ */
 .best-sellers-left {
   color: #0f233d;
   display: flex;
@@ -84,60 +89,85 @@
   margin: 0 auto;
 }
 
-/* ✅ 1. Drop shadow on Header */
 .bestsellers-heading {
+  font-family: "League Spartan";
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   line-height: 1;
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 1.25rem;
   text-transform: uppercase;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  color: #2c3c5e;
 }
 
-/* ✅ 2. Increase width of products */
+/* Product grid */
 .best-sellers-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem; 
+  gap: 2rem;
 }
 
 .product-card {
   text-align: left;
-  background: transparent !important; 
+  background: transparent !important;
   padding: 1rem;
+  border: none !important;
   transform: scale(1.05);
-  box-shadow: none !important;
-  border: none !important; 
 }
-
 
 .product-card img {
   width: 100%;
   height: auto;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .product-title {
   text-transform: uppercase;
-  margin: 0 0 .75rem 0;
+  margin: 0 0 0.75rem;
   line-height: 1.2;
 }
 
-/* Add to cart button */
 .add-to-cart {
   background: #f15a29;
   border: none;
   color: #fff;
-  padding: .85rem 1.25rem;
+  padding: 0.85rem 1.25rem;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.25s ease;
 }
-.add-to-cart:hover { background:#d94e21; transform: translateY(-2px); }
+.add-to-cart:hover {
+  background: #d94e21;
+  transform: translateY(-2px);
+}
 
-/* ✅ 4. Center "About Shoreline" button */
+/* ------------------------------
+   RIGHT SIDE (Story)
+------------------------------ */
+.best-sellers-right {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding: 3rem 2rem;
+  color: #fff;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+.best-sellers-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+  z-index: 0;
+}
+
 .right-inner {
+  position: relative;
+  z-index: 1;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
@@ -146,48 +176,26 @@
   align-items: center;
 }
 
-/* ✅ 5. Add overlay to the Shoreline Story section */
-.best-sellers-right {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  display: grid;
-  place-items: center;
-  padding: 2.5rem 2rem;
-  color: #fff;
-  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
-  overflow: hidden;
-}
-
-.best-sellers-right::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
-  z-index: 0;
-}
-
-.right-inner { position: relative; z-index: 1; }
-
 .story-logo {
   max-width: 180px;
   margin: 0 auto 1rem;
-  display:block;
+  display: block;
 }
 
 .story-heading {
+  font-family: "League Spartan";
   font-size: clamp(1.5rem, 2.8vw, 2.25rem);
   font-weight: 800;
   text-transform: uppercase;
-  margin: .5rem 0 1rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,.4);
+  margin: 0.5rem 0 1rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Centered "About Shoreline" button */
 .story-btn {
   display: inline-block;
   margin-top: 1rem;
-  padding: .85rem 1.5rem;
+  padding: 0.85rem 1.5rem;
   border: 3px solid #fff;
   color: #fff;
   font-family: "League Spartan";
@@ -199,25 +207,130 @@
   background: #fff;
   color: #1f2d50;
 }
-.bestsellers-heading {
-  font-family: "League Spartan";
-  color: #2c3c5e; /* blue tone for Best Sellers only */
-}
 
-/* Keep all other h2s normal (white or default) */
-.story-heading {
-  font-family: "League Spartan";
-  color: #fff; /* ensure the story heading stays white */
-}
+/* ------------------------------
+   RESPONSIVE STYLES
+------------------------------ */
 
-
-/* Responsive */
+/* Tablet */
 @media (max-width: 989px) {
-  .best-sellers-wrapper { grid-template-columns: 1fr; }
-  .best-sellers-right { clip-path: none; }
-  .product-card { transform: none; }
+  .best-sellers-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .best-sellers-left {
+    padding: 3rem 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bestsellers-heading {
+    margin-bottom: 2rem;
+  }
+
+  .best-sellers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .product-card {
+    transform: none;
+    text-align: center;
+  }
+
+  .best-sellers-right {
+    clip-path: none;
+    padding: 4rem 2rem;
+  }
+
+  .story-heading {
+    font-size: 2rem;
+  }
 }
 
+/* Mobile */
+@media (max-width: 749px) {
+  .best-sellers-left {
+    padding: 2.5rem 1.25rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bestsellers-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .best-sellers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .add-to-cart {
+    width: 80%;
+    max-width: 240px;
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .best-sellers-right {
+    clip-path: none;
+    padding: 3rem 1.5rem;
+    background-position: center;
+  }
+
+  .story-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .story-heading {
+    font-size: 1.6rem;
+  }
+
+  .story-btn {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.25rem;
+    width: 80%;
+    max-width: 240px;
+  }
+}
+
+/* Extra Small (Phones) */
+@media (max-width: 480px) {
+  .bestsellers-heading {
+    font-size: 1.75rem;
+  }
+
+  .best-sellers-grid {
+    gap: 1.2rem;
+  }
+
+  .product-title {
+    font-size: 0.95rem;
+  }
+
+  .story-heading {
+    font-size: 1.4rem;
+  }
+
+  .story-btn {
+    width: 100%;
+    max-width: 220px;
+    padding: 0.8rem 1.2rem;
+  }
+}
 {% endstylesheet %}
 
 {% schema %}

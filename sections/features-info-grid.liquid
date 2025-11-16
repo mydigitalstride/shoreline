@@ -8,10 +8,10 @@
   <div class="page-width features-wrapper">
     <div class="features-grid">
       {% for block in section.blocks %}
-        <div class=".feature-items" {{ block.shopify_attributes }}>
+        <div class="feature-item" {{ block.shopify_attributes }}>
           {% if block.settings.icon %}
             <div class="feature-icon">
-              <img src="{{ block.settings.icon | image_url: width: 120 }}" alt="{{ block.settings.title | escape }}">
+              <img src="{{ block.settings.icon | image_url: width: 180 }}" alt="{{ block.settings.title | escape }}">
             </div>
           {% endif %}
           <div class="feature-content">
@@ -24,109 +24,153 @@
   </div>
 </section>
 
-<style>
-/* === SECTION === */
+{% stylesheet %}
+/* ------------------------------
+   FEATURES SECTION
+------------------------------ */
+
 .features-info-grid {
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 0;
+  padding: 5rem 2rem;
   color: #0f1f3d;
   overflow: hidden;
 }
 
+/* Subtle white overlay to lighten background image */
 .features-overlay {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(255, 255, 255, 0.85),
-    rgba(255, 255, 255, 0.92)
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.95)
   );
   z-index: 1;
 }
 
-/* Inner wrapper so text sits above overlay */
 .features-wrapper {
   position: relative;
   z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/* === GRID LAYOUT === */
+/* ------------------------------
+   GRID LAYOUT
+------------------------------ */
 .features-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centers fewer than 3 */
-  gap: 60px 80px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 4rem;
+  justify-items: center;
+  align-items: start;
   text-align: left;
+  padding: 4rem 5rem;
+
 }
 
-/* Feature Items */
-..feature-items {
-  flex: 0 1 calc(33.333% - 40px);
-  min-width: 300px;
-  max-width: 420px;
+/* ------------------------------
+   FEATURE ITEMS
+------------------------------ */
+.feature-item {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 1.25rem;
+  max-width: 420px;
 }
-
-/* Icon Styling */
+.feature-item p {
+    font: 400 .95rem / 1.4 "Heebo", sans-serif;
+    color: #2c3c5e !important;
+    margin: 0;
+}
+/* ICON */
 .feature-icon img {
-  width: 90px;
-  height: 90px;
+  width: 110px;  /* matches screenshot scale */
+  height: 110px;
   object-fit: contain;
   flex-shrink: 0;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.08));
 }
 
-/* Text Styles */
+/* TITLE */
 .feature-title {
   font-size: 1.2rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: #0d2248; /* darker navy for better contrast */
-  margin: 0 0 10px;
-  letter-spacing: 0.02em;
+  color: #1c2b47;
+  margin: 0 0 0.4rem;
+  font-family: "League Spartan", sans-serif;
 }
 
+/* TEXT */
 .feature-text {
+  font-family: "Heebo", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  font-weight:500;
-  color: #1c2b47; !important
+  font-weight: 500;
+  color: #1c2b47;
   margin: 0;
-  max-width: 380px;
 }
 
-/* === RESPONSIVE === */
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+
+/* --- Tablet --- */
 @media (max-width: 989px) {
-  ..feature-items {
-    flex: 0 1 calc(50% - 30px);
-  }
-}
-
-@media (max-width: 700px) {
   .features-grid {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  ..feature-items {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 2.5rem;
   }
 
   .feature-icon img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+  }
+
+  .feature-text {
+    font-size: 0.95rem;
   }
 }
-</style>
+
+/* --- Mobile --- */
+@media (max-width: 749px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-icon img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .feature-title {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .feature-text {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+{% endstylesheet %}
+
 
 {% schema %}
 {

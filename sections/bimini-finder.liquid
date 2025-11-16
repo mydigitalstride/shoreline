@@ -4,32 +4,19 @@
       <h2 class="bimini-finder-heading">{{ section.settings.heading }}</h2>
     {% endif %}
 
-    {% assign year_list = section.settings.year_options | split: "," %}
-    {% assign make_list = section.settings.make_options | split: "," %}
-    {% assign manu_list = section.settings.manufacturer_options | split: "," %}
-
     <!-- Finder Form -->
     <form id="biminiFinderForm" class="bimini-finder-form" onsubmit="return false;">
       <div class="bimini-finder-selects">
         <select id="yearSelect" class="bimini-select">
-          <option selected disabled>Select Year</option>
-          {% for year in year_list %}
-            <option value="{{ year | strip }}">{{ year | strip }}</option>
-          {% endfor %}
+          <option value="">Select Year</option>
         </select>
 
         <select id="makeSelect" class="bimini-select">
-          <option selected disabled>Select Make</option>
-          {% for make in make_list %}
-            <option value="{{ make | strip }}">{{ make | strip }}</option>
-          {% endfor %}
+          <option value="">Select Make</option>
         </select>
 
-        <select id="manufacturerSelect" class="bimini-select">
-          <option selected disabled>Select Manufacturer</option>
-          {% for manu in manu_list %}
-            <option value="{{ manu | strip }}">{{ manu | strip }}</option>
-          {% endfor %}
+        <select id="modelSelect" class="bimini-select" disabled>
+          <option value="">Select Model</option>
         </select>
       </div>
 
@@ -38,16 +25,109 @@
         <button type="button" id="searchBtn" class="bimini-btn search">{{ section.settings.search_text }}</button>
       </div>
     </form>
+
+    <!-- Results Container -->
+    <div id="resultsContainer" class="bimini-results"></div>
   </div>
 </section>
 
-<style>
+<script>
+document.addEventListener("DOMContentLoaded", async function() {
+  const yearSelect = document.getElementById("yearSelect");
+  const makeSelect = document.getElementById("makeSelect");
+  const modelSelect = document.getElementById("modelSelect");
+  const searchBtn = document.getElementById("searchBtn");
+  const clearBtn = document.getElementById("clearBtn");
+  const resultsContainer = document.getElementById("resultsContainer");
+
+  let boatData = [];
+
+  // ✅ Fetch the boats.json file dynamically
+  try {
+    const response = await fetch('{{ "boats.json" | asset_url }}');
+    boatData = await response.json();
+  } catch (err) {
+    console.error("Error loading boats.json:", err);
+  }
+
+  // ✅ Populate Year dropdown
+  const years = [...new Set(boatData.map(item => String(item.Year)))].sort((a, b) => b - a);
+  years.forEach(year => {
+    yearSelect.innerHTML += `<option value="${year}">${year}</option>`;
+  });
+
+  // ✅ Populate Make dropdown
+  const makes = [...new Set(boatData.map(item => item.Make))].sort();
+  makes.forEach(make => {
+    makeSelect.innerHTML += `<option value="${make}">${make}</option>`;
+  });
+
+  // ✅ Update Models when Year or Make changes
+  function updateModels() {
+    const selectedYear = yearSelect.value;
+    const selectedMake = makeSelect.value;
+
+    const filtered = boatData.filter(item =>
+      (!selectedYear || String(item.Year) === selectedYear) &&
+      (!selectedMake || item.Make === selectedMake)
+    );
+
+    const models = [...new Set(filtered.map(item => item.Model))].sort();
+
+    modelSelect.innerHTML = `<option value="">Select Model</option>`;
+    models.forEach(model => {
+      modelSelect.innerHTML += `<option value="${model}">${model}</option>`;
+    });
+
+    modelSelect.disabled = models.length === 0;
+  }
+
+  yearSelect.addEventListener("change", updateModels);
+  makeSelect.addEventListener("change", updateModels);
+
+  // ✅ Clear Filters
+  clearBtn.addEventListener("click", function() {
+    yearSelect.selectedIndex = 0;
+    makeSelect.selectedIndex = 0;
+    modelSelect.innerHTML = `<option value="">Select Model</option>`;
+    modelSelect.disabled = true;
+    resultsContainer.innerHTML = "";
+  });
+
+  // ✅ Search + Show Results in Horizontal Card Layout
+  searchBtn.addEventListener("click", function() {
+    const year = yearSelect.value;
+    const make = makeSelect.value;
+    const model = modelSelect.value;
+
+    const filtered = boatData.filter(item =>
+      (!year || String(item.Year) === year) &&
+      (!make || item.Make === make) &&
+      (!model || item.Model === model)
+    );
+
+    if (filtered.length === 0) {
+      resultsContainer.innerHTML = `<p class="no-results">No results found.</p>`;
+      return;
+    }
+
+    resultsContainer.innerHTML = filtered.map(item => `
+      <div class="bimini-card">
+        <div class="bimini-card-info">
+          <h3 class="bimini-card-model">${item.Model || "Model"}</h3>
+          <p class="bimini-card-details">${item.Make || ""} ${item.Year || ""}</p>
+        </div>
+        <a href="${item.link || '#'}" class="bimini-card-btn" target="_blank">View Product</a>
+      </div>
+    `).join("");
+  });
+});
+</script>
+
+{% stylesheet %}
 /* ==============================
    BIMINI FINDER SECTION
-   ============================== */
-/* ==============================
-   BIMINI FINDER SECTION
-   ============================== */
+============================== */
 .bimini-finder-section {
   background: #1c2b47;
   color: #fff;
@@ -55,7 +135,7 @@
   padding: 6rem 0;
 }
 
-/* Proper container width */
+/* Container */
 .page-width {
   max-width: 1400px;
   margin: 0 auto;
@@ -102,12 +182,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .bimini-select:hover {
   border-color: #46b3b8;
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 .bimini-select option {
   color: #0f1f3d;
   background-color: #fff;
@@ -119,8 +197,6 @@
   justify-content: center;
   gap: 2rem;
 }
-
-/* ✅ Orange default, transparent hover */
 .bimini-btn {
   font-size: 1.2rem;
   font-weight: 800;
@@ -132,12 +208,65 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .bimini-btn:hover {
   background: transparent;
   color: white;
   border-color: white;
   transform: translateY(-2px);
+}
+
+/* ==============================
+   RESULTS — HORIZONTAL CARDS
+============================== */
+.bimini-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.bimini-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #d5e8eb 0%, #b9ecf1 100%);
+  color: #1c2b47;
+  
+  padding: 1.5rem 2rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.bimini-card:hover {
+  transform: translateY(-4px);
+}
+
+.bimini-card-info {
+  text-align: left;
+}
+.bimini-card-model {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.bimini-card-details {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.bimini-card-btn {
+  background: #1c2b47;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.bimini-card-btn:hover {
+  background: #0e162d;
 }
 
 /* Responsive */
@@ -150,89 +279,24 @@
     flex-direction: column;
     gap: 1rem;
   }
+  .bimini-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
 }
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const yearSelect = document.getElementById('yearSelect');
-  const makeSelect = document.getElementById('makeSelect');
-  const manuSelect = document.getElementById('manufacturerSelect');
-  const clearBtn = document.getElementById('clearBtn');
-  const searchBtn = document.getElementById('searchBtn');
-
-  // ✅ Clear button resets dropdowns
-  clearBtn.addEventListener('click', () => {
-    yearSelect.selectedIndex = 0;
-    makeSelect.selectedIndex = 0;
-    manuSelect.selectedIndex = 0;
-  });
-
-  // ✅ Search button redirects to collection page
-  searchBtn.addEventListener('click', () => {
-    const year = yearSelect.value !== 'Select Year' ? yearSelect.value : '';
-    const make = makeSelect.value !== 'Select Make' ? makeSelect.value : '';
-    const manu = manuSelect.value !== 'Select Manufacturer' ? manuSelect.value : '';
-
-    // Example: redirect with query params
-    const params = new URLSearchParams();
-    if (year) params.append('year', year);
-    if (make) params.append('make', make);
-    if (manu) params.append('manufacturer', manu);
-
-    // Change this to your target collection or page
-    const baseUrl = '/collections/bimini-extensions';
-
-    window.location.href = params.toString() ? `${baseUrl}?${params}` : baseUrl;
-  });
-});
-</script>
+{% endstylesheet %}
 
 {% schema %}
 {
   "name": "Bimini Finder Section",
   "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Find Your Shoreline Shade Bimini Extension"
-    },
-    {
-      "type": "text",
-      "id": "year_options",
-      "label": "Year Options (comma separated)",
-      "default": "2024, 2023, 2022, 2021"
-    },
-    {
-      "type": "text",
-      "id": "make_options",
-      "label": "Make Options (comma separated)",
-      "default": "Mastercraft, Malibu, Nautique, Axis"
-    },
-    {
-      "type": "text",
-      "id": "manufacturer_options",
-      "label": "Manufacturer Options (comma separated)",
-      "default": "Shoreline, Hyperlite, Ronix"
-    },
-    {
-      "type": "text",
-      "id": "clear_text",
-      "label": "Clear Button Text",
-      "default": "Clear"
-    },
-    {
-      "type": "text",
-      "id": "search_text",
-      "label": "Search Button Text",
-      "default": "Search"
-    }
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Find Your Shoreline Shade Bimini Extension" },
+    { "type": "text", "id": "clear_text", "label": "Clear Button Text", "default": "Clear" },
+    { "type": "text", "id": "search_text", "label": "Search Button Text", "default": "Search" }
   ],
   "presets": [
-    {
-      "name": "Bimini Finder Section"
-    }
+    { "name": "Bimini Finder Section" }
   ]
 }
 {% endschema %}
