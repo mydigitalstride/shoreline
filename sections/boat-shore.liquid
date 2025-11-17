@@ -102,6 +102,22 @@
 ========================= */
 @media (max-width: 768px) {
 
+  .boat-wrapper {
+    display: flex !important;       /* force override */
+    flex-direction: column !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  .boat-badge {
+    order: 3; /* badge always moves to bottom */
+  }
+
+}
+
+@media (max-width: 768px) {
+
   .from-boat-to-shore {
     padding: 2rem 1rem;
   }
