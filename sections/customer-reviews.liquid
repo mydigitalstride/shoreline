@@ -147,20 +147,46 @@
   font-weight: 400;
 }
 
-/* Responsive */
+/* ------------------ RESPONSIVE ------------------ */
+
 @media (max-width: 989px) {
   .reviews-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customer-reviews {
+    padding: 3rem 1.5rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .reviews-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .review-card {
     max-width: 100%;
+    padding: 1.75rem;
+  }
+
+  .reviews-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .review-card {
+    padding: 1.5rem;
+  }
+
+  .review-title {
+    font-size: 1rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
   }
 }
 {% endstylesheet %}
