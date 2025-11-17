@@ -99,89 +99,79 @@
 @media (max-width: 768px) {
 
   .from-boat-to-shore {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem; /* reduce outer spacing */
   }
 
   .boat-wrapper {
+    background-color: #d2f3f4;
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem;
 
-    background-color: #d2f3f4;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;   /* perfect balanced padding */
 
     display: flex;
     flex-direction: column;
-
-    align-items: center;   
-    justify-content: center; 
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
-    gap: 1.5rem;           
+    gap: 1.25rem;
+
+    border-radius: 8px;
   }
 
-  /* Headings inside the box */
-  .boat-heading {
-    margin: 0;
-    font-size: 1.9rem;
-    line-height: 1.2;
+  .boat-text {
     width: 100%;
+    max-width: 500px;
+  }
+
+  .boat-heading {
+    margin-top: 0.5rem;      /* fixes top spacing issue */
+    margin-bottom: 1rem;     /* clean spacing */
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
 
   .boat-description {
-    margin: 0;
+    margin: 0 auto 1.5rem auto;
     width: 100%;
+    max-width: 450px;
     font-size: 1.05rem;
-    line-height: 1.6;
-    /* max-width: 95%; ensures perfect centering */
+    line-height: 1.55;
   }
-
-  /* Button */
 
   .boat-btn {
     width: 100%;
     max-width: 320px;
     padding: 1rem;
-    margin-top: 0.5rem;
     font-size: 1.05rem;
   }
 
-  /* Badge */
   .boat-badge {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .boat-badge img {
-    max-width: 150px;
+    max-width: 140px;
+    height: auto;
   }
 }
 
-
-/* Extra-small phones */
 @media (max-width: 480px) {
 
   .boat-wrapper {
-    padding: 2rem 1rem;
-    
+    padding: 1.75rem 1rem;
   }
 
   .boat-heading {
-    font-size: 1.6rem;
+    font-size: 1.55rem;
   }
 
   .boat-description {
-    font-size: 0.97rem;
-  }
-
-  .boat-btn {
-    max-width: 280px;
-    font-size: 1rem;
-  }
-
-  .boat-badge img {
-    max-width: 120px;
+    font-size: 0.96rem;
   }
 }
 
