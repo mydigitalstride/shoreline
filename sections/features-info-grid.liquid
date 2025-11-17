@@ -119,32 +119,43 @@
    RESPONSIVE
 ------------------------------ */
 
-/* --- Tablet --- */
+/* Tablet (up to ~990px) */
 @media (max-width: 989px) {
+  .features-info-grid {
+    padding: 3.5rem 1.5rem;
+  }
+
   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .feature-icon img {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
   }
 
   .feature-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .feature-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 
-/* --- Mobile --- */
+/* Mobile (up to ~749px) */
 @media (max-width: 749px) {
+
+  .features-info-grid {
+    padding: 3rem 1.25rem;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0;
     text-align: center;
   }
 
@@ -152,23 +163,59 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: 100%;
+    padding: 0 0.5rem;
   }
 
   .feature-icon img {
-    width: 95px;
-    height: 95px;
+    width: 80px;
+    height: 80px;
   }
 
   .feature-title {
+    font-size: 1.05rem;
     margin-top: 0.5rem;
-    font-size: 1.1rem;
   }
 
   .feature-text {
-    max-width: 320px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 380px;
+    margin: 0.5rem auto 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  /* Lighten overlay so text does not look faded */
+  .features-overlay {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.9)
+    );
   }
 }
+
+/* Small mobile (up to 480px) */
+@media (max-width: 480px) {
+
+  .features-info-grid {
+    padding: 2.5rem 1rem;
+  }
+
+  .feature-icon img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+  }
+
+  .feature-text {
+    font-size: 0.88rem;
+    max-width: 330px;
+  }
+}
+
 {% endstylesheet %}
 
 
