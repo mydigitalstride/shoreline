@@ -1,1 +1,538 @@
-{"sections":{"main":{"type":"main-page","blocks":{"heading":{"type":"text","name":"Title","settings":{"text":"<h1>{{ closest.page.title }}<\/h1>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h2","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"page-content":{"type":"page-content","settings":{},"blocks":{}}},"block_order":["heading","page-content"],"disabled":true,"settings":{"content_direction":"column","gap":32,"color_scheme":"","padding-block-start":40,"padding-block-end":80}},"hero_PwQ9KH":{"type":"hero","blocks":{"group_eyjeFH":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"center","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":100,"padding-inline-end":0,"custom_id":""},"blocks":{"logo_QhEYPg":{"type":"logo","name":"t:names.logo","settings":{"inverse":false,"font":"heading","unit":"pixel","percent_width":100,"pixel_height":160,"custom_mobile_size":false,"unit_mobile":"percent","percent_width_mobile":100,"pixel_height_mobile":120,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_WJWPUA":{"type":"text","settings":{"text":"<p>Shop Shoreline <\/p><p>Products<\/p>","width":"100%","max_width":"none","alignment":"left","type_preset":"h1","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":20,"padding-inline-end":0},"blocks":{}},"group_gAmWVW":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":20,"padding-inline-end":0,"custom_id":""},"blocks":{"button_9q6RfM":{"type":"button","name":"t:names.button","settings":{"label":"Shop All Products","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}},"button_KAMcUD":{"type":"button","name":"t:names.button","settings":{"label":"Find My Shade Sail","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["button_9q6RfM","button_KAMcUD"]}},"block_order":["logo_QhEYPg","text_WJWPUA","group_gAmWVW"]},"group_X8kaaC":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0,"custom_id":"menu-group"},"blocks":{"menu_TrnXRt":{"type":"menu","name":"t:names.menu","settings":{"menu":"main-menu","heading":"","menu_spacing":12,"show_as_accordion":false,"accordion_icon":"caret","accordion_dividers":false,"inherit_color_scheme":true,"color_scheme":"","heading_preset":"h3","link_preset":"paragraph","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0,"main_menu":true},"blocks":{}}},"block_order":["menu_TrnXRt"]}},"block_order":["group_eyjeFH","group_X8kaaC"],"name":"t:names.hero","settings":{"media_type_1":"video","video_1":"shopify:\/\/files\/videos\/09 - SLB25_Shade-Install-Boat_9x16_Final (1).mp4","media_type_2":"image","link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":16,"section_width":"page-width","section_height":"large","section_height_custom":50,"color_scheme":"scheme-5","toggle_overlay":true,"overlay_color":"#00000026","overlay_style":"gradient","gradient_direction":"to top","blurred_reflection":false,"reflection_opacity":75,"padding-block-start":40,"padding-block-end":40}},"shop_category_pTGbit":{"type":"shop-category","blocks":{"category_FXRGVg":{"type":"category","settings":{"image":"shopify:\/\/shop_images\/IMG_2821_1.jpg","title":"Shade Sails","link":"shopify:\/\/pages\/category-page-shade-extension-kits"}},"category_iQdNwz":{"type":"category","settings":{"image":"shopify:\/\/shop_images\/09a39f3b-45d221_2bdcd265eb3e4783b9598f2b82e7e155_mv2.jpg","title":"Bimini Extensions","link":"shopify:\/\/pages\/category-page-shade-extension-kits"}},"category_fxfhmK":{"type":"category","settings":{"image":"shopify:\/\/shop_images\/28177ebd-45d221_eda8f00c99fa4a588c784b2f347a90cf_mv2.jpg","title":"Apparel","link":"shopify:\/\/pages\/category-page-apparel"}},"category_t8F9WD":{"type":"category","settings":{"image":"shopify:\/\/shop_images\/62e6703b-45d221_02382c3120954a6380e25cf4b11cfb46_mv2.png","title":"Accessories","link":"shopify:\/\/pages\/shop"}}},"block_order":["category_FXRGVg","category_iQdNwz","category_fxfhmK","category_t8F9WD"],"custom_css":["h3 {font-family: \"Bebas Neue\";}","*\/h2 {font-family: \"League Spartan\";}","button,.hero__heading {font-family: \"League Spartan\", sans-serif;}"],"name":"Shop Category Grid","settings":{"heading":"Shop by Category"}},"find_your_shoreline_fcDLhD":{"type":"find-your-shoreline","custom_css":["h3 {font-family: \"Bebas Neue\";}","h2 {font-family: \"League Spartan\";}"],"name":"Find Shoreline Shade","settings":{"heading":"Find Your Shoreline Shade Bimini Extension"}},"all_products_grid_4jDVaa":{"type":"all-products-grid","custom_css":["h3 {font-family: \"Bebas Neue\";}","h2 {font-family: \"League Spartan\";}"],"name":"All Products Grid","settings":{"heading":"All Products","products":["2015-2025-malibu-boats-bimini-mounted-shade-extension","2017-2025-mb-boats-bimini-shade-extension-kit","athletic-fit-t-shirt-mauve","athletic-fit-t-shirt-white","athletic-fit-t-shirt-sage","axis-wake-boat-bimini-shade-extension-kit","carbon-fiber-telescoping-shade-poles","center-console-t-top-shade-extension","centurion-and-supreme-bimini-extension-kit","hyperlite-20-wakesurf-rope","curved-performance-hat","hardshell-wakesurf-board-case","centurion-predator-tower-bimini-extension","pontoon-boat-bimini-extension-kit","short-sleeve-t-shirt","slix-ceramic-detailing-spray","tige-ultre-shade-extension","wakesurf-rope-swivel-attachment","yamaha-xd-series-shade-extension"]}},"additional_resources_a8c3mT":{"type":"additional-resources","blocks":{"link_gfCP6L":{"type":"link","settings":{"title":"FAQ","link":"shopify:\/\/pages\/faq"}},"link_NK6Bak":{"type":"link","settings":{"title":"Instructions","link":"shopify:\/\/pages\/instructions-1"}},"link_eBwrBq":{"type":"link","settings":{"title":"Returns","link":"shopify:\/\/pages\/returns"}},"link_4mXwaT":{"type":"link","settings":{"title":"Warranty","link":"shopify:\/\/pages\/warranty"}}},"block_order":["link_gfCP6L","link_NK6Bak","link_eBwrBq","link_4mXwaT"],"name":"Additional Resources","settings":{"heading":"Additional Resources","text":"Explore our most popular resources below for quick answers, product instructions, or help reaching our team.","right_image":"shopify:\/\/shop_images\/IMG_2821_1.jpg"}},"customer_reviews_g94yk9":{"type":"customer-reviews","blocks":{"review_y73Qqq":{"type":"review","settings":{"name":"Zach G.","date":"06\/24\/2025","product_title":"2017-2025 Tige Bimini Shade Extension Kit","text":"This extension works perfectly. Shipping was super fast! Thinking about buying another one to point forward and cover bow!!"}},"review_mR7dkk":{"type":"review","settings":{"name":"Luke S.","date":"07\/01\/2025","product_title":"Wake Tower Mounted Universal Bimini Extension","text":"This kit was exactly what we needed! The additional shade keeps our family cool, and the design blends seamlessly with our MB boat. I was impressed with how sturdy the materials feel, and it only took me about 20 minutes to set up the first time. Highly recommend!"}},"review_mXd93p":{"type":"review","settings":{"name":"Andrew E.","date":"03\/21\/2024","product_title":"Wake Tower Mounted Universal Bimini Extension","text":"Very cool shade! This is much needed with the small kids and the extreme AZ heat! The carbon fiber poles look very good! Good quality design and product! Everyone needs one!"}},"review_Xe8qkw":{"type":"review","settings":{"name":"David","date":"09\/14\/2025","product_title":"2017 - 2025 MB Boats Bimini Shade Extension Kit","text":"We love it, super easy to set up and take down and covers the whole back of the boat!"}}},"block_order":["review_y73Qqq","review_mR7dkk","review_mXd93p","review_Xe8qkw"],"name":"Customer Reviews","settings":{"heading":"Reviews","bg_image":"shopify:\/\/shop_images\/ocean-waves.png"}}},"order":["main","hero_PwQ9KH","shop_category_pTGbit","find_your_shoreline_fcDLhD","all_products_grid_4jDVaa","additional_resources_a8c3mT","customer_reviews_g94yk9"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_PwQ9KH": {
+      "type": "hero",
+      "blocks": {
+        "group_eyjeFH": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 100,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "logo_QhEYPg": {
+              "type": "logo",
+              "name": "t:names.logo",
+              "settings": {
+                "inverse": false,
+                "font": "heading",
+                "unit": "pixel",
+                "percent_width": 100,
+                "pixel_height": 160,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_WJWPUA": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Shop Shoreline </p><p>Products</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "h1",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_gAmWVW": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0,
+                "custom_id": ""
+              },
+              "blocks": {
+                "button_9q6RfM": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop All Products",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_KAMcUD": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Find My Shade Sail",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_9q6RfM",
+                "button_KAMcUD"
+              ]
+            }
+          },
+          "block_order": [
+            "logo_QhEYPg",
+            "text_WJWPUA",
+            "group_gAmWVW"
+          ]
+        },
+        "group_X8kaaC": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_TrnXRt": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_TrnXRt"
+          ]
+        }
+      },
+      "block_order": [
+        "group_eyjeFH",
+        "group_X8kaaC"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "video",
+        "video_1": "shopify://files/videos/09 - SLB25_Shade-Install-Boat_9x16_Final (1).mp4",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "shop_category_pTGbit": {
+      "type": "shop-category",
+      "blocks": {
+        "category_FXRGVg": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2821_1.jpg",
+            "title": "Shade Sails",
+            "link": "shopify://pages/category-page-shade-extension-kits"
+          }
+        },
+        "category_iQdNwz": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/09a39f3b-45d221_2bdcd265eb3e4783b9598f2b82e7e155_mv2.jpg",
+            "title": "Bimini Extensions",
+            "link": "shopify://pages/category-page-shade-extension-kits"
+          }
+        },
+        "category_fxfhmK": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/28177ebd-45d221_eda8f00c99fa4a588c784b2f347a90cf_mv2.jpg",
+            "title": "Apparel",
+            "link": "shopify://pages/category-page-apparel"
+          }
+        },
+        "category_t8F9WD": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/62e6703b-45d221_02382c3120954a6380e25cf4b11cfb46_mv2.png",
+            "title": "Accessories",
+            "link": "shopify://pages/shop"
+          }
+        }
+      },
+      "block_order": [
+        "category_FXRGVg",
+        "category_iQdNwz",
+        "category_fxfhmK",
+        "category_t8F9WD"
+      ],
+      "custom_css": [
+        "h3 {font-family: \"Bebas Neue\";}",
+        "*/h2 {font-family: \"League Spartan\";}",
+        "button,.hero__heading {font-family: \"League Spartan\", sans-serif;}"
+      ],
+      "name": "Shop Category Grid",
+      "settings": {
+        "heading": "Shop by Category"
+      }
+    },
+    "find_your_shoreline_fcDLhD": {
+      "type": "find-your-shoreline",
+      "disabled": true,
+      "custom_css": [
+        "h3 {font-family: \"Bebas Neue\";}",
+        "h2 {font-family: \"League Spartan\";}"
+      ],
+      "name": "Find Shoreline Shade",
+      "settings": {
+        "heading": "Find Your Shoreline Shade Bimini Extension"
+      }
+    },
+    "all_products_grid_4jDVaa": {
+      "type": "all-products-grid",
+      "custom_css": [
+        "h3 {font-family: \"Bebas Neue\";}",
+        "h2 {font-family: \"League Spartan\";}"
+      ],
+      "name": "All Products Grid",
+      "settings": {
+        "heading": "All Products",
+        "products": [
+          "2015-2025-malibu-boats-bimini-mounted-shade-extension",
+          "2017-2025-mb-boats-bimini-shade-extension-kit",
+          "athletic-fit-t-shirt-mauve",
+          "athletic-fit-t-shirt-white",
+          "athletic-fit-t-shirt-sage",
+          "axis-wake-boat-bimini-shade-extension-kit",
+          "carbon-fiber-telescoping-shade-poles",
+          "center-console-t-top-shade-extension",
+          "centurion-and-supreme-bimini-extension-kit",
+          "hyperlite-20-wakesurf-rope",
+          "curved-performance-hat",
+          "hardshell-wakesurf-board-case",
+          "centurion-predator-tower-bimini-extension",
+          "pontoon-boat-bimini-extension-kit",
+          "short-sleeve-t-shirt",
+          "slix-ceramic-detailing-spray",
+          "tige-ultre-shade-extension",
+          "wakesurf-rope-swivel-attachment",
+          "yamaha-xd-series-shade-extension"
+        ]
+      }
+    },
+    "additional_resources_a8c3mT": {
+      "type": "additional-resources",
+      "blocks": {
+        "link_gfCP6L": {
+          "type": "link",
+          "settings": {
+            "title": "FAQ",
+            "link": "shopify://pages/faq"
+          }
+        },
+        "link_NK6Bak": {
+          "type": "link",
+          "settings": {
+            "title": "Instructions",
+            "link": "shopify://pages/instructions-1"
+          }
+        },
+        "link_eBwrBq": {
+          "type": "link",
+          "settings": {
+            "title": "Returns",
+            "link": "shopify://pages/returns"
+          }
+        },
+        "link_4mXwaT": {
+          "type": "link",
+          "settings": {
+            "title": "Warranty",
+            "link": "shopify://pages/warranty"
+          }
+        }
+      },
+      "block_order": [
+        "link_gfCP6L",
+        "link_NK6Bak",
+        "link_eBwrBq",
+        "link_4mXwaT"
+      ],
+      "name": "Additional Resources",
+      "settings": {
+        "heading": "Additional Resources",
+        "text": "Explore our most popular resources below for quick answers, product instructions, or help reaching our team.",
+        "right_image": "shopify://shop_images/IMG_2821_1.jpg"
+      }
+    },
+    "customer_reviews_g94yk9": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_y73Qqq": {
+          "type": "review",
+          "settings": {
+            "name": "Zach G.",
+            "date": "06/24/2025",
+            "product_title": "2017-2025 Tige Bimini Shade Extension Kit",
+            "text": "This extension works perfectly. Shipping was super fast! Thinking about buying another one to point forward and cover bow!!"
+          }
+        },
+        "review_mR7dkk": {
+          "type": "review",
+          "settings": {
+            "name": "Luke S.",
+            "date": "07/01/2025",
+            "product_title": "Wake Tower Mounted Universal Bimini Extension",
+            "text": "This kit was exactly what we needed! The additional shade keeps our family cool, and the design blends seamlessly with our MB boat. I was impressed with how sturdy the materials feel, and it only took me about 20 minutes to set up the first time. Highly recommend!"
+          }
+        },
+        "review_mXd93p": {
+          "type": "review",
+          "settings": {
+            "name": "Andrew E.",
+            "date": "03/21/2024",
+            "product_title": "Wake Tower Mounted Universal Bimini Extension",
+            "text": "Very cool shade! This is much needed with the small kids and the extreme AZ heat! The carbon fiber poles look very good! Good quality design and product! Everyone needs one!"
+          }
+        },
+        "review_Xe8qkw": {
+          "type": "review",
+          "settings": {
+            "name": "David",
+            "date": "09/14/2025",
+            "product_title": "2017 - 2025 MB Boats Bimini Shade Extension Kit",
+            "text": "We love it, super easy to set up and take down and covers the whole back of the boat!"
+          }
+        }
+      },
+      "block_order": [
+        "review_y73Qqq",
+        "review_mR7dkk",
+        "review_mXd93p",
+        "review_Xe8qkw"
+      ],
+      "name": "Customer Reviews",
+      "settings": {
+        "heading": "Reviews",
+        "bg_image": "shopify://shop_images/ocean-waves.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_PwQ9KH",
+    "shop_category_pTGbit",
+    "find_your_shoreline_fcDLhD",
+    "all_products_grid_4jDVaa",
+    "additional_resources_a8c3mT",
+    "customer_reviews_g94yk9"
+  ]
+}
