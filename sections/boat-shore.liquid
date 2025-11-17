@@ -101,17 +101,16 @@
 @media (max-width: 768px) {
 
   .from-boat-to-shore {
-    padding: 2rem 0; /* No side padding – allows full-width */
+    padding: 2rem 0;
   }
 
   .boat-wrapper {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    background-color: #d2f3f4;
 
-    /* FIX: FULL WIDTH & REMOVE SIDE SQUEEZE */
-    padding: 2rem 1rem;   /* small padding so text can breathe */
+    background-color: #d2f3f4;
+    padding: 2rem 1rem;
     box-sizing: border-box;
 
     display: flex;
@@ -121,36 +120,40 @@
     justify-content: center;
 
     text-align: center;
-    gap: 2rem;
+    gap: 1.8rem;
   }
 
-  /* TEXT AREA */
+  /* TEXT BLOCK */
   .boat-text {
     width: 100%;
-    max-width: 95%; /* nice centered paragraph width */
+    max-width: 85%; /* limits line length */
     margin: 0 auto;
   }
 
+  /* HEADING */
   .boat-heading {
-    font-size: 1.9rem;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;   /* smaller */
+    font-weight: 800;
     line-height: 1.2;
+    margin-bottom: 0.8rem;
   }
 
+  /* DESCRIPTION PARAGRAPH */
   .boat-description {
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 0.95rem;  /* reduced */
+    line-height: 1.45;   /* tighter spacing */
     margin: 0 auto;
+    max-width: 90%;      /* constrain long lines */
+    word-break: break-word;
   }
 
   /* BUTTON */
   .boat-btn {
     width: 90%;
-    max-width: 320px;
+    max-width: 260px;
+    padding: 0.9rem;
+    font-size: 1rem;
     margin: 0 auto;
-    padding: 1rem;
-    display: block;
-    text-align: center;
   }
 
   /* BADGE IMAGE */
@@ -161,11 +164,38 @@
   }
 
   .boat-badge img {
-    max-width: 150px;
+    max-width: 120px;  /* smaller */
     margin-top: 1rem;
   }
 }
-  
+
+/* EXTRA SMALL SCREENS */
+@media (max-width: 480px) {
+
+  .boat-wrapper {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .boat-heading {
+    font-size: 1.4rem;
+  }
+
+  .boat-description {
+    font-size: 0.87rem;
+    max-width: 92%;
+    line-height: 1.4;
+  }
+
+  .boat-btn {
+    max-width: 230px;
+    font-size: 0.95rem;
+  }
+
+  .boat-badge img {
+    max-width: 90px;
+  }
+}
+
 
 /* Extra-small phones */
 @media (max-width: 480px) {
