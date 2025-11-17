@@ -10,7 +10,9 @@
       <p class="boat-description">{{ section.settings.description }}</p>
 
       {% if section.settings.button_label != blank %}
-        <a href="{{ section.settings.button_link }}" class="boat-btn">{{ section.settings.button_label }}</a>
+        <a href="{{ section.settings.button_link }}" class="boat-btn">
+          {{ section.settings.button_label }}
+        </a>
       {% endif %}
     </div>
 
@@ -43,6 +45,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  box-sizing: border-box;
 }
 
 /* TEXT AREA */
@@ -82,7 +85,7 @@
   background: #d94e21;
 }
 
-/* LOGO / BADGE IMAGE */
+/* BADGE IMAGE */
 .boat-badge {
   flex: 0 0 auto;
   display: flex;
@@ -95,50 +98,49 @@
   height: auto;
 }
 
-/* RESPONSIVE */
+/* =========================
+   MOBILE / TABLET
+========================= */
 @media (max-width: 768px) {
 
   .from-boat-to-shore {
-    padding: 2rem 1rem; /* reduce outer spacing */
+    padding: 3rem 1rem;
   }
 
   .boat-wrapper {
-    background-color: #d2f3f4;
     width: 100%;
     max-width: 100%;
-
     margin: 0 auto;
-    padding: 2rem 1.25rem;   /* perfect balanced padding */
+    padding: 2.5rem 1.5rem;
+    background-color: #d2f3f4;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
 
-    gap: 1.25rem;
-
-    border-radius: 8px;
+    gap: 1.5rem;
+    box-sizing: border-box;
   }
 
   .boat-text {
     width: 100%;
-    max-width: 500px;
+    max-width: 500px;   /* keeps text clearly inside the box */
   }
 
   .boat-heading {
-    margin-top: 0.5rem;      /* fixes top spacing issue */
-    margin-bottom: 1rem;     /* clean spacing */
+    margin: 0 0 1.25rem 0;
     font-size: 1.8rem;
     line-height: 1.2;
   }
 
   .boat-description {
-    margin: 0 auto 1.5rem auto;
+    margin: 0 0 1.75rem 0;
     width: 100%;
-    max-width: 450px;
+    max-width: 480px;
     font-size: 1.05rem;
-    line-height: 1.55;
+    line-height: 1.6;
   }
 
   .boat-btn {
@@ -149,32 +151,38 @@
   }
 
   .boat-badge {
-    display: flex;
-    justify-content: center;
     width: 100%;
+    justify-content: center;
   }
 
   .boat-badge img {
-    max-width: 140px;
-    height: auto;
+    max-width: 150px;
   }
 }
 
+/* Extra-small phones */
 @media (max-width: 480px) {
-
   .boat-wrapper {
-    padding: 1.75rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .boat-heading {
-    font-size: 1.55rem;
+    font-size: 1.6rem;
   }
 
   .boat-description {
-    font-size: 0.96rem;
+    font-size: 0.97rem;
+  }
+
+  .boat-btn {
+    max-width: 280px;
+    font-size: 1rem;
+  }
+
+  .boat-badge img {
+    max-width: 120px;
   }
 }
-
 {% endstylesheet %}
 
 {% schema %}
