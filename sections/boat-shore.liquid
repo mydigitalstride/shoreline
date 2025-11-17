@@ -104,33 +104,50 @@
 
   .boat-wrapper {
     width: 100%;
-    max-width: 95%;           
-    margin: 0 auto;           
-    padding: 2rem 1.5rem;           
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+
+    background-color: #d2f3f4;
+
+    display: flex;
     flex-direction: column;
+
+    align-items: center;   /* centers heading & text */
+    justify-content: center; 
     text-align: center;
-    gap: 2rem;
+
+    gap: 1.5rem;           /* even spacing */
+    border-radius: 10px;
   }
 
+  /* Headings inside the box */
   .boat-heading {
-    font-size: 1.8rem;
-    line-height: 1.3;
+    margin: 0;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    width: 100%;
   }
 
   .boat-description {
-    font-size: 1rem;
+    margin: 0;
+    width: 100%;
+    font-size: 1.05rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    max-width: 95%; /* ensures perfect centering */
   }
+
+  /* Button */
 
   .boat-btn {
     width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 320px;
     padding: 1rem;
-    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.05rem;
   }
 
+  /* Badge */
   .boat-badge {
     width: 100%;
     display: flex;
@@ -138,16 +155,17 @@
   }
 
   .boat-badge img {
-    max-width: 140px;
-    height: auto;
+    max-width: 150px;
   }
 }
 
-/* Extra small phones */
+
+/* Extra-small phones */
 @media (max-width: 480px) {
+
   .boat-wrapper {
-    padding: 1.5rem 1rem;
-    max-width: 100%;  
+    padding: 2rem 1rem;
+    border-radius: 8px;
   }
 
   .boat-heading {
@@ -155,12 +173,12 @@
   }
 
   .boat-description {
-    font-size: 0.95rem;
+    font-size: 0.97rem;
   }
 
   .boat-btn {
-    font-size: 0.95rem;
-    padding: 0.9rem;
+    max-width: 280px;
+    font-size: 1rem;
   }
 
   .boat-badge img {
