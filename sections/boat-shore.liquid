@@ -96,24 +96,75 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+
+  .from-boat-to-shore {
+    padding: 3rem 1.5rem;
+    background-position: top center;
+  }
+
   .boat-wrapper {
     flex-direction: column;
+    padding: 2rem 1.5rem;
     text-align: center;
+    gap: 2.5rem;
+  }
+
+  .boat-heading {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .boat-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+  }
+
+  .boat-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1rem;
   }
 
   .boat-badge {
+    display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .boat-badge img {
-    max-width: 200px;
-  }
-
-  .boat-text {
-    max-width: 100%;
+    max-width: 160px;
+    height: auto;
   }
 }
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .boat-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .boat-heading {
+    font-size: 1.6rem;
+  }
+
+  .boat-description {
+    font-size: 0.95rem;
+  }
+
+  .boat-btn {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+
+  .boat-badge img {
+    max-width: 140px;
+  }
+}
+
 {% endstylesheet %}
 
 {% schema %}
