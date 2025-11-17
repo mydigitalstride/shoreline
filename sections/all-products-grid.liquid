@@ -284,51 +284,139 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 /* === RESPONSIVE === */
+/* === RESPONSIVE FIXES === */
+
+/* ——— TABLET ——— */
 @media (max-width: 900px) {
+
   .products-header {
+    padding: 2rem 1.5rem 1rem;
     flex-direction: column;
     align-items: center;
-  }
-
-  .product-filter-dropdown {
-    margin-top: 1rem;
-  }
-
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-    padding: 0;
-    gap: 1.5rem;
-  }
-
-  .product-card {
-    max-width: 100%;
+    gap: 1rem;
   }
 
   .products-heading {
     text-align: center;
+    width: 100%;
   }
 
   .product-filter-dropdown {
+    margin-top: 0.5rem;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
   .filter-toggle {
-    width: 80%;
+    width: 100%;
+    max-width: 320px;
   }
 
   .filter-menu {
-    width: 80%;
+    width: 100%;
+    max-width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1rem 1rem;
   }
 }
+
+/* ——— MOBILE ——— */
+@media (max-width: 600px) {
+
+  .all-products-grid {
+    padding: 2.5rem 1rem;
+  }
+
+  .products-header {
+    padding: 1rem 0;
+    gap: 1.25rem;
+  }
+
+  .products-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  /* Filter centered + full width */
+  .product-filter-dropdown {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-toggle {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .filter-menu {
+    width: 100%;
+    max-width: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Grid becomes 1 column */
+  .products-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 1.75rem;
+  }
+
+  /* Better product card scaling */
+  .product-card {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .product-title-top {
+    font-size: 1.1rem;
+  }
+
+  .product-content {
+    padding-top: 0.5rem;
+  }
+
+  .product-price {
+    font-size: 0.85rem;
+  }
+
+  .add-to-cart-btn {
+    font-size: 0.85rem;
+    padding: 0.65rem 1rem;
+  }
+}
+
+/* ——— SMALL PHONES ——— */
+@media (max-width: 400px) {
+
+  .filter-toggle {
+    max-width: 240px;
+  }
+
+  .filter-menu {
+    max-width: 240px;
+  }
+
+  .product-title-top {
+    font-size: 1rem;
+  }
+
+  .add-to-cart-btn {
+    font-size: 0.8rem;
+  }
+}
+
 {% endstylesheet %}
 
 {% schema %}
