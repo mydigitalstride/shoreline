@@ -955,6 +955,37 @@ h6,
   }
 }
 
+/* Mobile typography adjustments */
+@media screen and (max-width: 749px) {
+  body,
+  .paragraph:not(.button),
+  .paragraph > * {
+    font-size: 1rem;
+  }
+
+  h2,
+  .h2.h2,
+  .text-block.h2 > * {
+    font-size: 2.5rem;
+    letter-spacing: 0px;
+  }
+
+  h3,
+  .h3,
+  .h3.h3,
+  .text-block.h3 > * {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  h4,
+  .h4.h4,
+  .text-block.h4 > * {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+}
+
 :first-child:is(.h1, .h2, .h3, .h4, .h5, .h6) {
   margin-block-start: 0;
 }
