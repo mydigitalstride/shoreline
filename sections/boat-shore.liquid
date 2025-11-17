@@ -99,19 +99,19 @@
 }
 
 /* =========================
-   MOBILE / TABLET
+   MOBILE FIX (Everything perfect)
 ========================= */
 @media (max-width: 768px) {
 
-  .from-boat-to-shore {
-    padding: 3rem 0; /* let wrapper handle side padding */
-  }
-
+  /* Light blue box */
   .boat-wrapper {
-    width: 92%;           /* so blue box is clearly inside screen */
-    max-width: 92%;
-    margin: 0 auto;
-    padding: 2.25rem 1.5rem;
+    width: 90%;           /* ensures even left/right margin */
+    max-width: 600px;     /* makes layout stable */
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 2rem 1.5rem;
+
     background-color: #d2f3f4;
 
     display: flex;
@@ -120,75 +120,73 @@
     justify-content: center;
     text-align: center;
 
-    gap: 1.5rem;
     box-sizing: border-box;
+    gap: 1.5rem;
   }
 
-  .boat-text {
-    width: 100%;
-    max-width: 500px;
+  /* Heading */
+  .boat-heading {
+    font-size: 1.7rem;
+    line-height: 1.25;
     margin: 0 auto;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  /* Description */
+  .boat-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto 1.2rem auto; 
+  }
+
+  /* Button – smaller and centered */
+  .boat-btn {
+    display: block;
+    width: 70%;              /* no more full width */
+    max-width: 260px;        /* prevents overflowing */
+    margin: 1rem auto 0 auto;
+    padding: 0.9rem 1rem;
+
+    font-size: 1rem;
     text-align: center;
   }
 
-  .boat-heading {
-    margin: 0 0 1.1rem 0;
-    font-size: 1.7rem;
-    line-height: 1.2;
-    padding: 0 0.5rem; /* keeps text away from edges */
-  }
-
-  .boat-description {
-    margin: 0 0 1.5rem 0;
-    width: 100%;
-    max-width: 480px;
-    font-size: 1.02rem;
-    line-height: 1.6;
-    padding: 0 0.75rem;
-  }
-
-  .boat-btn {
-    display: block;
-    width: 100%;
-    max-width: 260px;   /* smaller button */
-    padding: 0.9rem 1.2rem;
-    font-size: 1rem;
-    margin: 1rem auto 0;  /* centered inside box */
-  }
-
-  .boat-badge {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .boat-badge img {
-    max-width: 110px;   /* smaller badge */
-  }
-}
-
-/* Extra-small phones */
-@media (max-width: 480px) {
-  .boat-wrapper {
-    padding: 2rem 1rem;
-  }
-
-  .boat-heading {
-    font-size: 1.5rem;
-  }
-
-  .boat-description {
-    font-size: 0.96rem;
-  }
-
-  .boat-btn {
-    max-width: 240px;
-    font-size: 0.98rem;
-  }
-
+  /* Smaller badge */
   .boat-badge img {
     max-width: 100px;
   }
 }
+
+/* Super small screens */
+@media (max-width: 480px) {
+
+  .boat-wrapper {
+    width: 92%;
+    padding: 1.8rem 1.2rem;
+  }
+
+  .boat-heading {
+    font-size: 1.55rem;
+  }
+
+  .boat-description {
+    font-size: 0.95rem;
+    max-width: 95%;
+  }
+
+  .boat-btn {
+    width: 75%;
+    max-width: 230px;
+  }
+
+  .boat-badge img {
+    max-width: 90px;
+  }
+}
+
 {% endstylesheet %}
 
 {% schema %}
