@@ -98,96 +98,77 @@
   height: auto;
 }
 
-/* ================================
-   MOBILE FIX — TRUE CENTERED BOX
-================================ */
 @media (max-width: 768px) {
 
+  /* Force wrapper to never overflow screen */
   .boat-wrapper {
-    background-color: #d2f3f4;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    overflow: hidden !important;   /* KEY FIX */
+  }
 
+  /* Ensure text cannot extend outside the box */
+  .boat-text {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
-
-    padding: 2.2rem 1.2rem;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
     text-align: center;
-
-    overflow: hidden; /* prevents content spilling */
+    overflow-wrap: break-word;
   }
 
-  /* Proper centered text */
-  .boat-heading,
-  .boat-description {
-    width: 100%;
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+  /* Fix heading width */
   .boat-heading {
-    font-size: 1.8rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-
-  .boat-description {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Smaller button */
-  .boat-btn {
-    width: 80%;
-    max-width: 260px;
-    text-align: center;
-
-    padding: 0.9rem 1rem;
-    margin: 0 auto 1rem auto;
-
-    font-size: 1rem;
-    display: block;
-  }
-
-  /* Fix the badge overflowing right side */
-  .boat-badge img {
-    max-width: 120px;
     width: 100%;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  /* Fix description width */
+  .boat-description {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  /* Fix button wrapping */
+  .boat-btn {
+    width: 90%;
+    max-width: 280px;
+    margin: 1.5rem auto 1rem auto;
+  }
+
+  /* MAIN ISSUE: Badge is oversized — reduce it more */
+  .boat-badge img {
+    max-width: 90px !important;   /* Reduced to avoid pushing width */
+    height: auto;
   }
 }
 
-/* EXTRA SMALL (iPhone SE, 12 mini) */
+
+/* Extra-small phones */
 @media (max-width: 480px) {
   .boat-wrapper {
-    padding: 1.8rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .boat-heading {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
   }
 
   .boat-description {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
   }
 
   .boat-btn {
-    width: 85%;
     max-width: 240px;
+    font-size: 0.98rem;
   }
 
   .boat-badge img {
     max-width: 100px;
   }
 }
-
 {% endstylesheet %}
 
 {% schema %}
