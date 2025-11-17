@@ -94,22 +94,24 @@
 }
 
 .boat-badge img {
-  max-width: 250px;
+  max-width: 220px;
   height: auto;
 }
 
-
+/* =========================
+   MOBILE / TABLET
+========================= */
 @media (max-width: 768px) {
 
   .from-boat-to-shore {
-    padding: 3rem 1rem;
+    padding: 3rem 0; /* let wrapper handle side padding */
   }
 
   .boat-wrapper {
-    width: 100%;
-    max-width: 100%;
+    width: 92%;           /* so blue box is clearly inside screen */
+    max-width: 92%;
     margin: 0 auto;
-    padding: 2.5rem 1.5rem;
+    padding: 2.25rem 1.5rem;
     background-color: #d2f3f4;
 
     display: flex;
@@ -124,37 +126,43 @@
 
   .boat-text {
     width: 100%;
-    max-width: 500px;   /* keeps text clearly inside the box */
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .boat-heading {
-    margin: 0 0 1.25rem 0;
-    font-size: 1.8rem;
+    margin: 0 0 1.1rem 0;
+    font-size: 1.7rem;
     line-height: 1.2;
+    padding: 0 0.5rem; /* keeps text away from edges */
   }
 
   .boat-description {
-    margin: 0 0 1.75rem 0;
+    margin: 0 0 1.5rem 0;
     width: 100%;
     max-width: 480px;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     line-height: 1.6;
+    padding: 0 0.75rem;
   }
 
   .boat-btn {
+    display: block;
     width: 100%;
-    max-width: 320px;
-    padding: 1rem;
-    font-size: 1.05rem;
+    max-width: 260px;   /* smaller button */
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    margin: 1rem auto 0;  /* centered inside box */
   }
 
   .boat-badge {
-    width: 50%;
+    width: 100%;
     justify-content: center;
   }
 
   .boat-badge img {
-    max-width: 90px;
+    max-width: 110px;   /* smaller badge */
   }
 }
 
@@ -165,20 +173,20 @@
   }
 
   .boat-heading {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .boat-description {
-    font-size: 0.97rem;
+    font-size: 0.96rem;
   }
 
   .boat-btn {
-    max-width: 280px;
-    font-size: 1rem;
+    max-width: 240px;
+    font-size: 0.98rem;
   }
 
   .boat-badge img {
-    max-width: 10px;
+    max-width: 100px;
   }
 }
 {% endstylesheet %}
