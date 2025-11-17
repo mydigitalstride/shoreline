@@ -114,6 +114,8 @@
 }
 
 /* RESPONSIVE */
+
+/* Medium screens */
 @media (max-width: 1200px) {
   .categories-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -122,13 +124,50 @@
 
 @media (max-width: 989px) {
   .categories-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* MOBILE FULL FIX */
 @media (max-width: 600px) {
+
+  .shop-category-grid {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+  }
+
+  .categories-heading {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
+
   .categories-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .category-image {
+    height: 220px; /* smaller, fits mobile better */
+    padding: 1rem;
+  }
+
+  .category-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+
+  .category-image {
+    height: 190px;
+  }
+
+  .category-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
   }
 }
 {% endstylesheet %}
