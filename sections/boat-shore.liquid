@@ -101,18 +101,18 @@
 @media (max-width: 768px) {
 
   .from-boat-to-shore {
-    padding: 3rem 1rem;
+    padding: 2rem 0; /* No side padding – allows full-width */
   }
 
   .boat-wrapper {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
-
-    /* Internal light-blue box */
+    margin: 0;
     background-color: #d2f3f4;
 
-    padding: 2.5rem 1.5rem;
+    /* FIX: FULL WIDTH & REMOVE SIDE SQUEEZE */
+    padding: 2rem 1rem;   /* small padding so text can breathe */
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
@@ -124,41 +124,36 @@
     gap: 2rem;
   }
 
-  /* --- TEXT AREA --- */
+  /* TEXT AREA */
   .boat-text {
     width: 100%;
-    max-width: 90%;
+    max-width: 95%; /* nice centered paragraph width */
     margin: 0 auto;
-    text-align: center;
   }
 
   .boat-heading {
     font-size: 1.9rem;
+    margin-bottom: 1rem;
     line-height: 1.2;
-    width: 100%;
-    margin: 0 auto 1rem auto;
   }
 
   .boat-description {
-    width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
     font-size: 1.05rem;
     line-height: 1.6;
+    margin: 0 auto;
   }
 
-  /* --- BUTTON --- */
+  /* BUTTON */
   .boat-btn {
-    width: 100%;
-    max-width: 300px;
-    padding: 1rem;
+    width: 90%;
+    max-width: 320px;
     margin: 0 auto;
-    font-size: 1.1rem;
+    padding: 1rem;
     display: block;
     text-align: center;
   }
 
-  /* --- BADGE IMAGE AT BOTTOM --- */
+  /* BADGE IMAGE */
   .boat-badge {
     width: 100%;
     display: flex;
@@ -167,7 +162,6 @@
 
   .boat-badge img {
     max-width: 150px;
-    height: auto;
     margin-top: 1rem;
   }
 }
