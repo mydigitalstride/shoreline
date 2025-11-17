@@ -100,67 +100,25 @@
 
 @media (max-width: 768px) {
 
-  /* Force wrapper to stay inside screen */
-  .boat-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 2rem 1rem;
-    margin: 0 auto;
-    box-sizing: border-box;
-    overflow: hidden !important; /* KEY FIX */
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Text area stays centered, no overflow */
   .boat-text {
     width: 100%;
-    max-width: 100%;
+    max-width: 92%;     /* pulls text inward so it isn't touching the edges */
+    margin: 0 auto;     /* centers it perfectly */
     text-align: center;
-    padding: 0 0.5rem;
-    overflow-wrap: break-word;
+    padding: 0;
   }
 
   .boat-heading {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 0.3rem;
+    max-width: 90%;
+    margin: 0 auto 1rem auto;
     font-size: 1.9rem;
   }
 
   .boat-description {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 0.5rem;
+    max-width: 90%;
+    margin: 0 auto;
     font-size: 1.05rem;
     line-height: 1.6;
-  }
-
-  /* Center the button INSIDE the wrapper */
-  .boat-btn {
-    width: 90%;
-    max-width: 280px;
-    margin: 1.5rem auto 1rem auto;
-    display: block;
-  }
-
-  /* FIX 3 — The badge image was too big and broke the layout */
-  .boat-badge img {
-    max-width: 110px !important; /* smaller */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* Badge container centered */
-  .boat-badge {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
   }
 }
 
