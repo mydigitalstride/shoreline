@@ -100,48 +100,67 @@
 
 @media (max-width: 768px) {
 
-  /* Force wrapper to never overflow screen */
+  /* Force wrapper to stay inside screen */
   .boat-wrapper {
     width: 100% !important;
     max-width: 100% !important;
     padding: 2rem 1rem;
+    margin: 0 auto;
     box-sizing: border-box;
-    overflow: hidden !important;   /* KEY FIX */
+    overflow: hidden !important; /* KEY FIX */
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Ensure text cannot extend outside the box */
+  /* Text area stays centered, no overflow */
   .boat-text {
     width: 100%;
     max-width: 100%;
     text-align: center;
+    padding: 0 0.5rem;
     overflow-wrap: break-word;
   }
 
-  /* Fix heading width */
   .boat-heading {
     width: 100%;
     max-width: 100%;
-    padding: 0 0.5rem;
+    padding: 0 0.3rem;
+    font-size: 1.9rem;
   }
 
-  /* Fix description width */
   .boat-description {
     width: 100%;
     max-width: 100%;
     padding: 0 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
   }
 
-  /* Fix button wrapping */
+  /* Center the button INSIDE the wrapper */
   .boat-btn {
     width: 90%;
     max-width: 280px;
     margin: 1.5rem auto 1rem auto;
+    display: block;
   }
 
-  /* MAIN ISSUE: Badge is oversized — reduce it more */
+  /* FIX 3 — The badge image was too big and broke the layout */
   .boat-badge img {
-    max-width: 90px !important;   /* Reduced to avoid pushing width */
+    max-width: 110px !important; /* smaller */
     height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Badge container centered */
+  .boat-badge {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
   }
 }
 
