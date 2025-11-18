@@ -142,6 +142,36 @@
     0 100%
   );
 }
+/* === FIX HEADER ALIGNMENT ON HERO SECTIONS === */
+
+/* Remove Shopify's default padding on the header */
+.header-wrapper,
+.header__inline-menu,
+.header,
+.header__left,
+.header__heading {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Make the hamburger icon flush left */
+.header__icon-item,
+.header__icon,
+.menu-toggle,
+.header__menu,
+.header__mobile-nav {
+    margin-left: 0 !important;
+}
+
+/* Full edge-to-edge mobile menu drawer */
+#menu-drawer,
+.menu-drawer,
+.menu-drawer__inner {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
 
 /* Smaller + centered for mobile */
 @media (max-width: 989px) {
