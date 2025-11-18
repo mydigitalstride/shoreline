@@ -1,1 +1,487 @@
-{"sections":{"main":{"type":"main-page","blocks":{"heading":{"type":"text","name":"Title","settings":{"text":"<h1>{{ closest.page.title }}<\/h1>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h2","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"page-content":{"type":"page-content","settings":{},"blocks":{}}},"block_order":["heading","page-content"],"disabled":true,"settings":{"content_direction":"column","gap":32,"color_scheme":"","padding-block-start":40,"padding-block-end":80}},"hero_Dngph7":{"type":"hero","blocks":{"group_kCL7DM":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":100,"padding-inline-end":0,"custom_id":""},"blocks":{"logo_KzLMUi":{"type":"logo","name":"t:names.logo","settings":{"inverse":false,"font":"heading","unit":"pixel","percent_width":100,"pixel_height":160,"custom_mobile_size":false,"unit_mobile":"percent","percent_width_mobile":100,"pixel_height_mobile":120,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"icon_yfHUXx":{"type":"icon","name":"t:names.icon","disabled":true,"settings":{"icon":"price_tag","image_upload":"shopify:\/\/shop_images\/Made_In_USA_-_White_Version.png","width":24,"link":"","open_in_new_tab":false},"blocks":{}},"text_7brfY9":{"type":"text","settings":{"text":"<p>Shoreline Brands FAQ<\/p>","width":"fit-content","max_width":"narrow","alignment":"left","type_preset":"h1","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":20,"padding-inline-end":0},"blocks":{}},"group_Dc9Qcc":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":20,"padding-inline-end":0,"custom_id":""},"blocks":{"button_bjbH3V":{"type":"button","name":"t:names.button","settings":{"label":"Shop All Products","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}},"button_ePYWBN":{"type":"button","name":"t:names.button","settings":{"label":"Contact Us","link":"shopify:\/\/pages\/contact","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["button_bjbH3V","button_ePYWBN"]}},"block_order":["logo_KzLMUi","icon_yfHUXx","text_7brfY9","group_Dc9Qcc"]},"group_XCHhzd":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0,"custom_id":"menu-group"},"blocks":{"menu_Az9Aqk":{"type":"menu","name":"t:names.menu","settings":{"menu":"main-menu","heading":"","menu_spacing":12,"show_as_accordion":false,"accordion_icon":"caret","accordion_dividers":false,"inherit_color_scheme":true,"color_scheme":"","heading_preset":"h3","link_preset":"paragraph","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0,"main_menu":true},"blocks":{}}},"block_order":["menu_Az9Aqk"]}},"block_order":["group_kCL7DM","group_XCHhzd"],"name":"t:names.hero","settings":{"media_type_1":"image","image_1":"shopify:\/\/shop_images\/IMG_1485.jpg","video_1":"shopify:\/\/files\/videos\/121 - SB24_Website_SunShade_1080x1080 (1).mp4","media_type_2":"image","link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":16,"section_width":"page-width","section_height":"large","section_height_custom":50,"color_scheme":"scheme-5","toggle_overlay":true,"overlay_color":"#00000026","overlay_style":"gradient","gradient_direction":"to top","blurred_reflection":false,"reflection_opacity":75,"padding-block-start":40,"padding-block-end":40}},"faq_two_column_KbiRcg":{"type":"faq-two-column","blocks":{"faq_6EyMfE":{"type":"faq","settings":{"question":"What Bimini Shade Extension will fit my boat?","answer":"We have over 18 different variations of boat shade extensions to fit most makes and models. Use our search tool to find yours. If you are still unable to locate the correct bimini kit, please get in touch with our team for personalized assistance."}},"faq_PnPkqV":{"type":"faq","settings":{"question":"What if I have an existing bimini top?","answer":"Our versatile boat shade kits are designed to work seamlessly with your factory bimini top. We include telescopic poles that are longer than the sunshade provided to eliminate any overlap between your factory bimini and our bimini extension kit."}},"faq_RYQPh8":{"type":"faq","settings":{"question":"What if I don’t have a wakeboard tower?","answer":"We offer bimini shade kits for virtually all makes and models. Visit our shop page to learn more about our boat bimini shade options and installation setups."}},"faq_T4RiAq":{"type":"faq","settings":{"question":"How do you store the bimini shade extension when it is not extended?","answer":"The included mounting brackets will always remain on the tower. When not in use, the poles collapse down to 36\" long and can be easily stored in one of your boat compartments. The bimini shade material is lightweight and flexible for easy storage anywhere on your boat. We also offer an optional storage and carrying case to accompany your bimini kit."}},"faq_QKfti7":{"type":"faq","settings":{"question":"How long does it take to set up the bimini shade extension?","answer":"Setting up the boat bimini shade extension is a breeze. With the included mounting hardware, you can complete the initial setup in just 5–10 minutes. Once in position, deploying or disassembling the shade and telescoping poles takes less than a minute."}},"faq_iLFPtk":{"type":"faq","settings":{"question":"Can I use the bimini shade extension while wakesurfing?","answer":"Yes, the boat shade extension can be used while wakesurfing. The rope will be passed underneath to attach to your tow point. The maximum recommended speed is 15 mph for safe use."}},"faq_b6rgBi":{"type":"faq","settings":{"question":"Do you offer custom colors for the bimini extension?","answer":"We keep a black shade in stock, but customization is available for an additional fee. Please use the Contact Us form for general inquiries about custom bimini tops or bimini kit options."}},"faq_k38Yp8":{"type":"faq","settings":{"question":"What is a Bimini Extension?","answer":"A Bimini Extension is a sun-shade device used on your boat to protect passengers not covered by your factory Bimini top.\n\nAlso Known As: Shade Sail, Boat Shade Extension, Transom Awning, Wake Shade, Sun Shade Canopy."}}},"block_order":["faq_6EyMfE","faq_PnPkqV","faq_RYQPh8","faq_T4RiAq","faq_QKfti7","faq_iLFPtk","faq_b6rgBi","faq_k38Yp8"],"name":"FAQ Two Column","settings":{"bg_image":"shopify:\/\/shop_images\/Background_-_Blue.png","heading":"Frequently Asked Questions","subtext":"Learn more about how our bimini tops, shade kits, and boat shade extensions work and how to get the best fit for your boat.","button_text":"Contact Us","button_link":"shopify:\/\/pages\/contact"}},"contact_shoreline_brands_bm9bt9":{"type":"contact-shoreline-brands","name":"Contact Shoreline Brands","settings":{}},"additional_resources_a4NEJq":{"type":"additional-resources","blocks":{"link_YVKUbK":{"type":"link","settings":{"title":"FAQ","link":"shopify:\/\/pages\/faq"}},"link_GgUzbK":{"type":"link","settings":{"title":"Instructions","link":"shopify:\/\/pages\/instructions-1"}},"link_McUJwb":{"type":"link","settings":{"title":"Returns","link":"shopify:\/\/pages\/returns"}},"link_mp9Uwp":{"type":"link","settings":{"title":"Warranty","link":"shopify:\/\/pages\/warranty"}}},"block_order":["link_YVKUbK","link_GgUzbK","link_McUJwb","link_mp9Uwp"],"name":"Additional Resources","settings":{"heading":"Additional Resources","text":"We’re here to make your experience simple. Whether you need installation instructions, product details, or direct support, these quick links will point you in the right direction.","right_image":"shopify:\/\/shop_images\/IMG_2739.jpg"}}},"order":["main","hero_Dngph7","faq_two_column_KbiRcg","contact_shoreline_brands_bm9bt9","additional_resources_a4NEJq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_Dngph7": {
+      "type": "hero",
+      "blocks": {
+        "group_XCHhzd": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 49,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_Az9Aqk": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_Az9Aqk"
+          ]
+        },
+        "group_kCL7DM": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 100,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "logo_KzLMUi": {
+              "type": "logo",
+              "name": "t:names.logo",
+              "settings": {
+                "inverse": false,
+                "font": "heading",
+                "unit": "pixel",
+                "percent_width": 100,
+                "pixel_height": 160,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "icon_yfHUXx": {
+              "type": "icon",
+              "name": "t:names.icon",
+              "disabled": true,
+              "settings": {
+                "icon": "price_tag",
+                "image_upload": "shopify://shop_images/Made_In_USA_-_White_Version.png",
+                "width": 24,
+                "link": "",
+                "open_in_new_tab": false
+              },
+              "blocks": {}
+            },
+            "text_7brfY9": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Shoreline Brands FAQ</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "h1",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_Dc9Qcc": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0,
+                "custom_id": ""
+              },
+              "blocks": {
+                "button_bjbH3V": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop All Products",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_ePYWBN": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Contact Us",
+                    "link": "shopify://pages/contact",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_bjbH3V",
+                "button_ePYWBN"
+              ]
+            }
+          },
+          "block_order": [
+            "logo_KzLMUi",
+            "icon_yfHUXx",
+            "text_7brfY9",
+            "group_Dc9Qcc"
+          ]
+        }
+      },
+      "block_order": [
+        "group_XCHhzd",
+        "group_kCL7DM"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/IMG_1485.jpg",
+        "video_1": "shopify://files/videos/121 - SB24_Website_SunShade_1080x1080 (1).mp4",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "faq_two_column_KbiRcg": {
+      "type": "faq-two-column",
+      "blocks": {
+        "faq_6EyMfE": {
+          "type": "faq",
+          "settings": {
+            "question": "What Bimini Shade Extension will fit my boat?",
+            "answer": "We have over 18 different variations of boat shade extensions to fit most makes and models. Use our search tool to find yours. If you are still unable to locate the correct bimini kit, please get in touch with our team for personalized assistance."
+          }
+        },
+        "faq_PnPkqV": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I have an existing bimini top?",
+            "answer": "Our versatile boat shade kits are designed to work seamlessly with your factory bimini top. We include telescopic poles that are longer than the sunshade provided to eliminate any overlap between your factory bimini and our bimini extension kit."
+          }
+        },
+        "faq_RYQPh8": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I don’t have a wakeboard tower?",
+            "answer": "We offer bimini shade kits for virtually all makes and models. Visit our shop page to learn more about our boat bimini shade options and installation setups."
+          }
+        },
+        "faq_T4RiAq": {
+          "type": "faq",
+          "settings": {
+            "question": "How do you store the bimini shade extension when it is not extended?",
+            "answer": "The included mounting brackets will always remain on the tower. When not in use, the poles collapse down to 36\" long and can be easily stored in one of your boat compartments. The bimini shade material is lightweight and flexible for easy storage anywhere on your boat. We also offer an optional storage and carrying case to accompany your bimini kit."
+          }
+        },
+        "faq_QKfti7": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does it take to set up the bimini shade extension?",
+            "answer": "Setting up the boat bimini shade extension is a breeze. With the included mounting hardware, you can complete the initial setup in just 5–10 minutes. Once in position, deploying or disassembling the shade and telescoping poles takes less than a minute."
+          }
+        },
+        "faq_iLFPtk": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use the bimini shade extension while wakesurfing?",
+            "answer": "Yes, the boat shade extension can be used while wakesurfing. The rope will be passed underneath to attach to your tow point. The maximum recommended speed is 15 mph for safe use."
+          }
+        },
+        "faq_b6rgBi": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer custom colors for the bimini extension?",
+            "answer": "We keep a black shade in stock, but customization is available for an additional fee. Please use the Contact Us form for general inquiries about custom bimini tops or bimini kit options."
+          }
+        },
+        "faq_k38Yp8": {
+          "type": "faq",
+          "settings": {
+            "question": "What is a Bimini Extension?",
+            "answer": "A Bimini Extension is a sun-shade device used on your boat to protect passengers not covered by your factory Bimini top.\n\nAlso Known As: Shade Sail, Boat Shade Extension, Transom Awning, Wake Shade, Sun Shade Canopy."
+          }
+        }
+      },
+      "block_order": [
+        "faq_6EyMfE",
+        "faq_PnPkqV",
+        "faq_RYQPh8",
+        "faq_T4RiAq",
+        "faq_QKfti7",
+        "faq_iLFPtk",
+        "faq_b6rgBi",
+        "faq_k38Yp8"
+      ],
+      "name": "FAQ Two Column",
+      "settings": {
+        "bg_image": "shopify://shop_images/Background_-_Blue.png",
+        "heading": "Frequently Asked Questions",
+        "subtext": "Learn more about how our bimini tops, shade kits, and boat shade extensions work and how to get the best fit for your boat.",
+        "button_text": "Contact Us",
+        "button_link": "shopify://pages/contact"
+      }
+    },
+    "contact_shoreline_brands_bm9bt9": {
+      "type": "contact-shoreline-brands",
+      "name": "Contact Shoreline Brands",
+      "settings": {}
+    },
+    "additional_resources_a4NEJq": {
+      "type": "additional-resources",
+      "blocks": {
+        "link_YVKUbK": {
+          "type": "link",
+          "settings": {
+            "title": "FAQ",
+            "link": "shopify://pages/faq"
+          }
+        },
+        "link_GgUzbK": {
+          "type": "link",
+          "settings": {
+            "title": "Instructions",
+            "link": "shopify://pages/instructions-1"
+          }
+        },
+        "link_McUJwb": {
+          "type": "link",
+          "settings": {
+            "title": "Returns",
+            "link": "shopify://pages/returns"
+          }
+        },
+        "link_mp9Uwp": {
+          "type": "link",
+          "settings": {
+            "title": "Warranty",
+            "link": "shopify://pages/warranty"
+          }
+        }
+      },
+      "block_order": [
+        "link_YVKUbK",
+        "link_GgUzbK",
+        "link_McUJwb",
+        "link_mp9Uwp"
+      ],
+      "name": "Additional Resources",
+      "settings": {
+        "heading": "Additional Resources",
+        "text": "We’re here to make your experience simple. Whether you need installation instructions, product details, or direct support, these quick links will point you in the right direction.",
+        "right_image": "shopify://shop_images/IMG_2739.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_Dngph7",
+    "faq_two_column_KbiRcg",
+    "contact_shoreline_brands_bm9bt9",
+    "additional_resources_a4NEJq"
+  ]
+}
