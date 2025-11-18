@@ -21,13 +21,16 @@
       </div>
 
       <div class="bimini-finder-buttons">
-        <button type="button" id="clearBtn" class="bimini-btn clear">{{ section.settings.clear_text }}</button>
-        <button type="button" id="searchBtn" class="bimini-btn search">{{ section.settings.search_text }}</button>
+        <button type="button" id="clearBtn" class="bimini-btn clear">
+          {{ section.settings.clear_text }}
+        </button>
+
+        <button type="button" id="searchBtn" class="bimini-btn search">
+          {{ section.settings.search_text }}
+        </button>
       </div>
     </form>
 
-    <!-- Results Container -->
-    <div id="resultsContainer" class="bimini-results"></div>
   </div>
 </section>
 
@@ -38,11 +41,13 @@ document.addEventListener("DOMContentLoaded", async function() {
   const modelSelect = document.getElementById("modelSelect");
   const searchBtn = document.getElementById("searchBtn");
   const clearBtn = document.getElementById("clearBtn");
-  const resultsContainer = document.getElementById("resultsContainer");
+
+  // 🔗 UNIVERSAL FALLBACK PRODUCT
+  const UNIVERSAL_URL = "/products/universal-bimini-shade-extension";
 
   let boatData = [];
 
-  // ✅ Fetch the boats.json file dynamically
+  // Load boats.json
   try {
     const response = await fetch('{{ "boats.json" | asset_url }}');
     boatData = await response.json();
@@ -50,19 +55,19 @@ document.addEventListener("DOMContentLoaded", async function() {
     console.error("Error loading boats.json:", err);
   }
 
-  // ✅ Populate Year dropdown
+  // Populate Years
   const years = [...new Set(boatData.map(item => String(item.Year)))].sort((a, b) => b - a);
   years.forEach(year => {
     yearSelect.innerHTML += `<option value="${year}">${year}</option>`;
   });
 
-  // ✅ Populate Make dropdown
+  // Populate Makes
   const makes = [...new Set(boatData.map(item => item.Make))].sort();
   makes.forEach(make => {
     makeSelect.innerHTML += `<option value="${make}">${make}</option>`;
   });
 
-  // ✅ Update Models when Year or Make changes
+  // Update Models when year/make changes
   function updateModels() {
     const selectedYear = yearSelect.value;
     const selectedMake = makeSelect.value;
@@ -85,46 +90,42 @@ document.addEventListener("DOMContentLoaded", async function() {
   yearSelect.addEventListener("change", updateModels);
   makeSelect.addEventListener("change", updateModels);
 
-  // ✅ Clear Filters
+  // Clear Filters
   clearBtn.addEventListener("click", function() {
     yearSelect.selectedIndex = 0;
     makeSelect.selectedIndex = 0;
     modelSelect.innerHTML = `<option value="">Select Model</option>`;
     modelSelect.disabled = true;
-    resultsContainer.innerHTML = "";
   });
 
-  // ✅ Search + Show Results in Horizontal Card Layout
+  // SEARCH → Redirect Only
   searchBtn.addEventListener("click", function() {
     const year = yearSelect.value;
     const make = makeSelect.value;
     const model = modelSelect.value;
 
-    const filtered = boatData.filter(item =>
+    // Find a matching entry
+    const match = boatData.find(item =>
       (!year || String(item.Year) === year) &&
       (!make || item.Make === make) &&
       (!model || item.Model === model)
     );
 
-    if (filtered.length === 0) {
-      resultsContainer.innerHTML = `<p class="no-results">No results found.</p>`;
+    // Redirect logic
+    if (match && match.link) {
+      window.location.href = match.link;
       return;
     }
 
-    resultsContainer.innerHTML = filtered.map(item => `
-      <div class="bimini-card">
-        <div class="bimini-card-info">
-          <h3 class="bimini-card-model">${item.Model || "Model"}</h3>
-          <p class="bimini-card-details">${item.Make || ""} ${item.Year || ""}</p>
-        </div>
-        <a href="${item.link || '#'}" class="bimini-card-btn" target="_blank">View Product</a>
-      </div>
-    `).join("");
+    // Fallback if no model exists
+    window.location.href = UNIVERSAL_URL;
   });
+
 });
 </script>
 
 {% stylesheet %}
+
 /* ==============================
    BIMINI FINDER SECTION
 ============================== */
@@ -135,30 +136,21 @@ document.addEventListener("DOMContentLoaded", async function() {
   padding: 6rem 0;
 }
 
-/* Container */
 .page-width {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
-  width: 100%;
 }
 
-.bimini-finder-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Heading */
 .bimini-finder-heading {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   margin-bottom: 3rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
 }
 
-/* Dropdown Row */
+/* --- Select Row --- */
 .bimini-finder-selects {
   display: flex;
   justify-content: center;
@@ -167,7 +159,7 @@ document.addEventListener("DOMContentLoaded", async function() {
   margin-bottom: 3rem;
 }
 
-/* Dropdowns */
+/* --- Dropdowns --- */
 .bimini-select {
   background: transparent;
   color: #fff;
@@ -177,26 +169,28 @@ document.addEventListener("DOMContentLoaded", async function() {
   padding: 1rem 2rem;
   width: 280px;
   text-align: center;
-  text-transform: capitalize;
-  appearance: none;
+  appearance: none; /* NO DROPDOWN ARROW */
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-.bimini-select:hover {
-  border-color: #46b3b8;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.bimini-select option {
-  color: #0f1f3d;
-  background-color: #fff;
+  transition: all .3s ease;
 }
 
-/* Buttons */
+.bimini-select option {
+  color: #0f1f3d;
+  background: #fff;
+}
+
+.bimini-select:hover {
+  border-color: #46b3b8;
+  background: rgba(255,255,255, .1);
+}
+
+/* --- Buttons --- */
 .bimini-finder-buttons {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
+
 .bimini-btn {
   font-size: 1.2rem;
   font-weight: 800;
@@ -206,85 +200,30 @@ document.addEventListener("DOMContentLoaded", async function() {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: .3s ease;
 }
+
 .bimini-btn:hover {
   background: transparent;
-  color: white;
-  border-color: white;
+  border-color: #fff;
   transform: translateY(-2px);
 }
 
-/* ==============================
-   RESULTS — HORIZONTAL CARDS
-============================== */
-.bimini-results {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 3rem;
-  width: 100%;
-  max-width: 800px;
-}
-
-.bimini-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #d5e8eb 0%, #b9ecf1 100%);
-  color: #1c2b47;
-  
-  padding: 1.5rem 2rem;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.bimini-card:hover {
-  transform: translateY(-4px);
-}
-
-.bimini-card-info {
-  text-align: left;
-}
-.bimini-card-model {
-  font-family: "League Spartan", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-.bimini-card-details {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.bimini-card-btn {
-  background: #1c2b47;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.8rem 1.6rem;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-.bimini-card-btn:hover {
-  background: #0e162d;
-}
-
-/* Responsive */
+/* --- Mobile --- */
 @media (max-width: 768px) {
+
   .bimini-select {
     width: 100%;
     max-width: 320px;
   }
+
   .bimini-finder-buttons {
     flex-direction: column;
     gap: 1rem;
-  }
-  .bimini-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+    width: 100%;
   }
 }
+
 {% endstylesheet %}
 
 {% schema %}
