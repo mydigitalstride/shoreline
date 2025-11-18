@@ -18,7 +18,7 @@
   assign media_type_2 = section.settings.media_type_2
 
   if section.settings.image_1 != blank and media_type_1 == 'image'
-    assign has_image_1 = true
+    assign as_image_1 = true
   endif
   if section.settings.video_1 != blank and media_type_1 == 'video'
     assign has_video_1 = true
