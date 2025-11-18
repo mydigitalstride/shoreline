@@ -489,9 +489,10 @@
       "name": "Contact Shoreline Brands",
       "settings": {
         "heading": "Contact Shoreline Brands",
-        "email": "warranty@shorelinebrands.com",
+        "email": "riannabarrett11@gmail.com",
         "phone": "+1-123-456-7890",
-        "quick_links_heading": "Quick Links:"
+        "quick_links_heading": "Quick Links:",
+        "upload_required": true
       }
     }
   },
