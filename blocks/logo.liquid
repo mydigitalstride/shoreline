@@ -70,7 +70,7 @@
 
 {% stylesheet %}
   .logo-block {
-    width: var(--logo-width);
+    width: calc(var(--logo-width) + var(--padding-inline-start) + var(--padding-inline-end));
     max-width: 100%;
     max-height: calc(var(--logo-height, 100%) + var(--padding-block-start) + var(--padding-block-end));
     font-size: var(--logo-height);
