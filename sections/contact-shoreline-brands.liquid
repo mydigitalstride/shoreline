@@ -60,70 +60,58 @@
       background-color: #b7bfd8; 
       color: #1c2a49; 
       font-weight: 600;
-      display: inline-block; 
-      padding: 10px 20px; 
-      border-radius: 4px; 
-      cursor: pointer; 
-      margin-bottom: 0.5rem;
+      display: inline-block; padding: 10px 20px; 
+      border-radius: 4px; cursor: pointer; margin-bottom: 0.5rem;
     }
 
-    /* 🔴 Upload Required Message */
+    /* Error message (hidden by default) */
     .upload-required-msg {
-      color: #d32f2f; /* red */
+      color: #d32f2f;
       font-size: 0.9rem;
       font-weight: 600;
-      margin: 0 0 0.75rem;
+      margin-bottom: 0.75rem;
+      display: none; /* initially hidden */
     }
 
     .file-upload input[type="file"] { display: none; }
 
     .submit-btn {
       width: 100%;
-      background-color: #e76a3b;  /* orange */
-      color: #ffffff;             /* white text */
+      background-color: #e76a3b;
+      color: #ffffff;
       font-weight: 700;
       text-transform: uppercase;
       padding: 14px;
       border: none;
-      border-radius: 0;           /* squared */
+      border-radius: 0;
       cursor: pointer;
       transition: background 0.2s ease;
     }
 
-    .submit-btn:hover { 
-      background-color:#d45c2c;
-    }
+    .submit-btn:hover { background-color:#d45c2c; }
   </style>
 
   <div class="contact-shoreline__wrapper">
     <div class="contact-shoreline__info">
-
-      <!-- Editable Heading -->
       <h2>{{ section.settings.heading }}</h2>
 
-      <!-- Editable Email -->
       <p><strong>Email:</strong>
         <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
       </p>
 
-      <!-- Editable Phone -->
       <p><strong>Phone:</strong>
         <a href="tel:{{ section.settings.phone | replace: ' ', '' }}">{{ section.settings.phone }}</a>
       </p>
 
       <h3>{{ section.settings.quick_links_heading }}</h3>
 
-      <!-- Dynamic Link Buttons -->
       <div class="contact-shoreline__buttons">
         {% for block in section.blocks %}
-          <a href="{{ block.settings.link }}" class="contact-btn">
-            {{ block.settings.label }}
-          </a>
+          <a href="{{ block.settings.link }}" class="contact-btn">{{ block.settings.label }}</a>
         {% endfor %}
       </div>
     </div>
 
-    <!-- Contact Form -->
     <div class="contact-shoreline__form">
       <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" enctype="multipart/form-data">
         <input type="hidden" name="form_type" value="contact" />
@@ -140,7 +128,7 @@
           <label for="contact_file">Upload File</label>
 
           {% if section.settings.upload_required %}
-            <p class="upload-required-msg">Please upload a file before submitting this form.</p>
+            <p id="upload-error" class="upload-required-msg">Please upload a file before submitting this form.</p>
           {% endif %}
 
           <input
@@ -157,6 +145,24 @@
       </form>
     </div>
   </div>
+
+  {% if section.settings.upload_required %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contact_form");
+      const fileInput = document.getElementById("contact_file");
+      const errorMsg = document.getElementById("upload-error");
+
+      form.addEventListener("submit", function (e) {
+        if (!fileInput.files.length) {
+          e.preventDefault();           // Stop form submit
+          errorMsg.style.display = "block"; // Show message
+          fileInput.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      });
+    });
+  </script>
+  {% endif %}
 </section>
 
 {% schema %}
