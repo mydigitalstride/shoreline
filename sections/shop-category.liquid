@@ -86,22 +86,24 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(70, 179, 184, 0.8), rgba(70, 179, 184, 0.4));
-  opacity: 0;
+  background: #2c3c5e;
+  opacity: 0.2;
   transition: opacity 0.4s ease;
   pointer-events: none; /* ✅ ensure clicks go through */
 }
 
 .category-card:hover .category-overlay {
   opacity: 1;
+  background: linear-gradient(to top, rgba(70, 179, 184, 0.8), rgba(70, 179, 184, 0.4));
+
 }
 
 /* TITLE */
 .category-title {
   position: relative;
   z-index: 2;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 500;
   text-transform: uppercase;
   color: #fff;
   font-family: "Bebas Neue";
