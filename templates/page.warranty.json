@@ -321,7 +321,7 @@
       ],
       "name": "t:names.hero",
       "settings": {
-        "media_type_1": "image",
+        "media_type_1": "video",
         "image_1": "shopify://shop_images/Malibu2.jpg",
         "video_1": "shopify://files/videos/02 - f273095f72274a6aa3fc9e779e203748.mp4",
         "media_type_2": "image",
@@ -489,7 +489,7 @@
       "name": "Contact Shoreline Brands",
       "settings": {
         "heading": "Contact Shoreline Brands",
-        "email": "riannabarrett11@gmail.com",
+        "email": "warranty@shorelinebrands.com",
         "phone": "+1-123-456-7890",
         "quick_links_heading": "Quick Links:",
         "upload_required": true
