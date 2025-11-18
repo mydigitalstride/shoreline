@@ -64,16 +64,15 @@
       padding: 10px 20px; 
       border-radius: 4px; 
       cursor: pointer; 
-      margin-bottom: 1rem;
-      position: relative;
+      margin-bottom: 0.5rem;
     }
 
-    /* 🔴 RED ASTERISK FOR REQUIRED FIELD */
-    .required-asterisk {
-      color: red;
-      margin-left: 4px;
-      font-weight: bold;
-      font-size: 1.1rem;
+    /* 🔴 Upload Required Message */
+    .upload-required-msg {
+      color: #d32f2f; /* red */
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0 0 0.75rem;
     }
 
     .file-upload input[type="file"] { display: none; }
@@ -138,12 +137,11 @@
         <textarea name="contact[body]" rows="5" placeholder="Message"></textarea>
 
         <div class="file-upload">
-          <label for="contact_file">
-            Upload File
-            {% if section.settings.upload_required %}
-              <span class="required-asterisk">*</span>
-            {% endif %}
-          </label>
+          <label for="contact_file">Upload File</label>
+
+          {% if section.settings.upload_required %}
+            <p class="upload-required-msg">Please upload a file before submitting this form.</p>
+          {% endif %}
 
           <input
             type="file"
