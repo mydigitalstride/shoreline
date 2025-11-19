@@ -444,8 +444,8 @@
         "link_YVKUbK": {
           "type": "link",
           "settings": {
-            "title": "FAQ",
-            "link": "shopify://pages/faq"
+            "title": "Shop",
+            "link": "shopify://pages/shop"
           }
         },
         "link_GgUzbK": {
