@@ -4432,3 +4432,7 @@ text-component {
     font-size: max(1rem, 100%);
   }
 }
+.product-price [ref="priceContainer"] {
+  font-size: 1.5rem !important;
+  color: #2C3C5E !important;
+}
