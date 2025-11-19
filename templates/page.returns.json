@@ -203,7 +203,6 @@
                 "button_rBfFT8": {
                   "type": "button",
                   "name": "t:names.button",
-                  "disabled": true,
                   "settings": {
                     "label": "Shop now",
                     "link": "shopify://collections/all",
@@ -219,7 +218,6 @@
                 "button_9tqtFy": {
                   "type": "button",
                   "name": "t:names.button",
-                  "disabled": true,
                   "settings": {
                     "label": "Find My Shade Sail",
                     "link": "shopify://pages/shade-solutions",
@@ -358,6 +356,17 @@
         "text": "<p>Thank you for shopping with Shoreline Brands. We are committed to delivering high-quality marine products, including our popular bimini cover for boat models, and ensuring your full satisfaction. To help us keep costs low and service strong, we ask that you contact our team before initiating any Shoreline Brands returns.</p><p>If you experience an issue at any time, please reach out through the “<a href=\"/pages/contact\" title=\"Contact\">Contact Us</a>” form. Our support team will guide you through troubleshooting, repair, replacement, or any other resolution we can provide. If a solution cannot be reached, we offer a hassle-free full refund.</p><p></p><h4>When We Cover the Cost</h4><p>Products returned or replaced due to manufacturing defects, repair needs, or fitment issues, including improper fit on a bimini cover for a boat, will be handled free of charge.<br/></p><h4>General Return Window</h4><ul><li>Returns accepted within 30 days of purchase</li><li>Unopened items may incur a 6% restocking fee</li><li>Custom products are not eligible for return</li></ul><h4><br/>Refund Timing</h4><p>Please allow up to 10 business days for your refund to be processed once the return is approved and received.</p><p>For any questions regarding Shoreline Brands returns or support with a bimini cover for a boat product, our team is here to help every step of the way.<br/></p>"
       }
     },
+    "contact_shoreline_brands_4zzjPB": {
+      "type": "contact-shoreline-brands",
+      "name": "Contact Shoreline Brands",
+      "settings": {
+        "heading": "Contact Shoreline Brands",
+        "email": "Returns@shorelinebrands.com",
+        "phone": "(717) 205-9983",
+        "quick_links_heading": "",
+        "upload_required": false
+      }
+    },
     "additional_resources_3afDJm": {
       "type": "additional-resources",
       "blocks": {
@@ -482,17 +491,6 @@
         "subtext": "Add supporting text here.",
         "button_text": "Contact Us",
         "button_link": ""
-      }
-    },
-    "contact_shoreline_brands_4zzjPB": {
-      "type": "contact-shoreline-brands",
-      "name": "Contact Shoreline Brands",
-      "settings": {
-        "heading": "Contact Shoreline Brands",
-        "email": "Returns@shorelinebrands.com",
-        "phone": "+1-123-456-7890",
-        "quick_links_heading": "Quick Links:",
-        "upload_required": false
       }
     }
   },
