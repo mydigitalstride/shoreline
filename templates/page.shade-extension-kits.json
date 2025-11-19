@@ -437,47 +437,6 @@
         "text": "Explore our most popular resources below for quick answers or help reaching our team!",
         "right_image": "shopify://shop_images/IMG_5538.jpg"
       }
-    },
-    "customer_reviews_prwpJp": {
-      "type": "customer-reviews",
-      "blocks": {
-        "review_tY6bXi": {
-          "type": "review",
-          "settings": {
-            "name": "Name",
-            "date": "Date",
-            "product_title": "Product Being Reviewed",
-            "text": "We are so happy this product was created..."
-          }
-        },
-        "review_hRNmN7": {
-          "type": "review",
-          "settings": {
-            "name": "Name",
-            "date": "Date",
-            "product_title": "Product Being Reviewed",
-            "text": "We are so happy this product was created..."
-          }
-        },
-        "review_gXEBNE": {
-          "type": "review",
-          "settings": {
-            "name": "Name",
-            "date": "Date",
-            "product_title": "Product Being Reviewed",
-            "text": "We are so happy this product was created..."
-          }
-        }
-      },
-      "block_order": [
-        "review_tY6bXi",
-        "review_hRNmN7",
-        "review_gXEBNE"
-      ],
-      "name": "Customer Reviews",
-      "settings": {
-        "heading": "Reviews"
-      }
     }
   },
   "order": [
@@ -485,7 +444,6 @@
     "hero_Dngph7",
     "shade_extension_search_8eJJRB",
     "all_products_grid_TyNbNJ",
-    "additional_resources_a4NEJq",
-    "customer_reviews_prwpJp"
+    "additional_resources_a4NEJq"
   ]
 }
