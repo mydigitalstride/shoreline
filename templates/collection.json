@@ -439,7 +439,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Find My Shade Sail",
-                    "link": "shopify://pages/shade-solutions",
+                    "link": "shopify://pages/category-page-shade-extension-kits",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
