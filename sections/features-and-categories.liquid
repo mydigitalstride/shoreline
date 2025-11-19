@@ -21,9 +21,10 @@
     <div class="feature-divider"></div>
 
     <!-- Shop by Category -->
-    <div class="categories-wrapper">  <!-- NEW: aligns heading with features row -->
+    <div class="categories-wrapper">
       <h2 class="categories-heading">{{ section.settings.heading }}</h2>
     </div>
+
     <div class="categories-grid">
       {% for block in section.blocks %}
         {% if block.type == 'category' %}
@@ -41,7 +42,8 @@
 </section>
 
 {% stylesheet %}
-/* --- Shared sizing so left edges line up --- */
+
+/* SECTION WRAPPER */
 .features-and-categories {
   --teal: #46b3b8;
   background:#2c3c5e;
@@ -50,8 +52,8 @@
   text-align:center;
 }
 
-/* Top icons row — centered group with the same left edge as heading */
-.features-row{
+/* FEATURES ROW */
+.features-row {
   max-width:var(--content-max);
   margin:0 auto 1.75rem;
   display:flex;flex-wrap:wrap;
@@ -61,14 +63,20 @@
 }
 .feature-item{display:flex;gap:.9rem;align-items:center;text-align:left}
 .feature-item img{width:70px}
-.feature-item h4{font:500 1.5rem/1 "Bebas Neue",sans-serif;letter-spacing:.4px;text-transform:uppercase;margin:0}
-.feature-item p{font:400 1rem/1.4 "Heebo",sans-serif;
-  color:white !important;
-  margin:0}
-p {
-  color: white !important;
+.feature-item h4{
+  font:500 1.5rem/1 "Bebas Neue",sans-serif;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  margin:0
 }
-/* Short, thick, centered divider with same outer width as content */
+.feature-item p{
+  font:400 1rem/1.4 "Heebo",sans-serif;
+  color:white !important;
+  margin:0
+}
+p { color:white !important; }
+
+/* DIVIDER */
 .feature-divider{
   height:3px;width:65%;
   max-width:var(--content-max);
@@ -77,11 +85,10 @@ p {
   border-radius:3px;
 }
 
-/* Heading sits in the same max-width box as the icons row, left-aligned */
+/* CATEGORY HEADING */
 .categories-wrapper{
   max-width:var(--content-max);
   margin:0 auto 1.75rem;
-  padding:0 0;
   text-align:left;
 }
 .categories-heading{
@@ -93,195 +100,98 @@ p {
   text-transform:uppercase;
 }
 
-/* Categories grid — centered, evenly spaced, and aligned with heading */
+/* GRID */
 .categories-grid {
-  display: flex;
-  justify-content: center;        /* keeps the cards centered */
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 3rem;                      /* increased from 2rem → adds more space between cards */
-  max-width: var(--content-max);  /* keeps alignment with heading */
-  margin: 0 auto;
-  padding-top: 0.5rem;            /* a little breathing room below heading */
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+  flex-wrap:wrap;
+  gap:3rem;
+  max-width:var(--content-max);
+  margin:0 auto;
+  padding-top:.5rem;
 }
 
-/* Individual category cards */
+/* CARD */
 .category-cards {
-  flex: 0 1 320px !important;               /* fixed card width */
-  display: block;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  margin: 0 1rem;                 /* extra spacing between each card group */
+  flex:0 1 320px !important;
+  display:block;
+  text-decoration:none;
+  overflow:hidden;
+  transition: transform .3s ease;
+  cursor:pointer;
 }
-
 
 .category-image {
-  aspect-ratio: 1 / 1; /* makes images perfectly square */
-  height: auto; /* auto height to respect aspect ratio */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  border: none !important;
-  padding: 1rem;
-  position: relative;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
-  transition: transform .3s ease;
+  aspect-ratio: 1 / 1;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding:1rem;
+  position:relative;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  transition:transform .3s ease;
 }
 
-.category-cards:hover .category-image{transform:scale(1.02)}
-.category-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,60,94,.55),rgba(44,60,94,.25))}
+/* HOVER SCALE */
+.category-cards:hover .category-image { transform:scale(1.02); }
+
+/* 🌟 FIXED OVERLAY — DEFAULT OPACITY + TEAL HOVER */
+.category-overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(70,179,184,0.85),
+    rgba(70,179,184,0.35)
+  );
+  opacity:.25;                       /* DEFAULT OPACITY */
+  transform:translateY(10%);         /* subtle start */
+  transition:opacity .45s ease, transform .45s ease;
+  pointer-events:none;
+}
+
+/* HOVER — FULL TEAL + SLIDE UP */
+.category-cards:hover .category-overlay {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* TITLE */
 .category-title{
-  position:relative;z-index:1;
+  position:relative;
+  z-index:2;
   font:700 1rem/1 "League Spartan",sans-serif;
-  letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:.6rem;text-shadow:0 2px 6px rgba(0,0,0,.35)
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#fff;
+  margin-bottom:.6rem;
+  text-shadow:0 2px 6px rgba(0,0,0,.35);
 }
 
 /* ---------- RESPONSIVE ---------- */
-
-/* --- Tablet --- */
-@media (max-width: 1024px) {
-  .features-and-categories {
-    padding: 3rem 2rem !important;
-  }
-
-  .features-row {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-  }
-
-  .feature-item {
-    flex: 1 1 45%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .feature-item img {
-    width: 60px;
-  }
-
-  .categories-heading {
-    font-size: 2.4rem;
-    text-align: center;
-  }
-
-  .categories-grid {
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .category-cards {
-    flex: 0 1 280px !important;
-  }
-
-  .category-image {
-    height: 280px;
-  }
+@media (max-width:1024px){
+  .features-and-categories{padding:3rem 2rem !important}
+  .features-row{gap:2.5rem}
+  .feature-item{flex:1 1 45%;text-align:center;justify-content:center}
+  .categories-heading{text-align:center;font-size:2.4rem}
+  .category-cards{flex:0 1 280px !important}
 }
 
-/* --- Mobile --- */
-@media (max-width: 749px) {
-  .features-and-categories {
-    padding: 3rem 1.5rem !important;
-  }
-
-  /* Stack feature icons vertically */
-  .features-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .feature-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
-  }
-
-  .feature-item img {
-    width: 55px;
-    margin-bottom: 0.5rem;
-  }
-
-  .feature-item h4 {
-    font-size: 1.1rem;
-  }
-
-  .feature-item p {
-    font-size: 1rem;
-    line-height: 1.4;
-    color: rgba(255,255,255,0.9);
-  }
-
-  /* Divider */
-  .feature-divider {
-    width: 80%;
-    margin: 2rem auto;
-  }
-
-  /* Categories heading */
-  .categories-wrapper {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .categories-heading {
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-
-  /* Categories grid - single column */
-  .categories-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .category-cards {
-    flex: 0 1 100% !important;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .category-image {
-    height: 250px;
-  }
-
-  .category-title {
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
+@media (max-width:749px){
+  .features-and-categories{padding:3rem 1.5rem !important}
+  .features-row{flex-direction:column;align-items:center;gap:1.5rem}
+  .feature-divider{width:80%}
+  .categories-grid{flex-direction:column;align-items:center;gap:1.5rem}
+  .category-cards{max-width:320px;margin:0 auto}
+  .category-image{height:250px}
 }
 
-/* --- Extra Small Phones --- */
-@media (max-width: 480px) {
-  .features-and-categories {
-    padding: 2.5rem 1rem !important;
-  }
-
-  .feature-item img {
-    width: 50px;
-  }
-
-  .categories-heading {
-    font-size: 1.7rem;
-    letter-spacing: 1.5px;
-  }
-
-  .category-image {
-    height: 220px;
-  }
-
-  .category-title {
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
+@media (max-width:480px){
+  .category-image{height:220px}
+  .categories-heading{font-size:1.7rem}
 }
 
 {% endstylesheet %}
@@ -298,8 +208,8 @@ p {
       "name": "Feature Item",
       "settings": [
         { "type": "image_picker", "id": "icon", "label": "Feature Icon" },
-        { "type": "text", "id": "title", "label": "Feature Title", "default": "Wake Approved" },
-        { "type": "text", "id": "text", "label": "Feature Description", "default": "Use your Bimini while moving up to 15 mph." }
+        { "type": "text", "id": "title", "label": "Feature Title" },
+        { "type": "text", "id": "text", "label": "Feature Description" }
       ]
     },
     {
@@ -307,7 +217,7 @@ p {
       "name": "Category Item",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Category Image" },
-        { "type": "text", "id": "title", "label": "Category Title", "default": "Shade Solutions" },
+        { "type": "text", "id": "title", "label": "Category Title" },
         { "type": "url", "id": "link", "label": "Category Link" }
       ]
     }
