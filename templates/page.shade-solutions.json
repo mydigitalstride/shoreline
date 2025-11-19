@@ -1,1 +1,450 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"content_direction":"column","gap":32,"color_scheme":"","padding-block-start":40,"padding-block-end":80}},"hero_rTrUVF":{"type":"hero","blocks":{"group_GGR93V":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0,"custom_id":"menu-group"},"blocks":{"menu_MxHfq9":{"type":"menu","name":"t:names.menu","settings":{"menu":"main-menu","heading":"","menu_spacing":12,"show_as_accordion":false,"accordion_icon":"caret","accordion_dividers":false,"inherit_color_scheme":true,"color_scheme":"","heading_preset":"h3","link_preset":"paragraph","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0,"main_menu":true},"blocks":{}}},"block_order":["menu_MxHfq9"]},"group_Aar6fJ":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":61,"padding-inline-end":0,"custom_id":""},"blocks":{"logo_YbbCie":{"type":"logo","name":"t:names.logo","settings":{"inverse":false,"font":"heading","unit":"pixel","percent_width":100,"pixel_height":160,"custom_mobile_size":false,"unit_mobile":"percent","percent_width_mobile":100,"pixel_height_mobile":120,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"icon_DekmDk":{"type":"icon","name":"t:names.icon","disabled":true,"settings":{"icon":"price_tag","image_upload":"shopify:\/\/shop_images\/Made_In_USA_-_White_Version.png","width":24,"link":"","open_in_new_tab":false},"blocks":{}},"text_LGTLab":{"type":"text","settings":{"text":"<p>Shoreline Shade Bimini Extensions<\/p>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h1","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":20,"padding-inline-end":0},"blocks":{}},"group_ekfKpn":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":18,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":20,"padding-inline-end":0,"custom_id":""},"blocks":{"button_mXxtiQ":{"type":"button","name":"t:names.button","settings":{"label":"Shop All Products","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}},"button_3XVmwL":{"type":"button","name":"t:names.button","settings":{"label":"Find My Shade Sail","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["button_mXxtiQ","button_3XVmwL"]}},"block_order":["logo_YbbCie","icon_DekmDk","text_LGTLab","group_ekfKpn"]}},"block_order":["group_GGR93V","group_Aar6fJ"],"name":"t:names.hero","settings":{"media_type_1":"video","video_1":"shopify:\/\/files\/videos\/01 - 4cb33fdfb1e6445e976fd7b62ba83cd8.mp4","media_type_2":"image","link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":16,"section_width":"page-width","section_height":"large","section_height_custom":50,"color_scheme":"scheme-5","toggle_overlay":true,"overlay_color":"#00000026","overlay_style":"gradient","gradient_direction":"to top","blurred_reflection":false,"reflection_opacity":75,"padding-block-start":40,"padding-block-end":40}},"bimini_finder_7bUYDh":{"type":"bimini-finder","name":"Bimini Finder Section","settings":{"heading":"Find Your Shoreline Shade Bimini Extension","clear_text":"Clear","search_text":"Search"}},"features_info_grid_tLY9MK":{"type":"features-info-grid","blocks":{"feature_wyw6Uz":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/Assets_70f5a8e4-c2b9-498d-8a8e-7d16a20a0940.png","title":"Wakesurf Rated","text":"For wakesurfing with the Bimini Extension Deployed, simply pass the rope underneath the shade"}},"feature_wiB9Nn":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/Customizable.png","title":"Fully Customizable","text":"All Bimini Extension and Shade Sail kits Can be customized to color match your boat"}},"feature_YLPTfU":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/Breeze_2afa4e3e-4242-4c09-ad99-9cc17246083d.png","title":"60 Second Deployment","text":"All Shade Kits assemble and disassemble in less than 60 seconds"}},"feature_rF4rdh":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/Prem._Carbon_Fiber_4e81171f-d550-4bfd-9c1b-7df887ba6d78.png","title":"Premium Carbon Fiber","text":"Pure Carbon Fiber provides unmatched strength and a premium finish"}},"feature_AwdHXr":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/UV_performance.png","title":"UV Performance Fabric","text":"All Bimini Extensions and Shade Sails are crafted from UV Performance fabric that won't fade in the sun"}}},"block_order":["feature_wyw6Uz","feature_wiB9Nn","feature_YLPTfU","feature_rF4rdh","feature_AwdHXr"],"name":"Features Info Grid","settings":{"bg_image":"shopify:\/\/shop_images\/ocean-waves.png"}},"easy_design_split_6DbiA9":{"type":"easy-design-split","name":"Easy Design Split","settings":{"bg_image_right":"shopify:\/\/shop_images\/7f24f7a4-45d221_0d78b512a7ad4628bdc379d97e12a50c_mv2.jpg","heading":"Easy-to-Use Design","text":"<p>Our Bimini Extensions are easy to use and deploy in less than 60 seconds. The use of our product takes only a fraction of the time compared to traditional bimini products. The Shoreline Shade Sails offer 7 feet of additional coverage, ensuring comfort and protection for all passengers. Our shade products are designed to be used up to 15 mph and can be used while surfing.<\/p>","button_1_text":"FAQ","button_1_link":"shopify:\/\/pages\/faq","button_2_text":"Instructions","button_2_link":"shopify:\/\/pages\/instructions-1"}}},"order":["main","hero_rTrUVF","bimini_finder_7bUYDh","features_info_grid_tLY9MK","easy_design_split_6DbiA9"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_rTrUVF": {
+      "type": "hero",
+      "blocks": {
+        "group_GGR93V": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_MxHfq9": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_MxHfq9"
+          ]
+        },
+        "group_Aar6fJ": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 61,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "logo_YbbCie": {
+              "type": "logo",
+              "name": "t:names.logo",
+              "settings": {
+                "inverse": false,
+                "font": "heading",
+                "unit": "pixel",
+                "percent_width": 100,
+                "pixel_height": 160,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "icon_DekmDk": {
+              "type": "icon",
+              "name": "t:names.icon",
+              "disabled": true,
+              "settings": {
+                "icon": "price_tag",
+                "image_upload": "shopify://shop_images/Made_In_USA_-_White_Version.png",
+                "width": 24,
+                "link": "",
+                "open_in_new_tab": false
+              },
+              "blocks": {}
+            },
+            "text_LGTLab": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Shoreline Shade Bimini Extensions</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h1",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_ekfKpn": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 18,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0,
+                "custom_id": ""
+              },
+              "blocks": {
+                "button_mXxtiQ": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop All Products",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_3XVmwL": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Find My Shade Sail",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_mXxtiQ",
+                "button_3XVmwL"
+              ]
+            }
+          },
+          "block_order": [
+            "logo_YbbCie",
+            "icon_DekmDk",
+            "text_LGTLab",
+            "group_ekfKpn"
+          ]
+        }
+      },
+      "block_order": [
+        "group_GGR93V",
+        "group_Aar6fJ"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "video",
+        "video_1": "shopify://files/videos/01 - 4cb33fdfb1e6445e976fd7b62ba83cd8.mp4",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "bimini_finder_7bUYDh": {
+      "type": "bimini-finder",
+      "name": "Bimini Finder Section",
+      "settings": {
+        "heading": "Find Your Shoreline Shade Bimini Extension",
+        "clear_text": "Clear",
+        "search_text": "Search"
+      }
+    },
+    "features_info_grid_tLY9MK": {
+      "type": "features-info-grid",
+      "blocks": {
+        "feature_wyw6Uz": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Assets_70f5a8e4-c2b9-498d-8a8e-7d16a20a0940.png",
+            "title": "Wakesurf Rated",
+            "text": "For wakesurfing with the Bimini Extension Deployed, simply pass the rope underneath the shade"
+          }
+        },
+        "feature_wiB9Nn": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Customizable.png",
+            "title": "Fully Customizable",
+            "text": "All Bimini Extension and Shade Sail kits Can be customized to color match your boat"
+          }
+        },
+        "feature_YLPTfU": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Breeze_2afa4e3e-4242-4c09-ad99-9cc17246083d.png",
+            "title": "60 Second Deployment",
+            "text": "All Shade Kits assemble and disassemble in less than 60 seconds"
+          }
+        },
+        "feature_rF4rdh": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Prem._Carbon_Fiber_4e81171f-d550-4bfd-9c1b-7df887ba6d78.png",
+            "title": "Premium Carbon Fiber",
+            "text": "Pure Carbon Fiber provides unmatched strength and a premium finish"
+          }
+        },
+        "feature_AwdHXr": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/UV_performance.png",
+            "title": "UV Performance Fabric",
+            "text": "All Bimini Extensions and Shade Sails are crafted from UV Performance fabric that won't fade in the sun"
+          }
+        }
+      },
+      "block_order": [
+        "feature_wyw6Uz",
+        "feature_wiB9Nn",
+        "feature_YLPTfU",
+        "feature_rF4rdh",
+        "feature_AwdHXr"
+      ],
+      "name": "Features Info Grid",
+      "settings": {
+        "bg_image": "shopify://shop_images/ocean-waves.png"
+      }
+    },
+    "easy_design_split_6DbiA9": {
+      "type": "easy-design-split",
+      "name": "Easy Design Split",
+      "settings": {
+        "bg_image_right": "shopify://shop_images/7f24f7a4-45d221_0d78b512a7ad4628bdc379d97e12a50c_mv2.jpg",
+        "heading": "Easy-to-Use Design",
+        "text": "<p>Our Bimini Extensions are easy to use and deploy in less than 60 seconds. The use of our product takes only a fraction of the time compared to traditional bimini products. The Shoreline Shade Sails offer 7 feet of additional coverage, ensuring comfort and protection for all passengers. Our shade products are designed to be used up to 15 mph and can be used while surfing.</p>",
+        "button_1_text": "FAQ",
+        "button_1_link": "shopify://pages/faq",
+        "button_2_text": "Instructions",
+        "button_2_link": "shopify://pages/instructions-1"
+      }
+    },
+    "features_circles_Y9D4UJ": {
+      "type": "features-circles",
+      "blocks": {
+        "feature_CLzmAM": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium Carbon Fiber",
+            "text": "Your feature description goes here."
+          }
+        },
+        "feature_XGqF7m": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium Carbon Fiber",
+            "text": "Your feature description goes here."
+          }
+        },
+        "feature_wkPeCf": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium Carbon Fiber",
+            "text": "Your feature description goes here."
+          }
+        },
+        "feature_jQCeYx": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium Carbon Fiber",
+            "text": "Your feature description goes here."
+          }
+        },
+        "feature_imwhhz": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium Carbon Fiber",
+            "text": "Your feature description goes here."
+          }
+        }
+      },
+      "block_order": [
+        "feature_CLzmAM",
+        "feature_XGqF7m",
+        "feature_wkPeCf",
+        "feature_jQCeYx",
+        "feature_imwhhz"
+      ],
+      "name": "Circle Feature Row",
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_rTrUVF",
+    "bimini_finder_7bUYDh",
+    "features_info_grid_tLY9MK",
+    "easy_design_split_6DbiA9",
+    "features_circles_Y9D4UJ"
+  ]
+}
