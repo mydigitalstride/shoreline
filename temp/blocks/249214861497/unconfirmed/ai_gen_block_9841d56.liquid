@@ -1,6 +1,593 @@
+{% doc %}
+  @prompt
+    section that displays the reviews for the product
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-product-reviews-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 0;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-product-reviews-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-product-reviews-header-{{ ai_gen_id }} {
+    text-align: {{ block.settings.heading_alignment }};
+    margin-bottom: 40px;
+  }
+
+  .ai-product-reviews-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 16px;
+  }
+
+  .ai-product-reviews-summary-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: {{ block.settings.heading_alignment }};
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .ai-product-reviews-rating-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .ai-product-reviews-star-{{ ai_gen_id }} {
+    width: {{ block.settings.star_size }}px;
+    height: {{ block.settings.star_size }}px;
+    fill: {{ block.settings.star_color }};
+  }
+
+  .ai-product-reviews-star-empty-{{ ai_gen_id }} {
+    fill: {{ block.settings.star_empty_color }};
+  }
+
+  .ai-product-reviews-count-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-product-reviews-list-{{ ai_gen_id }} {
+    display: grid;
+    gap: {{ block.settings.review_spacing }}px;
+  }
+
+  .ai-product-review-item-{{ ai_gen_id }} {
+    padding: {{ block.settings.review_padding }}px;
+    background-color: {{ block.settings.review_background }};
+    border-radius: {{ block.settings.review_border_radius }}px;
+    border: {{ block.settings.review_border_width }}px solid {{ block.settings.review_border_color }};
+  }
+
+  .ai-product-review-header-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 16px;
+  }
+
+  .ai-product-review-author-{{ ai_gen_id }} {
+    flex: 1;
+  }
+
+  .ai-product-review-name-{{ ai_gen_id }} {
+    font-size: {{ block.settings.reviewer_name_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 4px;
+  }
+
+  .ai-product-review-date-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+  }
+
+  .ai-product-review-rating-{{ ai_gen_id }} {
+    display: flex;
+    gap: 2px;
+  }
+
+  .ai-product-review-content-{{ ai_gen_id }} {
+    font-size: {{ block.settings.review_text_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+  }
+
+  .ai-product-reviews-empty-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 60px 20px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.6;
+  }
+
+  .ai-product-reviews-empty-icon-{{ ai_gen_id }} {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    opacity: 0.3;
+  }
+
+  .ai-product-reviews-empty-text-{{ ai_gen_id }} {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-product-reviews-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding | times: 0.6 }}px 0;
+    }
+
+    .ai-product-reviews-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.7 }}px;
+    }
+
+    .ai-product-review-item-{{ ai_gen_id }} {
+      padding: {{ block.settings.review_padding | times: 0.8 }}px;
+    }
+
+    .ai-product-review-header-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-product-reviews-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-product-reviews-container-{{ ai_gen_id }}">
+    {% if block.settings.show_heading %}
+      <div class="ai-product-reviews-header-{{ ai_gen_id }}">
+        <h2 class="ai-product-reviews-title-{{ ai_gen_id }}">{{ block.settings.heading_text }}</h2>
+        {% if block.settings.show_summary %}
+          <div class="ai-product-reviews-summary-{{ ai_gen_id }}">
+            <div class="ai-product-reviews-rating-{{ ai_gen_id }}">
+              {% assign average_rating = block.settings.average_rating %}
+              {% for i in (1..5) %}
+                {% if i <= average_rating %}
+                  <svg class="ai-product-reviews-star-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                {% else %}
+                  <svg class="ai-product-reviews-star-{{ ai_gen_id }} ai-product-reviews-star-empty-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <span class="ai-product-reviews-count-{{ ai_gen_id }}">{{ block.settings.review_count_text }}</span>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% assign has_reviews = false %}
+    {% if block.settings.review_1_name != blank or block.settings.review_2_name != blank or block.settings.review_3_name != blank %}
+      {% assign has_reviews = true %}
+    {% endif %}
+
+    {% if has_reviews %}
+      <div class="ai-product-reviews-list-{{ ai_gen_id }}">
+        {% if block.settings.review_1_name != blank %}
+          <div class="ai-product-review-item-{{ ai_gen_id }}">
+            <div class="ai-product-review-header-{{ ai_gen_id }}">
+              <div class="ai-product-review-author-{{ ai_gen_id }}">
+                <h3 class="ai-product-review-name-{{ ai_gen_id }}">{{ block.settings.review_1_name }}</h3>
+                {% if block.settings.review_1_date != blank %}
+                  <div class="ai-product-review-date-{{ ai_gen_id }}">{{ block.settings.review_1_date }}</div>
+                {% endif %}
+              </div>
+              <div class="ai-product-review-rating-{{ ai_gen_id }}">
+                {% for i in (1..5) %}
+                  {% if i <= block.settings.review_1_rating %}
+                    <svg class="ai-product-reviews-star-{{ ai_gen_id }}" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% else %}
+                    <svg class="ai-product-reviews-star-{{ ai_gen_id }} ai-product-reviews-star-empty-{{ ai_gen_id }}" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            {% if block.settings.review_1_text != blank %}
+              <p class="ai-product-review-content-{{ ai_gen_id }}">{{ block.settings.review_1_text }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if block.settings.review_2_name != blank %}
+          <div class="ai-product-review-item-{{ ai_gen_id }}">
+            <div class="ai-product-review-header-{{ ai_gen_id }}">
+              <div class="ai-product-review-author-{{ ai_gen_id }}">
+                <h3 class="ai-product-review-name-{{ ai_gen_id }}">{{ block.settings.review_2_name }}</h3>
+                {% if block.settings.review_2_date != blank %}
+                  <div class="ai-product-review-date-{{ ai_gen_id }}">{{ block.settings.review_2_date }}</div>
+                {% endif %}
+              </div>
+              <div class="ai-product-review-rating-{{ ai_gen_id }}">
+                {% for i in (1..5) %}
+                  {% if i <= block.settings.review_2_rating %}
+                    <svg class="ai-product-reviews-star-{{ ai_gen_id }}" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% else %}
+                    <svg class="ai-product-reviews-star-{{ ai_gen_id }} ai-product-reviews-star-empty-{{ ai_gen_id }}" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            {% if block.settings.review_2_text != blank %}
+              <p class="ai-product-review-content-{{ ai_gen_id }}">{{ block.settings.review_2_text }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if block.settings.review_3_name != blank %}
+          <div class="ai-product-review-item-{{ ai_gen_id }}">
+            <div class="ai-product-review-header-{{ ai_gen_id }}">
+              <div class="ai-product-review-author-{{ ai_gen_id }}">
+                <h3 class="ai-product-review-name-{{ ai_gen_id }}">{{ block.settings.review_3_name }}</h3>
+                {% if block.settings.review_3_date != blank %}
+                  <div class="ai-product-review-date-{{ ai_gen_id }}">{{ block.settings.review_3_date }}</div>
+                {% endif %}
+              </div>
+              <div class="ai-product-review-rating-{{ ai_gen_id }}">
+                {% for i in (1..5) %}
+                  {% if i <= block.settings.review_3_rating %}
+                    <svg class="ai-product-reviews-star-{{ ai_gen_id }}" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% else %}
+                    <svg class="ai-product-reviews-star-{{ ai_gen_id }} ai-product-reviews-star-empty-{{ ai_gen_id }}" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            {% if block.settings.review_3_text != blank %}
+              <p class="ai-product-review-content-{{ ai_gen_id }}">{{ block.settings.review_3_text }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% else %}
+      <div class="ai-product-reviews-empty-{{ ai_gen_id }}">
+        <svg class="ai-product-reviews-empty-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="ai-product-reviews-empty-text-{{ ai_gen_id }}">No reviews yet. Be the first to review this product!</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Product reviews",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show heading",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading text",
+      "default": "Customer Reviews"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Rating summary"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_summary",
+      "label": "Show rating summary",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "average_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Average rating",
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_count_text",
+      "label": "Review count text",
+      "default": "Based on 3 reviews"
+    },
+    {
+      "type": "header",
+      "content": "Review 1"
+    },
+    {
+      "type": "text",
+      "id": "review_1_name",
+      "label": "Name",
+      "default": "Sarah M."
+    },
+    {
+      "type": "text",
+      "id": "review_1_date",
+      "label": "Date",
+      "default": "January 15, 2025"
+    },
+    {
+      "type": "range",
+      "id": "review_1_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Rating",
+      "default": 5
+    },
+    {
+      "type": "textarea",
+      "id": "review_1_text",
+      "label": "Review text",
+      "default": "Absolutely love this product! The quality exceeded my expectations and it arrived quickly. Highly recommend to anyone looking for a reliable solution."
+    },
+    {
+      "type": "header",
+      "content": "Review 2"
+    },
+    {
+      "type": "text",
+      "id": "review_2_name",
+      "label": "Name",
+      "default": "Michael T."
+    },
+    {
+      "type": "text",
+      "id": "review_2_date",
+      "label": "Date",
+      "default": "January 10, 2025"
+    },
+    {
+      "type": "range",
+      "id": "review_2_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Rating",
+      "default": 5
+    },
+    {
+      "type": "textarea",
+      "id": "review_2_text",
+      "label": "Review text",
+      "default": "Great value for money. Works exactly as described and the customer service was excellent when I had questions."
+    },
+    {
+      "type": "header",
+      "content": "Review 3"
+    },
+    {
+      "type": "text",
+      "id": "review_3_name",
+      "label": "Name",
+      "default": "Jennifer L."
+    },
+    {
+      "type": "text",
+      "id": "review_3_date",
+      "label": "Date",
+      "default": "January 5, 2025"
+    },
+    {
+      "type": "range",
+      "id": "review_3_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Rating",
+      "default": 5
+    },
+    {
+      "type": "textarea",
+      "id": "review_3_text",
+      "label": "Review text",
+      "default": "This has become my go-to product. The attention to detail is impressive and it's clear that quality was a priority in the design."
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "reviewer_name_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Name size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "review_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "review_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Space between reviews",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "review_padding",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Review padding",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "review_border_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Review border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "review_border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Review border width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Star size",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "label": "Container width",
+      "default": 1000
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "review_background",
+      "label": "Review background",
+      "default": "#F9F9F9"
+    },
+    {
+      "type": "color",
+      "id": "review_border_color",
+      "label": "Review border",
+      "default": "#E6E6E6"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star",
+      "default": "#FFD700"
+    },
+    {
+      "type": "color",
+      "id": "star_empty_color",
+      "label": "Empty star",
+      "default": "#E0E0E0"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product reviews"
+    }
+  ]
+}
 {% endschema %}
