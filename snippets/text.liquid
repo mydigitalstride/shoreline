@@ -215,4 +215,9 @@
   .custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {
     color: var(--color);
   }
+
+  /* Override: Make paragraphs in rte text blocks use default black color */
+  .text-block.rte p {
+    color: var(--color-foreground) !important;
+  }
 {% endstylesheet %}
