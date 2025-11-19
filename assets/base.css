@@ -2371,6 +2371,9 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   --margin-inline-end: var(--margin-inline, 0px);
 }
 
+.hero__text-block {
+  padding-left: 4rem;
+}
 .spacing-style,
 .inherit-spacing {
   padding-block: calc(var(--padding-block-start) + var(--section-top-offset, 0px)) var(--padding-block-end);
