@@ -45,23 +45,23 @@
   {% if show_sale_price_first == false and show_compare_price %}
     <span role="group">
       <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-      <span class="compare-at-price">{{- compare_at_price -}}</span>
+      <h4 class="compare-at-price">{{- compare_at_price -}}</h4>
     </span>
   {% endif %}
 
   {% if show_compare_price %}
     <span role="group">
       <span class="visually-hidden">{{ 'content.price_sale' | t }}&nbsp;</span>
-      <span class="price">{{ price | default: '&nbsp;' }}</span>
+      <h4 class="price">{{ price | default: '&nbsp;' }}</h4>
     </span>
   {% else %}
-    <span class="price">{{ price | default: '&nbsp;' }}</span>
+    <h4 class="price">{{ price | default: '&nbsp;' }}</h4>
   {% endif %}
 
   {% if show_sale_price_first == true and show_compare_price %}
     <span role="group">
       <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-      <span class="compare-at-price">{{- compare_at_price -}}</span>
+      <h4 class="compare-at-price">{{- compare_at_price -}}</h4>
     </span>
   {% endif %}
   {%- if selected_variant.unit_price and show_unit_price %}
