@@ -358,6 +358,17 @@
         "text": "<p>We stand behind the quality of our products. Enjoy peace of mind with a 1-year warranty that covers manufacturing defects and damage from regular use. </p><p>Please inspect your purchase upon arrival before using or installing it. If you encounter further issues after the warranty has expired, we are happy to provide replacement components at a reduced price. </p><p>To validate your warranty claim, kindly provide photographic evidence of the defect. The warranty can only be processed by the original purchaser and does not apply to second-hand purchases.</p>"
       }
     },
+    "contact_shoreline_brands_4zzjPB": {
+      "type": "contact-shoreline-brands",
+      "name": "Contact Shoreline Brands",
+      "settings": {
+        "heading": "Contact Shoreline Brands",
+        "email": "warranty@shorelinebrands.com",
+        "phone": "+1-123-456-7890",
+        "quick_links_heading": "Quick Links:",
+        "upload_required": true
+      }
+    },
     "additional_resources_3afDJm": {
       "type": "additional-resources",
       "blocks": {
@@ -483,25 +494,14 @@
         "button_text": "Contact Us",
         "button_link": "shopify://pages/contact"
       }
-    },
-    "contact_shoreline_brands_4zzjPB": {
-      "type": "contact-shoreline-brands",
-      "name": "Contact Shoreline Brands",
-      "settings": {
-        "heading": "Contact Shoreline Brands",
-        "email": "warranty@shorelinebrands.com",
-        "phone": "+1-123-456-7890",
-        "quick_links_heading": "Quick Links:",
-        "upload_required": true
-      }
     }
   },
   "order": [
     "main",
     "hero_U7rRX8",
     "our_story_section_Hfk7my",
+    "contact_shoreline_brands_4zzjPB",
     "additional_resources_3afDJm",
-    "faq_two_column_BJfKNF",
-    "contact_shoreline_brands_4zzjPB"
+    "faq_two_column_BJfKNF"
   ]
 }
