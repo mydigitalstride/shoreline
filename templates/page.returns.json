@@ -321,7 +321,7 @@
       ],
       "name": "t:names.hero",
       "settings": {
-        "media_type_1": "image",
+        "media_type_1": "video",
         "image_1": "shopify://shop_images/Axis_-Casey_Cotton.jpg",
         "video_1": "shopify://files/videos/02 - f273095f72274a6aa3fc9e779e203748.mp4",
         "media_type_2": "image",
@@ -491,7 +491,8 @@
         "heading": "Contact Shoreline Brands",
         "email": "Returns@shorelinebrands.com",
         "phone": "+1-123-456-7890",
-        "quick_links_heading": "Quick Links:"
+        "quick_links_heading": "Quick Links:",
+        "upload_required": false
       }
     }
   },
@@ -499,8 +500,8 @@
     "main",
     "hero_U7rRX8",
     "our_story_section_Hfk7my",
+    "contact_shoreline_brands_4zzjPB",
     "additional_resources_3afDJm",
-    "faq_two_column_BJfKNF",
-    "contact_shoreline_brands_4zzjPB"
+    "faq_two_column_BJfKNF"
   ]
 }
