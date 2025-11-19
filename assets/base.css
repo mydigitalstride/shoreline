@@ -4433,6 +4433,6 @@ text-component {
   }
 }
 product-price [ref="priceContainer"] {
-  font-size: 1.5rem;
-  color: #2C3C5E;
+  font-size: 1.5rem !important;
+  color: #2C3C5E !important;
 }
