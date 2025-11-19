@@ -46,7 +46,6 @@
   position: relative;
 }
 
-/* Optional overlay */
 .customer-reviews::after {
   content: "";
   position: absolute;
@@ -67,7 +66,7 @@
   color: #1a294a;
 }
 
-/* Grid Layout */
+/* Grid */
 .reviews-grid {
   position: relative;
   z-index: 1;
@@ -84,34 +83,32 @@
   padding: 2rem;
   position: relative;
   text-align: left;
-  font-size: 0.95rem;
-  line-height: 1.5;
   border-radius: 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   max-width: 380px;
   width: 100%;
 }
 
-/* Speech Bubble Pointer (centered fix) */
+/* OUTER TEAL ARROW */
 .review-card::after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 22px 22px 0 22px;
+  border-style: solid;
+  border-color: #46b3b8 transparent transparent transparent;
+}
+
+/* INNER WHITE ARROW */
+.review-card::before {
   content: "";
   position: absolute;
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   border-width: 20px 20px 0 20px;
-  border-style: solid;
-  border-color: #46b3b8 transparent transparent transparent;
-}
-
-/* White inner fill for arrow */
-.review-card::before {
-  content: "";
-  position: absolute;
-  bottom: -17px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 17px 17px 0 17px;
   border-style: solid;
   border-color: #fff transparent transparent transparent;
   z-index: 1;
@@ -121,9 +118,23 @@
 .review-header {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
+  align-items: center; /* centers date vertically */
   margin-bottom: 0.5rem;
+}
+
+/* Name */
+.review-name {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #1a294a;
+}
+
+/* Date */
+.review-date {
+  font-size: 1rem;
+  align-content: center;
+  opacity: .8;
+  color: #3a4b6a;
 }
 
 /* Stars */
@@ -137,7 +148,8 @@
 .review-title {
   font-weight: 800;
   margin-bottom: 0.75rem;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  letter-spacing: .4px;
   color: #1a294a;
 }
 
@@ -148,12 +160,10 @@
 }
 
 /* ------------------ RESPONSIVE ------------------ */
-
 @media (max-width: 989px) {
   .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .customer-reviews {
     padding: 3rem 1.5rem;
   }
@@ -164,12 +174,10 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
   .review-card {
     max-width: 100%;
     padding: 1.75rem;
   }
-
   .reviews-heading {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -180,11 +188,9 @@
   .review-card {
     padding: 1.5rem;
   }
-
   .review-title {
     font-size: 1rem;
   }
-
   .review-text {
     font-size: 0.9rem;
   }
@@ -195,17 +201,8 @@
 {
   "name": "Customer Reviews",
   "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Reviews"
-    },
-    {
-      "type": "image_picker",
-      "id": "bg_image",
-      "label": "Background Image"
-    }
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Reviews" },
+    { "type": "image_picker", "id": "bg_image", "label": "Background Image" }
   ],
   "blocks": [
     {
