@@ -203,9 +203,8 @@
                 "button_rBfFT8": {
                   "type": "button",
                   "name": "t:names.button",
-                  "disabled": true,
                   "settings": {
-                    "label": "Shop now",
+                    "label": "Shop Now",
                     "link": "shopify://collections/all",
                     "open_in_new_tab": false,
                     "style_class": "button",
@@ -219,7 +218,6 @@
                 "button_9tqtFy": {
                   "type": "button",
                   "name": "t:names.button",
-                  "disabled": true,
                   "settings": {
                     "label": "Find My Shade Sail",
                     "link": "shopify://pages/shade-solutions",
@@ -364,8 +362,8 @@
       "settings": {
         "heading": "Contact Shoreline Brands",
         "email": "warranty@shorelinebrands.com",
-        "phone": "+1-123-456-7890",
-        "quick_links_heading": "Quick Links:",
+        "phone": "(717) 205-9983",
+        "quick_links_heading": "",
         "upload_required": true
       }
     },
