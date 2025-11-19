@@ -362,7 +362,7 @@
         "extension_card_yAVbYW": {
           "type": "extension_card",
           "settings": {
-            "image": "shopify://shop_images/45d221_91c525fc28004f55b72ff7eff359700b_mv2.webp",
+            "image": "shopify://shop_images/646699db-45d221_2022e5fc65d946478e50c6ffe307fcb7_mv2.jpg",
             "title": "Stern-Mount Shade Extensions",
             "text": "Designed to mount through your boat’s stern near the swim platform."
           }
@@ -370,7 +370,7 @@
         "extension_card_bA83BY": {
           "type": "extension_card",
           "settings": {
-            "image": "shopify://shop_images/45d221_6ec6fc1fa53745b1998f9a0fe876e516_mv2.png",
+            "image": "shopify://shop_images/cc73df26-45d221_a061254709074ae69a5abfbae2810759_mv2.jpg",
             "title": "Bimini-Mount Shade Extensions",
             "text": "Ideal for Malibu and similar models, this kit expands your existing coverage."
           }
@@ -422,8 +422,8 @@
         "link_GgUzbK": {
           "type": "link",
           "settings": {
-            "title": "Shop All Products",
-            "link": "shopify://collections/all"
+            "title": "Contact Us",
+            "link": "shopify://pages/contact"
           }
         }
       },
@@ -434,8 +434,8 @@
       "name": "Additional Resources",
       "settings": {
         "heading": "Additional Resources",
-        "text": "Enter your description here. You can edit this text in the theme editor.",
-        "right_image": "shopify://shop_images/45d221_6ec6fc1fa53745b1998f9a0fe876e516_mv2.png"
+        "text": "Explore our most popular resources below for quick answers or help reaching our team!",
+        "right_image": "shopify://shop_images/IMG_5538.jpg"
       }
     },
     "customer_reviews_prwpJp": {
