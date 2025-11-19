@@ -1408,6 +1408,7 @@ button.shopify-payment-button__button--unbranded:hover {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  padding: 10vh 10vw;
 }
 
 /* Target the block wrappers Shopify generates */
@@ -2369,10 +2370,6 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   --margin-inline: 0px;
   --margin-inline-start: var(--margin-inline, 0px);
   --margin-inline-end: var(--margin-inline, 0px);
-}
-
-.hero__text-block {
-  padding-left: 4rem;
 }
 .spacing-style,
 .inherit-spacing {
