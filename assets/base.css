@@ -2808,6 +2808,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   color: #2C3C5E !important;
   background-color:transparent !important;
   border: none !important;
+  font-weight: 800;
 }
 
 .product-details .quantity-selector .quantity-plus {
