@@ -410,7 +410,7 @@
         "image_block_PGy68W": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/IMG_6135.jpg",
+            "image": "shopify://shop_images/IMG_6135.avif",
             "alt_text": "Gallery image"
           }
         },
