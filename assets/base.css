@@ -1385,12 +1385,14 @@ button.shopify-payment-button__button--unbranded {
   padding-block: var(--button-padding-block);
   padding-inline: var(--button-padding-inline);
 }
-.button,.button{
+.button,.button,
+button.shopify-payment-button__button--unbranded {
   background-color:none !important;
   border: 3px solid transparent;
   box-shadow: none !important;
 }
-.button:hover {
+.button:hover,
+button.shopify-payment-button__button--unbranded:hover {
   background-color: transparent;
   /* color:rgb(255, 255, 255); */
   border-radius:0px;
