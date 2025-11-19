@@ -51,8 +51,8 @@ button:hover,
 .button:hover,
 .shopify-button:hover {
   /* background-color: #ffffff;      White background */
-  color: #f26522;                 /* Orange text */
-  border-color: #f26522;          /* Same border */
+  color: #f26522 !important;                 /* Orange text */
+  border-color: #f26522 !important;          /* Same border */
   transform: none;                /* Prevent accidental motion */
 }
 
