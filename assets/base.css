@@ -2798,8 +2798,14 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   border-end-start-radius: var(--style-border-radius-buttons-primary);
 }
 
-.quantity-plus {
-  color: #f26522;
+.quantity-plus, .quantity-minus{
+  color: #f26522 !important;
+  background-color:transparent !important;
+  border: none !important;
+}
+
+.quantity-plus:hover, .quantity-minus:hover{
+  color: #2C3C5E !important;
   background-color:transparent !important;
   border: none !important;
 }
