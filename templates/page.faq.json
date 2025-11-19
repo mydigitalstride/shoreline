@@ -320,9 +320,10 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/IMG_1485.jpg",
+        "image_1": "shopify://shop_images/MB.jpg",
         "video_1": "shopify://files/videos/121 - SB24_Website_SunShade_1080x1080 (1).mp4",
         "media_type_2": "image",
+        "image_2": "shopify://shop_images/MB.jpg",
         "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
@@ -354,56 +355,56 @@
           "type": "faq",
           "settings": {
             "question": "What Bimini Shade Extension will fit my boat?",
-            "answer": "We have over 18 different variations of boat shade extensions to fit most makes and models. Use our search tool to find yours. If you are still unable to locate the correct bimini kit, please get in touch with our team for personalized assistance."
+            "answer": "<p>We have over 18 different variations of boat shade extensions to fit most makes and models. Use our search tool to find yours. If you are still unable to locate the correct bimini kit, please get in touch with our team for personalized assistance.</p>"
           }
         },
         "faq_PnPkqV": {
           "type": "faq",
           "settings": {
             "question": "What if I have an existing bimini top?",
-            "answer": "Our versatile boat shade kits are designed to work seamlessly with your factory bimini top. We include telescopic poles that are longer than the sunshade provided to eliminate any overlap between your factory bimini and our bimini extension kit."
+            "answer": "<p>Our versatile boat shade kits are designed to work seamlessly with your factory bimini top. We include telescopic poles that are longer than the sunshade provided to eliminate any overlap between your factory bimini and our bimini extension kit.</p>"
           }
         },
         "faq_RYQPh8": {
           "type": "faq",
           "settings": {
             "question": "What if I don’t have a wakeboard tower?",
-            "answer": "We offer bimini shade kits for virtually all makes and models. Visit our shop page to learn more about our boat bimini shade options and installation setups."
+            "answer": "<p>We offer bimini shade kits for virtually all makes and models. Visit our shop page to learn more about our boat bimini shade options and installation setups.</p>"
           }
         },
         "faq_T4RiAq": {
           "type": "faq",
           "settings": {
             "question": "How do you store the bimini shade extension when it is not extended?",
-            "answer": "The included mounting brackets will always remain on the tower. When not in use, the poles collapse down to 36\" long and can be easily stored in one of your boat compartments. The bimini shade material is lightweight and flexible for easy storage anywhere on your boat. We also offer an optional storage and carrying case to accompany your bimini kit."
+            "answer": "<p>The included mounting brackets will always remain on the tower. When not in use, the poles collapse down to 36\" long and can be easily stored in one of your boat compartments. The bimini shade material is lightweight and flexible for easy storage anywhere on your boat. We also offer an optional storage and carrying case to accompany your bimini kit.</p>"
           }
         },
         "faq_QKfti7": {
           "type": "faq",
           "settings": {
             "question": "How long does it take to set up the bimini shade extension?",
-            "answer": "Setting up the boat bimini shade extension is a breeze. With the included mounting hardware, you can complete the initial setup in just 5–10 minutes. Once in position, deploying or disassembling the shade and telescoping poles takes less than a minute."
+            "answer": "<p>Setting up the boat bimini shade extension is a breeze. With the included mounting hardware, you can complete the initial setup in just 5–10 minutes. Once in position, deploying or disassembling the shade and telescoping poles takes less than a minute.</p>"
           }
         },
         "faq_iLFPtk": {
           "type": "faq",
           "settings": {
             "question": "Can I use the bimini shade extension while wakesurfing?",
-            "answer": "Yes, the boat shade extension can be used while wakesurfing. The rope will be passed underneath to attach to your tow point. The maximum recommended speed is 15 mph for safe use."
+            "answer": "<p>Yes, the boat shade extension can be used while wakesurfing. The rope will be passed underneath to attach to your tow point. The maximum recommended speed is 15 mph for safe use.</p>"
           }
         },
         "faq_b6rgBi": {
           "type": "faq",
           "settings": {
             "question": "Do you offer custom colors for the bimini extension?",
-            "answer": "We keep a black shade in stock, but customization is available for an additional fee. Please use the Contact Us form for general inquiries about custom bimini tops or bimini kit options."
+            "answer": "<p>We keep a black shade in stock, but customization is available for an additional fee. Please use the Contact Us form for general inquiries about custom bimini tops or bimini kit options.</p>"
           }
         },
         "faq_k38Yp8": {
           "type": "faq",
           "settings": {
             "question": "What is a Bimini Extension?",
-            "answer": "A Bimini Extension is a sun-shade device used on your boat to protect passengers not covered by your factory Bimini top.\n\nAlso Known As: Shade Sail, Boat Shade Extension, Transom Awning, Wake Shade, Sun Shade Canopy."
+            "answer": "<p>A Bimini Extension is a sun-shade device used on your boat to protect passengers not covered by your factory Bimini top.\n\nAlso Known As: Shade Sail, Boat Shade Extension, Transom Awning, Wake Shade, Sun Shade Canopy.</p>"
           }
         }
       },
@@ -429,7 +430,13 @@
     "contact_shoreline_brands_bm9bt9": {
       "type": "contact-shoreline-brands",
       "name": "Contact Shoreline Brands",
-      "settings": {}
+      "settings": {
+        "heading": "Contact Shoreline Brands",
+        "email": "info@shorelinebrands.com",
+        "phone": "(717) 205-9983",
+        "quick_links_heading": "",
+        "upload_required": false
+      }
     },
     "additional_resources_a4NEJq": {
       "type": "additional-resources",
