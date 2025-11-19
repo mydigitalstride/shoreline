@@ -2,10 +2,10 @@
 
 {% if closest.product == blank %}
   {% assign text = 'placeholders.product_title' | t %}
-  {% assign product_title = '<p>' | append: text | append: '</p>' %}
+  {% assign product_title = '<h4>' | append: text | append: '</h4>' %}
   {% render 'text', fallback_text: product_title, block: block %}
 {% elsif closest.product != blank %}
-  {% assign product_title = '<p>' | append: closest.product.title | append: '</p>' %}
+  {% assign product_title = '<h4>' | append: closest.product.title | append: '</h4>' %}
   <a
     class="contents user-select-text"
     ref="productTitleLink"
