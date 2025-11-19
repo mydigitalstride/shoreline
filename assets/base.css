@@ -1387,16 +1387,18 @@ button.shopify-payment-button__button--unbranded {
 }
 .button,.button,
 button.shopify-payment-button__button--unbranded {
-  background-color:none !important;
-  border: 3px solid transparent;
+  color: #fff !important;
+  background-color: #f26522 !important;
+  border-radius: 0px !important;
+  border: 3px solid #f26522 !important;
   box-shadow: none !important;
 }
 .button:hover,
 button.shopify-payment-button__button--unbranded:hover {
-  background-color: transparent;
-  /* color:rgb(255, 255, 255); */
-  border-radius:0px;
-  border: 3px solid white !important;
+  color: #f26522 !important;
+  background-color: #fff !important;
+  border-radius: 0px !important;
+  border: 3px solid #f26522 !important;
   box-shadow: none !important;
   transition: all 0.3s ease;
 }
