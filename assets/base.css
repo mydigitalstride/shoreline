@@ -2801,6 +2801,9 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 .product-details .quantity-selector .quantity-plus {
   border-start-end-radius: var(--style-border-radius-buttons-primary);
   border-end-end-radius: var(--style-border-radius-buttons-primary);
+  color: #f26522;
+  background-color:none !important;
+  border: none !important;
 }
 
 .quantity-selector .svg-wrapper {
