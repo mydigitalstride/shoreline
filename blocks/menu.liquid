@@ -141,8 +141,15 @@ menu__item paragraph{
 
   .main-menu-bar {
     padding: 2rem;
-    height: var(--hero-min-height, 90vh);
-  } 
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
 
 /* .main-menu-bar {
     background: transparent;
@@ -198,33 +205,23 @@ menu__item paragraph{
     display: none;
   }
 
-  /* Desktop: cart below menu */
-  @media screen and (min-width: 750px) {
-    .main-menu-bar {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-    }
+  /* Desktop menu wrapper positioning */
+  .menu-wrapper {
+    width: 10rem;
+    height: 100vh;
+    padding: 2rem;
+    background-color: #2c3c5d;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
   }
 
   /* Mobile: cart next to menu */
   @media screen and (max-width: 749px) {
     .main-menu-bar {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      align-items: center;
       justify-content: flex-start;
     }
-  }
-
-  .menu-wrapper {
-    width: 10rem;
-    height: var(--hero-min-height, 90vh);
-    padding: 2rem;
-    background-color: #2c3c5d;
-    position: relative;
   }
 
   /* Menu Logo Styles */
@@ -239,11 +236,20 @@ menu__item paragraph{
     max-height: 80px;
   }
 
+  /* Details content positioning */
+  .details-content {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: auto;
+    padding: 4vh 1vw;
+  }
+
   /* Close Button Styles */
   .menu-close-btn {
     position: absolute;
     top: 1rem;
-    right: -34px; /* 10px outside menu */
+    right: 11rem; /* Positioned to the left of menu */
     background-color: white;
     border: none;
     border-radius: 50%;
@@ -272,6 +278,14 @@ menu__item paragraph{
     a {
       font-weight: bold !important;
     }
+  }
+
+  .menu__item.paragraph {
+    line-height: 2;
+  }
+
+  .list-unstyled {
+    text-align: left;
   }
 
   .hidden {
@@ -306,36 +320,6 @@ menu__item paragraph{
 
     .menu--dividers .details-content {
       padding-block-end: var(--padding-sm);
-    }
-
-    /* Custom mobile menu styles */
-    .menu__item.paragraph {
-      line-height: 2;
-    }
-
-    .details-content {
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      right: auto;
-      padding: 4vh 1vw;
-    }
-
-    .menu-close-btn {
-      right: 11rem;
-    }
-
-    .menu-wrapper {
-      width: 10rem;
-      height: 100vh;
-      padding: 2rem;
-      background-color: #2c3c5d;
-      position: absolute;
-      right: 0;
-    }
-
-    .list-unstyled {
-      text-align: left;
     }
   }
 

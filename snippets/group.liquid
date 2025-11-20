@@ -91,34 +91,27 @@
   }
 
   #menu-group {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    height: var(--hero-min-height, 90vh);
+    right: 0;
+    height: auto;
     width: auto;
+    z-index: 100;
   }
 
   /* Desktop gradient behind menu */
   @media screen and (min-width: 750px) {
     #menu-group::before {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       max-width: var(--hero-max-width, 100vw);
-      height: 100%;
+      height: var(--hero-min-height, 90vh);
       background: linear-gradient(to bottom, #008080, transparent);
       z-index: -1;
       pointer-events: none;
-    }
-  }
-
-  @media screen and (max-width: 749px) {
-    #menu-group {
-      height: auto;
-      right: 0;
-      left: auto;
     }
   }
 {% endstylesheet %}
