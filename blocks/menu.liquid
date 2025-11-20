@@ -165,6 +165,17 @@ menu__item paragraph{
     margin: 0;
   }
 
+  /* Blue menu icons on product pages */
+  body.product-page .main-menu-bar svg,
+  body.product-page #main-menu-button svg,
+  body.product-page .cart-icon-wrapper svg {
+    color: #0066cc;
+  }
+
+  body.product-page .cart-count {
+    background-color: #0066cc;
+  }
+
   /* Cart Icon Styles */
   .cart-icon-wrapper {
     position: relative;
@@ -333,6 +344,11 @@ menu__item paragraph{
 <script>
   // Update cart count when cart changes
   document.addEventListener('DOMContentLoaded', function() {
+    // Detect product pages and add class to body
+    if (window.location.pathname.includes('/products/')) {
+      document.body.classList.add('product-page');
+    }
+
     const cartCountElement = document.getElementById('cart-count');
 
     if (cartCountElement) {
