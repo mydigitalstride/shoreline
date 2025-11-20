@@ -105,7 +105,15 @@
   }
 
   .shopify-section .section {
-    padding-left: 4rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 769px) {
+    .shopify-section .section {
+      padding-left: 4rem !important;
+      padding-right: 4rem;
+    }
   }
 
   #product-menu {
@@ -116,10 +124,6 @@
     margin-top: 0;
     padding: 0;
     width: 5.4rem;
-
-    .main-menu-bar {
-      height: 100vh;
-    }
 
     #menu-group {
       height: 100vh;
