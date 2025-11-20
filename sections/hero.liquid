@@ -119,16 +119,14 @@
 .hero__text-block .text-block.h1::after {
   content: "";
   position: absolute;
-  left: 37%;
   bottom: 0;
-  transform: translateX(-50%);
-  
-  width: 65%; /* shorten to fit text width */
-  height: 3px; /* thinner line */
+  width: 100%; /* shorten to fit text width */
+  height: 5px; /* thinner line */
   
   background: linear-gradient(
-    90deg,
+    45deg,
     rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.95) 10%,
     rgba(255,255,255,0.85) 70%,
     rgba(255,255,255,0) 100%
   );
@@ -195,7 +193,7 @@
   justify-content: center;
   align-items: flex-start;
 
-  padding: 3rem 3rem 4rem !important;
+  padding: 10vh 10vw !important;
   text-align: left;
 }
 

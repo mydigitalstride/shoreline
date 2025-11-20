@@ -37,6 +37,8 @@
 .page-wrapper{
   padding: 4rem 3rem;
 }
+
+
 .faq-section {
   position: relative;
   padding: 4rem 2rem;
@@ -107,7 +109,7 @@
   color: #2c3c5e;
   font-weight: 700;
   font-family: "Heebo", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   list-style: none;
   transition: background 0.2s ease;
@@ -136,6 +138,9 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     padding: 3rem 1.5rem;
+  }
+  .page-wrapper {
+    padding: 0;
   }
 }
 
@@ -171,6 +176,7 @@
     max-width: 100%;
     padding: 0 1rem;
     color: rgba(255, 255, 255, 0.9);
+    text-align: left;
   }
 
   .faq-btn {
@@ -197,21 +203,14 @@
 /* --- EXTRA SMALL --- */
 @media screen and (max-width: 480px) {
   .faq-left h2 {
-    font-size: 1.7rem;
-  }
-
-  .faq-left p {
-    font-size: 0.95rem;
+    font-size: 2rem;
+    line-height: 1.25;
   }
 
   .faq-btn {
     width: 100%;
     max-width: 250px;
     text-align: center;
-  }
-
-  .faq-question {
-    font-size: 0.95rem;
   }
 }
 {% endstylesheet %}

@@ -92,6 +92,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 5rem;
+  
 }
 
 .bestsellers-heading {
@@ -144,11 +145,12 @@
 
 .product-title {
   font-size:1.5rem;
-  font-weight:800;
+  font-weight:500 !important;
   text-transform: uppercase;
   margin:1rem 0 0 5rem;
   color:(var--color-surface);
   letter-spacing: 1px;
+  text-align: left;
 }
 
 .add-to-cart {
@@ -242,13 +244,18 @@
 /* ------------------------------
    RESPONSIVE STYLES
 ------------------------------ */
-
+.product-card{
+  background: transparent !important;
+}
 /* Tablet */
 @media (max-width: 989px) {
   .best-sellers-wrapper {
     grid-template-columns: 1fr;
   }
 
+  .left-inner{
+    margin:0px;
+  }
   .best-sellers-left {
     padding: 3rem 2rem;
     justify-content: center;
@@ -257,6 +264,8 @@
 
   .bestsellers-heading {
     margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
   }
 
   .best-sellers-grid {
@@ -267,6 +276,7 @@
   .product-card {
     transform: none;
     text-align: center;
+t;
   }
 
   .best-sellers-right {
@@ -289,7 +299,7 @@
   }
 
   .bestsellers-heading {
-    font-size: 2rem;
+
     margin-bottom: 1.5rem;
   }
 
@@ -308,8 +318,8 @@
   }
 
   .add-to-cart {
-    width: 80%;
-    max-width: 240px;
+    width: 100%;
+    max-width: none;
     font-size: 0.9rem;
     margin: 0 auto;
   }
@@ -340,10 +350,6 @@
 
 /* Extra Small (Phones) */
 @media (max-width: 480px) {
-  .bestsellers-heading {
-    font-size: 1.75rem;
-  }
-
   .best-sellers-grid {
     gap: 1.2rem;
   }

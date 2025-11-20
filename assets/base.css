@@ -1385,17 +1385,19 @@ button.shopify-payment-button__button--unbranded {
   padding-block: var(--button-padding-block);
   padding-inline: var(--button-padding-inline);
 }
-.button,.button{
-  background-color:none !important;
-  border: 3px solid transparent;
-  box-shadow: none !important;
+.button,.button,
+button.shopify-payment-button__button--unbranded {
+  background-color: #f26522;
+  border-radius: 0px ;
+  border: 3px solid #f26522 ;
+  box-shadow: none ;
 }
-.button:hover {
-  background-color: transparent;
-  /* color:rgb(255, 255, 255); */
-  border-radius:0px;
-  border: 3px solid white !important;
-  box-shadow: none !important;
+.button:hover,
+button.shopify-payment-button__button--unbranded:hover {
+  color: #f26522;
+  border-radius: 0px;
+  border: 3px solid #f26522 ;
+  box-shadow: none ;
   transition: all 0.3s ease;
 }
 
@@ -1406,6 +1408,7 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  padding: 10vh 10vw;
 }
 
 /* Target the block wrappers Shopify generates */
@@ -2368,11 +2371,10 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   --margin-inline-start: var(--margin-inline, 0px);
   --margin-inline-end: var(--margin-inline, 0px);
 }
-
 .spacing-style,
 .inherit-spacing {
   padding-block: calc(var(--padding-block-start) + var(--section-top-offset, 0px)) var(--padding-block-end);
-  padding-inline: 20px var(--padding-inline-end);
+  padding-inline: 0px var(--padding-inline-end);
   margin-block: var(--margin-block-start) var(--margin-block-end);
   margin-inline: var(--margin-inline-start) var(--margin-inline-end);
 }
@@ -2794,9 +2796,23 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   border-end-start-radius: var(--style-border-radius-buttons-primary);
 }
 
+.quantity-plus, .quantity-minus{
+  color: #f26522 !important;
+  background-color:transparent !important;
+  border: none !important;
+}
+
+.quantity-plus:hover, .quantity-minus:hover{
+  color: #2C3C5E !important;
+  background-color:transparent !important;
+  border: none !important;
+  font-weight: 800;
+}
+
 .product-details .quantity-selector .quantity-plus {
   border-start-end-radius: var(--style-border-radius-buttons-primary);
   border-end-end-radius: var(--style-border-radius-buttons-primary);
+
 }
 
 .quantity-selector .svg-wrapper {
@@ -4422,4 +4438,8 @@ text-component {
   .group-block {
     width: 100%;
   }
+}
+product-price [ref="priceContainer"] {
+  font-size: 1.5rem !important;
+  color: #2C3C5E !important;
 }
