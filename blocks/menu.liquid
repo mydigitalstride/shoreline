@@ -60,6 +60,12 @@
                 {{- 'icon-menu.svg' | inline_asset_content -}}
               </span>
             </button>
+            <a href="/cart" id="cart-icon-link" class="cart-icon-wrapper">
+              <span class="svg-wrapper">
+                {{- 'icon-cart.svg' | inline_asset_content -}}
+              </span>
+              <span class="cart-count" id="cart-count">{{ cart.item_count }}</span>
+            </a>
           </div>
       {%- endif -%}
       <div class="menu-wrapper hidden" {%- if is_main_menu -%}id="main-menu-wrapper"{%- endif -%}>
@@ -120,10 +126,7 @@ menu__item paragraph{
     display: flex;
   }
 
-   .main-menu-bar {
-    background: linear-gradient(to bottom, #89ddde 0%,#000000 100%);
-    background: #89DDDE;
-    background: linear-gradient(180deg,rgba(137, 221, 222, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  .main-menu-bar {
     padding: 2rem;
     height: var(--hero-min-height, 90vh);
   } 
@@ -140,6 +143,66 @@ menu__item paragraph{
     background: transparent;
     padding: 0;
     margin: 0;
+  }
+
+  /* Cart Icon Styles */
+  .cart-icon-wrapper {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-icon-wrapper .svg-wrapper {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cart-icon-wrapper svg {
+    fill: currentColor;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #f26522;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .cart-count:empty {
+    display: none;
+  }
+
+  /* Desktop: cart below menu */
+  @media screen and (min-width: 750px) {
+    .main-menu-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+
+  /* Mobile: cart next to menu */
+  @media screen and (max-width: 749px) {
+    .main-menu-bar {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+    }
   }
 
   .menu-wrapper {
@@ -195,6 +258,42 @@ menu__item paragraph{
     display: none;
   }
 {% endstylesheet %}
+
+<script>
+  // Update cart count when cart changes
+  document.addEventListener('DOMContentLoaded', function() {
+    const cartCountElement = document.getElementById('cart-count');
+
+    if (cartCountElement) {
+      // Function to fetch and update cart count
+      async function updateCartCount() {
+        try {
+          const response = await fetch('/cart.js');
+          const cart = await response.json();
+          const itemCount = cart.item_count;
+
+          if (itemCount > 0) {
+            cartCountElement.textContent = itemCount;
+            cartCountElement.style.display = 'flex';
+          } else {
+            cartCountElement.style.display = 'none';
+          }
+        } catch (error) {
+          console.error('Error updating cart count:', error);
+        }
+      }
+
+      // Update cart count on page load
+      updateCartCount();
+
+      // Listen for cart updates
+      document.addEventListener('cart:updated', updateCartCount);
+
+      // Listen for custom add to cart events
+      document.addEventListener('product:added-to-cart', updateCartCount);
+    }
+  });
+</script>
 
 {% schema %}
 {
