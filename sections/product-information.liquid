@@ -94,6 +94,11 @@
     gap: var(--gap) 0;
   }
 
+  /* Product information section padding */
+  .product-information.section--page-width {
+    padding: 1rem;
+  }
+
   /* Base grid layout */
   .product-information__grid {
     display: grid;
@@ -535,6 +540,23 @@ button.shopify-buy__button:hover,
   /* If the header is sticky, make product details content stick underneath the header */
   body:has(#header-group #header-component[data-sticky-state='active']) .product-details.sticky-content--desktop {
     --sticky-header-offset: var(--header-height);
+  }
+
+  /* Judge.me review body paragraphs - make black for desktop and mobile */
+  .jdgm-rev__body p {
+    color: #000 !important;
+  }
+
+  /* Buy it Now button styling - only affects product page Shopify payment button */
+  .product-information .shopify-payment-button__button.shopify-payment-button__button--unbranded {
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .product-information .shopify-payment-button__button.shopify-payment-button__button--unbranded:hover {
+    background-color: #fff !important;
+    color: #f26522 !important;
   }
 {% endstylesheet %}
 
