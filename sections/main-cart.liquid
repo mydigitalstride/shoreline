@@ -73,6 +73,15 @@
   .cart-page__summary {
     padding-top: var(--padding-xl);
   }
+
+  @media screen and (max-width: 749px) {
+    .cart-page__summary {
+      overflow: visible !important;
+      height: auto !important;
+      position: relative !important;
+    }
+  }
+
   @media screen and (min-width: 750px) {
     .cart-page {
       grid-template-columns: 1fr;
