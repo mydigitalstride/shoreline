@@ -652,7 +652,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>New arrivals</h3>",
+                        "text": "<h3>{{ closest.product.metafields.custom.wave_header_1.value }}</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -678,7 +678,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                        "text": "<p>{{ closest.product.metafields.custom.wave_1_body | metafield_tag }}</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -821,7 +821,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>{{ closest.product.metafields.custom.key_features_header.value }}</h3>",
+                        "text": "<p>{{ closest.product.metafields.custom.wave_2_header.value }}</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -847,7 +847,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p></p>{{ closest.product.metafields.custom.key_features_body | metafield_tag }}",
+                        "text": "<p>{{ closest.product.metafields.custom.wave_2_body | metafield_tag }}</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -990,7 +990,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h3>{{ closest.product.metafields.custom.compatibility_header.value }}</h3>",
+                        "text": "<p>{{ closest.product.metafields.custom.wave_3_header.value }}</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1016,7 +1016,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p></p>{{ closest.product.metafields.custom.compatibilities | metafield_tag }}",
+                        "text": "<p>{{ closest.product.metafields.custom.wave_3_body | metafield_tag }}</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1155,7 +1155,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h3>What's included</h3>",
+                    "text": "<h3>{{ closest.product.metafields.custom.whats_included_header.value }}</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
