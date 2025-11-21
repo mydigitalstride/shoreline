@@ -3957,8 +3957,8 @@ slideshow-arrows .slideshow-control {
 /* Slideshow next/previous controls - no border or background */
 .slideshow-control.slideshow-control--next,
 .slideshow-control.slideshow-control--previous {
-  border: none;
-  background: none;
+  border: none !important;
+  background: none !important;
 }
 
 slideshow-arrows .slideshow-control.slideshow-control--style-none {
