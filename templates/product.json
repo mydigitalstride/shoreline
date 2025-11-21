@@ -1181,7 +1181,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                    "text": "<p>{{ closest.product.metafields.custom.whats_included_body | metafield_tag }}</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1254,7 +1254,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h3>key features</h3>",
+                    "text": "<h3>{{ closest.product.metafields.custom.key_features_header.value }}</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1280,7 +1280,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                    "text": "<p>{{ closest.product.metafields.custom.key_features_body | metafield_tag }}</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1353,7 +1353,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h3>Compatibility</h3>",
+                    "text": "<h3>{{ closest.product.metafields.custom.compatibility_header.value }}</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1379,7 +1379,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                    "text": "<p>{{ closest.product.metafields.custom.compatibility_body | metafield_tag }}</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
