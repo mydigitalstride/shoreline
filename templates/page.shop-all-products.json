@@ -124,7 +124,7 @@
             "text_WJWPUA": {
               "type": "text",
               "settings": {
-                "text": "<p>Shop Shoreline </p><p>Products</p>",
+                "text": "<h1>Shop Shoreline<br/>Brands Products</h1>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
