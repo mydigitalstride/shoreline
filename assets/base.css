@@ -3918,7 +3918,7 @@ slideshow-arrows {
   display: flex;
   z-index: var(--layer-heightened);
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   align-items: flex-end;
 
   &[position='left'] {
@@ -3952,6 +3952,13 @@ slideshow-arrows .slideshow-control {
   min-height: var(--minimum-touch-target);
   padding: 0 var(--padding-xs);
   color: var(--color-white);
+}
+
+/* Slideshow next/previous controls - no border or background */
+.slideshow-control.slideshow-control--next,
+.slideshow-control.slideshow-control--previous {
+  border: none;
+  background: none;
 }
 
 slideshow-arrows .slideshow-control.slideshow-control--style-none {
