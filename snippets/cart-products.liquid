@@ -658,6 +658,14 @@
     grid-template-columns: 1fr;
   }
 
+  @media screen and (max-width: 749px) {
+    .cart__ctas {
+      position: relative;
+      z-index: 1;
+      margin-top: var(--margin-md);
+    }
+  }
+
   .cart__additional-checkout-buttons {
     width: 100%;
   }
@@ -666,6 +674,14 @@
     width: 100%;
     height: clamp(25px, var(--height-buy-buttons), 55px);
     padding-inline: var(--padding-4xl);
+  }
+
+  @media screen and (max-width: 749px) {
+    .cart__ctas .cart__checkout-button {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
   }
 
   shopify-accelerated-checkout-cart {

@@ -69,6 +69,11 @@
     top: 0;
     align-self: start;
 
+    @media screen and (max-width: 749px) {
+      position: relative;
+      padding: var(--padding-md) 0;
+    }
+
     @media screen and (min-width: 750px) {
       padding: var(--padding-5xl);
       grid-row: 1 / -1;
@@ -82,6 +87,8 @@
   .cart__summary-container {
     @media screen and (max-width: 749px) {
       border: none;
+      overflow: visible !important;
+      height: auto !important;
     }
 
     @media screen and (min-width: 750px) {
