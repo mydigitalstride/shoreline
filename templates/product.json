@@ -821,7 +821,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<p>{{ closest.product.metafields.custom.wave_2_header.value }}</p>",
+                        "text": "<h3>{{ closest.product.metafields.custom.wave_2_header.value }}</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -990,7 +990,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<p>{{ closest.product.metafields.custom.wave_3_header.value }}</p>",
+                        "text": "<h3>{{ closest.product.metafields.custom.wave_3_header.value }}</h3>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
