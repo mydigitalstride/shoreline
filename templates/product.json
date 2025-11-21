@@ -343,6 +343,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
+                    "image": "shopify://shop_images/up_to_15mph_useage.png",
                     "link": "",
                     "image_ratio": "adapt",
                     "width": "fit-content",
@@ -365,6 +366,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
+                    "image": "shopify://shop_images/Deploy_in_60_seconds.png",
                     "link": "",
                     "image_ratio": "adapt",
                     "width": "fit-content",
@@ -387,6 +389,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
+                    "image": "shopify://shop_images/Made_in_the_USA_Circle.png",
                     "link": "",
                     "image_ratio": "adapt",
                     "width": "fit-content",
@@ -441,7 +444,7 @@
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
-                "stacking": true,
+                "stacking": false,
                 "show_pickup_availability": false,
                 "gift_card_form": true,
                 "padding-block-start": 0,
@@ -466,6 +469,7 @@
                 },
                 "accelerated-checkout": {
                   "type": "accelerated-checkout",
+                  "disabled": true,
                   "static": true,
                   "settings": {},
                   "blocks": {}
@@ -1151,7 +1155,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>New arrivals</h2>",
+                    "text": "<h3>What's included</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1250,7 +1254,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>New arrivals</h2>",
+                    "text": "<h3>key features</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1349,7 +1353,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>New arrivals</h2>",
+                    "text": "<h3>Compatibility</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1526,6 +1530,7 @@
     },
     "faq_two_column_LyEUpq": {
       "type": "faq-two-column",
+      "disabled": true,
       "name": "FAQ Two Column",
       "settings": {
         "heading": "Frequently Asked Questions",
