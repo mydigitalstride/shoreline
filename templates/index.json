@@ -515,7 +515,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/IMG_5029.jpg",
-            "title": "Shade Solutions",
+            "title": "Wake Tower Bimini Extensions",
             "link": "shopify://pages/category-page-shade-extension-kits"
           }
         },
@@ -523,8 +523,16 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/att.dg0gpxFADVXbp2bTkvkjTlgl1fc2I0pWMLLNgLMAcyY.jpg",
-            "title": "Watersports Gear",
+            "title": "Center Console Bimini Extensions",
             "link": "shopify://pages/category-page-wakesurf"
+          }
+        },
+        "category_Mr9GH8": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2438_jpeg.jpg",
+            "title": "Pontoon boat bimini extensions",
+            "link": "shopify://collections/pontoon-boat-bimini-extensions"
           }
         },
         "category_j3kEcK": {
@@ -542,6 +550,7 @@
         "feature_MfUikD",
         "category_6FPBDT",
         "category_UrLgW6",
+        "category_Mr9GH8",
         "category_j3kEcK"
       ],
       "custom_css": [
