@@ -803,12 +803,17 @@ body,
   font-family: var(--font-paragraph--family);
   font-style: var(--font-paragraph--style);
   font-weight: var(--font-paragraph--weight);
-  font-size: var(--font-paragraph--size);
+  font-size: 1rem !important;
   line-height: var(--font-paragraph--line-height);
   text-transform: var(--font-paragraph--case);
   -webkit-font-smoothing: antialiased;
   color:white;
   /* color: var(--color, var(--color-foreground)); */
+}
+
+/* Ensure all paragraph tags have 1rem font-size */
+p {
+  font-size: 1rem !important;
 }
 
 /* Ensure inputs with type presets maintain minimum 16px on mobile to prevent iOS zoom */
@@ -2412,6 +2417,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   }
 
   p {
+    font-size: 1rem !important;
     line-height: var(--line-height--body, var(--line-height));
   }
 }
