@@ -9,226 +9,6 @@
  */
 {
   "sections": {
-    "section": {
-      "type": "section",
-      "blocks": {
-        "text_tqQTNE": {
-          "type": "text",
-          "name": "Title",
-          "settings": {
-            "text": "<p>{{ closest.collection.title }}</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_twGGkJ": {
-          "type": "text",
-          "name": "Description",
-          "settings": {
-            "text": "{{ closest.collection.description }}",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_tqQTNE",
-        "text_twGGkJ"
-      ],
-      "disabled": true,
-      "name": "Collection heading",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48,
-        "custom_section_id": ""
-      }
-    },
-    "main": {
-      "type": "main-collection",
-      "blocks": {
-        "filters": {
-          "type": "filters",
-          "static": true,
-          "settings": {
-            "enable_filtering": true,
-            "filter_style": "horizontal",
-            "filter_width": "centered",
-            "text_label_case": "default",
-            "show_swatch_label": false,
-            "show_filter_label": false,
-            "enable_sorting": true,
-            "enable_grid_density": true,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "padding-block-start": 8,
-            "padding-block-end": 8,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "facets_margin_bottom": 8,
-            "facets_margin_right": 20
-          },
-          "blocks": {}
-        },
-        "product-card": {
-          "type": "_product-card",
-          "static": true,
-          "settings": {
-            "product_card_gap": 4,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "card-gallery": {
-              "type": "_product-card-gallery",
-              "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_title_4nY4eT": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 4,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "price_EzJzMm": {
-              "type": "price",
-              "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h6",
-                "width": "100%",
-                "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "color": "var(--color-foreground)",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "card-gallery",
-            "product_title_4nY4eT",
-            "price_EzJzMm"
-          ]
-        }
-      },
-      "disabled": true,
-      "settings": {
-        "layout_type": "grid",
-        "product_card_size": "medium",
-        "mobile_product_card_size": "small",
-        "product_grid_width": "centered",
-        "full_width_on_mobile": true,
-        "columns_gap_horizontal": 16,
-        "columns_gap_vertical": 24,
-        "padding-inline-start": 0,
-        "padding-inline-end": 0,
-        "color_scheme": "scheme-1",
-        "padding-block-start": 0,
-        "padding-block-end": 32
-      }
-    },
     "hero_Qq3nc4": {
       "type": "hero",
       "blocks": {
@@ -496,6 +276,206 @@
         "padding-block-end": 40
       }
     },
+    "all_products_grid_KbTrRb": {
+      "type": "all-products-grid",
+      "disabled": true,
+      "name": "All Products Grid with Filter beside Heading",
+      "settings": {
+        "heading": "All Products",
+        "products": [
+          "2015-2025-malibu-boats-bimini-mounted-shade-extension",
+          "2017-2025-mb-boats-bimini-shade-extension-kit",
+          "2017-2025-tige-bimini-shade-extension-kit",
+          "2019-2025-nautique-standard-tower-shade-sail-kit",
+          "athletic-fit-t-shirt-mauve",
+          "athletic-fit-t-shirt-sage",
+          "athletic-fit-t-shirt-white",
+          "axis-wake-boat-bimini-shade-extension-kit",
+          "carbon-fiber-telescoping-shade-poles",
+          "center-console-t-top-shade-extension",
+          "centurion-and-supreme-bimini-extension-kit",
+          "centurion-predator-tower-bimini-extension",
+          "curved-performance-hat",
+          "hardshell-wakesurf-board-case",
+          "nautique-power-tower-shade-extension",
+          "pontoon-boat-bimini-extension-kit",
+          "short-sleeve-t-shirt",
+          "slix-ceramic-detailing-spray",
+          "tige-ultre-shade-extension",
+          "wake-tower-mounted-universal-bimini-extension",
+          "wakesurf-rope-swivel-attachment",
+          "yamaha-xd-series-shade-extension"
+        ]
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "filters": {
+          "type": "filters",
+          "static": true,
+          "settings": {
+            "enable_filtering": true,
+            "filter_style": "horizontal",
+            "filter_width": "full-width",
+            "text_label_case": "default",
+            "show_swatch_label": false,
+            "show_filter_label": false,
+            "enable_sorting": true,
+            "enable_grid_density": true,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "padding-block-start": 16,
+            "padding-block-end": 16,
+            "padding-inline-start": 16,
+            "padding-inline-end": 16,
+            "facets_margin_bottom": 0,
+            "facets_margin_right": 20
+          },
+          "blocks": {}
+        },
+        "product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 0,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_title_4nY4eT": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "card-gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "square",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_EzJzMm": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_Y9qG4R": {
+              "type": "buy-buttons",
+              "name": "t:names.product_buy_buttons",
+              "settings": {
+                "stacking": false,
+                "show_pickup_availability": true,
+                "gift_card_form": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            }
+          },
+          "block_order": [
+            "product_title_4nY4eT",
+            "card-gallery",
+            "price_EzJzMm",
+            "buy_buttons_Y9qG4R"
+          ]
+        }
+      },
+      "custom_css": [],
+      "settings": {
+        "layout_type": "grid",
+        "product_card_size": "medium",
+        "mobile_product_card_size": "small",
+        "product_grid_width": "full-width",
+        "full_width_on_mobile": true,
+        "columns_gap_horizontal": 0,
+        "columns_gap_vertical": 0,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "shop_category_4yHxzX": {
       "type": "shop-category",
       "blocks": {
@@ -542,52 +522,12 @@
       "settings": {
         "heading": "Shop by Category"
       }
-    },
-    "find_your_shoreline_Hki9LQ": {
-      "type": "find-your-shoreline",
-      "name": "Find Shoreline Shade",
-      "settings": {
-        "heading": "Find Your Shoreline Shade Bimini Extension"
-      }
-    },
-    "all_products_grid_KbTrRb": {
-      "type": "all-products-grid",
-      "name": "All Products Grid with Filter beside Heading",
-      "settings": {
-        "heading": "All Products",
-        "products": [
-          "2015-2025-malibu-boats-bimini-mounted-shade-extension",
-          "2017-2025-mb-boats-bimini-shade-extension-kit",
-          "2017-2025-tige-bimini-shade-extension-kit",
-          "2019-2025-nautique-standard-tower-shade-sail-kit",
-          "athletic-fit-t-shirt-mauve",
-          "athletic-fit-t-shirt-sage",
-          "athletic-fit-t-shirt-white",
-          "axis-wake-boat-bimini-shade-extension-kit",
-          "carbon-fiber-telescoping-shade-poles",
-          "center-console-t-top-shade-extension",
-          "centurion-and-supreme-bimini-extension-kit",
-          "centurion-predator-tower-bimini-extension",
-          "curved-performance-hat",
-          "hardshell-wakesurf-board-case",
-          "nautique-power-tower-shade-extension",
-          "pontoon-boat-bimini-extension-kit",
-          "short-sleeve-t-shirt",
-          "slix-ceramic-detailing-spray",
-          "tige-ultre-shade-extension",
-          "wake-tower-mounted-universal-bimini-extension",
-          "wakesurf-rope-swivel-attachment",
-          "yamaha-xd-series-shade-extension"
-        ]
-      }
     }
   },
   "order": [
-    "section",
-    "main",
     "hero_Qq3nc4",
-    "shop_category_4yHxzX",
-    "find_your_shoreline_Hki9LQ",
-    "all_products_grid_KbTrRb"
+    "all_products_grid_KbTrRb",
+    "main",
+    "shop_category_4yHxzX"
   ]
 }
