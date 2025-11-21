@@ -129,4 +129,19 @@
   .cart__installments {
     color: var(--color-foreground);
   }
+
+  @media screen and (max-width: 749px) {
+    .cart__summary-totals {
+      overflow: visible !important;
+      height: auto !important;
+    }
+
+    .cart__ctas {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      overflow: visible !important;
+    }
+  }
 {% endstylesheet %}
