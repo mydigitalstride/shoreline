@@ -137,7 +137,7 @@
             "text_CcxHKH": {
               "type": "text",
               "settings": {
-                "text": "<p>SHADE EXTENSION KITS</p>",
+                "text": "<h1>Shade Extension Kits</h1>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
