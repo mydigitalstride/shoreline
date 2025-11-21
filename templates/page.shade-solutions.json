@@ -168,7 +168,7 @@
             "text_LGTLab": {
               "type": "text",
               "settings": {
-                "text": "<p>Shoreline Shade Bimini Extensions</p>",
+                "text": "<h1>Shoreline Shade Bimini Extensions</h1>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
