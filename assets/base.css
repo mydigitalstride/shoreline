@@ -3386,6 +3386,15 @@ slideshow-slides {
   }
 }
 
+slideshow-slides[ref="scroller"] {
+  aspect-ratio: 1 / 1;
+}
+
+slideshow-slides[ref="scroller"] .product-media img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 slideshow-component[disabled='true'] slideshow-slides {
   overflow: hidden;
 }
