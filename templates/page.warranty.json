@@ -137,7 +137,7 @@
             "text_eJbYDF": {
               "type": "text",
               "settings": {
-                "text": "<p>Shoreline Brands Warranty Policy</p>",
+                "text": "<h1>Shoreline Brands Warranty Policy</h1>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
