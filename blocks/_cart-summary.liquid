@@ -63,20 +63,22 @@
     flex-direction: column;
     align-items: center;
     gap: var(--gap-2xl);
-    container-type: inline-size;
     padding: 0;
     position: sticky;
     top: 0;
     align-self: start;
+    width: 100%;
 
     @media screen and (max-width: 749px) {
       position: relative;
       padding: var(--padding-md) 0;
+      container-type: normal;
     }
 
     @media screen and (min-width: 750px) {
       padding: var(--padding-5xl);
       grid-row: 1 / -1;
+      container-type: inline-size;
     }
   }
 
