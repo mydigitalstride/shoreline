@@ -137,7 +137,7 @@
             "text_7brfY9": {
               "type": "text",
               "settings": {
-                "text": "<p>Shoreline Brands FAQ</p>",
+                "text": "<h1>Shoreline Brands FAQ</h1>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
