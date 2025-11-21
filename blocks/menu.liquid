@@ -228,6 +228,12 @@ menu__item paragraph{
     z-index: 99;
   }
 
+  @media screen and (min-width: 750px) {
+    .menu-wrapper {
+      width: 15rem;
+    }
+  }
+
   /* Mobile: cart next to menu */
   @media screen and (max-width: 749px) {
     .main-menu-bar {
@@ -261,7 +267,7 @@ menu__item paragraph{
   .menu-close-btn {
     position: absolute;
     top: 1rem;
-    right: 11rem; /* Positioned to the left of menu */
+    right: 15vw; /* Positioned to the left of menu */
     background-color: white;
     border: none;
     border-radius: 50%;
