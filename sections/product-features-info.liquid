@@ -1,0 +1,390 @@
+{% comment %}
+  Product Features & Info Section
+  Uses product metafields to populate feature highlights and product information
+
+  Metafields namespace: custom
+  - feature_1_title, feature_1_description
+  - feature_2_title, feature_2_description
+  - feature_3_title, feature_3_description
+  - whats_included_title, whats_included_description
+  - key_features_title, key_features_description
+  - compatibility_title, compatibility_description
+{% endcomment %}
+
+<div class="product-features-section section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}">
+  {% if section.settings.background_image %}
+    <div class="product-features-section__background">
+      <img
+        src="{{ section.settings.background_image | image_url: width: 3840 }}"
+        alt="{{ section.settings.background_image.alt | escape }}"
+        loading="lazy"
+        width="{{ section.settings.background_image.width }}"
+        height="{{ section.settings.background_image.height }}"
+        sizes="100vw"
+      >
+    </div>
+  {% endif %}
+
+  <div class="product-features-section__content page-width">
+    <!-- Top Feature Rows -->
+    <div class="product-features-grid">
+      {% comment %} Feature 1 {% endcomment %}
+      {% if product.metafields.custom.feature_1_title != blank or product.metafields.custom.feature_1_description != blank %}
+        <div class="product-feature-row">
+          <div class="product-feature-row__icon">
+            {% if section.settings.feature_icon %}
+              <img
+                src="{{ section.settings.feature_icon | image_url: width: 500 }}"
+                alt="Feature icon"
+                loading="lazy"
+                width="500"
+                height="500"
+              >
+            {% endif %}
+          </div>
+          <div class="product-feature-row__content">
+            {% if product.metafields.custom.feature_1_title != blank %}
+              <h3 class="product-feature-row__title">{{ product.metafields.custom.feature_1_title }}</h3>
+            {% endif %}
+            {% if product.metafields.custom.feature_1_description != blank %}
+              <p class="product-feature-row__description">{{ product.metafields.custom.feature_1_description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% comment %} Feature 2 {% endcomment %}
+      {% if product.metafields.custom.feature_2_title != blank or product.metafields.custom.feature_2_description != blank %}
+        <div class="product-feature-row">
+          <div class="product-feature-row__icon">
+            {% if section.settings.feature_icon %}
+              <img
+                src="{{ section.settings.feature_icon | image_url: width: 500 }}"
+                alt="Feature icon"
+                loading="lazy"
+                width="500"
+                height="500"
+              >
+            {% endif %}
+          </div>
+          <div class="product-feature-row__content">
+            {% if product.metafields.custom.feature_2_title != blank %}
+              <h3 class="product-feature-row__title">{{ product.metafields.custom.feature_2_title }}</h3>
+            {% endif %}
+            {% if product.metafields.custom.feature_2_description != blank %}
+              <p class="product-feature-row__description">{{ product.metafields.custom.feature_2_description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% comment %} Feature 3 {% endcomment %}
+      {% if product.metafields.custom.feature_3_title != blank or product.metafields.custom.feature_3_description != blank %}
+        <div class="product-feature-row">
+          <div class="product-feature-row__icon">
+            {% if section.settings.feature_icon %}
+              <img
+                src="{{ section.settings.feature_icon | image_url: width: 500 }}"
+                alt="Feature icon"
+                loading="lazy"
+                width="500"
+                height="500"
+              >
+            {% endif %}
+          </div>
+          <div class="product-feature-row__content">
+            {% if product.metafields.custom.feature_3_title != blank %}
+              <h3 class="product-feature-row__title">{{ product.metafields.custom.feature_3_title }}</h3>
+            {% endif %}
+            {% if product.metafields.custom.feature_3_description != blank %}
+              <p class="product-feature-row__description">{{ product.metafields.custom.feature_3_description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Divider -->
+    <div class="product-features-divider">
+      <span class="product-features-divider__line"></span>
+    </div>
+
+    <!-- Bottom Info Columns -->
+    <div class="product-info-columns">
+      {% comment %} What's Included {% endcomment %}
+      {% if product.metafields.custom.whats_included_title != blank or product.metafields.custom.whats_included_description != blank %}
+        <div class="product-info-column">
+          {% if product.metafields.custom.whats_included_title != blank %}
+            <h3 class="product-info-column__title">{{ product.metafields.custom.whats_included_title }}</h3>
+          {% else %}
+            <h3 class="product-info-column__title">What's Included</h3>
+          {% endif %}
+          {% if product.metafields.custom.whats_included_description != blank %}
+            <p class="product-info-column__description">{{ product.metafields.custom.whats_included_description }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% comment %} Key Features {% endcomment %}
+      {% if product.metafields.custom.key_features_title != blank or product.metafields.custom.key_features_description != blank %}
+        <div class="product-info-column">
+          {% if product.metafields.custom.key_features_title != blank %}
+            <h3 class="product-info-column__title">{{ product.metafields.custom.key_features_title }}</h3>
+          {% else %}
+            <h3 class="product-info-column__title">Key Features</h3>
+          {% endif %}
+          {% if product.metafields.custom.key_features_description != blank %}
+            <p class="product-info-column__description">{{ product.metafields.custom.key_features_description }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% comment %} Compatibility {% endcomment %}
+      {% if product.metafields.custom.compatibility_title != blank or product.metafields.custom.compatibility_description != blank %}
+        <div class="product-info-column">
+          {% if product.metafields.custom.compatibility_title != blank %}
+            <h3 class="product-info-column__title">{{ product.metafields.custom.compatibility_title }}</h3>
+          {% else %}
+            <h3 class="product-info-column__title">Compatibility</h3>
+          {% endif %}
+          {% if product.metafields.custom.compatibility_description != blank %}
+            <p class="product-info-column__description">{{ product.metafields.custom.compatibility_description }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .product-features-section {
+    position: relative;
+    padding: 3rem 0;
+    min-height: 400px;
+  }
+
+  .product-features-section__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .product-features-section__background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-features-section__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Feature Rows Grid */
+  .product-features-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .product-feature-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .product-feature-row__icon {
+    flex: 0 0 25%;
+    max-width: 120px;
+  }
+
+  .product-feature-row__icon img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  .product-feature-row__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .product-feature-row__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-foreground);
+  }
+
+  .product-feature-row__description {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-foreground);
+    opacity: 0.85;
+  }
+
+  /* Divider */
+  .product-features-divider {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .product-features-divider__line {
+    display: block;
+    width: 100%;
+    height: 3.5px;
+    background-color: var(--color-border);
+    border-radius: 2px;
+  }
+
+  /* Info Columns */
+  .product-info-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .product-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .product-info-column__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--color-foreground);
+  }
+
+  .product-info-column__description {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-foreground);
+    opacity: 0.85;
+  }
+
+  /* Mobile Styles */
+  @media screen and (max-width: 749px) {
+    .product-features-section {
+      padding: 2rem 1rem;
+    }
+
+    .product-feature-row {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .product-feature-row__icon {
+      flex: 0 0 auto;
+      max-width: 80px;
+    }
+
+    .product-info-columns {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .product-info-column {
+      text-align: center;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product Features Info",
+  "tag": "section",
+  "class": "product-features-info-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        { "value": "page-width", "label": "Page width" },
+        { "value": "full-width", "label": "Full width" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "header",
+      "content": "Feature Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_icon",
+      "label": "Feature icon",
+      "info": "Icon displayed next to each feature row"
+    },
+    {
+      "type": "header",
+      "content": "Metafields Info"
+    },
+    {
+      "type": "paragraph",
+      "content": "This section uses product metafields from the 'custom' namespace. Create the following metafields in Shopify Admin > Settings > Custom data > Products:"
+    },
+    {
+      "type": "paragraph",
+      "content": "Feature 1: feature_1_title (single line text), feature_1_description (multi-line text)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Feature 2: feature_2_title (single line text), feature_2_description (multi-line text)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Feature 3: feature_3_title (single line text), feature_3_description (multi-line text)"
+    },
+    {
+      "type": "paragraph",
+      "content": "What's Included: whats_included_title (single line text), whats_included_description (multi-line text)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Key Features: key_features_title (single line text), key_features_description (multi-line text)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Compatibility: compatibility_title (single line text), compatibility_description (multi-line text)"
+    }
+  ],
+  "templates": ["product"],
+  "presets": [
+    {
+      "name": "Product Features Info"
+    }
+  ]
+}
+{% endschema %}
