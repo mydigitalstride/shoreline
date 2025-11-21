@@ -165,10 +165,22 @@ menu__item paragraph{
   body.cart-page #main-menu-button svg,
   body.cart-page .cart-icon-wrapper svg {
     color: #2C3C5E;
+    transition: color 0.3s ease;
   }
 
   body.cart-page .cart-count {
     background-color: #2C3C5E;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover states - turn orange on cart page */
+  body.cart-page #main-menu-button:hover svg,
+  body.cart-page .cart-icon-wrapper:hover svg {
+    color: #f26522;
+  }
+
+  body.cart-page .cart-icon-wrapper:hover .cart-count {
+    background-color: #f26522;
   }
 
   /* Cart Icon Styles */
