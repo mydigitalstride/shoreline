@@ -3782,8 +3782,14 @@ slideshow-component[autoplay] slideshow-controls {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1 / 1;
-  background-color: var(--color-primary-button-background);
-  color: var(--color-primary-button-text);
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.button-unstyled.slideshow-control.slideshow-control--shape-square:hover,
+.button-unstyled.slideshow-control.slideshow-control--shape-circle:hover {
+  color: #f26522;
 }
 
 .button-unstyled.slideshow-control.slideshow-control--shape-circle {
