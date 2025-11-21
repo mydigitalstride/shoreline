@@ -158,17 +158,6 @@ menu__item paragraph{
     background-color: #2C3C5E;
   }
 
-  /* Blue menu icons on cart page */
-  body.cart-page .main-menu-bar svg,
-  body.cart-page #main-menu-button svg,
-  body.cart-page .cart-icon-wrapper svg {
-    color: #2C3C5E;
-  }
-
-  body.cart-page .cart-count {
-    background-color: #2C3C5E;
-  }
-
   /* Cart Icon Styles */
   .cart-icon-wrapper {
     position: relative;
@@ -372,11 +361,6 @@ menu__item paragraph{
     // Detect product pages and add class to body
     if (window.location.pathname.includes('/products/')) {
       document.body.classList.add('product-page');
-    }
-
-    // Detect cart page and add class to body
-    if (window.location.pathname.includes('/cart')) {
-      document.body.classList.add('cart-page');
     }
 
     const cartCountElement = document.getElementById('cart-count');
