@@ -106,6 +106,35 @@
   {% endif %}
 </div>
 
+<script>
+  // Force cart checkout button visibility on mobile
+  if (window.matchMedia('(max-width: 749px)').matches) {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        const checkoutButton = document.getElementById('checkout');
+        const cartCtas = document.querySelector('.cart__ctas');
+
+        if (checkoutButton) {
+          // Force reflow by reading offsetHeight
+          void checkoutButton.offsetHeight;
+          // Ensure visibility
+          checkoutButton.style.display = 'block';
+          checkoutButton.style.visibility = 'visible';
+          checkoutButton.style.opacity = '1';
+        }
+
+        if (cartCtas) {
+          // Force reflow
+          void cartCtas.offsetHeight;
+          // Ensure visibility
+          cartCtas.style.display = 'grid';
+          cartCtas.style.visibility = 'visible';
+        }
+      }, 100);
+    });
+  }
+</script>
+
 {% stylesheet %}
   .cart-actions {
     display: flex;
@@ -137,11 +166,31 @@
     }
 
     .cart__ctas {
-      display: block !important;
+      display: grid !important;
       visibility: visible !important;
       opacity: 1 !important;
       position: relative !important;
       overflow: visible !important;
+      transform: translateZ(0) !important;
+      backface-visibility: visible !important;
+    }
+
+    .cart__ctas .cart__checkout-button {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateZ(0) !important;
+      backface-visibility: visible !important;
+    }
+
+    /* Force render fix - creates a minimal animation to trigger reflow */
+    @keyframes force-render {
+      0%, 100% { opacity: 1; }
+    }
+
+    .cart__ctas {
+      animation: force-render 0.001s;
     }
   }
 {% endstylesheet %}
