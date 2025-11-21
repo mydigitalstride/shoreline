@@ -1684,7 +1684,7 @@
       "type": "best-sellers-story",
       "name": "Best Sellers with Story",
       "settings": {
-        "heading": "Best Sellers",
+        "heading": "Shop More Products",
         "products": [
           "2015-2025-malibu-boats-bimini-mounted-shade-extension",
           "2017-2025-mb-boats-bimini-shade-extension-kit"
@@ -1692,8 +1692,8 @@
         "bg_image_left": "shopify://shop_images/Shoreline_Website_Mockup.png",
         "bg_image_right": "shopify://shop_images/IMG_2826.jpg",
         "story_heading": "",
-        "button_text": "",
-        "button_link": ""
+        "button_text": "Shop All Products",
+        "button_link": "shopify://pages/shop"
       }
     }
   },
