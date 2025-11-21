@@ -107,40 +107,40 @@
 </div>
 
 <script>
-  // Ensure cart checkout button is visible on mobile
-  if (window.matchMedia('(max-width: 749px)').matches) {
-    // Run immediately and after DOM load
-    function ensureCheckoutVisible() {
-      const checkoutButton = document.getElementById('checkout');
-      const cartCtas = checkoutButton?.closest('.cart__ctas');
+  // Ensure cart checkout button is visible on all devices
+  function ensureCheckoutVisible() {
+    const checkoutButton = document.getElementById('checkout');
+    const cartCtas = checkoutButton?.closest('.cart__ctas');
 
-      if (checkoutButton && cartCtas) {
-        // Remove any inline styles that might be hiding it
-        checkoutButton.style.cssText = '';
-        cartCtas.style.cssText = '';
+    if (checkoutButton && cartCtas) {
+      // Remove any inline styles that might be hiding it
+      checkoutButton.style.cssText = '';
+      cartCtas.style.cssText = '';
 
-        // Force visibility
-        requestAnimationFrame(() => {
-          checkoutButton.style.display = 'block';
-          checkoutButton.style.visibility = 'visible';
-          checkoutButton.style.opacity = '1';
-          cartCtas.style.display = 'grid';
-          cartCtas.style.visibility = 'visible';
-        });
-      }
+      // Force visibility with !important via inline styles
+      requestAnimationFrame(() => {
+        checkoutButton.style.setProperty('display', 'block', 'important');
+        checkoutButton.style.setProperty('visibility', 'visible', 'important');
+        checkoutButton.style.setProperty('opacity', '1', 'important');
+        cartCtas.style.setProperty('display', 'grid', 'important');
+        cartCtas.style.setProperty('visibility', 'visible', 'important');
+      });
     }
-
-    // Try immediately
-    ensureCheckoutVisible();
-
-    // Try after DOM load
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', ensureCheckoutVisible);
-    }
-
-    // Try after everything is loaded
-    window.addEventListener('load', ensureCheckoutVisible);
   }
+
+  // Run immediately
+  ensureCheckoutVisible();
+
+  // Run after DOM load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureCheckoutVisible);
+  }
+
+  // Run after everything is loaded
+  window.addEventListener('load', ensureCheckoutVisible);
+
+  // Run when cart is updated
+  document.addEventListener('cart:updated', ensureCheckoutVisible);
 </script>
 
 {% stylesheet %}
@@ -167,6 +167,22 @@
     color: var(--color-foreground);
   }
 
+  .cart__ctas {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: var(--checkout-button-gap);
+    width: 100%;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .cart__ctas .cart__checkout-button {
+    display: block !important;
+    width: 100%;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
   @media screen and (max-width: 749px) {
     .cart__summary-totals {
       overflow: visible;
@@ -175,18 +191,12 @@
     }
 
     .cart__ctas {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--checkout-button-gap);
-      width: 100%;
       position: static;
       margin-top: var(--margin-md);
       min-width: 0;
     }
 
     .cart__ctas .cart__checkout-button {
-      width: 100%;
-      display: block;
       min-width: 0;
     }
   }
