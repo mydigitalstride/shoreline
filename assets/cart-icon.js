@@ -64,6 +64,11 @@ class CartIcon extends Component {
 
     this.classList.toggle('header-actions__cart-icon--has-cart', itemCount > 0);
 
+    // Add pulse animation when items are added from product form
+    if (comingFromProductForm && itemCount > 0 && animate) {
+      this.classList.add('header-actions__cart-icon--pulse');
+    }
+
     sessionStorage.setItem(
       'cart-count',
       JSON.stringify({
@@ -76,6 +81,7 @@ class CartIcon extends Component {
     await onAnimationEnd(this.refs.cartBubbleText);
 
     this.refs.cartBubble.classList.remove('cart-bubble--animating');
+    this.classList.remove('header-actions__cart-icon--pulse');
   };
 
   /**
