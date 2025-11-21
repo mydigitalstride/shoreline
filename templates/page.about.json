@@ -137,7 +137,7 @@
             "text_7HxKz7": {
               "type": "text",
               "settings": {
-                "text": "<p>ABOUT SHORELINE  BRANDS</p>",
+                "text": "<h1>About <br/>Shoreline Brands</h1>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
