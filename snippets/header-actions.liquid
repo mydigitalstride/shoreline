@@ -253,6 +253,20 @@
     width: var(--cart-bubble-size, 20px);
     top: var(--cart-bubble-top);
     right: var(--cart-bubble-right);
+    overflow: visible;
+  }
+
+  @media screen and (max-width: 749px) {
+    .header-actions__cart-icon {
+      --cart-bubble-top: 2px;
+      --cart-bubble-right: 0px;
+    }
+
+    .header-actions__cart-icon .cart-bubble {
+      font-size: 10px;
+      min-width: 18px;
+      height: 18px;
+    }
   }
 
   .header-actions__cart-icon .cart-bubble__text,
