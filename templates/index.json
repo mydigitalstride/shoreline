@@ -539,8 +539,8 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/Photoroom_20250227_092724.jpg",
-            "title": "Shoreline Apparel",
-            "link": "shopify://pages/category-page-apparel"
+            "title": "Accessories & apparel",
+            "link": "shopify://collections/accessories-and-apparel"
           }
         }
       },
