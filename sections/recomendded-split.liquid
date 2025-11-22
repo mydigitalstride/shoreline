@@ -1,0 +1,382 @@
+<section class="best-sellers-story"
+  {% if section.settings.bg_image_left %}
+    style="background-image:url('{{ section.settings.bg_image_left | image_url: width: 1600 }}');"
+  {% endif %}
+>
+  <div class="best-sellers-wrapper">
+
+    <!-- LEFT CONTENT (text + products) -->
+    <div class="best-sellers-left">
+      <div class="left-inner">
+        <h2 class="bestsellers-heading">{{ section.settings.heading }}</h2>
+
+        <div class="best-sellers-grid">
+          {% for product in section.settings.products %}
+            {% if product %}
+<article class="product-card">
+
+  <a class="product-card-link" href="{{ product.url }}">
+    <h3 class="product-title">{{ product.title }}</h3>
+
+    {% assign card_img = product.featured_media.preview_image | default: product.featured_image %}
+    {% if card_img %}
+      {{ card_img | image_url: width: 400 | image_tag: alt: product.title, loading: 'lazy' }}
+    {% endif %}
+  </a>
+
+  <form method="post" action="/cart/add" class="card-cart-form">
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    <button type="submit" class="add-to-cart">Add to Cart</button>
+  </form>
+
+</article>
+
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT OVERLAY BLOCK -->
+    <div class="best-sellers-right"
+      {% if section.settings.bg_image_right %}
+        style="background-image:url('{{ section.settings.bg_image_right | image_url: width: 1600 }}');"
+      {% endif %}
+    >
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+
+/* ------------------------------
+   BASE SECTION
+------------------------------ */
+.best-sellers-story {
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Layout */
+.best-sellers-wrapper {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  align-items: stretch;
+  gap: 0;
+}
+
+/* ------------------------------
+   LEFT SIDE (Text + Products)
+------------------------------ */
+.best-sellers-left {
+  color: #0f233d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 3rem;
+}
+
+.left-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 5rem;
+  
+}
+
+.bestsellers-heading {
+  font-family: "League Spartan";
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  color: #2c3c5e;
+}
+
+/* Product grid */
+.best-sellers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.product-card-link:hover .product-title {
+  text-decoration: none;
+}
+
+.card-cart-form {
+  margin-top: auto;
+}
+
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  aspect-ratio: 1;
+}
+
+.product-title {
+  font-size:1.5rem;
+  font-weight:500 !important;
+  text-transform: uppercase;
+  margin:1rem 0 0 5rem;
+  color:(var--color-surface);
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.add-to-cart {
+  background: #f15a29;
+  border: none;
+  color: #fff;
+  padding: 0.85rem 5.3rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.add-to-cart:hover {
+  background: #d94e21;
+  transform: translateY(-2px);
+}
+
+/* ------------------------------
+   RIGHT SIDE (Story)
+------------------------------ */
+.best-sellers-right {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding: 3rem 2rem;
+  color: #fff;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+.best-sellers-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+  z-index: 0;
+}
+
+.right-inner {
+ margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-logo {
+  max-width: 180px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.story-heading {
+  font-family: "League Spartan";
+  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0.5rem 0 1rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.story-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 1.5rem;
+  border: 3px solid #fff;
+  color: #fff;
+  font-family: "League Spartan";
+  text-decoration: none;
+  font-weight: 800;
+  transition: all 0.25s ease;
+  font-size: 16px !important;
+}
+.story-btn:hover {
+  background: #fff;
+  color: #f15a29;
+}
+/* .h3{
+  font-size:1.5rem;
+  font-weight:800;
+  text-transform: uppercase;
+  margin:1rem 0 0 5rem;
+  color:(var--color-surface);
+  letter-spacing: 1px;
+
+} */
+/* ------------------------------
+   RESPONSIVE STYLES
+------------------------------ */
+.product-card{
+  background: transparent !important;
+}
+/* Tablet */
+@media (max-width: 989px) {
+  .best-sellers-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .left-inner{
+    margin:0px;
+  }
+  .best-sellers-left {
+    padding: 3rem 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bestsellers-heading {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .best-sellers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .product-card {
+    transform: none;
+    text-align: center;
+t;
+  }
+
+  .best-sellers-right {
+    clip-path: none;
+    padding: 4rem 2rem;
+  }
+
+  .story-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 749px) {
+  .best-sellers-left {
+    padding: 2.5rem 1.25rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bestsellers-heading {
+
+    margin-bottom: 1.5rem;
+  }
+
+  .best-sellers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    max-width: none;
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .best-sellers-right {
+    clip-path: none;
+    padding: 3rem 1.5rem;
+    background-position: center;
+  }
+
+  .story-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .story-heading {
+    font-size: 1.6rem;
+  }
+
+  .story-btn {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.25rem;
+    width: 80%;
+    max-width: 240px;
+  }
+}
+
+/* Extra Small (Phones) */
+@media (max-width: 480px) {
+  .best-sellers-grid {
+    gap: 1.2rem;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .story-heading {
+    font-size: 1.4rem;
+  }
+
+  .story-btn {
+    width: 100%;
+    max-width: 220px;
+    padding: 0.8rem 1.2rem;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Best Sellers with Story",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Best Sellers" },
+    { "type": "product_list", "id": "products", "label": "Select Products" },
+    { "type": "image_picker", "id": "bg_image_left", "label": "Left Background Image" },
+    { "type": "image_picker", "id": "bg_image_right", "label": "Right Background Image" },
+    { "type": "image_picker", "id": "logo", "label": "Right Logo" },
+    { "type": "text", "id": "story_heading", "label": "Right Heading", "default": "The Shoreline Story" },
+    { "type": "text", "id": "button_text", "label": "Right Button Text", "default": "About Shoreline" },
+    { "type": "url", "id": "button_link", "label": "Right Button Link" }
+  ],
+  "presets": [
+    { "name": "Best Sellers with Story" }
+  ]
+}
+{% endschema %}
