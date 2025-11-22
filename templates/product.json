@@ -388,7 +388,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "{{ closest.product.metafields.custom.circle_differentiator_3.value }}",
+                    "image": "shopify://shop_images/Made_in_the_USA_Circle.png",
                     "link": "",
                     "image_ratio": "square",
                     "width": "custom",
