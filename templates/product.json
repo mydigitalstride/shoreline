@@ -1540,16 +1540,12 @@
         "button_link": ""
       }
     },
-    "easy_design_split_CEk8f3": {
-      "type": "easy-design-split",
-      "name": "Easy Design Split",
+    "recomendded_split_Xfe7in": {
+      "type": "recomendded-split",
+      "name": "Best Sellers with Story",
       "settings": {
-        "heading": "Easy-to-Use Design",
-        "text": "<p>Our Bimini Extensions are easy to use and deploy in less than 60 seconds. The use of our product takes only a fraction of the time compared to traditional bimini products. The Shoreline Shade Sails offer 7 feet of additional coverage, ensuring comfort and protection for all passengers. Our shade products are designed to be used up to 15 mph and can be used while surfing.</p>",
-        "button_1_text": "FAQ",
-        "button_1_link": "",
-        "button_2_text": "Instructions",
-        "button_2_link": ""
+        "heading": "Best Sellers",
+        "products": []
       }
     },
     "product_recommendations_qggXJq": {
@@ -1701,7 +1697,7 @@
     "1763576089c53d7305",
     "section_DUGfyX",
     "faq_two_column_LyEUpq",
-    "easy_design_split_CEk8f3",
+    "recomendded_split_Xfe7in",
     "product_recommendations_qggXJq"
   ]
 }
