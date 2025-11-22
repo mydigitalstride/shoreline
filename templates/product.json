@@ -1545,8 +1545,9 @@
       "name": "Best Sellers with Story",
       "settings": {
         "heading": "Shop more from Shoreline",
-        "products": [],
-        "bg_image_left": "shopify://shop_images/Shoreline_Website_Mockup.png"
+        "products": "{{ product.metafields.custom.recommended_products.value }}",
+        "bg_image_left": "shopify://shop_images/Shoreline_Website_Mockup.png",
+        "bg_image_right": "{{ product.metafields.custom.recommended_right_image.value }}"
       }
     },
     "product_recommendations_qggXJq": {
