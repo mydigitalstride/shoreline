@@ -194,7 +194,7 @@
             "text": "<h2>{{ article.title }}</h2>",
             "width": "100%",
             "max_width": "normal",
-            "alignment": "center",
+            "alignment": "left",
             "type_preset": "h2",
             "font": "var(--font-primary--family)",
             "font_size": "",
