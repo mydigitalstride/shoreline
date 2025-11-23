@@ -59,8 +59,8 @@
               "settings": {
                 "inverse": false,
                 "font": "heading",
-                "unit": "pixel",
-                "percent_width": 100,
+                "unit": "percent",
+                "percent_width": 90,
                 "pixel_height": 160,
                 "custom_mobile_size": false,
                 "unit_mobile": "percent",
