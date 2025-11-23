@@ -192,7 +192,7 @@
           "static": true,
           "settings": {
             "text": "<h1>{{ article.title }}</h1>",
-            "width": "100%",
+            "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
             "type_preset": "h2",
@@ -202,12 +202,12 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "",
+            "color": "var(--color-foreground)",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 37,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -257,6 +257,9 @@
           "blocks": {}
         }
       },
+      "custom_css": [
+        "body,p,h1,h2,h3,h4,h5,h6,ul,li {color: #000000 !important;}"
+      ],
       "settings": {
         "content_direction": "column",
         "gap": 0,
