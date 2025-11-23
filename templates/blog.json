@@ -77,26 +77,27 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "button_iY8HTW": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Shop Now",
+                "link": "shopify://collections/shoreline-brands",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "text_NREQMf"
+            "text_NREQMf",
+            "button_iY8HTW"
           ]
-        },
-        "button_KMU4HT": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/shoreline-brands",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
         },
         "text_TyMLTB": {
           "type": "text",
@@ -127,7 +128,6 @@
       },
       "block_order": [
         "group_dfCUjN",
-        "button_KMU4HT",
         "text_TyMLTB"
       ],
       "name": "t:names.hero",
