@@ -1396,7 +1396,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>{{ closest.product.metafields.custom.whats_included_body | metafield_tag }}</p>",
+                    "text": "<p>{{ closest.product.metafields.custom.whats_included_body | metafield_tag }}</p>{{ closest.product.metafields.custom.what_it_includes | metafield_tag }}<p></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
