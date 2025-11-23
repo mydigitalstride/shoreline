@@ -242,6 +242,16 @@
 
   /* ===== MATCH ALL-PRODUCTS-GRID STYLING ===== */
 
+  /* Ensure grid items and card links fill their cells */
+  .product-grid__item {
+    width: 100%;
+  }
+
+  product-card-link {
+    width: 100%;
+    display: block;
+  }
+
   /* Product card container */
   .product-card {
     background: #fff;
@@ -250,6 +260,11 @@
     width: 100%;
     text-align: center;
     border: none;
+  }
+
+  .product-grid__item .product-card {
+    display: flex;
+    width: 100%;
   }
 
   /* Product image styling */
@@ -320,7 +335,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    justify-items: center;
   }
 
   /* Non-desktop - 2 columns */

@@ -73,13 +73,15 @@
 .category-image {
   background-size: cover;
   background-position: center;
-  height: 280px;
+  aspect-ratio: 1 / 1;
   width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding: 1.25rem;
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* OVERLAY */
@@ -91,6 +93,7 @@
   opacity: 0.25;
   transition: opacity 0.4s ease;
   pointer-events: none; /* ✅ ensure clicks go through */
+  border-radius: 10px;
 }
 
 .category-card:hover .category-overlay {
@@ -155,6 +158,7 @@
     position: relative;
     background-size: cover;
     background-position: center;
+    border-radius: 5px;
   }
 
   .category-overlay {
@@ -162,6 +166,7 @@
     inset: 0;
     transform: none;
     opacity: .8;
+    border-radius: 5px;
   }
 
   .category-title {
