@@ -60,7 +60,7 @@
                 "inverse": false,
                 "font": "heading",
                 "unit": "percent",
-                "percent_width": 90,
+                "percent_width": 100,
                 "pixel_height": 160,
                 "custom_mobile_size": false,
                 "unit_mobile": "percent",
