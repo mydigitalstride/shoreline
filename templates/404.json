@@ -6,8 +6,113 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
+    "hero_X4aHDP": {
+      "type": "hero",
+      "blocks": {
+        "text_tBHbTL": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Oops!</h1>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_FLRp4Y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This page doesn't exist!</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 32,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_iefXaD": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Shop Biminis",
+            "link": "shopify://collections/shoreline-brands",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_tBHbTL",
+        "text_FLRp4Y",
+        "button_iefXaD"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/IMG_3155.jpg",
+        "media_type_2": "image",
+        "image_2": "shopify://shop_images/IMG_3155.jpg",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
     "main": {
       "type": "main-404",
       "blocks": {
@@ -84,6 +189,7 @@
         "text_Ua9XAW",
         "button_PAQMwR"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "section_width": "page-width",
@@ -273,10 +379,59 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "features_and_categories_AVFNMD": {
+      "type": "features-and-categories",
+      "blocks": {
+        "category_49tnGc": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2821_1.jpg",
+            "title": "wake tower bimini extensions",
+            "link": "shopify://collections/shade-extension-kits-best-sellers-all-products"
+          }
+        },
+        "category_7BJyPg": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/b33dbf02-45d221_070936f09f1e46b5b506765684574692_mv2.jpg",
+            "title": "Center Console Bimini Extensions",
+            "link": "shopify://collections/shade-extension-kits-all-products"
+          }
+        },
+        "category_kaYnpP": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/560c5cc0-45d221_d3ac3272ca3f46d0a2751ce32b954996_mv2.webp",
+            "title": "Pontoon boat bimini extensions",
+            "link": "shopify://collections/pontoon-boat-bimini-extensions"
+          }
+        },
+        "category_Tyr9kk": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3006.jpg",
+            "title": "Accessories & apparel",
+            "link": "shopify://collections/accessories-and-apparel"
+          }
+        }
+      },
+      "block_order": [
+        "category_49tnGc",
+        "category_7BJyPg",
+        "category_kaYnpP",
+        "category_Tyr9kk"
+      ],
+      "name": "Features & Categories",
+      "settings": {
+        "heading": "Shop by Category"
+      }
     }
   },
   "order": [
+    "hero_X4aHDP",
     "main",
-    "product_list_iA96Tq"
+    "product_list_iA96Tq",
+    "features_and_categories_AVFNMD"
   ]
 }
