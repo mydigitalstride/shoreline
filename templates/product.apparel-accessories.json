@@ -515,6 +515,7 @@
             "group_7jRPBq": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -1636,6 +1637,7 @@
         "divider_zVyryh",
         "group_MJBKEL"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
