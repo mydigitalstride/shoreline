@@ -242,7 +242,7 @@
     justify-items: center;
   }
 
-  /* Tablet - 2 columns */
+  /* Non-desktop - 2 columns */
   @media (max-width: 900px) {
     .product-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -250,10 +250,10 @@
     }
   }
 
-  /* Mobile - 1 column */
+  /* Mobile - keep 2 columns */
   @media (max-width: 600px) {
     .product-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.75rem;
     }
 
