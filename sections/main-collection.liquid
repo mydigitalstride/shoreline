@@ -165,6 +165,65 @@
     top: auto;
   }
 
+  /* Mobile filter drawer fixes */
+  .facets--drawer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .facets--drawer .facets__form-wrapper {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .facets--drawer .facets__filters-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .facets--drawer .facets__item {
+    position: relative;
+  }
+
+  .facets--drawer .facets__panel {
+    position: relative;
+  }
+
+  .facets--drawer .facets__panel-content,
+  .facets--drawer floating-panel-component {
+    position: relative !important;
+    top: auto !important;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .facets--drawer .facets__inputs-wrapper {
+    position: relative;
+  }
+
+  .facets--drawer .facets__inputs-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .facets--drawer .sorting-filter__options {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  .facets--drawer .facets__actions {
+    position: sticky;
+    bottom: 0;
+    background: inherit;
+    padding: 1rem 0;
+    margin-top: auto;
+  }
+
   /* Hide add-to-cart icon on collection pages */
   .svg-wrapper.add-to-cart-icon {
     display: none;
