@@ -191,7 +191,7 @@
           "name": "Title",
           "static": true,
           "settings": {
-            "text": "<h1>{{ article.title }}</h1>",
+            "text": "<h2>{{ article.title }}</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
