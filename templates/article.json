@@ -192,7 +192,7 @@
           "static": true,
           "settings": {
             "text": "<h1>{{ article.title }}</h1>",
-            "width": "fit-content",
+            "width": "100%",
             "max_width": "normal",
             "alignment": "center",
             "type_preset": "h2",
@@ -258,7 +258,8 @@
         }
       },
       "custom_css": [
-        "body,p,h1,h2,h3,h4,h5,h6,ul,li {color: #000000 !important;}"
+        "body,p,h1,h2,h3,h4,h5,h6,ul,li {color: #000000 !important;}",
+        ".blog-post-content {max-width: 75vw; margin: 0 auto;}"
       ],
       "settings": {
         "content_direction": "column",
