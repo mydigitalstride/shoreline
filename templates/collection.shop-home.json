@@ -121,22 +121,30 @@
             "custom_id": ""
           },
           "blocks": {
-            "icon_3AC3NL": {
-              "type": "icon",
-              "name": "t:names.icon",
+            "logo_T8aCjT": {
+              "type": "logo",
+              "name": "t:names.logo",
               "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png",
-                "width": 200,
-                "link": "shopify://collections/frontpage",
-                "open_in_new_tab": false
+                "inverse": false,
+                "font": "heading",
+                "unit": "percent",
+                "percent_width": 100,
+                "pixel_height": 48,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
             "text_PEi8FP": {
               "type": "text",
               "settings": {
-                "text": "<h1>Shop Shoreline </h1><h1>Products</h1>",
+                "text": "<h1>Shoreline  Store</h1>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -155,6 +163,48 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_c8TeBb": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_id": ""
               },
               "blocks": {}
             },
@@ -238,8 +288,9 @@
             }
           },
           "block_order": [
-            "icon_3AC3NL",
+            "logo_T8aCjT",
             "text_PEi8FP",
+            "group_c8TeBb",
             "group_ULM9fP"
           ]
         }
