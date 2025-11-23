@@ -15,7 +15,7 @@
         "text_rf9BzB": {
           "type": "text",
           "settings": {
-            "text": "<h1>Shoreline</h1><h1>Instructions</h1>",
+            "text": "<h1>Bimini Extension</h1><h1>Instructions</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -120,8 +120,8 @@
           "type": "text",
           "name": "Title",
           "settings": {
-            "text": "<p>{{ closest.blog.title }}</p>",
-            "width": "fit-content",
+            "text": "<h2>Bimini Extension Instructions</h2>",
+            "width": "100%",
             "max_width": "narrow",
             "alignment": "left",
             "type_preset": "h2",
@@ -131,12 +131,12 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "",
+            "color": "var(--color-foreground)",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
-            "padding-block-start": 48,
-            "padding-block-end": 48,
+            "padding-block-start": 36,
+            "padding-block-end": 36,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -154,14 +154,14 @@
               "name": "t:names.title",
               "static": true,
               "settings": {
-                "type_preset": "h4",
+                "type_preset": "h3",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
+                "color": "var(--color-foreground)",
                 "text": "",
                 "read_only": true,
                 "alignment": "left",
@@ -200,7 +200,7 @@
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
-                "padding-block-start": 16,
+                "padding-block-start": 8,
                 "padding-block-end": 0
               },
               "blocks": {}
@@ -209,11 +209,11 @@
               "type": "_blog-post-image",
               "static": true,
               "settings": {
-                "height": "large",
+                "height": "small",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_radius": 4
+                "border_radius": 10
               },
               "blocks": {}
             }
