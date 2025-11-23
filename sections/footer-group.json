@@ -18,7 +18,7 @@
           "type": "footer_column",
           "settings": {
             "heading": "Shop",
-            "heading_link": "shopify://pages/shop",
+            "heading_link": "shopify://collections/shoreline-brands",
             "link_text_1": "Wakesurf",
             "link_url_1": "shopify://pages/category-page-wakesurf",
             "link_text_2": "Sails",
@@ -132,6 +132,7 @@
         "left_logo": "shopify://shop_images/SHORELINE_BRANDS_NO_BOTTOM_SHIRTS_STICKERS__edited_edited.jpg",
         "right_logo": "shopify://shop_images/Shoreline_Website_Mockup_2.png",
         "contact_email": "",
+        "facebook": "",
         "instagram": "https://instagram.com"
       }
     }
