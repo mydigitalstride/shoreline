@@ -523,12 +523,111 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "additional_resources_iNR8KU": {
+      "type": "additional-resources",
+      "blocks": {
+        "link_FDrEhm": {
+          "type": "link",
+          "settings": {
+            "title": "FAQ",
+            "link": "shopify://pages/faq"
+          }
+        },
+        "link_w6Fzfw": {
+          "type": "link",
+          "settings": {
+            "title": "Instructions",
+            "link": "shopify://pages/instructions"
+          }
+        },
+        "link_PEMtra": {
+          "type": "link",
+          "settings": {
+            "title": "Returns",
+            "link": "shopify://pages/returns"
+          }
+        },
+        "link_nFErr4": {
+          "type": "link",
+          "settings": {
+            "title": "Warranty",
+            "link": "shopify://pages/warranty"
+          }
+        }
+      },
+      "block_order": [
+        "link_FDrEhm",
+        "link_w6Fzfw",
+        "link_PEMtra",
+        "link_nFErr4"
+      ],
+      "name": "Additional Resources",
+      "settings": {
+        "heading": "Additional Resources",
+        "text": "Enter your description here. You can edit this text in the theme editor.",
+        "right_image": "shopify://shop_images/IMG_2819.jpg"
+      }
+    },
+    "customer_reviews_MkHJBp": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_FXNCjz": {
+          "type": "review",
+          "settings": {
+            "name": "David",
+            "date": "09/14/2025",
+            "product_title": "2017 - 2025 MB Boats Bimini Shade Extension Kit",
+            "text": "We love it, super easy to set up and take down and covers the whole back of the boat!"
+          }
+        },
+        "review_iqTgGU": {
+          "type": "review",
+          "settings": {
+            "name": "Luke S.",
+            "date": "07/01/2025",
+            "product_title": "Wake Tower Mounted Universal Bimini Extension",
+            "text": "This kit was exactly what we needed! The additional shade keeps our family cool, and the design blends seamlessly with our MB boat. I was impressed with how sturdy the materials feel, and it only took me about 20 minutes to set up the first time. Highly recommend!"
+          }
+        },
+        "review_acccGi": {
+          "type": "review",
+          "settings": {
+            "name": "Zach G.",
+            "date": "06/24/2025",
+            "product_title": "2017-2025 Tige Bimini Shade Extension Kit",
+            "text": "This extension works perfectly. Shipping was super fast! Thinking about buying another one to point forward and cover bow!!"
+          }
+        },
+        "review_r8hTtT": {
+          "type": "review",
+          "settings": {
+            "name": "Andrew E.",
+            "date": "03/21/2024",
+            "product_title": "Wake Tower Mounted Universal Bimini Extension",
+            "text": "Very cool shade! This is much needed with the small kids and the extreme AZ heat! The carbon fiber poles look very good! Good quality design and product! Everyone needs one!"
+          }
+        }
+      },
+      "block_order": [
+        "review_FXNCjz",
+        "review_iqTgGU",
+        "review_acccGi",
+        "review_r8hTtT"
+      ],
+      "name": "Customer Reviews",
+      "settings": {
+        "heading": "Customer Reviews",
+        "bg_image": "shopify://shop_images/ocean-waves.png"
+      }
     }
   },
   "order": [
     "hero_Qq3nc4",
     "all_products_grid_KbTrRb",
     "shop_category_aF7bJD",
-    "main"
+    "main",
+    "additional_resources_iNR8KU",
+    "customer_reviews_MkHJBp"
   ]
 }
