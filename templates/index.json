@@ -73,19 +73,6 @@
               },
               "blocks": {}
             },
-            "icon_3aLJLc": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "disabled": true,
-              "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/shoreline-logo.png",
-                "width": 12,
-                "link": "",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            },
             "text_HtUjNw": {
               "type": "text",
               "settings": {
@@ -188,7 +175,6 @@
           },
           "block_order": [
             "logo_tiE3UA",
-            "icon_3aLJLc",
             "text_HtUjNw",
             "group_7NtEiy"
           ]
