@@ -205,7 +205,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Shop All Products",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://collections/shoreline-brands",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
