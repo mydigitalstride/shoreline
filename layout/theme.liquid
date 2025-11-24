@@ -74,9 +74,7 @@
 
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M10 3l-7 7h4v7h6v-7h4l-7-7z"/>
-      </svg>
+      ↑
     </button>
 
     <style>
@@ -103,6 +101,9 @@
         min-height: 50px;
         max-width: 50px;
         max-height: 50px;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1;
       }
 
       .scroll-to-top-btn:hover {
@@ -113,14 +114,6 @@
 
       .scroll-to-top-btn.show {
         display: flex;
-      }
-
-      .scroll-to-top-btn svg {
-        width: 20px !important;
-        height: 20px !important;
-        display: block !important;
-        flex-shrink: 0;
-        pointer-events: none;
       }
     </style>
 
