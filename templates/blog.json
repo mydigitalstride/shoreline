@@ -346,10 +346,21 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "video_section_KPdczp": {
+      "type": "video-section",
+      "name": "Video Section",
+      "settings": {
+        "heading": "Watch this short video below for installation of our Universal Wake Tower Bimini Extension",
+        "subheading": "Watch this short video below for installation of our Universal Wake Tower Bimini Extension",
+        "video_url": "https://www.youtube.com/watch?v=7Px-mIbjfuw",
+        "bg_image": "shopify://shop_images/Background_-_Blue.png"
+      }
     }
   },
   "order": [
     "hero_jnt8rV",
-    "main"
+    "main",
+    "video_section_KPdczp"
   ]
 }
