@@ -1,26 +1,30 @@
 <section class="shop-category-grid">
   <div class="page-width">
-    <!-- HEADING -->
+
     {% if section.settings.heading != blank %}
       <h2 class="categories-heading">{{ section.settings.heading }}</h2>
     {% endif %}
 
-    <!-- CATEGORY GRID -->
     <div class="categories-grid">
       {% for block in section.blocks %}
         {% if block.settings.link != blank %}
           <a href="{{ block.settings.link }}" class="category-card">
-            <div class="category-image" style="background-image:url('{{ block.settings.image | image_url: width: 800 }}');">
-              <div class="category-overlay"></div>
-              <span class="category-title">{{ block.settings.title }}</span>
-            </div>
-          </a>
         {% else %}
           <div class="category-card no-link">
+        {% endif %}
+
             <div class="category-image" style="background-image:url('{{ block.settings.image | image_url: width: 800 }}');">
               <div class="category-overlay"></div>
-              <span class="category-title">{{ block.settings.title }}</span>
+
+              <span 
+                class="category-title pos-{{ block.settings.text_position }} align-{{ block.settings.text_alignment }}">
+                {{ block.settings.title }}
+              </span>
             </div>
+
+        {% if block.settings.link != blank %}
+          </a>
+        {% else %}
           </div>
         {% endif %}
       {% endfor %}
@@ -30,23 +34,22 @@
 </section>
 
 {% stylesheet %}
-/* === SHOP CATEGORY GRID === */
-/* === SHOP CATEGORY GRID === */
+/* --------------------------------------------------
+   SHOP CATEGORY GRID SECTION
+-------------------------------------------------- */
+
 .shop-category-grid {
   background: #1c2b47;
   padding: 4rem 5rem;
   color: #fff;
-  text-align: left;
 }
 
-/* Heading */
 .categories-heading {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 2.5rem;
-  color: #ffffff;
-  letter-spacing: 0.5px;
+  color: #fff;
 }
 
 /* GRID */
@@ -63,26 +66,20 @@
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  transition: transform 0.3s ease;
   cursor: pointer;
+  transition: transform .3s ease;
 }
 
-.category-card:hover {
-  transform: scale(1.03);
-}
+.category-card:hover { transform: scale(1.03); }
 
-/* IMAGE WRAPPER */
+/* IMAGE BLOCK */
 .category-image {
   background-size: cover;
   background-position: center;
   aspect-ratio: 1 / 1;
   width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 1.25rem;
   position: relative;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -90,33 +87,44 @@
 .category-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(70, 179, 184, 0.8), rgba(70, 179, 184, 0.4));
-  opacity: 0.25;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-  border-radius: 10px;
+  background: linear-gradient(to top, rgba(70,179,184,.8), rgba(70,179,184,.4));
+  opacity: .25;
+  transition: opacity .3s ease;
 }
 
 .category-card:hover .category-overlay {
   opacity: 1;
 }
 
-/* TITLE */
+/* =======================
+      TITLE STYLING
+======================= */
+
 .category-title {
-  position: relative;
-  z-index: 2;
-  font-size: 1.5rem;
-  font-weight: 500;
+  position: absolute;
+  width: 100%;
+  padding: .75rem;
+  font-size: 1.6rem;
+  font-family: "Bebas Neue";
   text-transform: uppercase;
   color: #fff;
-  font-family: "Bebas Neue";
-  letter-spacing: .75px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
 }
 
-/* ===========================
-   RESPONSIVE BREAKPOINTS
-=========================== */
+/* --- TITLE POSITION --- */
+.pos-top { top: .75rem; }
+.pos-center { top: 50%; transform: translateY(-50%); }
+.pos-bottom { bottom: .75rem; }
+
+/* --- TEXT ALIGNMENT --- */
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
 
 /* Medium screens */
 @media (max-width: 1200px) {
@@ -131,9 +139,8 @@
   }
 }
 
-/* MOBILE FULL FIX */
+/* MOBILE — 1 PER ROW */
 @media (max-width: 600px) {
-
   .shop-category-grid {
     padding: 2.5rem 1.25rem;
     text-align: center;
@@ -141,47 +148,25 @@
 
   .categories-heading {
     text-align: center;
-    font-size: 1.9rem;
     margin-bottom: 2rem;
   }
 
   .categories-grid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-  }
-
-  .category-image {
-    aspect-ratio: 1/1;
-    padding: 0;
-    border-radius: 6px;
-  }
-
-  .category-overlay {
-    opacity: 0.65;
-    border-radius: 6px;
+    grid-template-columns: 1fr; /* ← SINGLE COLUMN */
+    gap: 1.2rem;
   }
 
   .category-title {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 0;
-    right: 0;
-    font-size: 1.25rem;
-    padding: 0.3rem 0.5rem;
-    line-height: 1.1;
-    letter-spacing: 1px;
+    font-size: 1.7rem;
+    padding: .5rem .75rem;
   }
 }
 
-/* Very small phones */
+/* Extra small */
 @media (max-width: 420px) {
-
   .category-title {
-    font-size: 1.05rem;
-    padding: 0.25rem 0.4rem;
-    letter-spacing: 0.6px;
+    font-size: 1.4rem;
   }
-
 }
 {% endstylesheet %}
 
@@ -201,21 +186,32 @@
       "type": "category",
       "name": "Category Item",
       "settings": [
+        { "type": "image_picker", "id": "image", "label": "Category Image" },
+        { "type": "text", "id": "title", "label": "Category Title", "default": "Category" },
+        { "type": "url", "id": "link", "label": "Category Link" },
+
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Category Image"
+          "type": "select",
+          "id": "text_position",
+          "label": "Title Position",
+          "default": "bottom",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "center", "label": "Center" },
+            { "value": "bottom", "label": "Bottom" }
+          ]
         },
+
         {
-          "type": "text",
-          "id": "title",
-          "label": "Category Title",
-          "default": "Shade Solutions"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Category Link"
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Title Alignment",
+          "default": "center",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ]
         }
       ]
     }
