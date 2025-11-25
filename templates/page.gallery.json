@@ -678,22 +678,6 @@
             "title": "Centurion RI245",
             "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
           }
-        },
-        "boat_gallery_GgDyez": {
-          "type": "boat-gallery",
-          "settings": {
-            "image": "shopify://shop_images/2025_Centurion_Ri230_Predator_Tower.jpg",
-            "title": "2025 Centurion Ri230 Predator Tower",
-            "link": "shopify://products/centurion-predator-tower-bimini-extension"
-          }
-        },
-        "boat_gallery_UPLJ3c": {
-          "type": "boat-gallery",
-          "settings": {
-            "image": "shopify://shop_images/2025_Centurion_Ri245_Predator_Tower.jpg",
-            "title": "2025 Centurion Ri245 Predator Tower",
-            "link": "shopify://products/centurion-predator-tower-bimini-extension"
-          }
         }
       },
       "block_order": [
@@ -744,19 +728,344 @@
         "boat_gallery_WFpf4T",
         "boat_gallery_TA6YiG",
         "boat_gallery_mj7t4t",
-        "boat_gallery_yC96CR",
-        "boat_gallery_GgDyez",
-        "boat_gallery_UPLJ3c"
+        "boat_gallery_yC96CR"
       ],
       "name": "Boat Gallery",
       "settings": {
-        "heading": "Boat Gallery"
+        "heading": "boat gallery"
+      }
+    },
+    "boat_gallery_section_HEBRB4": {
+      "type": "boat-gallery-section",
+      "blocks": {
+        "boat_gallery_QX6Wr6": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Centurion_Ri245_Predator_Tower.jpg",
+            "title": "2025 Centurion Ri230 Predator Tower",
+            "link": "shopify://products/centurion-predator-tower-bimini-extension"
+          }
+        },
+        "boat_gallery_djrW9F": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Centurion_Ri230_Predator_Tower.jpg",
+            "title": "2025 Centurion Ri245 Predator Tower",
+            "link": "shopify://products/centurion-predator-tower-bimini-extension"
+          }
+        },
+        "boat_gallery_aY7YMC": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Nautiqe_G23_Power_Tower.jpg",
+            "title": "2025 Nautiqe G23 Power Tower",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_BDWD4D": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Nautique_G23.jpg",
+            "title": "2023 Nautique G23",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_tG6Gah": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Nautique_G23_-_Telescopic_Tower.jpg",
+            "title": "2022 Nautique G23 - Telescopic Tower",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_HirHtk": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021-2025_Nautique_G23.jpg",
+            "title": "2021-2025 Nautique G23",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_fHEePH": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_4364_3c948029-9e6c-47e8-9a39-82513d6ce7d5.jpg",
+            "title": "Tigue Ultre",
+            "link": ""
+          }
+        },
+        "boat_gallery_KhheJ7": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Malibu_23LSV.jpg",
+            "title": "2015 Malibu 23LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_famMzn": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2017_Malibu_25LSV.jpg",
+            "title": "2017 Malibu 25LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_6VqGKt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2020_Malibu_23_LSV.jpg",
+            "title": "2020 Malibu 23 LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_BiTKDr": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022-2026_Malibu_26LSV.jpg",
+            "title": "2022-2026 Malibu 26LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_YGFTMP": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Malibu_23LSV.jpg",
+            "title": "2023 Malibu 23LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_ndtBe7": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Malibu23LSV.jpg",
+            "title": "2023 Malibu 23LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_TtCMCG": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Malibu_25LSV.jpg",
+            "title": "2024 Malibu 25LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_VezP3E": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Malibu_26LSV.jpg",
+            "title": "2024 Malibu 26LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_wPFb68": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Malibu_23_LSV.webp",
+            "title": "2025 Malibu 23 LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_UW9bak": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Axis_A24_with_XL_Bimini.jpg",
+            "title": "Axis A24 with XL Bimini",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_Kkij7T": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Malibu_Bracket_Installation.jpg",
+            "title": "Malibu Bracket Installation",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_G7ggEJ": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2017-2022_MB_B52.jpg",
+            "title": "2017-2022 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_ja9Mdg": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021_MB_F22_Tomcat.jpg",
+            "title": "2021 MB F22 Tomcat",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_8p6mdt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_MB_B52.jpg",
+            "title": "2022 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_jXbfxM": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_MB_B52_949e7718-4799-4aa3-ba1a-bbae4bdd3d62.jpg",
+            "title": "2022 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_fnW8wF": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_MB_B52.jpg",
+            "title": "2024 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_9cTFJg": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Tige_23ZX.jpg",
+            "title": "2022 Tige 23ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_wbRLy9": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Tige_RZX.jpg",
+            "title": "2023 Tige RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_M9kCbN": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Tige_RZX_b103dd62-1393-472f-ae2d-1744533e6c89.jpg",
+            "title": "2022 Tige 23ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_kDXrpF": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Tige_ZX.jpg",
+            "title": "2023 Tige ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_UbL3Ad": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_TIge_RZX.jpg",
+            "title": "2024 Tige RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_GeUeMm": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_22RZX.jpg",
+            "title": "Tige 22RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_a9QUL4": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_23ZX.webp",
+            "title": "Tige 23ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_QRn4Jp": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_RZX_E3_Tower.jpg",
+            "title": "Tige RZX E3 Tower",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_rtzrgf": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_RZX.jpg",
+            "title": "Tige RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_7Hc6jb": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_RZX_852adcdd-887b-4f91-ac64-f6d13fa96bce.jpg",
+            "title": "Tige RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_qjDCCX": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Nautique_G23.jpg",
+            "title": "2022 Nautique G23",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_mV4U9m": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Nautique_GS24_Sunshade_Extension.jpg",
+            "title": "2025 Nautique GS24 Sunshade Extension",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        }
+      },
+      "block_order": [
+        "boat_gallery_QX6Wr6",
+        "boat_gallery_djrW9F",
+        "boat_gallery_aY7YMC",
+        "boat_gallery_BDWD4D",
+        "boat_gallery_tG6Gah",
+        "boat_gallery_HirHtk",
+        "boat_gallery_fHEePH",
+        "boat_gallery_KhheJ7",
+        "boat_gallery_famMzn",
+        "boat_gallery_6VqGKt",
+        "boat_gallery_BiTKDr",
+        "boat_gallery_YGFTMP",
+        "boat_gallery_ndtBe7",
+        "boat_gallery_TtCMCG",
+        "boat_gallery_VezP3E",
+        "boat_gallery_wPFb68",
+        "boat_gallery_UW9bak",
+        "boat_gallery_Kkij7T",
+        "boat_gallery_G7ggEJ",
+        "boat_gallery_ja9Mdg",
+        "boat_gallery_8p6mdt",
+        "boat_gallery_jXbfxM",
+        "boat_gallery_fnW8wF",
+        "boat_gallery_9cTFJg",
+        "boat_gallery_wbRLy9",
+        "boat_gallery_M9kCbN",
+        "boat_gallery_kDXrpF",
+        "boat_gallery_UbL3Ad",
+        "boat_gallery_GeUeMm",
+        "boat_gallery_a9QUL4",
+        "boat_gallery_QRn4Jp",
+        "boat_gallery_rtzrgf",
+        "boat_gallery_7Hc6jb",
+        "boat_gallery_qjDCCX",
+        "boat_gallery_mV4U9m"
+      ],
+      "name": "Boat Gallery",
+      "settings": {
+        "heading": ""
       }
     }
   },
   "order": [
     "main",
     "section_nUpEf4",
-    "boat_gallery_section_JKCGQD"
+    "boat_gallery_section_JKCGQD",
+    "boat_gallery_section_HEBRB4"
   ]
 }
