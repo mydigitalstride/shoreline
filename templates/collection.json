@@ -484,32 +484,32 @@
         "category_hFYxKN": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/IMG_1806.jpg",
-            "title": "Shade Solutions",
+            "image": "shopify://shop_images/2020_Malibu_23_LSV.jpg",
+            "title": "Wake Tower Bimini Extensions",
             "link": "shopify://pages/category-page-shade-extension-kits"
           }
         },
         "category_V6gWbL": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/IMG_2802.jpg",
-            "title": "Best Sellers",
+            "image": "shopify://shop_images/IMG_1133.jpg",
+            "title": "Center Console Bimini Extensions",
             "link": "shopify://pages/category-page-best-sellers"
           }
         },
         "category_KpJKBD": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/28177ebd-45d221_eda8f00c99fa4a588c784b2f347a90cf_mv2.jpg",
-            "title": "Apparel",
+            "image": "shopify://shop_images/pontoon_shade.webp",
+            "title": "Pontoon Boat Bimini Extensions",
             "link": "shopify://pages/category-page-apparel"
           }
         },
         "category_UdmFBa": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/IMG_4764_jpeg.jpg",
-            "title": "Wakesurf",
+            "image": "shopify://shop_images/a74fea17-45d221_106a60f4c43347febd51fd51f1fa8089_mv2.jpg",
+            "title": "Accessories & Apparel",
             "link": "shopify://pages/category-page-wakesurf"
           }
         }
