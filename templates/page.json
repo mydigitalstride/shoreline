@@ -138,21 +138,6 @@
             "custom_id": ""
           },
           "blocks": {
-            "button_bjbH3V": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            },
             "button_ePYWBN": {
               "type": "button",
               "name": "t:names.button",
@@ -170,7 +155,6 @@
             }
           },
           "block_order": [
-            "button_bjbH3V",
             "button_ePYWBN"
           ]
         }
@@ -182,7 +166,7 @@
       ],
       "name": "t:names.hero",
       "settings": {
-        "media_type_1": "image",
+        "media_type_1": "video",
         "image_1": "shopify://shop_images/2025_Centurion_Ri245_Predator_Tower.jpg",
         "video_1": "shopify://files/videos/121 - SB24_Website_SunShade_1080x1080 (1).mp4",
         "media_type_2": "image",
@@ -209,10 +193,25 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "easy_design_split_VVxVYA": {
+      "type": "easy-design-split",
+      "name": "Easy Design Split",
+      "settings": {
+        "bg_image_left": "shopify://shop_images/Background_-_Blue.png",
+        "bg_image_right": "shopify://shop_images/2023_Tige_RZX_b103dd62-1393-472f-ae2d-1744533e6c89.jpg",
+        "heading": "Privacy Policy",
+        "text": "<p>Our Bimini Extensions are easy to use and deploy in less than 60 seconds. The use of our product takes only a fraction of the time compared to traditional bimini products. The Shoreline Shade Sails offer 7 feet of additional coverage, ensuring comfort and protection for all passengers. Our shade products are designed to be used up to 15 mph and can be used while surfing.</p>",
+        "button_1_text": "FAQ",
+        "button_1_link": "",
+        "button_2_text": "Instructions",
+        "button_2_link": ""
+      }
     }
   },
   "order": [
     "main",
-    "hero_Dngph7"
+    "hero_Dngph7",
+    "easy_design_split_VVxVYA"
   ]
 }
