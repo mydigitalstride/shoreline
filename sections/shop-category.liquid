@@ -1,32 +1,40 @@
 <section class="shop-category-grid">
   <div class="page-width">
+
     {% if section.settings.heading != blank %}
       <h2 class="categories-heading">{{ section.settings.heading }}</h2>
     {% endif %}
 
     <div class="categories-grid">
       {% for block in section.blocks %}
-        {% if block.settings.link != blank %}
-          <a href="{{ block.settings.link }}" class="category-card">
+
+        {% assign linkwrap = block.settings.link %}
+        {% if linkwrap != blank %}
+          <a href="{{ linkwrap }}" class="category-card">
         {% else %}
           <div class="category-card no-link">
         {% endif %}
 
-            <div class="category-image" style="background-image:url('{{ block.settings.image | image_url: width: 800 }}');">
+            <div class="category-image"
+                 style="background-image:url('{{ block.settings.image | image_url: width: 800 }}');">
+
               <div class="category-overlay"></div>
 
+              <!-- CONTENT POSITION CONTROLLER -->
               <div class="category-content pos-{{ block.settings.text_position }}">
                 <span class="category-title align-{{ block.settings.text_alignment }}">
                   {{ block.settings.title }}
                 </span>
               </div>
+
             </div>
 
-        {% if block.settings.link != blank %}
+        {% if linkwrap != blank %}
           </a>
         {% else %}
           </div>
         {% endif %}
+
       {% endfor %}
     </div>
 
@@ -34,12 +42,12 @@
 </section>
 
 {% stylesheet %}
-/* ================================
-   SHOP CATEGORY GRID - BASE
-================================ */
 
+/* =========================================
+   BASE SECTION
+========================================= */
 .shop-category-grid {
-  background: #1c2b47; /* deep navy */
+  background: #1c2b47;
   padding: 4rem 5rem;
   color: #fff;
 }
@@ -47,13 +55,12 @@
 .categories-heading {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 800;
-  text-transform: uppercase;
   margin-bottom: 2.5rem;
+  text-transform: uppercase;
   color: #ffffff;
-  letter-spacing: 0.5px;
 }
 
-/* GRID */
+/* GRID LAYOUT */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -63,26 +70,26 @@
 /* CARD */
 .category-card {
   display: block;
-  position: relative;
   text-decoration: none;
   color: inherit;
+  position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  transition: transform .3s ease;
+  border-radius: 14px;
 }
 
 .category-card:hover {
   transform: scale(1.03);
 }
 
-/* IMAGE BLOCK */
+/* IMAGE */
 .category-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   background-size: cover;
   background-position: center;
-  aspect-ratio: 1 / 1;
-  width: 100%;
-  position: relative;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
 }
 
@@ -92,122 +99,98 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(70, 179, 184, 0.8),
-    rgba(70, 179, 184, 0.4)
+    rgba(0,0,0,0.40) 10%,
+    rgba(0,0,0,0.15) 40%,
+    transparent 100%
   );
-  opacity: 0.25;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
+  opacity: .5;
+  transition: opacity .3s ease;
 }
 
 .category-card:hover .category-overlay {
-  opacity: 1;
+  opacity: .9;
 }
 
-/* ================================
-   TITLE & CONTENT LAYOUT
-================================ */
+/* =========================================
+   TITLE POSITION + ALIGN CONTROL
+========================================= */
 
-/* wrapper that controls vertical position */
+/* Content wrapper controls vertical placement */
 .category-content {
   position: absolute;
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* default bottom */
   align-items: stretch;
-  padding: 1rem;
-  z-index: 2;
+  z-index: 3;
 }
 
-/* vertical options from schema */
-.pos-top {
-  justify-content: flex-start;
-}
+/* Vertical options */
+.pos-top    { justify-content: flex-start; }
+.pos-center { justify-content: center; }
+.pos-bottom { justify-content: flex-end; }
 
-.pos-center {
-  justify-content: center;
-}
-
-.pos-bottom {
-  justify-content: flex-end; /* true bottom of the card */
-}
-
-/* actual title */
+/* TITLE */
 .category-title {
   width: 100%;
-  font-size: 1.6rem;
-  font-weight: 500;
+  padding: 0.75rem 1rem;
+  font-size: 1.8rem;
+  font-family: "Bebas Neue";
   text-transform: uppercase;
   color: #fff;
-  font-family: "Bebas Neue";
-  letter-spacing: 0.75px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-  padding: 0.35rem 0.6rem;
-  box-sizing: border-box;
+  text-shadow: 0 3px 8px rgba(0,0,0,.55);
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.15)
+  );
 }
 
-/* horizontal alignment options */
-.align-left {
-  text-align: left;
-}
+/* Horizontal alignment */
+.align-left { text-align: left;  }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
 
-.align-center {
-  text-align: center;
-}
-
-.align-right {
-  text-align: right;
-}
-
-/* ================================
+/* =========================================
    RESPONSIVE
-================================ */
+========================================= */
 
-/* Large tablet / small desktop */
 @media (max-width: 1200px) {
   .categories-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Tablet */
 @media (max-width: 989px) {
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile - 1 per row */
+/* MOBILE — 1 per row */
 @media (max-width: 600px) {
   .shop-category-grid {
     padding: 2.5rem 1.25rem;
     text-align: center;
   }
 
-  .categories-heading {
-    text-align: center;
-    font-size: 1.9rem;
-    margin-bottom: 2rem;
-  }
-
   .categories-grid {
-    grid-template-columns: 1fr; /* one per row */
+    grid-template-columns: 1fr;
     gap: 1.2rem;
   }
 
   .category-title {
     font-size: 1.7rem;
-    padding: 0.45rem 0.75rem;
+    padding: 0.6rem 0.9rem;
   }
 }
 
-/* Very small phones */
 @media (max-width: 420px) {
   .category-title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
 }
+
 {% endstylesheet %}
 
 {% schema %}
@@ -221,31 +204,20 @@
       "default": "Shop by Category"
     }
   ],
+
   "blocks": [
     {
       "type": "category",
       "name": "Category Item",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Category Image"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Category Title",
-          "default": "Category"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Category Link"
-        },
+        { "type": "image_picker", "id": "image", "label": "Category Image" },
+        { "type": "text", "id": "title", "label": "Category Title", "default": "Category" },
+        { "type": "url", "id": "link", "label": "Category Link" },
+
         {
           "type": "select",
           "id": "text_position",
-          "label": "Title Position",
+          "label": "Text Vertical Position",
           "default": "bottom",
           "options": [
             { "value": "top", "label": "Top" },
@@ -253,10 +225,11 @@
             { "value": "bottom", "label": "Bottom" }
           ]
         },
+
         {
           "type": "select",
           "id": "text_alignment",
-          "label": "Title Alignment",
+          "label": "Text Alignment",
           "default": "center",
           "options": [
             { "value": "left", "label": "Left" },
@@ -267,7 +240,9 @@
       ]
     }
   ],
+
   "max_blocks": 8,
+
   "presets": [
     {
       "name": "Shop Category Grid",
