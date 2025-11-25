@@ -145,14 +145,18 @@
 }
 
 .product-title {
-  font-size:1.5rem;
-  font-weight:500 !important;
+  font-size: 1.5rem;
+  font-weight: 500 !important;
   text-transform: uppercase;
-  margin:1rem 0 0 5rem;
-  color:(var--color-surface);
+  margin: 1rem 0 0 0;
+  color: var(--color-surface);
   letter-spacing: 1px;
   text-align: left;
+  min-height: 60px; /* <-- forces equal height */
+  display: flex;
+  align-items: flex-end;
 }
+
 
 .add-to-cart {
   background: #f15a29;
