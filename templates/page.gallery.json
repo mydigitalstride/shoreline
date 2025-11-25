@@ -360,7 +360,7 @@
         "gradient_direction": "to top",
         "padding-block-start": 100,
         "padding-block-end": 0,
-        "custom_section_id": ""
+        "custom_section_id": ".template-page"
       }
     },
     "boat_gallery_section_JKCGQD": {
