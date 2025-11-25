@@ -57,63 +57,26 @@
         "padding-block-end": 80
       }
     },
-    "hero_Dngph7": {
-      "type": "hero",
+    "section_nUpEf4": {
+      "type": "section",
       "blocks": {
-        "icon_cK6Dnj": {
-          "type": "icon",
-          "name": "t:names.icon",
-          "settings": {
-            "icon": "price_tag",
-            "image_upload": "shopify://shop_images/Made_In_USA_-_White_Version.png",
-            "width": 24,
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "text_N7TFrP": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Shoreline Brands FAQ</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "h1",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_PmGkjE": {
+        "group_kkPpDF": {
           "type": "group",
           "name": "t:names.group",
           "settings": {
             "link": "",
             "open_in_new_tab": false,
-            "content_direction": "row",
+            "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 22,
+            "width": "fit-content",
             "custom_width": 100,
-            "width_mobile": "fill",
+            "width_mobile": "fit-content",
             "custom_width_mobile": 100,
             "height": "fit",
             "custom_height": 100,
@@ -134,144 +97,324 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
           },
           "blocks": {
-            "button_bjbH3V": {
-              "type": "button",
-              "name": "t:names.button",
+            "menu_gNWtn7": {
+              "type": "menu",
+              "name": "t:names.menu",
               "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            },
-            "button_ePYWBN": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h2",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "button_bjbH3V",
-            "button_ePYWBN"
+            "menu_gNWtn7"
           ]
+        },
+        "group_z9q7Vt": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "text_cTJkxF": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h1>Gallery</h1>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h1",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_Edj6M3": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Explore our gallery below to see our bimini extensions and shade sails installed on customer boats. Click on the image to visit the associated product page.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_cTJkxF",
+            "text_Edj6M3"
+          ]
+        },
+        "image_UkbK3L": {
+          "type": "image",
+          "name": "t:names.image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2017_Nautique_G25.jpg",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "custom",
+            "custom_width": 52,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "icon_cK6Dnj",
-        "text_N7TFrP",
-        "group_PmGkjE"
+        "group_kkPpDF",
+        "group_z9q7Vt",
+        "image_UkbK3L"
       ],
-      "name": "t:names.hero",
+      "custom_css": [
+        "h1,p {color: #fff !important;}"
+      ],
+      "name": "t:names.custom_section",
       "settings": {
-        "media_type_1": "video",
-        "video_1": "shopify://files/videos/121 - SB24_Website_SunShade_1080x1080 (1).mp4",
-        "media_type_2": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
+        "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
+        "gap": 12,
         "section_width": "page-width",
-        "section_height": "large",
+        "section_height": "small",
         "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": true,
+        "color_scheme": "",
+        "background_media": "image",
+        "video_position": "cover",
+        "background_image": "shopify://shop_images/2017_Nautique_G25.jpg",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
         "overlay_color": "#00000026",
-        "overlay_style": "gradient",
+        "overlay_style": "solid",
         "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-start": 100,
+        "padding-block-end": 0,
+        "custom_section_id": ""
       }
     },
-    "faq_two_column_KbiRcg": {
-      "type": "faq-two-column",
-      "name": "FAQ Two Column",
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "subtext": "Add supporting text here.",
-        "button_text": "Contact Us",
-        "button_link": ""
-      }
-    },
-    "contact_shoreline_brands_bm9bt9": {
-      "type": "contact-shoreline-brands",
-      "name": "Contact Shoreline Brands",
-      "settings": {}
-    },
-    "additional_resources_a4NEJq": {
-      "type": "additional-resources",
+    "boat_gallery_section_JKCGQD": {
+      "type": "boat-gallery-section",
       "blocks": {
-        "link_YVKUbK": {
-          "type": "link",
+        "boat_gallery_aVnDzJ": {
+          "type": "boat-gallery",
           "settings": {
-            "title": "FAQ",
-            "link": ""
+            "image": "shopify://shop_images/2003-2008_Supra_24SSV.jpg",
+            "title": "2003-2008 Supra 24SSV",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
-        "link_GgUzbK": {
-          "type": "link",
+        "boat_gallery_tVmhJT": {
+          "type": "boat-gallery",
           "settings": {
-            "title": "Instructions",
-            "link": ""
+            "image": "shopify://shop_images/2014-2016_Super_Air_Nautique.jpg",
+            "title": "2014-2016 Super Air Nautique",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
-        "link_McUJwb": {
-          "type": "link",
+        "boat_gallery_c7WiwC": {
+          "type": "boat-gallery",
           "settings": {
-            "title": "Returns",
-            "link": ""
+            "image": "shopify://shop_images/2008_-_2016_MB_B52.jpg",
+            "title": "2008 - 2016 MB B52",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
-        "link_mp9Uwp": {
-          "type": "link",
+        "boat_gallery_HyYRBp": {
+          "type": "boat-gallery",
           "settings": {
-            "title": "Warranty",
-            "link": ""
+            "image": "shopify://shop_images/2008-2013_Sanger_V215.jpg",
+            "title": "2008-2013 Sanger V215",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_WxjDxc": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2013_Axis_A22.jpg",
+            "title": "2013 Axis A22",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_cCLVFC": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2013-2015_Moomba_Mojo_2.5.jpg",
+            "title": "2013-2015 Moomba Mojo 2.5",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_FMnQRD": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2014-2018_Mastercraft_X46_a78418f5-16ea-4655-a423-79d4a061c84a.jpg",
+            "title": "2014-2018 Mastercraft X46",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_HFN3yt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Nautique_G23.jpg",
+            "title": "2015 Nautique G23",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_RJ8JCb": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Nautique_G25.webp",
+            "title": "2015 Nautique G25",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_adxXQi": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Yamaha_AR240.jpg",
+            "title": "2015 Yamaha AR240",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_rKdnWE": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015-2026_Yamaha_212x_4fb3b91f-0070-47d8-ae3c-dc1bbc4bcc57.jpg",
+            "title": "2015-2026 Yamaha 212x",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_izfq8G": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2016_Nautique_G25.jpg",
+            "title": "2016 Nautique G25",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         }
       },
       "block_order": [
-        "link_YVKUbK",
-        "link_GgUzbK",
-        "link_McUJwb",
-        "link_mp9Uwp"
+        "boat_gallery_aVnDzJ",
+        "boat_gallery_tVmhJT",
+        "boat_gallery_c7WiwC",
+        "boat_gallery_HyYRBp",
+        "boat_gallery_WxjDxc",
+        "boat_gallery_cCLVFC",
+        "boat_gallery_FMnQRD",
+        "boat_gallery_HFN3yt",
+        "boat_gallery_RJ8JCb",
+        "boat_gallery_adxXQi",
+        "boat_gallery_rKdnWE",
+        "boat_gallery_izfq8G"
       ],
-      "name": "Additional Resources",
+      "name": "Boat Gallery",
       "settings": {
-        "heading": "Additional Resources"
+        "heading": "Boat Gallery"
       }
     }
   },
   "order": [
     "main",
-    "hero_Dngph7",
-    "faq_two_column_KbiRcg",
-    "contact_shoreline_brands_bm9bt9",
-    "additional_resources_a4NEJq"
+    "section_nUpEf4",
+    "boat_gallery_section_JKCGQD"
   ]
 }
