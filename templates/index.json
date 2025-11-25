@@ -542,7 +542,8 @@
         "category_j3kEcK"
       ],
       "custom_css": [
-        "p {color: white !important;}"
+        ".p {color: white !important;}",
+        ".category-title {position: absolute; /* top: 0rem; */ left: 1rem; top: 14rem; z-index: 2; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 0;}"
       ],
       "name": "Features & Categories",
       "settings": {
