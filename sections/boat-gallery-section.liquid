@@ -80,9 +80,9 @@
   aspect-ratio: 1 / 1;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -106,7 +106,9 @@
 
 /* TITLE */
 .boat-gallery-title {
-  position: relative;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
   z-index: 2;
   font-size: 1.5rem;
   font-weight: 500;
@@ -115,7 +117,7 @@
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.75px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  text-align: center;
+  text-align: left;
 }
 
 /* RESPONSIVE */
@@ -162,6 +164,7 @@
 
   .boat-gallery-image {
     border-radius: 5px;
+    padding: 0.5rem;
   }
 
   .boat-gallery-overlay {
@@ -169,9 +172,12 @@
   }
 
   .boat-gallery-title {
+    position: absolute;
+    text-align: left;
+    left: 0.5rem;
+    top: 0.5rem;
     font-size: clamp(1rem, 4vw, 1.5rem);
     letter-spacing: 0.5px;
-    padding: 0.5rem;
     line-height: 1.2;
   }
 }
@@ -179,9 +185,12 @@
 /* Very small phones */
 @media (max-width: 420px) {
   .boat-gallery-title {
+    position: absolute;
+    text-align: left;
+    left: 0.5rem;
+    top: 0.5rem;
     font-size: clamp(0.9rem, 3.5vw, 1.2rem);
     letter-spacing: 0.5px;
-    padding: 0.4rem;
   }
 }
 {% endstylesheet %}
