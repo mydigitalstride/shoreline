@@ -1,4 +1,4 @@
-<section class="boat-gallery-section">
+<section class="boat-gallery-section{% if section.settings.heading == blank %} no-heading{% endif %}">
   <div class="page-width">
     <!-- HEADING -->
     {% if section.settings.heading != blank %}
@@ -40,6 +40,10 @@
   padding: 1.5rem 5rem;
   color: #fff;
   text-align: left;
+}
+
+.boat-gallery-section.no-heading {
+  padding-top: 0;
 }
 
 .boat-gallery-heading {
@@ -149,6 +153,10 @@
   .boat-gallery-section {
     padding: 1rem 1.25rem;
     text-align: center;
+  }
+
+  .boat-gallery-section.no-heading {
+    padding-top: 0;
   }
 
   .boat-gallery-heading {
