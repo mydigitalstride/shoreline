@@ -678,6 +678,22 @@
             "title": "Centurion RI245",
             "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
           }
+        },
+        "boat_gallery_GgDyez": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Centurion_Ri230_Predator_Tower.jpg",
+            "title": "2025 Centurion Ri230 Predator Tower",
+            "link": "shopify://products/centurion-predator-tower-bimini-extension"
+          }
+        },
+        "boat_gallery_UPLJ3c": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Centurion_Ri245_Predator_Tower.jpg",
+            "title": "2025 Centurion Ri245 Predator Tower",
+            "link": "shopify://products/centurion-predator-tower-bimini-extension"
+          }
         }
       },
       "block_order": [
@@ -728,7 +744,9 @@
         "boat_gallery_WFpf4T",
         "boat_gallery_TA6YiG",
         "boat_gallery_mj7t4t",
-        "boat_gallery_yC96CR"
+        "boat_gallery_yC96CR",
+        "boat_gallery_GgDyez",
+        "boat_gallery_UPLJ3c"
       ],
       "name": "Boat Gallery",
       "settings": {
