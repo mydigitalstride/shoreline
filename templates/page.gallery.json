@@ -582,6 +582,102 @@
             "title": "2020 Chaparral 21ssi",
             "link": "shopify://products/yamaha-xd-series-shade-extension"
           }
+        },
+        "boat_gallery_8thrBk": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021-2023_Axis_A22.jpg",
+            "title": "2018 Axis A22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_GNncTq": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2018_Axis_T22.jpg",
+            "title": "2018 Axis T22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_MDQnkW": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Axis_A22_-_Copy.jpg",
+            "title": "2015 Axis A22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_yyQ9H8": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021-2023_Axis_A22.jpg",
+            "title": "2021-2023 Axis A22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_Wy8yxC": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Supreme_S220.jpg",
+            "title": "2022 Supreme S220",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_tRGEqQ": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Centurion_Ri_265.jpg",
+            "title": "2023 Centurion Ri 265",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_hHFfi6": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Centurion_RI245.jpg",
+            "title": "2023 Centurion RI245",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_PHc9iL": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Centurion_Ri265_2.jpg",
+            "title": "2023 Centurion Ri265",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_WFpf4T": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Centurion_Ri230.jpg",
+            "title": "2024 Centurion Ri230",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_TA6YiG": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Centurion_Ri245.jpg",
+            "title": "2024 Centurion Ri245",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_mj7t4t": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Centurion_Ri245_Surfing.jpg",
+            "title": "Centurion Ri245 Surfing",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_yC96CR": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/CenturionRI245.jpg",
+            "title": "Centurion RI245",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
         }
       },
       "block_order": [
@@ -620,7 +716,19 @@
         "boat_gallery_8aBgxc",
         "boat_gallery_8ceKdW",
         "boat_gallery_GYR3kx",
-        "boat_gallery_CHFr8K"
+        "boat_gallery_CHFr8K",
+        "boat_gallery_8thrBk",
+        "boat_gallery_GNncTq",
+        "boat_gallery_MDQnkW",
+        "boat_gallery_yyQ9H8",
+        "boat_gallery_Wy8yxC",
+        "boat_gallery_tRGEqQ",
+        "boat_gallery_hHFfi6",
+        "boat_gallery_PHc9iL",
+        "boat_gallery_WFpf4T",
+        "boat_gallery_TA6YiG",
+        "boat_gallery_mj7t4t",
+        "boat_gallery_yC96CR"
       ],
       "name": "Boat Gallery",
       "settings": {
