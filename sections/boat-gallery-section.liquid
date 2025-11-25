@@ -1,0 +1,237 @@
+<section class="boat-gallery-section">
+  <div class="page-width">
+    <!-- HEADING -->
+    {% if section.settings.heading != blank %}
+      <h2 class="boat-gallery-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <!-- BOAT GALLERY GRID -->
+    <div class="boat-gallery-grid">
+      {% for block in section.blocks %}
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}" class="boat-gallery-card" {{ block.shopify_attributes }}>
+            <div class="boat-gallery-image" style="background-image:url('{{ block.settings.image | image_url: width: 900 }}');">
+              <div class="boat-gallery-overlay"></div>
+              {% if block.settings.title != blank %}
+                <span class="boat-gallery-title">{{ block.settings.title }}</span>
+              {% endif %}
+            </div>
+          </a>
+        {% else %}
+          <div class="boat-gallery-card no-link" {{ block.shopify_attributes }}>
+            <div class="boat-gallery-image" style="background-image:url('{{ block.settings.image | image_url: width: 900 }}');">
+              <div class="boat-gallery-overlay"></div>
+              {% if block.settings.title != blank %}
+                <span class="boat-gallery-title">{{ block.settings.title }}</span>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+/* === BOAT GALLERY SECTION === */
+.boat-gallery-section {
+  background: #1c2b47;
+  padding: 4rem 5rem;
+  color: #fff;
+  text-align: left;
+}
+
+.boat-gallery-heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* GRID */
+.boat-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* CARD */
+.boat-gallery-card {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.boat-gallery-card:hover {
+  transform: scale(1.03);
+}
+
+/* IMAGE */
+.boat-gallery-image {
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* OVERLAY - Default: #46b3b8 at 20% opacity */
+.boat-gallery-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(70, 179, 184, 0.2);
+  transition: background 0.4s ease;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+/* HOVER: #46b3b8 to transparent gradient */
+.boat-gallery-card:hover .boat-gallery-overlay {
+  background: linear-gradient(to bottom, rgba(70, 179, 184, 0.8), transparent);
+}
+
+/* TITLE */
+.boat-gallery-title {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.75px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+/* Tablet/Medium screens - 3 columns */
+@media (max-width: 1200px) {
+  .boat-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile - 2 columns */
+@media (max-width: 989px) {
+  .boat-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .boat-gallery-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 600px) {
+  .boat-gallery-section {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+  }
+
+  .boat-gallery-heading {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .boat-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .boat-gallery-image {
+    border-radius: 5px;
+  }
+
+  .boat-gallery-overlay {
+    border-radius: 5px;
+  }
+
+  .boat-gallery-title {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    letter-spacing: 0.5px;
+    padding: 0.5rem;
+    line-height: 1.2;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .boat-gallery-title {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    letter-spacing: 0.5px;
+    padding: 0.4rem;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Boat Gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Boat Gallery"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "boat-gallery",
+      "name": "Gallery Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Gallery Title"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Boat Gallery",
+      "blocks": [
+        { "type": "boat-gallery" },
+        { "type": "boat-gallery" },
+        { "type": "boat-gallery" },
+        { "type": "boat-gallery" }
+      ]
+    }
+  ]
+}
+{% endschema %}

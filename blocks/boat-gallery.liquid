@@ -53,8 +53,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(70, 179, 184, 0.2);
     z-index: 1;
+    transition: background 0.4s ease;
+  }
+
+  .category-cards:hover .category-overlay {
+    background: linear-gradient(to bottom, rgba(70, 179, 184, 0.8), transparent);
   }
 
   .category-title {
