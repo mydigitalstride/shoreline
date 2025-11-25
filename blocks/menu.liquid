@@ -80,7 +80,9 @@
         <div class="details-content">
           {% if is_main_menu and block.settings.menu_logo %}
             <div class="menu-logo">
-              <img src="{{ block.settings.menu_logo | image_url: width: 200 }}" alt="Menu Logo">
+              <a href="{{ routes.root_url }}">
+                <img src="{{ block.settings.menu_logo | image_url: width: 200 }}" alt="Menu Logo">
+              </a>
             </div>
           {% endif %}
           {% if menu %}
