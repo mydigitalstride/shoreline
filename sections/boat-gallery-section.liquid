@@ -164,6 +164,7 @@
 
   .boat-gallery-image {
     border-radius: 5px;
+    padding: 0.5rem;
   }
 
   .boat-gallery-overlay {
@@ -171,10 +172,12 @@
   }
 
   .boat-gallery-title {
+    position: absolute;
+    text-align: left;
+    left: 0.5rem;
+    top: 0.5rem;
     font-size: clamp(1rem, 4vw, 1.5rem);
     letter-spacing: 0.5px;
-    top: 0.5rem;
-    left: 0.5rem;
     line-height: 1.2;
   }
 }
@@ -182,10 +185,12 @@
 /* Very small phones */
 @media (max-width: 420px) {
   .boat-gallery-title {
+    position: absolute;
+    text-align: left;
+    left: 0.5rem;
+    top: 0.5rem;
     font-size: clamp(0.9rem, 3.5vw, 1.2rem);
     letter-spacing: 0.5px;
-    top: 0.5rem;
-    left: 0.5rem;
   }
 }
 {% endstylesheet %}
