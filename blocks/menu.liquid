@@ -352,13 +352,7 @@ menu__item paragraph{
       padding-block-end: var(--padding-sm);
     }
 
-    .details-content {
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      right: auto;
-      padding: 4vh 1vw;
-    }
+
 
     .menu-close-btn {
       right: 11rem;
@@ -392,7 +386,86 @@ menu__item paragraph{
   .menu--plus .icon-caret {
     display: none;
   }
-  
+  /* ===========================================================
+   FINAL MOBILE MENU — FULL SCREEN, NO SCROLL, TIGHT SPACING
+   =========================================================== */
+@media (max-width: 749px) {
+
+  /* Full screen slide-out panel */
+  #main-menu-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 85vw !important;
+    max-width: 340px;
+    height: 100vh !important;
+    background: #2c3c5d !important;
+    padding: 2rem 1.5rem !important;
+    z-index: 999999 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    overflow: hidden !important;
+
+    transform: translateX(-100%);
+    transition: transform 0.35s ease-in-out;
+  }
+
+  /* Open state */
+  #main-menu-wrapper:not(.hidden) {
+    transform: translateX(0) !important;
+  }
+
+  /* Clean content wrapper */
+  #main-menu-wrapper .details-content {
+    position: static !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Clean logo spacing */
+  .menu-logo {
+    margin: 0 0 2rem 0 !important;
+  }
+
+  /* FIX HUGE SPACING — TIGHTEN LIST */
+  .list-unstyled {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important; /* Adjust spacing here */
+  }
+
+  .menu__item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .menu__item a {
+    font-size: 1.4rem !important;
+    line-height: 1.1 !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+  }
+
+  /* Fix close button */
+  .menu-close-btn {
+    position: absolute !important;
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+    z-index: 9999999 !important;
+  }
+
+  /* HERO MUST NOT CLIP MENU */
+  .hero {
+    overflow: visible !important;
+  }
+}
+
 {% endstylesheet %}
 
 <script>
