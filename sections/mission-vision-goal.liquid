@@ -2,7 +2,7 @@
   {% if section.settings.section_heading != blank %}
     <h2 class="mvg-heading">{{ section.settings.section_heading }}</h2>
   {% endif %}
-<div class= "page">
+<div class= "page-width">
   <div class="mvg-horizontal">
     {% for block in section.blocks %}
       <div class="mvg-item" {{ block.shopify_attributes }}>
@@ -22,11 +22,6 @@
 </section>
 
 <style>
-.page{
-   width: 100%;
-  padding: 2rem 1rem;
-  position: relative;
-  z-index: 0;}
 .mission-vision-goal {
   background-color: #fff;
   padding: 100px 3rem; /* ✅ increased top/bottom + side padding */
