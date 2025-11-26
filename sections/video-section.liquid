@@ -26,29 +26,37 @@
 
     <div class="video-wrapper">
 
-      {%- comment -%}
-      =============== VIDEO UPLOAD HAS PRIORITY ===============
-      If user uploads a video file, we ignore YouTube URL.
-      {%- endcomment -%}
-
-      {% if section.settings.video_upload != blank %}
+      {%- if section.settings.video_file != blank -%}
+        <!-- SHOPIFY VIDEO PICKER -->
         <video 
-          controls 
+          controls
           preload="metadata"
           playsinline
           style="width:100%; height:100%; border-radius:8px;"
         >
-          <source src="{{ section.settings.video_upload | video_url }}" type="video/mp4">
-          Your browser does not support the video tag.
+          <source src="{{ section.settings.video_file | video_url }}" type="video/mp4">
         </video>
 
-      {% elsif section.settings.video_url != blank %}
+      {%- elsif section.settings.mp4_url != blank -%}
+        <!-- EXTERNAL MP4 URL -->
+        <video 
+          controls
+          preload="metadata"
+          playsinline
+          style="width:100%; height:100%; border-radius:8px;"
+        >
+          <source src="{{ section.settings.mp4_url }}" type="video/mp4">
+        </video>
+
+      {%- elsif section.settings.video_url != blank -%}
+        <!-- YOUTUBE URL -->
         {% assign youtube_id = section.settings.video_url
           | replace: 'https://www.youtube.com/watch?v=', ''
           | replace: 'https://youtu.be/', ''
           | split: '&'
           | first
         %}
+
         <iframe
           src="https://www.youtube.com/embed/{{ youtube_id }}"
           title="YouTube video player"
@@ -56,7 +64,9 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      {% endif %}
+
+      {%- endif -%}
+
     </div>
 
   </div>
@@ -82,14 +92,20 @@
       "type": "text",
       "id": "video_url",
       "label": "YouTube Video URL",
-      "default": "https://www.youtube.com/watch?v=abcdefg",
-      "info": "Paste any YouTube link. Ignored if a video file is uploaded."
+      "default": "https://www.youtube.com/watch?v=7Px-mIbjfuw",
+      "info": "Paste a full YouTube link (optional)"
     },
     {
       "type": "video",
-      "id": "video_upload",
-      "label": "Upload Video File",
-      "info": "Upload an MP4/MOV video. This will override the YouTube URL."
+      "id": "video_file",
+      "label": "Upload Video (Shopify Hosted)",
+      "info": "Upload or select a video from your Shopify files"
+    },
+    {
+      "type": "url",
+      "id": "mp4_url",
+      "label": "External MP4 URL",
+      "info": "Optional link to an external MP4"
     },
     {
       "type": "image_picker",
