@@ -480,6 +480,45 @@
     overflow: visible !important;
   }
 }
+/* ============================================
+   MOBILE — Smaller menu + cart icons & move right
+   ============================================ */
+@media (max-width: 749px) {
+
+  /* Reduce icon size */
+  .main-menu-bar .svg-wrapper svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .main-menu-bar .svg-wrapper {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* Smaller cart bubble */
+  .cart-count {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 0.65rem !important;
+    top: -6px !important;
+    right: -6px !important;
+  }
+
+  /* Move icons further to the right */
+  .main-menu-bar {
+    position: absolute !important;
+    right: 4vw !important;  /* move right more */
+    top: 2.5vh !important;
+    gap: 0.75rem !important;
+    transform: scale(1) !important; /* remove large scaling */
+  }
+
+  /* Optional — slightly shrink the entire header icons section */
+  #main-menu-button, .cart-icon-wrapper {
+    transform: scale(0.9) !important;
+  }
+}
 
 {% endstylesheet %}
 
