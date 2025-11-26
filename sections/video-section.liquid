@@ -27,14 +27,17 @@
     <div class="video-wrapper">
 
       {%- if section.settings.video_file != blank -%}
-        <!-- SHOPIFY VIDEO PICKER -->
+        <!-- SHOPIFY VIDEO PICKER (CORRECT FORMAT) -->
         <video 
           controls
           preload="metadata"
           playsinline
           style="width:100%; height:100%; border-radius:8px;"
         >
-          <source src="{{ section.settings.video_file | video_url }}" type="video/mp4">
+          {% for source in section.settings.video_file.sources %}
+            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+          {% endfor %}
+          Your browser does not support the video tag.
         </video>
 
       {%- elsif section.settings.mp4_url != blank -%}
