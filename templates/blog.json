@@ -359,6 +359,7 @@
     },
     "video_section_JY79YD": {
       "type": "video-section",
+      "disabled": true,
       "name": "Video Section",
       "settings": {
         "heading": "Watch this short video below for installation of our Axis Wake Tower Bimini Extension",
