@@ -107,318 +107,161 @@
 {% endif %}
 
 {% stylesheet %}
-  .menu {
-    width: 100%;
-  }
-menu__item paragraph{
-  color:white !important;
+
+.menu {
+  width: 100%;
 }
-  .menu:not(:has(.menu__heading--empty)) .details-content {
-    margin-block-start: var(--spacing--size);
+
+.menu__item a {
+  font-weight: bold !important;
+}
+
+.menu__item.paragraph {
+  line-height: 2;
+}
+
+.menu__heading--empty {
+  display: none;
+}
+
+.menu__heading__default {
+  display: contents;
+}
+
+.menu__heading__accordion {
+  display: none;
+}
+
+/* Proper defaults for all pages */
+.menu-wrapper,
+.details-content {
+  position: static;
+  padding: 0;
+  margin: 0;
+}
+
+/* Desktop menu sizing */
+@media screen and (min-width: 750px) {
+  .menu-wrapper {
+    width: 15rem;
   }
-
-  .menu__item + .menu__item {
-    margin-block-start: var(--spacing--size);
-  }
-
-  .menu .menu__heading--empty {
-    display: none;
-  }
-
-  .menu__heading__default {
-    display: contents;
-  }
-
-  .menu__heading__accordion {
-    display: none;
-  }
-
-  .hero__container {
-    position: relative;
-  }
-
-  #main-menu {
-    display: flex;
-  }
-
-  #main-menu-button {
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-  }
-
-  /* Blue menu icons on product pages */
-  body.product-page .main-menu-bar svg,
-  body.product-page #main-menu-button svg,
-  body.product-page .cart-icon-wrapper svg {
-    color: #2C3C5E;
-  }
-
-  body.product-page .cart-count {
-    background-color: #2C3C5E;
-  }
-
-  /* Blue menu icons on cart page */
-  body.cart-page .main-menu-bar svg,
-  body.cart-page #main-menu-button svg,
-  body.cart-page .cart-icon-wrapper svg {
-    color: #2C3C5E;
-    transition: color 0.3s ease;
-  }
-  #product-menu .main-menu-bar #main-menu-button, #product-menu .main-menu-bar .cart-icon-wrapper {
-    color: #2C3C5E; 
-  }
-
-  
-  body.cart-page .cart-count {
-    background-color: #2C3C5E;
-    transition: background-color 0.3s ease;
-  }
-
-  /* Hover states - turn orange on cart page */
-  body.cart-page #main-menu-button:hover svg,
-  body.cart-page .cart-icon-wrapper:hover svg {
-    color: #f26522;
-  }
-
-  body.cart-page .cart-icon-wrapper:hover .cart-count {
-    background-color: #f26522;
-  }
-
-  /* Cart Icon Styles */
-  .cart-icon-wrapper {
-    position: relative;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cart-icon-wrapper .svg-wrapper {
-    width: 24px;
-    height: 24px;
-  }
-
-  .cart-icon-wrapper svg {
-    fill: currentColor;
-  }
-
-  .cart-count {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #f26522;
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: bold;
-    line-height: 1;
-  }
-
-  .cart-count:empty {
-    display: none;
-  }
-
-  /* Desktop: cart below menu */
-  @media screen and (min-width: 750px) {
-    .main-menu-bar {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      align-items: center;
-      position: absolute;
-      right: 5vw;
-      top: 5vh;
-      transform: scale(1.5);
-      transform-origin: top right; 
-    }
-
-    /* Keep top: 1vh for product and cart pages */
-    body.product-page .main-menu-bar,
-    body.cart-page .main-menu-bar {
-      top: 1vh;
-    }
-  }
-
-  @media screen and (min-width: 750px) {
-    .menu-wrapper {
-      width: 15rem;
-    }
-  }
-
-  /* Mobile: cart next to menu */
-  @media screen and (max-width: 749px) {
-    .main-menu-bar {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      align-items: center;
-      justify-content: flex-start;
-      height: auto;
-    }
-  }
-  /* Menu Logo Styles */
-  .menu-logo {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .menu-logo img {
-    max-width: 100%;
-    height: auto;
-    max-height: 80px;
-  }
-
-  /* Close Button Styles */
-  .menu-close-btn {
-    position: absolute;
-    top: 3vh;
-    right: 10vw;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    z-index: 10;
-  }
-
-  .menu-close-btn svg {
-    color: #2c3c5d;
-  }
-
-  .menu-close-btn:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-  }
-
-  .menu__item {
-    a {
-      font-weight: bold !important;
-    }
-  }
-
-  .menu__item.paragraph {
-    line-height: 2;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  @media screen and (max-width: 749px) {
-    /* Always show the fallback heading on mobile when accordion is enabled */
-    .menu--accordion .menu__heading--empty {
-      display: flex;
-    }
-
-    .menu--accordion .menu__heading__accordion {
-      display: contents;
-    }
-
-    .menu--accordion .menu__heading__default {
-      display: none;
-    }
-
-    .menu--accordion .details-content {
-      margin-block-start: var(--spacing--size);
-    }
-
-    .menu--accordion .menu__details {
-      padding-inline: 0;
-    }
-
-    .menu--dividers .menu__details {
-      border-block-end: var(--style-border-width) solid var(--color-border);
-    }
-
-    .menu--dividers .details-content {
-      padding-block-end: var(--padding-sm);
-    }
+}
 
 
-
-    .menu-close-btn {
-      right: 11rem;
-    }
-
-    .menu-wrapper {
-      width: 10rem;
-      height: 115vh;
-      padding: 1rem;
-      background-color: #2c3c5d;
-      position: fixed;
-      right: -0;
-      top: -0;
-    }
-
-    .menu-logo {
-      width: 80%;
-    }
-
-    .cart-count {
-      top: 0px;
-      right: -20px;
-    }
-
-    .list-unstyled {
-      text-align: left;
-    }
-  }
-
-  .menu--caret .icon-plus,
-  .menu--plus .icon-caret {
-    display: none;
-  }
-  /* ===========================================================
-   FINAL MOBILE MENU — FULL SCREEN, NO SCROLL, TIGHT SPACING
+/* ===========================================================
+   MAIN MENU BAR (hamburger + cart)
    =========================================================== */
+
+#main-menu {
+  display: flex;
+}
+
+#main-menu-button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon-wrapper .svg-wrapper {
+  width: 24px;
+  height: 24px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #f26522;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.cart-count:empty {
+  display: none;
+}
+
+/* Desktop position */
+@media screen and (min-width: 750px) {
+  .main-menu-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    position: absolute;
+    right: 5vw;
+    top: 5vh;
+    transform: scale(1.5);
+    transform-origin: top right;
+  }
+
+  body.product-page .main-menu-bar,
+  body.cart-page .main-menu-bar {
+    top: 1vh;
+  }
+}
+
+
+/* ===========================================================
+   CLEAN MOBILE MENU — FULL FIX (NO SCROLL, EVEN SPACING)
+   =========================================================== */
+
 @media (max-width: 749px) {
 
-  /* Full screen slide-out panel */
+  /* Full-screen slide-out panel */
   #main-menu-wrapper {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
     width: 85vw !important;
-    max-width: 340px;
+    max-width: 340px !important;
     height: 100vh !important;
+
     background: #2c3c5d !important;
-    padding: 2rem 1.5rem !important;
     z-index: 999999 !important;
+
+    padding: 2rem 1.5rem !important;
 
     display: flex !important;
     flex-direction: column !important;
+    justify-content: flex-start !important;
 
-    overflow: hidden !important;
+    overflow: hidden !important; /* removes scrolling */
 
-    transform: translateX(-100%);
-    transition: transform 0.35s ease-in-out;
+    transform: translateX(-100%) !important;
+    transition: transform .35s ease-in-out !important;
   }
 
-  /* Open state */
+  /* OPEN */
   #main-menu-wrapper:not(.hidden) {
     transform: translateX(0) !important;
   }
 
-  /* Clean content wrapper */
-  #main-menu-wrapper .details-content {
+  /* Remove ALL old conflicting absolute rules */
+  #main-menu-wrapper .details-content,
+  .details-content {
     position: static !important;
     height: auto !important;
     padding: 0 !important;
@@ -426,18 +269,49 @@ menu__item paragraph{
     overflow: visible !important;
   }
 
-  /* Clean logo spacing */
-  .menu-logo {
-    margin: 0 0 2rem 0 !important;
+  /* Remove all old wrapper size overrides */
+  .menu-wrapper {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    background: none !important;
   }
 
-  /* FIX HUGE SPACING — TIGHTEN LIST */
+  /* Menu Logo */
+  .menu-logo {
+    margin: 0 0 1.5rem 0 !important;
+  }
+
+  .menu-logo img {
+    max-height: 50px !important;
+    width: auto !important;
+  }
+
+  /* Close Button */
+  .menu-close-btn {
+    position: absolute !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    width: 34px !important;
+    height: 34px !important;
+    background: white !important;
+    border-radius: 50% !important;
+    z-index: 9999999 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Perfect spacing */
   .list-unstyled {
+    list-style: none !important;
     padding: 0 !important;
-    margin: 0 !important;
+    margin: 1.25rem 0 0 0 !important;
+
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.2rem !important; /* Adjust spacing here */
+    gap: 1.1rem !important; /* adjust spacing here */
   }
 
   .menu__item {
@@ -446,23 +320,20 @@ menu__item paragraph{
   }
 
   .menu__item a {
-    font-size: 1.4rem !important;
-    line-height: 1.1 !important;
+    font-size: 1.35rem !important;
+    line-height: 1 !important;
     font-weight: 700 !important;
     color: #fff !important;
+    text-decoration: none !important;
   }
 
-  /* Fix close button */
-  .menu-close-btn {
-    position: absolute !important;
-    top: 1.25rem !important;
-    right: 1.25rem !important;
-    z-index: 9999999 !important;
-  }
-
-  /* HERO MUST NOT CLIP MENU */
-  .hero {
+  /* Prevent hero clipping */
+  .hero,
+  .hero__container,
+  .hero img,
+  .hero video {
     overflow: visible !important;
+    position: relative !important;
   }
 }
 
