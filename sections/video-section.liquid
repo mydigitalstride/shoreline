@@ -10,6 +10,7 @@
   "
 >
   <div class="page-width">
+    
     {% if section.settings.heading != blank %}
       <div class="heading-wrapper">
         <h1 class="video-title">
@@ -23,22 +24,41 @@
       <p class="video-subtitle">{{ section.settings.subheading }}</p>
     {% endif %}
 
-    {% if section.settings.video_url != blank %}
-      {% assign youtube_id = section.settings.video_url
-        | replace: 'https://www.youtube.com/watch?v=', ''
-        | replace: 'https://youtu.be/', ''
-        | split: '&'
-        | first %}
-      <div class="video-wrapper">
+    <div class="video-wrapper">
+
+      {%- comment -%}
+      =============== VIDEO UPLOAD HAS PRIORITY ===============
+      If user uploads a video file, we ignore YouTube URL.
+      {%- endcomment -%}
+
+      {% if section.settings.video_upload != blank %}
+        <video 
+          controls 
+          preload="metadata"
+          playsinline
+          style="width:100%; height:100%; border-radius:8px;"
+        >
+          <source src="{{ section.settings.video_upload | video_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+      {% elsif section.settings.video_url != blank %}
+        {% assign youtube_id = section.settings.video_url
+          | replace: 'https://www.youtube.com/watch?v=', ''
+          | replace: 'https://youtu.be/', ''
+          | split: '&'
+          | first
+        %}
         <iframe
           src="https://www.youtube.com/embed/{{ youtube_id }}"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    {% endif %}
+          allowfullscreen
+        ></iframe>
+      {% endif %}
+    </div>
+
   </div>
 </section>
 
@@ -62,7 +82,14 @@
       "type": "text",
       "id": "video_url",
       "label": "YouTube Video URL",
-      "default": "https://www.youtube.com/watch?v=abcdefg"
+      "default": "https://www.youtube.com/watch?v=abcdefg",
+      "info": "Paste any YouTube link. Ignored if a video file is uploaded."
+    },
+    {
+      "type": "video",
+      "id": "video_upload",
+      "label": "Upload Video File",
+      "info": "Upload an MP4/MOV video. This will override the YouTube URL."
     },
     {
       "type": "image_picker",
@@ -137,17 +164,20 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.video-wrapper iframe {
+.video-wrapper iframe,
+.video-wrapper video {
   width: 100%;
   height: 500px;
   display: block;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
   .video-title {
     font-size: 2rem;
   }
-  .video-wrapper iframe {
+  .video-wrapper iframe,
+  .video-wrapper video {
     height: 320px;
   }
 }
