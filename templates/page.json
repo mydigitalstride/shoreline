@@ -60,12 +60,33 @@
     "hero_Dngph7": {
       "type": "hero",
       "blocks": {
+        "logo_V9RAa3": {
+          "type": "logo",
+          "name": "t:names.logo",
+          "settings": {
+            "inverse": false,
+            "font": "heading",
+            "unit": "percent",
+            "percent_width": 100,
+            "pixel_height": 48,
+            "custom_mobile_size": false,
+            "unit_mobile": "percent",
+            "percent_width_mobile": 100,
+            "pixel_height_mobile": 120,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "icon_cK6Dnj": {
           "type": "icon",
           "name": "t:names.icon",
+          "disabled": true,
           "settings": {
             "icon": "price_tag",
-            "image_upload": "shopify://shop_images/Made_In_USA_-_White_Version.png",
+            "image_upload": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png",
             "width": 24,
             "link": "",
             "open_in_new_tab": false
@@ -160,6 +181,7 @@
         }
       },
       "block_order": [
+        "logo_V9RAa3",
         "icon_cK6Dnj",
         "text_N7TFrP",
         "group_PmGkjE"
