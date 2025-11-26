@@ -354,6 +354,7 @@
         "heading": "Watch this short video below for installation of our Universal Wake Tower Bimini Extension",
         "subheading": "Watch this short video below for installation of our Universal Wake Tower Bimini Extension",
         "video_url": "https://www.youtube.com/watch?v=7Px-mIbjfuw",
+        "mp4_url": "",
         "bg_image": "shopify://shop_images/Background_-_Blue.png"
       }
     },
@@ -364,7 +365,8 @@
         "heading": "Watch this short video below for installation of our Axis Wake Tower Bimini Extension",
         "subheading": "Watch this short video below for installation of our Universal Wake Tower Bimini Extension",
         "video_url": "",
-        "video_upload": "shopify://files/videos/EA9E4646-ED4D-40E3-8EF9-C48516F11EAB.mp4",
+        "video_file": "shopify://files/videos/EA9E4646-ED4D-40E3-8EF9-C48516F11EAB.mp4",
+        "mp4_url": "",
         "bg_image": "shopify://shop_images/Background_-_Blue.png"
       }
     }
