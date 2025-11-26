@@ -498,62 +498,38 @@ menu__item paragraph{
     background: none !important;
   }
 }
-/* ===========================================
-   CONSISTENT MOBILE MENU SPACING (ALL PAGES)
-   =========================================== */
+/* ============================
+   FIX MOBILE MENU BEING STUCK
+   Make menu overlay full screen ALWAYS
+   ============================ */
 
 @media (max-width: 749px) {
 
-  #main-menu-wrapper {
-    padding-top: calc(env(safe-area-inset-top) + 1.25rem) !important;
-    padding-bottom: 1.5rem !important;
+  #main-menu-wrapper.menu-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 85vw !important;     /* slide-out panel width */
+    height: 100vh !important;   /* full screen height */
+
+    overflow-y: auto !important; /* in case menu is long */
+    background-color: #2c3c5d !important;
+    z-index: 99999 !important;
   }
 
-  /* Logo spacing — consistent everywhere */
-  .menu-logo {
-    margin: 0 0 1.5rem 0 !important;
+  /* Ensure content inside menu is not absolute positioned */
+  #main-menu-wrapper .details-content {
+    position: relative !important;
+    height: auto !important;
+    padding: 2rem 1rem !important;
   }
 
-  .menu-logo img {
-    max-height: 48px !important;
-  }
-
-  /* Close button pinned inside padding */
-  .menu-close-btn {
-    top: calc(env(safe-area-inset-top) + 0.5rem) !important;
-    right: 1rem !important;
-  }
-
-  /* Menu link stack — uniform spacing */
-  .list-unstyled {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1.25rem !important;  /* universal spacing */
-  }
-
-  .menu__item a {
-    font-size: 1.35rem !important;
-    line-height: 1.2 !important;
-    font-weight: 700 !important;
-  }
-
-  /* Remove unintended vertical spacing from parent containers */
-  .details-content,
-  .menu-wrapper,
-  .menu__details {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Force full-height visual consistency */
-  #main-menu-wrapper {
-    height: 100vh !important;
-    overflow: hidden !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
+  /* Stop hero overflow from clipping the menu */
+  .hero {
+    overflow: visible !important;
   }
 }
 
