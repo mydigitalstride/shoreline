@@ -401,6 +401,111 @@ menu__item paragraph{
   .menu--plus .icon-caret {
     display: none;
   }
+  /* ============================
+   MOBILE MENU FIX — CLEAN + MODERN
+   ============================ */
+
+@media (max-width: 749px) {
+
+  /* SLIDE OUT PANEL */
+  #main-menu-wrapper {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 80vw;                   /* Perfect width */
+    max-width: 340px;              /* Optional hard limit */
+    height: 100vh !important;      /* TRUE full height */
+    background-color: #2c3c5d !important;
+    padding: 2rem 1.75rem !important;
+    overflow-y: auto;
+    z-index: 999999;
+    transform: translateX(-100%);
+    transition: transform .35s ease-in-out;
+    border-radius: 0 12px 12px 0;
+  }
+
+  /* When menu is open */
+  #main-menu-wrapper:not(.hidden) {
+    transform: translateX(0);
+  }
+
+  /* HIDE THE HAMBURGER WHEN MENU OPENS */
+  #main-menu.open #main-menu-button {
+    display: none !important;
+  }
+
+  /* CLOSE BUTTON */
+  .menu-close-btn {
+    position: absolute !important;
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+    background: white !important;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+
+  .menu-close-btn svg {
+    color: #2c3c5d !important;
+    width: 22px;
+    height: 22px;
+  }
+
+  /* LOGO */
+  .menu-logo {
+    margin: 4rem 0 2rem 0;
+    text-align: left;
+  }
+
+  .menu-logo img {
+    max-width: 140px;
+  }
+
+  /* MENU LINKS */
+  .details-content {
+    margin-top: 2rem !important;
+    padding: 0 !important;
+  }
+
+  .list-unstyled {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding: 0;
+  }
+
+  .menu__item a {
+    font-size: 1.45rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+  }
+
+  .menu__item a:hover {
+    opacity: 0.7;
+  }
+
+  /* REMOVE ALL THE MESSES FROM OLD CODE */
+  .menu-wrapper {
+    width: 100% !important;
+    height: 100vh !important;
+    padding: 0 !important;
+    position: static !important;
+    background: transparent !important;
+  }
+
+  .details-content {
+    height: auto !important;
+    position: static !important;
+  }
+}
+
 {% endstylesheet %}
 
 <script>
