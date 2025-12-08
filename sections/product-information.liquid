@@ -43,7 +43,6 @@
 </script>
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
-<!-- Breadcrumbs -->
 <nav class="breadcrumb" aria-label="breadcrumb">
   <a href="{{ routes.root_url }}">Home</a>
   {% if collection %}
@@ -51,7 +50,7 @@
     <a href="{{ collection.url }}">{{ collection.title }}</a>
   {% endif %}
   <span class="divider">›</span>
-  <span>{{ product.title }}</span>
+  <span class="current">{{ product.title }}</span>
 </nav>
 
 <div

@@ -23,24 +23,46 @@ body {
   font-style: normal;
 }
 /* bread crumbs */ 
+/* Breadcrumb Container */
 .breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
   font-size: 14px;
-  margin-bottom: 20px;
-  color: #555;
+  margin: 10px 0 20px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #e3e3e3;
+  color: #1a1a1a;
 }
 
+/* Breadcrumb Links */
 .breadcrumb a {
-  color: #444;
+  color: #1a73e8; /* Best Buy blue */
   text-decoration: none;
+  font-weight: 500;
 }
 
 .breadcrumb a:hover {
   text-decoration: underline;
 }
 
+/* Divider arrows */
 .breadcrumb .divider {
-  margin: 0 6px;
   color: #999;
+  font-size: 14px;
+}
+
+/* Current page (Product Title) */
+.breadcrumb .current {
+  color: #555;
+  font-weight: 600;
+}
+
+/* Optional: Slight spacing between items */
+.breadcrumb a,
+.breadcrumb span {
+  display: inline-block;
 }
 
 button,
