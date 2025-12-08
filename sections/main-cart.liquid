@@ -3,6 +3,7 @@
   data-section-id="{{ section.id }}"
 >
   <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+
   <div
     class="section color-{{ section.settings.color_scheme }} section--{{ section.settings.section_width }}"
   >
@@ -105,9 +106,9 @@
     .section--page-width .cart-page:has(.cart__container--extend) {
       grid-column: 2 / 4;
       grid-template-columns: 1fr minmax(
-          var(--sidebar-width),
-          calc((100vw - var(--page-width)) / 2 + var(--sidebar-width))
-        );
+        var(--sidebar-width),
+        calc((100vw - var(--page-width)) / 2 + var(--sidebar-width))
+      );
     }
 
     .cart__container--extend {
@@ -122,27 +123,30 @@
   }
 {% endstylesheet %}
 
-<!-- ⭐ FINAL OVERRIDE: THIS FIXES THE MEDIUM-SCREEN CART BUG -->
+
+<!-- ⭐ FINAL FIX – MAKES CART WORK ON MEDIUM SCREENS -->
 <style>
 @media screen and (min-width: 750px) and (max-width: 1399px) {
-  
-  /* Force correct layout */
+
+  /* Force single-column layout */
   cart-items-component .cart-page {
-    grid-template-columns: 1fr 320px !important;
-    gap: 2rem !important;
+    grid-template-columns: 1fr !important;
   }
 
-  /* Fix sidebar width */
+  /* Move summary under items */
   cart-items-component .cart-page__summary {
-    max-width: 320px !important;
+    grid-column: 1 !important;
+    grid-row: auto !important;
     width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 2rem !important;
     position: relative !important;
   }
 
-  /* Prevent vertical text issue */
+  /* Fix product items width */
   cart-items-component .cart-page__items {
-    min-width: 0 !important;
     width: 100% !important;
+    min-width: 100% !important;
     white-space: normal !important;
     word-break: break-word !important;
     overflow: visible !important;
@@ -156,12 +160,11 @@
 }
 </style>
 
+
 {% schema %}
 {
   "name": "t:names.cart",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "disabled_on": { "groups": ["header", "footer"] },
   "blocks": [
     { "type": "@theme" },
     { "type": "@app" },
@@ -190,10 +193,7 @@
       "label": "t:settings.color_scheme",
       "default": "scheme-1"
     },
-    {
-      "type": "header",
-      "content": "t:content.padding"
-    },
+    { "type": "header", "content": "t:content.padding" },
     {
       "type": "range",
       "id": "padding-block-start",
