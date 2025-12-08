@@ -116,11 +116,11 @@
     }
   }
 
-  @media screen and (min-width: 1400px) {
+  /* @media screen and (min-width: 1400px) {
     .cart-page {
       grid-template-columns: 1fr;
     }
-  }
+  } */
 {% endstylesheet %}
 
 
@@ -129,7 +129,7 @@
 @media screen and (min-width: 750px) and (max-width: 1399px) {
 
   /* Force single-column layout */
-  cart-items-component  {
+  cart-items-component .cart-page {
     grid-template-columns: 1fr !important;
   }
 
