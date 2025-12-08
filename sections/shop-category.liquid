@@ -194,6 +194,18 @@
     display: block !important;
   }
 }
+/* Hide Shop Category Grid ONLY on /collections/shoreline-brands AND ONLY on mobile */
+.template-collection--shoreline-brands .shop-category-grid {
+  display: none !important;
+}
+
+/* Show the grid again on desktop */
+@media screen and (min-width: 750px) {
+  .template-collection--shoreline-brands .shop-category-grid {
+    display: block !important;
+  }
+}
+
 
 {% endstylesheet %}
 
