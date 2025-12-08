@@ -123,6 +123,17 @@
       grid-template-columns: 1fr;
     }
   }
+  @media screen and (min-width: 750px) and (max-width: 1399px) {
+  .cart-page {
+    grid-template-columns: 1fr 350px; 
+  }
+
+  .cart-page__summary {
+    position: relative;
+    max-width: 350px;
+  }
+}
+
 {% endstylesheet %}
 
 {% schema %}
