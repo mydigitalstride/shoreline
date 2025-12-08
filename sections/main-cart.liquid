@@ -1,5 +1,3 @@
-
-
 <cart-items-component
   class="cart-items-component"
   data-section-id="{{ section.id }}"
@@ -101,7 +99,6 @@
       grid-template-rows: subgrid;
       padding-top: 0;
 
-      /* needed to support blurred effect from hero section */
       position: relative;
     }
 
@@ -123,36 +120,41 @@
       grid-template-columns: 1fr;
     }
   }
-  /* FIX CART PAGE LAYOUT WHEN SCREEN IS NOT FULL WIDTH */
+{% endstylesheet %}
+
+<!-- ⭐ FINAL OVERRIDE: THIS FIXES THE MEDIUM-SCREEN CART BUG -->
+<style>
 @media screen and (min-width: 750px) and (max-width: 1399px) {
-  .cart-page {
-    grid-template-columns: 1fr 320px !important; /* main content + sidebar */
+  
+  /* Force correct layout */
+  cart-items-component .cart-page {
+    grid-template-columns: 1fr 320px !important;
     gap: 2rem !important;
   }
 
-  .cart-page__summary {
+  /* Fix sidebar width */
+  cart-items-component .cart-page__summary {
     max-width: 320px !important;
     width: 100% !important;
     position: relative !important;
   }
 
-  /* Prevent product titles from collapsing vertically */
-  .cart-page__items {
+  /* Prevent vertical text issue */
+  cart-items-component .cart-page__items {
     min-width: 0 !important;
     width: 100% !important;
-    overflow: visible !important;
-    word-break: normal !important;
     white-space: normal !important;
+    word-break: break-word !important;
+    overflow: visible !important;
   }
 
-  .cart-item__title,
-  .cart-item__details {
+  cart-items-component .cart-item__title,
+  cart-items-component .cart-item__details {
     white-space: normal !important;
     word-break: break-word !important;
   }
 }
-
-{% endstylesheet %}
+</style>
 
 {% schema %}
 {
@@ -161,33 +163,15 @@
     "groups": ["header", "footer"]
   },
   "blocks": [
-    {
-      "type": "@theme"
-    },
-    {
-      "type": "@app"
-    },
-    {
-      "type": "text"
-    },
-    {
-      "type": "icon"
-    },
-    {
-      "type": "image"
-    },
-    {
-      "type": "button"
-    },
-    {
-      "type": "video"
-    },
-    {
-      "type": "group"
-    },
-    {
-      "type": "spacer"
-    }
+    { "type": "@theme" },
+    { "type": "@app" },
+    { "type": "text" },
+    { "type": "icon" },
+    { "type": "image" },
+    { "type": "button" },
+    { "type": "video" },
+    { "type": "group" },
+    { "type": "spacer" }
   ],
   "settings": [
     {
@@ -195,14 +179,8 @@
       "id": "section_width",
       "label": "t:settings.width",
       "options": [
-        {
-          "value": "page-width",
-          "label": "t:options.page"
-        },
-        {
-          "value": "full-width",
-          "label": "t:options.full"
-        }
+        { "value": "page-width", "label": "t:options.page" },
+        { "value": "full-width", "label": "t:options.full" }
       ],
       "default": "page-width"
     },
