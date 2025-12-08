@@ -22,6 +22,27 @@ body {
   font-weight: 300;
   font-style: normal;
 }
+/* bread crumbs */ 
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.breadcrumb a {
+  color: #444;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .divider {
+  margin: 0 6px;
+  color: #999;
+}
+
 button,
 .button,
 .shopify-button {
