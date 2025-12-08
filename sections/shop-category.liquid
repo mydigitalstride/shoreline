@@ -183,6 +183,17 @@
   }
 
 }
+/* Hide category grid ONLY on the Shop All page and ONLY on mobile */
+.template-collection .section[id*="category"] {
+  display: none;
+}
+
+@media screen and (min-width: 750px) {
+  .template-collection .section[id*="category"] {
+    display: block;
+  }
+}
+
 {% endstylesheet %}
 
 {% schema %}
