@@ -162,7 +162,6 @@
             "group_ULM9fP": {
               "type": "group",
               "name": "t:names.group",
-              "disabled": true,
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
