@@ -173,7 +173,7 @@
   /* Breadcrumb styling */
   .breadcrumb {
     border-bottom: none !important;
-    padding: 4rem 2rem 0;
+    padding: 4rem 0 0 0;
   }
 
   /* Remove top padding from specific section group blocks */
@@ -194,6 +194,13 @@
       margin-left: auto;
       margin-right: auto;
       display: block;
+    }
+  }
+
+  /* Product information grid mobile adjustments */
+  @media screen and (max-width: 768px) {
+    .product-information__grid.product-information--media-left {
+      margin-top: 0;
     }
   }
 {% endstylesheet %}
