@@ -180,4 +180,20 @@
   #shopify-section-template--19847308148921__main .group-block {
     padding-block-start: 0;
   }
+
+  /* Center images and text in product-icon-header-text on mobile and tablet */
+  @media screen and (max-width: 1024px) {
+    #product-icon-header-text,
+    #product-icon-header-text * {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #product-icon-header-text img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
 {% endstylesheet %}
