@@ -289,7 +289,9 @@
     },
     "best_sellers_story_TfmKg8": {
       "type": "best-sellers-story",
-      "custom_css": [],
+      "custom_css": [
+        "img {object-fit: cover;}"
+      ],
       "name": "Best Sellers with Story",
       "settings": {
         "heading": "BEST SELLERS",
