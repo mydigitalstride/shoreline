@@ -43,15 +43,6 @@
 </script>
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
-<nav class="breadcrumb" aria-label="breadcrumb">
-  <a href="{{ routes.root_url }}">Home</a>
-  {% if collection %}
-    <span class="divider">›</span>
-    <a href="{{ collection.url }}">{{ collection.title }}</a>
-  {% endif %}
-  <span class="divider">›</span>
-  <span class="current">{{ product.title }}</span>
-</nav>
 
 <div
   class="product-information section section--{{ content_width }} spacing-style color-{{ section.settings.color_scheme }} relative"
