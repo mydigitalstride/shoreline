@@ -1854,7 +1854,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify://shop_images/2022_Nautique_G23.jpg",
+                "image": "shopify://shop_images/de21fdaf-45d221_8ef02963961749d8b50839799d7eca1b_mv2.jpg",
                 "link": "",
                 "image_ratio": "square",
                 "width": "fit-content",
@@ -2077,7 +2077,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify://shop_images/Tige_22RZX.jpg",
+                "image": "shopify://shop_images/2022_Nautique_G23.jpg",
                 "link": "",
                 "image_ratio": "square",
                 "width": "fit-content",
