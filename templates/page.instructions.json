@@ -304,7 +304,8 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "main_menu": true
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
               },
               "blocks": {}
             }
@@ -354,7 +355,7 @@
       "type": "video-section",
       "name": "Video Section",
       "settings": {
-        "heading": "UNIVERSAL WAKE TOWER INSTALLATION",
+        "heading": "Watch this short video below for installation of our Universal Wake Tower Bimini Extension",
         "subheading": "Watch this short video below for the installation of our Universal Wake Tower Bimini Extension",
         "video_url": "https://www.youtube.com/watch?v=7Px-mIbjfuw",
         "bg_image": "shopify://shop_images/Background_-_Blue.png"
@@ -364,7 +365,7 @@
       "type": "video-section",
       "name": "Video Section",
       "settings": {
-        "heading": "axis wake tower installation",
+        "heading": "Watch this short video below for installation of our Axis Wake Tower Bimini Extension",
         "subheading": "Watch this short video below for installation of our Axis Wake Tower Bimini Extension",
         "video_url": "https://www.youtube.com/watch?v=5xVRmQpi1g4",
         "bg_image": "shopify://shop_images/Background_-_Blue.png"

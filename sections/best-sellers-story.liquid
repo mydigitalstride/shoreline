@@ -90,8 +90,8 @@
 
 .left-inner {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 5rem;
+  max-width: none;
+  margin: 0 0 0 5rem;
   
 }
 
@@ -110,7 +110,7 @@
 /* Product grid */
 .best-sellers-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
@@ -145,14 +145,19 @@
 }
 
 .product-title {
-  font-size:1.5rem;
-  font-weight:500 !important;
+  font-size: 1.5rem;
+  font-weight: 500 !important;
   text-transform: uppercase;
-  margin:1rem 0 0 5rem;
-  color:(var--color-surface);
+  margin: 1rem 0 0 0;
+  color: var(--color-surface);
   letter-spacing: 1px;
   text-align: left;
+
+  min-height: 95px; /* <-- this solves your issue */
+  display: flex;
+  align-items: flex-end;
 }
+
 
 .add-to-cart {
   background: #f15a29;
@@ -277,16 +282,19 @@
   .product-card {
     transform: none;
     text-align: center;
-t;
   }
 
   .best-sellers-right {
-    clip-path: none;
     padding: 4rem 2rem;
+    clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);
+    height: 600px;
   }
 
   .story-heading {
     font-size: 2rem;
+  }
+  .story-btn {
+    text-align: center;
   }
 }
 
@@ -305,7 +313,7 @@ t;
   }
 
   .best-sellers-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
@@ -323,10 +331,10 @@ t;
     max-width: none;
     font-size: 0.9rem;
     margin: 0 auto;
+    padding: 1rem !important;
   }
 
   .best-sellers-right {
-    clip-path: none;
     padding: 3rem 1.5rem;
     background-position: center;
   }
@@ -352,6 +360,7 @@ t;
 /* Extra Small (Phones) */
 @media (max-width: 480px) {
   .best-sellers-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
   }
 

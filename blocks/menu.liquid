@@ -110,7 +110,7 @@
   .menu {
     width: 100%;
   }
-menu__item paragraph{
+.menu__item paragraph{
   color:white !important;
 }
   .menu:not(:has(.menu__heading--empty)) .details-content {
@@ -169,7 +169,11 @@ menu__item paragraph{
     color: #2C3C5E;
     transition: color 0.3s ease;
   }
+  #product-menu .main-menu-bar #main-menu-button, #product-menu .main-menu-bar .cart-icon-wrapper {
+    color: #2C3C5E; 
+  }
 
+  
   body.cart-page .cart-count {
     background-color: #2C3C5E;
     transition: background-color 0.3s ease;
@@ -226,7 +230,7 @@ menu__item paragraph{
   }
 
   /* Desktop: cart below menu */
-  @media screen and (min-width: 750px) {
+  @media screen  {
     .main-menu-bar {
       display: flex;
       flex-direction: row;
@@ -235,6 +239,8 @@ menu__item paragraph{
       position: absolute;
       right: 5vw;
       top: 5vh;
+      transform: scale(1.5);
+      transform-origin: top right; 
     }
 
     /* Keep top: 1vh for product and cart pages */
@@ -244,7 +250,7 @@ menu__item paragraph{
     }
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen  {
     .menu-wrapper {
       width: 15rem;
     }
@@ -325,7 +331,7 @@ menu__item paragraph{
     display: none;
   }
 
-  @media screen and (max-width: 749px) {
+  @media screen{
     /* Always show the fallback heading on mobile when accordion is enabled */
     .menu--accordion .menu__heading--empty {
       display: flex;
@@ -395,6 +401,144 @@ menu__item paragraph{
   .menu--plus .icon-caret {
     display: none;
   }
+  /* =============
+    MOBILE MENU 
+   ==================== */
+@media (max-width: 749px) {
+
+  /* Full screen slide-out panel */
+  #main-menu-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 85vw !important;
+    max-width: 340px;
+    height: 100vh !important;
+    background: #2c3c5d !important;
+    padding: 2rem 1.5rem !important;
+    z-index: 999999 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    overflow: hidden !important;
+
+    transform: translateX(-100%);
+    transition: transform 0.35s ease-in-out;
+  }
+
+  /* Open state */
+  #main-menu-wrapper:not(.hidden) {
+    transform: translateX(0) !important;
+  }
+
+  /* Clean content wrapper */
+  #main-menu-wrapper .details-content {
+    position: static !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Clean logo spacing */
+  .menu-logo {
+    margin: 0 0 2rem 0 !important;
+  }
+
+  /* FIX HUGE SPACING — TIGHTEN LIST */
+  .list-unstyled {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important; /* Adjust spacing here */
+  }
+
+  .menu__item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .menu__item a {
+    font-size: 1.4rem !important;
+    line-height: 1.1 !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+  }
+
+  /* Fix close button */
+  .menu-close-btn {
+    position: absolute !important;
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+    z-index: 9999999 !important;
+  }
+
+  /* HERO MUST NOT CLIP MENU */
+  .hero {
+    overflow: visible !important;
+  }
+}
+/* ============================================
+   MOBILE — Smaller menu + cart icons & move right
+   ============================================ */
+@media (max-width: 749px) {
+
+  /* Reduce icon size */
+  .main-menu-bar .svg-wrapper svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .main-menu-bar .svg-wrapper {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* Smaller cart bubble */
+  .cart-count {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 0.65rem !important;
+    top: -6px !important;
+    right: -6px !important;
+  }
+
+  /* Move icons further to the right */
+  .main-menu-bar {
+    position: absolute !important;
+    right: -8vw !important;  /* move right more */
+    top: 2.5vh !important;
+    gap: 0.75rem !important;
+    transform: scale(1) !important; /* remove large scaling */
+  }
+
+  /* Optional — slightly shrink the entire header icons section */
+  #main-menu-button, .cart-icon-wrapper {
+    transform: scale(0.9) !important;
+  }
+}
+@media (min-width: 1600px) {
+  .menu-close-btn{
+    position: absolute;
+    top: 3vh;
+    right: 12vw;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+}
 {% endstylesheet %}
 
 <script>

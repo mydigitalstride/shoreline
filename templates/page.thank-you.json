@@ -304,7 +304,8 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "main_menu": true
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
               },
               "blocks": {}
             }
@@ -321,7 +322,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "video",
-        "video_1": "shopify://files/videos/121 - SB24_Website_SunShade_1080x1080 (1).mp4",
+        "video_1": "shopify://files/videos/SB24_Website_SunShade_1080x1080 (1).mp4",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,

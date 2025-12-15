@@ -141,34 +141,32 @@
 
     .menu-wrapper {
       height: 100vh;
-      left: 4rem;
-      top: -1rem;
     }
 
     .main-menu-button,
-    .cart-icon-link {
+    .cart-icon-wrapper {
       color: #2C3C5E;
     }
   }
 
   /* White cart icon only on page templates (like gallery) */
-  .template-page {
-    .main-menu-button,
-    .cart-icon-link {
+    #cart-icon-link  {
       color: #ffffff;
-    }
   }
 
   /* Mobile menu updates */
   @media (max-width: 768px) {
     #product-menu {
-      right: 10vw;
-      top: 0vh;
+      right: 4vw;
+      top: -2vh;
+      
     }
 
     #product-menu #menu-group {
       height: auto;
-      right: 0;
+      right: 0rem;
+      top: 0rem;
+      padding: 2rem 1rem
     }
   }
 

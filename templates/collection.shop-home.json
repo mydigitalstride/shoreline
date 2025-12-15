@@ -12,75 +12,6 @@
     "hero_Qq3nc4": {
       "type": "hero",
       "blocks": {
-        "group_L88hYq": {
-          "type": "group",
-          "name": "t:names.group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_id": "menu-group"
-          },
-          "blocks": {
-            "menu_yidYA3": {
-              "type": "menu",
-              "name": "t:names.menu",
-              "settings": {
-                "menu": "main-menu",
-                "heading": "",
-                "menu_spacing": 12,
-                "show_as_accordion": false,
-                "accordion_icon": "caret",
-                "accordion_dividers": false,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "heading_preset": "h3",
-                "link_preset": "paragraph",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "main_menu": true,
-                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "menu_yidYA3"
-          ]
-        },
         "group_AzLxhA": {
           "type": "group",
           "name": "t:names.group",
@@ -122,22 +53,30 @@
             "custom_id": ""
           },
           "blocks": {
-            "icon_3AC3NL": {
-              "type": "icon",
-              "name": "t:names.icon",
+            "logo_T8aCjT": {
+              "type": "logo",
+              "name": "t:names.logo",
               "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png",
-                "width": 160,
-                "link": "",
-                "open_in_new_tab": false
+                "inverse": false,
+                "font": "heading",
+                "unit": "percent",
+                "percent_width": 100,
+                "pixel_height": 48,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
             "text_PEi8FP": {
               "type": "text",
               "settings": {
-                "text": "<h1>Shop Shoreline </h1><h1>Products</h1>",
+                "text": "<h1>Shoreline  Store</h1>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -159,9 +98,52 @@
               },
               "blocks": {}
             },
+            "group_c8TeBb": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_id": ""
+              },
+              "blocks": {}
+            },
             "group_ULM9fP": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -238,16 +220,87 @@
             }
           },
           "block_order": [
-            "icon_3AC3NL",
+            "logo_T8aCjT",
             "text_PEi8FP",
+            "group_c8TeBb",
             "group_ULM9fP"
+          ]
+        },
+        "group_L88hYq": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_yidYA3": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_yidYA3"
           ]
         }
       },
       "block_order": [
-        "group_L88hYq",
-        "group_AzLxhA"
+        "group_AzLxhA",
+        "group_L88hYq"
       ],
+      "custom_css": [],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "video",
@@ -309,6 +362,56 @@
         ]
       }
     },
+    "shop_category_aF7bJD": {
+      "type": "shop-category",
+      "blocks": {
+        "category_rTKbd6": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Axis_A24_with_XL_Bimini.jpg",
+            "title": "wake tower bimini extensions",
+            "link": "shopify://collections/shade-extension-kits-best-sellers-all-products"
+          }
+        },
+        "category_zJahhB": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/b95c6930-45d221_99795f339ac74ffcb2187f7e1f1a7276_mv2.jpg",
+            "title": "Center Console Bimini Extensions",
+            "link": "shopify://collections/shade-extension-kits-all-products"
+          }
+        },
+        "category_jAhPzB": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/pontoon_shade.webp",
+            "title": "Pontoon boat bimini extensions",
+            "link": "shopify://collections/pontoon-boat-bimini-extensions"
+          }
+        },
+        "category_NWV9mM": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/a74fea17-45d221_106a60f4c43347febd51fd51f1fa8089_mv2.jpg",
+            "title": "Apparel & Accessories",
+            "link": "shopify://collections/accessories-and-apparel"
+          }
+        }
+      },
+      "block_order": [
+        "category_rTKbd6",
+        "category_zJahhB",
+        "category_jAhPzB",
+        "category_NWV9mM"
+      ],
+      "custom_css": [
+        "@media (max-width: 600px) {.shop-category-grid {padding: 2.5rem 1.25rem; text-align: center; display:none; } }"
+      ],
+      "name": "Shop Category Grid",
+      "settings": {
+        "heading": "Shop by Category"
+      }
+    },
     "main": {
       "type": "main-collection",
       "blocks": {
@@ -318,18 +421,18 @@
           "settings": {
             "enable_filtering": true,
             "filter_style": "horizontal",
-            "filter_width": "full-width",
+            "filter_width": "centered",
             "text_label_case": "default",
             "show_swatch_label": false,
             "show_filter_label": false,
             "enable_sorting": true,
-            "enable_grid_density": true,
+            "enable_grid_density": false,
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 16,
             "padding-block-end": 16,
-            "padding-inline-start": 16,
-            "padding-inline-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
             "facets_margin_bottom": 0,
             "facets_margin_right": 20
           },
@@ -477,61 +580,110 @@
         "padding-block-end": 0
       }
     },
-    "shop_category_4yHxzX": {
-      "type": "shop-category",
+    "additional_resources_iNR8KU": {
+      "type": "additional-resources",
       "blocks": {
-        "category_hFYxKN": {
-          "type": "category",
+        "link_FDrEhm": {
+          "type": "link",
           "settings": {
-            "image": "shopify://shop_images/Axis_A24_with_XL_Bimini.jpg",
-            "title": "Wake Tower Bimini Extensions",
-            "link": "shopify://pages/category-page-shade-extension-kits"
+            "title": "FAQ",
+            "link": "shopify://pages/faq"
           }
         },
-        "category_V6gWbL": {
-          "type": "category",
+        "link_w6Fzfw": {
+          "type": "link",
           "settings": {
-            "image": "shopify://shop_images/IMG_1133.jpg",
-            "title": "Center Console Bimini Extensions",
-            "link": "shopify://pages/category-page-best-sellers"
+            "title": "Instructions",
+            "link": "shopify://pages/instructions"
           }
         },
-        "category_KpJKBD": {
-          "type": "category",
+        "link_PEMtra": {
+          "type": "link",
           "settings": {
-            "image": "shopify://shop_images/pontoon_shade.webp",
-            "title": "Pontoon Boat Bimini Extensions",
-            "link": "shopify://pages/category-page-apparel"
+            "title": "Returns",
+            "link": "shopify://pages/returns"
           }
         },
-        "category_UdmFBa": {
-          "type": "category",
+        "link_nFErr4": {
+          "type": "link",
           "settings": {
-            "image": "shopify://shop_images/a74fea17-45d221_106a60f4c43347febd51fd51f1fa8089_mv2.jpg",
-            "title": "Accessories & Apparel",
-            "link": "shopify://pages/category-page-wakesurf"
+            "title": "Warranty",
+            "link": "shopify://pages/warranty"
           }
         }
       },
       "block_order": [
-        "category_hFYxKN",
-        "category_V6gWbL",
-        "category_KpJKBD",
-        "category_UdmFBa"
+        "link_FDrEhm",
+        "link_w6Fzfw",
+        "link_PEMtra",
+        "link_nFErr4"
       ],
-      "custom_css": [
-        ".category-title {position: absolute; /* top: 0rem; */ left: 1rem; top: 13rem; z-index: 1; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 0;}"
-      ],
-      "name": "Shop Category Grid",
+      "name": "Additional Resources",
       "settings": {
-        "heading": "Shop by Category"
+        "heading": "Additional Resources",
+        "text": "Enter your description here. You can edit this text in the theme editor.",
+        "right_image": "shopify://shop_images/IMG_2819.jpg"
+      }
+    },
+    "customer_reviews_MkHJBp": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_FXNCjz": {
+          "type": "review",
+          "settings": {
+            "name": "David",
+            "date": "09/14/2025",
+            "product_title": "2017 - 2025 MB Boats Bimini Shade Extension Kit",
+            "text": "We love it, super easy to set up and take down and covers the whole back of the boat!"
+          }
+        },
+        "review_iqTgGU": {
+          "type": "review",
+          "settings": {
+            "name": "Luke S.",
+            "date": "07/01/2025",
+            "product_title": "Wake Tower Mounted Universal Bimini Extension",
+            "text": "This kit was exactly what we needed! The additional shade keeps our family cool, and the design blends seamlessly with our MB boat. I was impressed with how sturdy the materials feel, and it only took me about 20 minutes to set up the first time. Highly recommend!"
+          }
+        },
+        "review_acccGi": {
+          "type": "review",
+          "settings": {
+            "name": "Zach G.",
+            "date": "06/24/2025",
+            "product_title": "2017-2025 Tige Bimini Shade Extension Kit",
+            "text": "This extension works perfectly. Shipping was super fast! Thinking about buying another one to point forward and cover bow!!"
+          }
+        },
+        "review_r8hTtT": {
+          "type": "review",
+          "settings": {
+            "name": "Andrew E.",
+            "date": "03/21/2024",
+            "product_title": "Wake Tower Mounted Universal Bimini Extension",
+            "text": "Very cool shade! This is much needed with the small kids and the extreme AZ heat! The carbon fiber poles look very good! Good quality design and product! Everyone needs one!"
+          }
+        }
+      },
+      "block_order": [
+        "review_FXNCjz",
+        "review_iqTgGU",
+        "review_acccGi",
+        "review_r8hTtT"
+      ],
+      "name": "Customer Reviews",
+      "settings": {
+        "heading": "Customer Reviews",
+        "bg_image": "shopify://shop_images/ocean-waves.png"
       }
     }
   },
   "order": [
     "hero_Qq3nc4",
     "all_products_grid_KbTrRb",
+    "shop_category_aF7bJD",
     "main",
-    "shop_category_4yHxzX"
+    "additional_resources_iNR8KU",
+    "customer_reviews_MkHJBp"
   ]
 }

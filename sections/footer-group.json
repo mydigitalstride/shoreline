@@ -18,15 +18,15 @@
           "type": "footer_column",
           "settings": {
             "heading": "Shop",
-            "heading_link": "shopify://pages/shop",
-            "link_text_1": "Wakesurf",
-            "link_url_1": "shopify://pages/category-page-wakesurf",
-            "link_text_2": "Sails",
-            "link_url_2": "shopify://pages/category-page-shade-extension-kits",
-            "link_text_3": "Apparel",
-            "link_url_3": "shopify://pages/category-page-apparel",
-            "link_text_4": "",
-            "link_url_4": "",
+            "heading_link": "shopify://collections/shoreline-brands",
+            "link_text_1": "Wake Tower Bimini Extensions",
+            "link_url_1": "shopify://collections/shade-extension-kits-best-sellers-all-products",
+            "link_text_2": "Pontoon Boat Bimini Extensions",
+            "link_url_2": "shopify://collections/pontoon-boat-bimini-extensions",
+            "link_text_3": "Center Console Bimini Extensions",
+            "link_url_3": "shopify://collections/shade-extension-kits-all-products",
+            "link_text_4": "Apparel & Accessories",
+            "link_url_4": "shopify://collections/accessories-and-apparel",
             "link_text_5": "",
             "link_url_5": ""
           }
@@ -38,14 +38,14 @@
             "heading_link": "shopify://pages/about",
             "link_text_1": "FAQ",
             "link_url_1": "shopify://pages/faq",
-            "link_text_2": "Warranty",
-            "link_url_2": "shopify://pages/warranty",
+            "link_text_2": "Instructions",
+            "link_url_2": "shopify://blogs/instructions",
             "link_text_3": "Returns",
             "link_url_3": "shopify://pages/returns",
-            "link_text_4": "",
-            "link_url_4": "",
-            "link_text_5": "",
-            "link_url_5": ""
+            "link_text_4": "Warranty",
+            "link_url_4": "shopify://pages/warranty",
+            "link_text_5": "Privacy Policy",
+            "link_url_5": "shopify://pages/privacy-terms"
           }
         },
         "footer_column_KEXXY8": {
@@ -132,6 +132,7 @@
         "left_logo": "shopify://shop_images/SHORELINE_BRANDS_NO_BOTTOM_SHIRTS_STICKERS__edited_edited.jpg",
         "right_logo": "shopify://shop_images/Shoreline_Website_Mockup_2.png",
         "contact_email": "",
+        "facebook": "https://www.facebook.com/Shoreline.Brands",
         "instagram": "https://instagram.com"
       }
     }

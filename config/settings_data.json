@@ -90,10 +90,10 @@
       "scheme-1": {
         "settings": {
           "background": "#ffffff",
-          "foreground_heading": "#448b8d",
-          "foreground": "#000000",
+          "foreground_heading": "#2c3c5e",
+          "foreground": "#000000cf",
           "primary": "#000000cf",
-          "primary_hover": "#000000",
+          "primary_hover": "#f15a29",
           "border": "#0000000f",
           "shadow": "#000000",
           "primary_button_background": "#000000",

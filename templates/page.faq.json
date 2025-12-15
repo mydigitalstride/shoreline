@@ -137,7 +137,7 @@
             "text_7brfY9": {
               "type": "text",
               "settings": {
-                "text": "<p>Shoreline Brands FAQ</p>",
+                "text": "<h1>Shoreline Brands FAQ</h1>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -205,7 +205,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Shop All Products",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://collections/shoreline-brands",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -303,7 +303,8 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "main_menu": true
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
               },
               "blocks": {}
             }
@@ -445,14 +446,14 @@
           "type": "link",
           "settings": {
             "title": "Shop",
-            "link": "shopify://pages/shop"
+            "link": "shopify://collections/shoreline-brands"
           }
         },
         "link_GgUzbK": {
           "type": "link",
           "settings": {
             "title": "Instructions",
-            "link": "shopify://pages/instructions-1"
+            "link": "shopify://pages/instructions"
           }
         },
         "link_McUJwb": {

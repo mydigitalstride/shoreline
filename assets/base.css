@@ -22,6 +22,49 @@ body {
   font-weight: 300;
   font-style: normal;
 }
+/* bread crumbs */ 
+/* Breadcrumb Container */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 14px;
+  margin: 10px 0 20px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #e3e3e3;
+  color: #1a1a1a;
+}
+
+/* Breadcrumb Links */
+.breadcrumb a {
+  color: #1a73e8; /* Best Buy blue */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Divider arrows */
+.breadcrumb .divider {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Current page (Product Title) */
+.breadcrumb .current {
+  color: #555;
+  font-weight: 600;
+}
+
+/* Optional: Slight spacing between items */
+.breadcrumb a,
+.breadcrumb span {
+  display: inline-block;
+}
+
 button,
 .button,
 .shopify-button {
@@ -1578,33 +1621,9 @@ shopify-accelerated-checkout-cart {
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
 }
 /* menu styling */
+
 /* Mobile menu drawer */
-.menu-drawer,
-.menu-drawer.motion-reduce.color-scheme-1 {
-  background-color: #1f2d50 !important; /* dark navy */
-  color: #ffffff !important;
-}
 
-/* Drawer links */
-.menu-drawer a {
-  color: #ffffff !important;
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
-  display: block;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-/* Hover/focus states */
-.menu-drawer a:hover,
-.menu-drawer a:focus {
-  color: #f6633c !important; /* brand orange */
-}
-
-/* Optional: subtle dividers between links */
-.menu-drawer a + a {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
 
 
 
