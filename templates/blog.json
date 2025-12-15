@@ -326,11 +326,11 @@
               "type": "_blog-post-image",
               "static": true,
               "settings": {
-                "height": "small",
+                "height": "medium",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_radius": 10
+                "border_radius": 15
               },
               "blocks": {}
             }
