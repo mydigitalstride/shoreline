@@ -173,11 +173,40 @@
   /* Breadcrumb styling */
   .breadcrumb {
     border-bottom: none !important;
-    padding: 4rem 2rem 0;
+    padding: 4rem 0 0 0;
+  }
+
+  @media screen and (min-width: 769px) {
+    .breadcrumb {
+      padding: 4rem 2rem 0;
+    }
   }
 
   /* Remove top padding from specific section group blocks */
   #shopify-section-template--19847308148921__main .group-block {
     padding-block-start: 0;
+  }
+
+  /* Center images and text in product-icon-header-text on mobile and tablet */
+  @media screen and (max-width: 1024px) {
+    #product-icon-header-text,
+    #product-icon-header-text * {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #product-icon-header-text img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  /* Product information grid mobile adjustments */
+  @media screen and (max-width: 768px) {
+    .product-information__grid.product-information--media-left {
+      margin-top: 0;
+    }
   }
 {% endstylesheet %}
