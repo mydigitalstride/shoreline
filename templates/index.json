@@ -543,7 +543,7 @@
       ],
       "custom_css": [
         "p {color: white !important;}",
-        ".category-title {position: absolute; left: 0rem; right: 0rem; bottom: 0rem; z-index: 1; color: white; font-size: 1.5rem; text-align: center; padding: 0;}"
+        ".category-title {position: absolute; left: 0rem; right: 0rem; bottom: 0rem; top: auto; z-index: 1; color: white; font-size: 1.5rem; text-align: center; padding: 0;}"
       ],
       "name": "Features & Categories",
       "settings": {
