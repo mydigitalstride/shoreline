@@ -1677,7 +1677,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "View Instructions",
-                "link": "",
+                "link": "shopify://blogs/instructions",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
