@@ -42,6 +42,20 @@ export class ZoomDialog extends Component {
    * @param {PointerEvent} event - The pointer event.
    */
   async open(index, event) {
+    // Prevent zoom dialog from opening on mobile/tablet (max-width: 1023px)
+    // This matches the CSS media query that hides the zoom dialog
+    const isMobileOrTablet = window.innerWidth <= 1023;
+
+    if (isMobileOrTablet) {
+      event?.preventDefault();
+      // On mobile, cycle to next image instead of zooming
+      const mediaGallery = /** @type {import('./media-gallery').MediaGallery | undefined} */ (
+        this.closest('media-gallery')
+      );
+      mediaGallery?.slideshow?.next(event);
+      return;
+    }
+
     event.preventDefault();
 
     const { dialog, media, thumbnails } = this.refs;
