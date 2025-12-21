@@ -519,7 +519,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify://shop_images/2bd3aa88-45d221_f693ca60a10248adad1f1099ab0c49d1_mv2.jpg",
+                "image": "shopify://shop_images/2018_Centurion_FI23.jpg",
                 "link": "",
                 "image_ratio": "square",
                 "width": "fit-content",
@@ -742,7 +742,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify://shop_images/pontoon_shade.webp",
+                "image": "shopify://shop_images/45d221_f351d926dfc44dbcb557fa8aef27e269_mv2.webp",
                 "link": "",
                 "image_ratio": "square",
                 "width": "fit-content",
@@ -2141,7 +2141,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h4>1 / Mounts to the Nautique Standard (Non-Telescopic) Tower</h4><p>Compatible with all Nautique Boats manufactured from 2019-2026 equipped with the standard Flight Control Tower. </p><h4>2 / Compatibility</h4><p>Compatible with 2019 - 202 Model Year Nautique G Series Boats equipped with the non-telescopic tower. No drilling or modification required</p><h4>3 / Wake Surf Rated</h4><p>Use Up to 15mph. Simply pass the rope underneath the shade to begin surfing</p>",
+                    "text": "<h4>1 / Mounts to the Nautique Standard (Non-Telescopic) Tower</h4><p>Our custom brackets attach to your standard Flight Control Tower. Using existing speaker fasteners. No drilling or modification required</p><h4>2 / Compatibility</h4><p>Compatible with 2019 - 2026 Model Year Nautique G Series Boats equipped with the non-telescopic tower. </p><h4>3 / Wake Surf Rated</h4><p>Use Up to 15mph. Simply pass the rope underneath the shade to begin surfing</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
