@@ -2,10 +2,13 @@
   <div class="cart-boat-details">
     <label
       for="cart-boat-details"
-      class="cart-boat-details__label h6"
+      class="cart-boat-details__label h4"
     >
       Boat Year, Make, Model
     </label>
+    <p class="cart-boat-details__description">
+      To ensure proper fit, please provide your boat year, make, and model
+    </p>
     <input
       form="cart-form"
       id="cart-boat-details"
@@ -13,7 +16,7 @@
       name="attributes[Boat Year, Make, Model]"
       type="text"
       value="{{ cart.attributes['Boat Year, Make, Model'] }}"
-      placeholder="e.g., 2020 Sea Ray Sundancer 320"
+      placeholder="e.g., 2025 Malibu M220"
     />
   </div>
 </cart-boat-details>
@@ -32,8 +35,13 @@
 
   .cart-boat-details__label {
     margin: 0;
-    font-size: var(--font-size--md);
-    font-weight: 600;
+  }
+
+  .cart-boat-details__description {
+    margin: 0;
+    font-size: var(--font-size--sm);
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text));
+    line-height: 1.5;
   }
 
   .cart-boat-details__input {
