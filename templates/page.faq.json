@@ -359,6 +359,13 @@
             "answer": "<p>We have over 18 different variations of boat shade extensions to fit most makes and models. Use our search tool to find yours. If you are still unable to locate the correct bimini kit, please get in touch with our team for personalized assistance.</p>"
           }
         },
+        "faq_iLFPtk": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use the bimini extension while driving?",
+            "answer": "<p>Yes. Shoreline Brands Bimini Extensions are rated for use at speeds up to <strong>15 mph</strong>. This rating accounts for typical wind and weather conditions you may encounter on the lake.</p><p>In calm conditions, many customers find they can operate at slightly higher speeds. That said, conditions vary, so we always recommend using good judgment and reducing speed if winds pick up or water conditions change.</p>"
+          }
+        },
         "faq_PnPkqV": {
           "type": "faq",
           "settings": {
@@ -387,13 +394,6 @@
             "answer": "<p>Setting up the boat bimini shade extension is a breeze. With the included mounting hardware, you can complete the initial setup in just 5–10 minutes. Once in position, deploying or disassembling the shade and telescoping poles takes less than a minute.</p>"
           }
         },
-        "faq_iLFPtk": {
-          "type": "faq",
-          "settings": {
-            "question": "Can I use the bimini shade extension while wakesurfing?",
-            "answer": "<p>Yes, the boat shade extension can be used while wakesurfing. The rope will be passed underneath to attach to your tow point. The maximum recommended speed is 15 mph for safe use.</p>"
-          }
-        },
         "faq_b6rgBi": {
           "type": "faq",
           "settings": {
@@ -405,17 +405,17 @@
           "type": "faq",
           "settings": {
             "question": "What is a Bimini Extension?",
-            "answer": "<p>A Bimini Extension is a sun-shade device used on your boat to protect passengers not covered by your factory Bimini top.\n\nAlso Known As: Shade Sail, Boat Shade Extension, Transom Awning, Wake Shade, Sun Shade Canopy.</p>"
+            "answer": "<p>A Bimini Extension is a sun-shade device used on your boat to protect passengers not covered by your factory Bimini top.<br/><br/>Also Known As: Shade Sail, Boat Shade Extension, Transom Awning, Wake Shade, Sun Shade Canopy.</p>"
           }
         }
       },
       "block_order": [
         "faq_6EyMfE",
+        "faq_iLFPtk",
         "faq_PnPkqV",
         "faq_RYQPh8",
         "faq_T4RiAq",
         "faq_QKfti7",
-        "faq_iLFPtk",
         "faq_b6rgBi",
         "faq_k38Yp8"
       ],
