@@ -1944,7 +1944,7 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Shop Natique Power Tower Shade",
+                    "label": "Shop Nautique Power Tower Shade",
                     "link": "shopify://products/nautique-power-tower-shade-extension",
                     "open_in_new_tab": false,
                     "style_class": "button",
