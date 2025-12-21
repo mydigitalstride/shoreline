@@ -169,7 +169,7 @@
             "text_LGTLab": {
               "type": "text",
               "settings": {
-                "text": "<h1>Shoreline Shade Bimini Extensions</h1>",
+                "text": "<h1>Shoreline Bimini Extensions and Shade Sails</h1>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -314,7 +314,7 @@
       "type": "bimini-finder",
       "name": "Bimini Finder Section",
       "settings": {
-        "heading": "Find Your Shoreline Shade Bimini Extension",
+        "heading": "Find Your Bimini Extension",
         "clear_text": "Clear",
         "search_text": "Search"
       }
