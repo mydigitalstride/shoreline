@@ -18755,20 +18755,84 @@
     "Model": "R8 SURF",
     "link": "https://www.shorelinebrands.com/products/universal-wake-boat-tower-shade-extension"
   },
-  { "Year" : 2006, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2007, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2008, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2009, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2010, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2011, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2012, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2013, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2014, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2015, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2016, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2017, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2018, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2019, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
+  {
+    "Year": 2006,
+    "Make": "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
+  {
+    "Year": 2007,
+    "Make": "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
+  {
+    "Year": 2008,
+    "Make": "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
+  {
+    "Year": 2009,
+    "Make": "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
+  {
+    "Year": 2010,
+    "Make": "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
+  {
+    "Year": 2011,
+    "Make": "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
+  {
+    "Year": 2012,
+    "Make": "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
+  {
+    "Year": 2013,
+    "Make": "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
+  {
+     "Year": 2014,
+     "Make": "Sun Tracker",
+     "Model": "Party Barge",
+     "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+   },
+   {
+     "Year": 2015,
+     "Make": "Sun Tracker",
+     "Model": "Party Barge",
+     "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+   },
+   {
+     "Year": 2016,
+     "Make": "Sun Tracker",
+     "Model": "Party Barge",
+     "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+   },
+   {
+     "Year": 2017,
+     "Make": "Sun Tracker",
+     "Model": "Party Barge",
+     "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+   },
+  { 
+    "Year" : 2019,
+    "Make" : "Sun Tracker",
+    "Model": "Party Barge",
+    "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+  },
 { "Year" : 2020, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
 { "Year" : 2021, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
 { "Year" : 2022, "Make" : "Sun Tracker", "Model": "Party Barge","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
@@ -19063,6 +19127,11 @@
 { "Year" : 2025, "Make" : "Sun Tracker", "Model": "Party Barge 22 DLX","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
 { "Year" : 2025, "Make" : "Sun Tracker", "Model": "Bass Buggy 18 DLX","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
 { "Year" : 2025, "Make" : "Sun Tracker", "Model": "Fishin' Barge 20 DLX","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"},
-{ "Year" : 2025, "Make" : "Sun Tracker", "Model": "SportFish 22 XP3","link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"}
+{
+  "Year" : 2025,
+  "Make" : "Sun Tracker",
+  "Model": "SportFish 22 XP3",
+  "link": "https://www.shorelinebrands.com/products/pontoon-boat-bimini-extension-kit"
+}
 
 ]
