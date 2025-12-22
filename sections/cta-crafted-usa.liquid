@@ -3,7 +3,7 @@
     style="background-image:url('{{ section.settings.bg_image | image_url: width: 2000 }}');"
   {% endif %}
 >
-  <div class="page-width">
+  <div class="page">
     <div class="cta-overlay"></div>
 
     <div class="cta-wrapper">
@@ -35,6 +35,12 @@
 </section>
 
 <style>
+  .page{
+   width: 100%;
+  padding: 3rem 3rem;
+  position: relative;
+  z-index: 1;
+}
 .cta-crafted-usa {
   position: relative;
   background-size: cover;
@@ -58,7 +64,7 @@
 /* ✅ Content above overlay */
 .cta-wrapper {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   display: grid;
   padding: 4rem 5rem;
   grid-template-columns: repeat(2, 1fr);

@@ -1,1 +1,323 @@
-{"sections":{"main":{"type":"main-page","blocks":{"heading":{"type":"text","name":"Title","settings":{"text":"<h1>{{ closest.page.title }}<\/h1>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h2","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"page-content":{"type":"page-content","settings":{},"blocks":{}}},"block_order":["heading","page-content"],"disabled":true,"settings":{"content_direction":"column","gap":32,"color_scheme":"","padding-block-start":40,"padding-block-end":80}},"hero_Dngph7":{"type":"hero","blocks":{"icon_cK6Dnj":{"type":"icon","name":"t:names.icon","settings":{"icon":"price_tag","image_upload":"shopify:\/\/shop_images\/Made_In_USA_-_White_Version.png","width":24,"link":"","open_in_new_tab":false},"blocks":{}},"text_N7TFrP":{"type":"text","settings":{"text":"<p>Shoreline Brands FAQ<\/p>","width":"fit-content","max_width":"narrow","alignment":"left","type_preset":"h1","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"group_PmGkjE":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"button_bjbH3V":{"type":"button","name":"t:names.button","settings":{"label":"Shop now","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}},"button_ePYWBN":{"type":"button","name":"t:names.button","settings":{"label":"Shop now","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["button_bjbH3V","button_ePYWBN"]}},"block_order":["icon_cK6Dnj","text_N7TFrP","group_PmGkjE"],"name":"t:names.hero","settings":{"media_type_1":"video","video_1":"shopify:\/\/files\/videos\/121 - SB24_Website_SunShade_1080x1080 (1).mp4","media_type_2":"image","link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":16,"section_width":"page-width","section_height":"large","section_height_custom":50,"color_scheme":"scheme-5","toggle_overlay":true,"overlay_color":"#00000026","overlay_style":"gradient","gradient_direction":"to top","blurred_reflection":false,"reflection_opacity":75,"padding-block-start":40,"padding-block-end":40}},"faq_two_column_KbiRcg":{"type":"faq-two-column","name":"FAQ Two Column","settings":{"heading":"Frequently Asked Questions","subtext":"Add supporting text here.","button_text":"Contact Us","button_link":""}},"contact_shoreline_brands_bm9bt9":{"type":"contact-shoreline-brands","name":"Contact Shoreline Brands","settings":{}},"additional_resources_a4NEJq":{"type":"additional-resources","blocks":{"link_YVKUbK":{"type":"link","settings":{"title":"FAQ","link":""}},"link_GgUzbK":{"type":"link","settings":{"title":"Instructions","link":""}},"link_McUJwb":{"type":"link","settings":{"title":"Returns","link":""}},"link_mp9Uwp":{"type":"link","settings":{"title":"Warranty","link":""}}},"block_order":["link_YVKUbK","link_GgUzbK","link_McUJwb","link_mp9Uwp"],"name":"Additional Resources","settings":{"heading":"Additional Resources"}}},"order":["main","hero_Dngph7","faq_two_column_KbiRcg","contact_shoreline_brands_bm9bt9","additional_resources_a4NEJq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_Dngph7": {
+      "type": "hero",
+      "blocks": {
+        "group_P6QMqA": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_QaDqLt": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_QaDqLt"
+          ]
+        },
+        "logo_V9RAa3": {
+          "type": "logo",
+          "name": "t:names.logo",
+          "settings": {
+            "inverse": false,
+            "font": "heading",
+            "unit": "percent",
+            "percent_width": 100,
+            "pixel_height": 48,
+            "custom_mobile_size": false,
+            "unit_mobile": "percent",
+            "percent_width_mobile": 100,
+            "pixel_height_mobile": 120,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "icon_cK6Dnj": {
+          "type": "icon",
+          "name": "t:names.icon",
+          "disabled": true,
+          "settings": {
+            "icon": "price_tag",
+            "image_upload": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png",
+            "width": 24,
+            "link": "",
+            "open_in_new_tab": false
+          },
+          "blocks": {}
+        },
+        "text_N7TFrP": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Privacy Policy</h1>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "group_PmGkjE": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "button_ePYWBN": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Shop now",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_ePYWBN"
+          ]
+        }
+      },
+      "block_order": [
+        "group_P6QMqA",
+        "logo_V9RAa3",
+        "icon_cK6Dnj",
+        "text_N7TFrP",
+        "group_PmGkjE"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "video",
+        "image_1": "shopify://shop_images/2025_Centurion_Ri245_Predator_Tower.jpg",
+        "video_1": "shopify://files/videos/121 - SB24_Website_SunShade_1080x1080 (1).mp4",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "easy_design_split_VVxVYA": {
+      "type": "easy-design-split",
+      "name": "Easy Design Split",
+      "settings": {
+        "bg_image_left": "shopify://shop_images/Background_-_Blue.png",
+        "bg_image_right": "shopify://shop_images/Untitled_design_22.png",
+        "heading": "Privacy Policy",
+        "text": "<p><strong>Last Updated: October 16, 2025.</strong></p><h3>1. Introduction</h3><p>This Privacy Policy describes how Shoreline Brands collects, uses, and discloses your personal information when you visit, use our services, or make a purchase from <a href=\"https://shorelinebrands.com.myshopify.com/\"><strong>https://shorelinebrands.com.myshopify.com/</strong></a>.</p><h3>2. Information We Collect</h3><p>When you visit the Site, we collect certain information about your device, your interaction with the Site, and information necessary to process your purchases. We may also collect additional information if you contact us for customer support.</p><p><strong>Device Information:</strong> We automatically collect certain information about your device, including your web browser, IP address, time zone, and some of the cookies that are installed on your device. As you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. This data is collected using Google Analytics, Tag Manager, and other similar technologies.</p><p><strong>Order Information:</strong> When you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, billing address, shipping address, payment information (including credit card numbers), email address, and phone number.</p><p><strong>Customer Support Information:</strong> If you contact us for support, we may collect your name, email address, and the contents of your message.</p><h3>3. How We Use Your Information</h3><p>We use the information we collect to:</p><p><strong>Provide and Improve Our Services:</strong> We use your information to operate, maintain, and improve our Site and services, including to process your transactions and fulfill your orders.</p><p><strong>Communicate with You:</strong> We may use your information to communicate with you about your orders, respond to your inquiries, and send you promotional materials and newsletters, if you have opted in to receive them.</p><p><strong>Marketing and Advertising:</strong> We use your information for marketing and advertising purposes, including to display personalized advertisements to you on other websites (retargeting) based on your browsing behavior on our Site. This is managed through Google Ads, Google Tag Manager, and other third-party advertising platforms.</p><p><strong>Analytics:</strong> We use tools like Google Analytics to understand how our customers use the Site. This helps us improve our services and understand our audience better. You can read more about how Google uses your personal information here: <a href=\"https://policies.google.com/privacy\">https://policies.google.com/privacy</a>.</p><h3>4. Sharing Your Personal Information</h3><p>We share your personal information with third parties to help us use your information, as described above.</p><p><strong>Service Providers:</strong> We may share your information with third-party service providers to perform services on our behalf, such as payment processing, shipping, data analysis, and marketing assistance.</p><p><strong>Legal Compliance:</strong> We may disclose your personal information if required to do so by law or in response to valid requests by public authorities (e.g., a court order or a government agency).</p><h3>5. Paid Advertising Retargeting</h3><p>We use third-party paid advertising services to show you advertisements on other websites after you have visited our Site. These services may use cookies and other tracking technologies to collect information about your browsing activities on our Site and other websites in order to show you personalized ads.</p><h3>6. Your Rights</h3><p>Depending on your location, you may have certain rights regarding your personal information, including the right to access, correct, update, or delete your personal information. If you would like to exercise these rights, please contact us at <a href=\"mailto:info@shorelinebrands.com\" title=\"mailto:info@shorelinebrands.com\"><strong>Info@shorelinebrands.com</strong></a>.</p><h3>7. Cookies</h3><p>A cookie is a small amount of information that’s downloaded to your computer or device when you visit our Site. We use a number of different cookies, including functional, performance, advertising, and social media or content cookies. You can control and manage cookies in various ways. Please keep in mind that removing or blocking cookies can negatively impact your user experience and parts of our website may no longer be fully accessible.</p><h3>8. Changes to This Privacy Policy</h3><p>We may update this Privacy Policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons.</p><h3>9. Contact Us</h3><p>For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at: <a href=\"mailto:Info@shorelinebrands.com\" title=\"mailto:Info@shorelinebrands.com\"><strong>Info@shorelinebrands.com</strong></a></p><p></p>",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": ""
+      }
+    },
+    "easy_design_split_gPVth6": {
+      "type": "easy-design-split",
+      "name": "Easy Design Split",
+      "settings": {
+        "bg_image_left": "shopify://shop_images/Background_-_Blue.png",
+        "bg_image_right": "shopify://shop_images/Untitled_design_20.png",
+        "heading": "Terms and Conditions",
+        "text": "<h3>1. Introduction</h3><p>Welcome to <strong>Shoreline Brands</strong>! These Terms and Conditions govern your use of the website <a href=\"https://shorelinebrands.com.myshopify.com/\"><strong>https://shorelinebrands.com.myshopify.com/</strong></a> and the services offered by us. By accessing or using the Site, you agree to be bound by these Terms.</p><h3>2. Use of the Site</h3><p>You agree to use the Site only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else’s use and enjoyment of the Site.</p><h3>3. Intellectual Property</h3><p>The content on the Site, including text, graphics, logos, images, and software, is the property of <strong>Shoreline Brands</strong> and is protected by intellectual property laws.</p><h3>4. User-Generated Content</h3><p>If you submit any content to the Site, such as reviews or comments, you grant us a non-exclusive, royalty-free, perpetual, and irrevocable right to use, reproduce, modify, adapt, publish, and distribute such content.</p><h3>5. Disclaimers</h3><p><strong>Accuracy of Information:</strong> We make no representations or warranties about the accuracy or completeness of the content on the Site.<br/><br/><strong>Limitation of Liability:</strong> In no event shall Shoreline Brands be liable for any direct, indirect, incidental, special, or consequential damages arising out of your use of or inability to use the Site.</p><h3>6. Third-Party Links</h3><p>The Site may contain links to third-party websites. We are not responsible for the content or privacy practices of these websites.</p><h3>7. Google Analytics and Google Tag Manager</h3><p>We use Google Analytics and Google Tag Manager to collect and analyze information about the use of the Site. These services use cookies to collect information such as your IP address, pages visited, and time spent on the Site. This information is used to improve our services and marketing efforts.</p><h3>8. Paid Advertising</h3><p>We may use third-party paid advertising services, such as Google Ads, to promote our products and services. These services may use cookies and other tracking technologies to show you personalized ads based on your browsing history.</p><h3>9. Governing Law</h3><p>These Terms shall be governed by and construed in accordance with the laws of Pennsylvania, without regard to its conflict of law provisions.</p><h3>10. Changes to the Terms</h3><p>We reserve the right to modify these Terms at any time. Your continued use of the Site after any changes indicates your acceptance of the new Terms.</p><h3>11. Contact Information</h3><p>If you have any questions about these Terms, please contact us at: <a href=\"mailto:Info@shorelinebrands.com\" target=\"_blank\" title=\"mailto:Info@shorelinebrands.com\"><strong>Info@shorelinebrands.com</strong></a> or <a href=\"tel:717-205-9983\" target=\"_blank\" title=\"tel:717-205-9983\"><strong>(717) 205-9983</strong></a></p>",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_Dngph7",
+    "easy_design_split_VVxVYA",
+    "easy_design_split_gPVth6"
+  ]
+}

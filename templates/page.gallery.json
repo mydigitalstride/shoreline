@@ -1,0 +1,1142 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "section_nUpEf4": {
+      "type": "section",
+      "blocks": {
+        "group_kkPpDF": {
+          "type": "group",
+          "name": "t:names.group",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 22,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_gNWtn7": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h2",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_gNWtn7"
+          ]
+        },
+        "group_z9q7Vt": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "text_cTJkxF": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h1>Gallery</h1>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h1",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_Edj6M3": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Explore our gallery below to see our bimini extensions and shade sails installed on customer boats. Click on the image to visit the associated product page.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_cTJkxF",
+            "text_Edj6M3"
+          ]
+        },
+        "group_imPcLT": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_3cU8ar": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "scheme-2",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_3cU8ar"
+          ]
+        },
+        "image_UkbK3L": {
+          "type": "image",
+          "name": "t:names.image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2017_Nautique_G25.jpg",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "custom",
+            "custom_width": 52,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "group_kkPpDF",
+        "group_z9q7Vt",
+        "group_imPcLT",
+        "image_UkbK3L"
+      ],
+      "custom_css": [
+        "h1,p {color: #fff !important;}"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "image",
+        "video_position": "cover",
+        "background_image": "shopify://shop_images/Untitled_design_29.png",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 100,
+        "padding-block-end": 0,
+        "custom_section_id": ".template-page"
+      }
+    },
+    "boat_gallery_section_JKCGQD": {
+      "type": "boat-gallery-section",
+      "blocks": {
+        "boat_gallery_aVnDzJ": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2003-2008_Supra_24SSV.jpg",
+            "title": "2003-2008 Supra 24SSV",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_tVmhJT": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2014-2016_Super_Air_Nautique.jpg",
+            "title": "2014-2016 Super Air Nautique",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_c7WiwC": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2008_-_2016_MB_B52.jpg",
+            "title": "2008 - 2016 MB B52",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_HyYRBp": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2008-2013_Sanger_V215.jpg",
+            "title": "2008-2013 Sanger V215",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_WxjDxc": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2013_Axis_A22.jpg",
+            "title": "2013 Axis A22",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_cCLVFC": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2013-2015_Moomba_Mojo_2.5.jpg",
+            "title": "2013-2015 Moomba Mojo 2.5",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_FMnQRD": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2014-2018_Mastercraft_X46_a78418f5-16ea-4655-a423-79d4a061c84a.jpg",
+            "title": "2014-2018 Mastercraft X46",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_HFN3yt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Nautique_G23.jpg",
+            "title": "2015 Nautique G23",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_RJ8JCb": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Nautique_G25.webp",
+            "title": "2015 Nautique G25",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_adxXQi": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Yamaha_AR240.jpg",
+            "title": "2015 Yamaha AR240",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_rKdnWE": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015-2026_Yamaha_212x_4fb3b91f-0070-47d8-ae3c-dc1bbc4bcc57.jpg",
+            "title": "2015-2026 Yamaha 212x",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_izfq8G": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2016_Nautique_G25.jpg",
+            "title": "2016 Nautique G25",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_GE7Pzn": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2016-2020_Yamaha_242_Limited_S.jpg",
+            "title": "2016-2020 Yamaha 242 Limited S",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_nfiGqt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2017_nautique_G25_2.jpg",
+            "title": "2017 nautique G25",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_ingDPt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2017_Nautique_G25.jpg",
+            "title": "2017 nautique G25",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_7YmXxr": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2017-2020_Yamaha_242X_E-series.jpg",
+            "title": "2017-2020 Yamaha 242X E-series",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_jzVTRi": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2018_Centurion_FI23_2.jpg",
+            "title": "2018 Centurion FI23",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_Q76mUH": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2018_Centurion_FI23.jpg",
+            "title": "2018 Centurion FI23",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_jjMGXd": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2018_Nautique_G23.jpg",
+            "title": "2018 Nautique G23",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_7ig6Wt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2018_Nautique_G23_0b932405-9c08-43db-a12f-7b5346828041.jpg",
+            "title": "2018 Nautique G23",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_waTcyK": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2018-2022_Crownline.jpg",
+            "title": "2018-2022 Crownline",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_zb4pDV": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2020-2024_Chaparral_21ssi.jpg",
+            "title": "2020-2024 Chaparral 21ssi",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_LGGfNN": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2020-2026_Moomba_Mojo.jpg",
+            "title": "2020-2026 Moomba Mojo",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_rNqTMc": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2020-2026_Regal_LS4_Surf.jpg",
+            "title": "2020-2026 Regal LS4 Surf",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_QiTNjD": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021_Heyday_H22.jpg",
+            "title": "2021 Heyday H22",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_Ed4iGa": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021-2026_Yamaha_195S.jpg",
+            "title": "2021-2026 Yamaha 195S",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_3V4Rhi": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021-2026_Yamaha_AR250.jpg",
+            "title": "2021-2026 Yamaha AR250",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_fydtdA": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2018-2022_Crownline.jpg",
+            "title": "2022 Crownline",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_Eti8bE": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Crownline.jpg",
+            "title": "2022 Crownline",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_h3T9eL": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Moomba_Max.jpg",
+            "title": "2024 Moomba Max",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_LQBFxJ": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Nautique_GS22.jpg",
+            "title": "2024 Nautique GS22",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_tXzR6M": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025-2026_MB_F24_with_ZXT_Tower.jpg",
+            "title": "2025-2026 MB F24 with ZXT Tower",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_8aBgxc": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Axopar_25.jpg",
+            "title": "Axopar 25",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_8ceKdW": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Centurion_FI23_and_Malibu_25LSV.jpg",
+            "title": "Centurion FI23 and Malibu 25LSV",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_GYR3kx": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Yamaha_XD.jpg",
+            "title": "Yamaha xd",
+            "link": "shopify://products/yamaha-xd-series-shade-extension"
+          }
+        },
+        "boat_gallery_CHFr8K": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Chaparral_246SSI.jpg",
+            "title": "2020 Chaparral 21ssi",
+            "link": "shopify://products/yamaha-xd-series-shade-extension"
+          }
+        },
+        "boat_gallery_8thrBk": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021-2023_Axis_A22.jpg",
+            "title": "2018 Axis A22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_GNncTq": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2018_Axis_T22.jpg",
+            "title": "2018 Axis T22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_MDQnkW": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Axis_A22_-_Copy.jpg",
+            "title": "2015 Axis A22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_yyQ9H8": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021-2023_Axis_A22.jpg",
+            "title": "2021-2023 Axis A22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_Wy8yxC": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Supreme_S220.jpg",
+            "title": "2022 Supreme S220",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_tRGEqQ": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Centurion_Ri_265.jpg",
+            "title": "2023 Centurion Ri 265",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_hHFfi6": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Centurion_RI245.jpg",
+            "title": "2023 Centurion RI245",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_PHc9iL": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Centurion_Ri265_2.jpg",
+            "title": "2023 Centurion Ri265",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_WFpf4T": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Centurion_Ri230.jpg",
+            "title": "2024 Centurion Ri230",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_TA6YiG": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Centurion_Ri245.jpg",
+            "title": "2024 Centurion Ri245",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_mj7t4t": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Centurion_Ri245_Surfing.jpg",
+            "title": "Centurion Ri245 Surfing",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_yC96CR": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/CenturionRI245.jpg",
+            "title": "Centurion RI245",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        }
+      },
+      "block_order": [
+        "boat_gallery_aVnDzJ",
+        "boat_gallery_tVmhJT",
+        "boat_gallery_c7WiwC",
+        "boat_gallery_HyYRBp",
+        "boat_gallery_WxjDxc",
+        "boat_gallery_cCLVFC",
+        "boat_gallery_FMnQRD",
+        "boat_gallery_HFN3yt",
+        "boat_gallery_RJ8JCb",
+        "boat_gallery_adxXQi",
+        "boat_gallery_rKdnWE",
+        "boat_gallery_izfq8G",
+        "boat_gallery_GE7Pzn",
+        "boat_gallery_nfiGqt",
+        "boat_gallery_ingDPt",
+        "boat_gallery_7YmXxr",
+        "boat_gallery_jzVTRi",
+        "boat_gallery_Q76mUH",
+        "boat_gallery_jjMGXd",
+        "boat_gallery_7ig6Wt",
+        "boat_gallery_waTcyK",
+        "boat_gallery_zb4pDV",
+        "boat_gallery_LGGfNN",
+        "boat_gallery_rNqTMc",
+        "boat_gallery_QiTNjD",
+        "boat_gallery_Ed4iGa",
+        "boat_gallery_3V4Rhi",
+        "boat_gallery_fydtdA",
+        "boat_gallery_Eti8bE",
+        "boat_gallery_h3T9eL",
+        "boat_gallery_LQBFxJ",
+        "boat_gallery_tXzR6M",
+        "boat_gallery_8aBgxc",
+        "boat_gallery_8ceKdW",
+        "boat_gallery_GYR3kx",
+        "boat_gallery_CHFr8K",
+        "boat_gallery_8thrBk",
+        "boat_gallery_GNncTq",
+        "boat_gallery_MDQnkW",
+        "boat_gallery_yyQ9H8",
+        "boat_gallery_Wy8yxC",
+        "boat_gallery_tRGEqQ",
+        "boat_gallery_hHFfi6",
+        "boat_gallery_PHc9iL",
+        "boat_gallery_WFpf4T",
+        "boat_gallery_TA6YiG",
+        "boat_gallery_mj7t4t",
+        "boat_gallery_yC96CR"
+      ],
+      "name": "Boat Gallery",
+      "settings": {
+        "heading": "boat gallery"
+      }
+    },
+    "boat_gallery_section_HEBRB4": {
+      "type": "boat-gallery-section",
+      "blocks": {
+        "boat_gallery_QX6Wr6": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Centurion_Ri245_Predator_Tower.jpg",
+            "title": "2025 Centurion Ri230 Predator Tower",
+            "link": "shopify://products/centurion-predator-tower-bimini-extension"
+          }
+        },
+        "boat_gallery_djrW9F": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Centurion_Ri230_Predator_Tower.jpg",
+            "title": "2025 Centurion Ri245 Predator Tower",
+            "link": "shopify://products/centurion-predator-tower-bimini-extension"
+          }
+        },
+        "boat_gallery_aY7YMC": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Nautiqe_G23_Power_Tower.jpg",
+            "title": "2025 Nautiqe G23 Power Tower",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_BDWD4D": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Nautique_G23.jpg",
+            "title": "2023 Nautique G23",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_tG6Gah": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Nautique_G23_-_Telescopic_Tower.jpg",
+            "title": "2022 Nautique G23 - Telescopic Tower",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_HirHtk": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021-2025_Nautique_G23.jpg",
+            "title": "2021-2025 Nautique G23",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_fHEePH": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_4364_3c948029-9e6c-47e8-9a39-82513d6ce7d5.jpg",
+            "title": "Tigue Ultre",
+            "link": ""
+          }
+        },
+        "boat_gallery_KhheJ7": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Malibu_23LSV.jpg",
+            "title": "2015 Malibu 23LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_famMzn": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2017_Malibu_25LSV.jpg",
+            "title": "2017 Malibu 25LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_6VqGKt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2020_Malibu_23_LSV.jpg",
+            "title": "2020 Malibu 23 LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_BiTKDr": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022-2026_Malibu_26LSV.jpg",
+            "title": "2022-2026 Malibu 26LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_YGFTMP": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Malibu_23LSV.jpg",
+            "title": "2023 Malibu 23LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_ndtBe7": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Malibu23LSV.jpg",
+            "title": "2023 Malibu 23LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_TtCMCG": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Malibu_25LSV.jpg",
+            "title": "2024 Malibu 25LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_VezP3E": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_Malibu_26LSV.jpg",
+            "title": "2024 Malibu 26LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_wPFb68": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Malibu_23_LSV.webp",
+            "title": "2025 Malibu 23 LSV",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_UW9bak": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Axis_A24_with_XL_Bimini.jpg",
+            "title": "Axis A24 with XL Bimini",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_Kkij7T": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Malibu_Bracket_Installation.jpg",
+            "title": "Malibu Bracket Installation",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_G7ggEJ": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2017-2022_MB_B52.jpg",
+            "title": "2017-2022 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_ja9Mdg": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2021_MB_F22_Tomcat.jpg",
+            "title": "2021 MB F22 Tomcat",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_8p6mdt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_MB_B52.jpg",
+            "title": "2022 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_jXbfxM": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_MB_B52_949e7718-4799-4aa3-ba1a-bbae4bdd3d62.jpg",
+            "title": "2022 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_fnW8wF": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_MB_B52.jpg",
+            "title": "2024 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_9cTFJg": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Tige_23ZX.jpg",
+            "title": "2022 Tige 23ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_wbRLy9": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Tige_RZX.jpg",
+            "title": "2023 Tige RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_M9kCbN": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Tige_RZX_b103dd62-1393-472f-ae2d-1744533e6c89.jpg",
+            "title": "2022 Tige 23ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_kDXrpF": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2023_Tige_ZX.jpg",
+            "title": "2023 Tige ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_UbL3Ad": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2024_TIge_RZX.jpg",
+            "title": "2024 Tige RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_GeUeMm": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_22RZX.jpg",
+            "title": "Tige 22RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_a9QUL4": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_23ZX.webp",
+            "title": "Tige 23ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_QRn4Jp": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_RZX_E3_Tower.jpg",
+            "title": "Tige RZX E3 Tower",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_rtzrgf": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_RZX.jpg",
+            "title": "Tige RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_7Hc6jb": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_RZX_852adcdd-887b-4f91-ac64-f6d13fa96bce.jpg",
+            "title": "Tige RZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_qjDCCX": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_Nautique_G23.jpg",
+            "title": "2022 Nautique G23",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_mV4U9m": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Nautique_GS24_Sunshade_Extension.jpg",
+            "title": "2025 Nautique GS24 Sunshade Extension",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        }
+      },
+      "block_order": [
+        "boat_gallery_QX6Wr6",
+        "boat_gallery_djrW9F",
+        "boat_gallery_aY7YMC",
+        "boat_gallery_BDWD4D",
+        "boat_gallery_tG6Gah",
+        "boat_gallery_HirHtk",
+        "boat_gallery_fHEePH",
+        "boat_gallery_KhheJ7",
+        "boat_gallery_famMzn",
+        "boat_gallery_6VqGKt",
+        "boat_gallery_BiTKDr",
+        "boat_gallery_YGFTMP",
+        "boat_gallery_ndtBe7",
+        "boat_gallery_TtCMCG",
+        "boat_gallery_VezP3E",
+        "boat_gallery_wPFb68",
+        "boat_gallery_UW9bak",
+        "boat_gallery_Kkij7T",
+        "boat_gallery_G7ggEJ",
+        "boat_gallery_ja9Mdg",
+        "boat_gallery_8p6mdt",
+        "boat_gallery_jXbfxM",
+        "boat_gallery_fnW8wF",
+        "boat_gallery_9cTFJg",
+        "boat_gallery_wbRLy9",
+        "boat_gallery_M9kCbN",
+        "boat_gallery_kDXrpF",
+        "boat_gallery_UbL3Ad",
+        "boat_gallery_GeUeMm",
+        "boat_gallery_a9QUL4",
+        "boat_gallery_QRn4Jp",
+        "boat_gallery_rtzrgf",
+        "boat_gallery_7Hc6jb",
+        "boat_gallery_qjDCCX",
+        "boat_gallery_mV4U9m"
+      ],
+      "name": "Boat Gallery",
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_nUpEf4",
+    "boat_gallery_section_JKCGQD",
+    "boat_gallery_section_HEBRB4"
+  ]
+}

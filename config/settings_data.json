@@ -15,8 +15,8 @@
     "type_subheading_font": "bebas_neue_n4",
     "type_heading_font": "montserrat_n7",
     "type_accent_font": "montserrat_n7",
-    "type_size_paragraph": "14",
-    "type_line_height_paragraph": "body-loose",
+    "type_size_paragraph": "16",
+    "type_line_height_paragraph": "body-normal",
     "type_font_h1": "heading",
     "type_size_h1": "56",
     "type_line_height_h1": "display-tight",
@@ -46,9 +46,10 @@
     "transition_to_main_product": false,
     "card_hover_effect": "none",
     "badge_position": "top-right",
-    "badge_corner_radius": 100,
+    "badge_corner_radius": 44,
     "badge_sale_color_scheme": "scheme-1",
     "badge_sold_out_color_scheme": "scheme-3",
+    "badge_font_family": "subheading",
     "badge_text_transform": "none",
     "primary_button_border_width": 0,
     "button_border_radius_primary": 14,
@@ -83,16 +84,21 @@
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
+      },
+      "13768625480086291342": {
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
       "scheme-1": {
         "settings": {
           "background": "#ffffff",
-          "foreground_heading": "#448b8d",
-          "foreground": "#000000",
+          "foreground_heading": "#2c3c5e",
+          "foreground": "#000000cf",
           "primary": "#000000cf",
-          "primary_hover": "#000000",
+          "primary_hover": "#f15a29",
           "border": "#0000000f",
           "shadow": "#000000",
           "primary_button_background": "#000000",

@@ -124,7 +124,7 @@
             "text_WJWPUA": {
               "type": "text",
               "settings": {
-                "text": "<p>Shop Shoreline </p><p>Products</p>",
+                "text": "<h1>Shop Shoreline<br/>Brands Products</h1>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -339,32 +339,32 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/IMG_2821_1.jpg",
-            "title": "Shade Sails",
-            "link": "shopify://pages/category-page-shade-extension-kits"
+            "title": "Wake Tower Bimini Extensions",
+            "link": "shopify://collections/shade-extension-kits-best-sellers-all-products"
           }
         },
         "category_iQdNwz": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/09a39f3b-45d221_2bdcd265eb3e4783b9598f2b82e7e155_mv2.jpg",
-            "title": "Bimini Extensions",
-            "link": "shopify://pages/category-page-shade-extension-kits"
+            "image": "shopify://shop_images/646699db-45d221_2022e5fc65d946478e50c6ffe307fcb7_mv2.jpg",
+            "title": "Center Console Bimini Extensions",
+            "link": "shopify://collections/shade-extension-kits-all-products"
           }
         },
         "category_fxfhmK": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/28177ebd-45d221_eda8f00c99fa4a588c784b2f347a90cf_mv2.jpg",
-            "title": "Apparel",
-            "link": "shopify://pages/category-page-apparel"
+            "image": "shopify://shop_images/pontoon_shade.webp",
+            "title": "Pontoon boat bimini extensions",
+            "link": "shopify://collections/pontoon-boat-bimini-extensions"
           }
         },
         "category_t8F9WD": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/62e6703b-45d221_02382c3120954a6380e25cf4b11cfb46_mv2.png",
-            "title": "Accessories",
-            "link": "shopify://pages/shop"
+            "image": "shopify://shop_images/IMG_3055.jpg",
+            "title": "Apparel & Accessories",
+            "link": "shopify://collections/accessories-and-apparel"
           }
         }
       },
@@ -443,7 +443,7 @@
           "type": "link",
           "settings": {
             "title": "Instructions",
-            "link": "shopify://pages/instructions-1"
+            "link": "shopify://pages/instructions"
           }
         },
         "link_eBwrBq": {

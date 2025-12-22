@@ -5,7 +5,7 @@
 >
   <div class="features-overlay"></div>
 
-  <div class="page-width features-wrapper">
+  <div class="page features-wrapper">
     <div class="features-grid">
       {% for block in section.blocks %}
         <div class="feature-item" {{ block.shopify_attributes }}>
@@ -35,7 +35,7 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 5rem 2rem;
-  color: #0f1f3d;
+  color: #0f1f3d !important;
   overflow: hidden;
 }
 
@@ -83,8 +83,8 @@
 }
 .feature-item p {
     font: 400 .95rem / 1.4 "Heebo", sans-serif;
-    color: #2c3c5e !important;
     margin: 0;
+    color: black !important;
 }
 /* ICON */
 .feature-icon img {
@@ -100,7 +100,7 @@
   font-size: 1.2rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: #1c2b47;
+  color: #1c2b47 !important;
   margin: 0 0 0.4rem;
   font-family: "League Spartan", sans-serif;
 }
@@ -111,7 +111,7 @@
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 500;
-  color: #1c2b47;
+  color: #1c2b47 !important;
   margin: 0;
 }
 

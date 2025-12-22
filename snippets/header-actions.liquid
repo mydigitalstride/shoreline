@@ -220,6 +220,26 @@
     height: var(--icon-size-md);
   }
 
+  .header-actions__cart-icon svg {
+    color: #f26522;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .header-actions__cart-icon--pulse svg {
+    animation: cartIconPulse 0.6s ease;
+  }
+
+  @keyframes cartIconPulse {
+    0%, 100% {
+      transform: scale(1);
+      color: #f26522;
+    }
+    50% {
+      transform: scale(1.2);
+      color: #f26522;
+    }
+  }
+
   .header-actions__cart-icon {
     --cart-bubble-size: 20px;
     --cart-bubble-top: 4.5px;
@@ -233,6 +253,20 @@
     width: var(--cart-bubble-size, 20px);
     top: var(--cart-bubble-top);
     right: var(--cart-bubble-right);
+    overflow: visible;
+  }
+
+  @media screen and (max-width: 749px) {
+    .header-actions__cart-icon {
+      --cart-bubble-top: 2px;
+      --cart-bubble-right: 0px;
+    }
+
+    .header-actions__cart-icon .cart-bubble {
+      font-size: 10px;
+      min-width: 18px;
+      height: 18px;
+    }
   }
 
   .header-actions__cart-icon .cart-bubble__text,

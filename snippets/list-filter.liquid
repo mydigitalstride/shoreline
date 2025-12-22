@@ -780,4 +780,30 @@
   .variant-option--images:not(:has(input:disabled)) .facets__image-label:hover {
     font-weight: 500;
   }
+
+  .facets--drawer .facets__panel-content, .facets--drawer floating-panel-component
+  {
+    top: 0px !important;
+    left: 0px !important;
+  }
+
+  .facets--drawer .facets__panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .svg-wrapper--small {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm); 
+  }
+
+  .facets__title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .facets-drawer__close, .facets__see-results {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+  }
 {% endstylesheet %}

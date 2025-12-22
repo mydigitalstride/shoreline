@@ -71,6 +71,12 @@
     .custom-footer {
       margin-left: 4rem;
     }
+
+    @media screen and (max-width: 749px) {
+      .custom-footer {
+        margin-left: 0;
+      }
+    }
   </style>
   {% endif %}
 
@@ -111,7 +117,7 @@
   @media (min-width: 769px) {
     .shopify-section .section {
       padding-left: 4rem !important;
-      padding-right: 4rem;
+      padding-right: 4rem !important;
     }
   }
 
@@ -127,23 +133,80 @@
 
     #menu-group {
       height: auto;
+
+      .menu-wrapper {
+        right: 0vw;
+      }
     }
 
     .menu-wrapper {
       height: 100vh;
     }
+
+    .main-menu-button,
+    .cart-icon-wrapper {
+      color: #2C3C5E;
+    }
+  }
+
+  /* White cart icon only on page templates (like gallery) */
+    #cart-icon-link  {
+      color: #ffffff;
   }
 
   /* Mobile menu updates */
   @media (max-width: 768px) {
     #product-menu {
-      right: 10vw;
-      top: 4vh;
+      right: 4vw;
+      top: -2vh;
+      
     }
 
     #product-menu #menu-group {
       height: auto;
-      right: 0;
+      right: 0rem;
+      top: 0rem;
+      padding: 2rem 1rem
+    }
+  }
+
+  /* Breadcrumb styling */
+  .breadcrumb {
+    border-bottom: none !important;
+    padding: 4rem 0 0 0;
+  }
+
+  @media screen and (min-width: 769px) {
+    .breadcrumb {
+      padding: 4rem 2rem 0;
+    }
+  }
+
+  /* Remove top padding from specific section group blocks */
+  #shopify-section-template--19847308148921__main .group-block {
+    padding-block-start: 0;
+  }
+
+  /* Center images and text in product-icon-header-text on mobile and tablet */
+  @media screen and (max-width: 1024px) {
+    #product-icon-header-text,
+    #product-icon-header-text * {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #product-icon-header-text img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  /* Product information grid mobile adjustments */
+  @media screen and (max-width: 768px) {
+    .product-information__grid.product-information--media-left {
+      margin-top: 0;
     }
   }
 {% endstylesheet %}

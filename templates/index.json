@@ -12,6 +12,75 @@
     "hero_xUmzY4": {
       "type": "hero",
       "blocks": {
+        "group_eHGc68": {
+          "type": "group",
+          "name": "Menu-Group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_QJjtpc": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 0,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_QJjtpc"
+          ]
+        },
         "group_g7EQCJ": {
           "type": "group",
           "name": "t:names.group",
@@ -59,7 +128,7 @@
               "settings": {
                 "inverse": false,
                 "font": "heading",
-                "unit": "pixel",
+                "unit": "percent",
                 "percent_width": 100,
                 "pixel_height": 160,
                 "custom_mobile_size": false,
@@ -73,23 +142,10 @@
               },
               "blocks": {}
             },
-            "icon_3aLJLc": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "disabled": true,
-              "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/shoreline-logo.png",
-                "width": 12,
-                "link": "",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            },
             "text_HtUjNw": {
               "type": "text",
               "settings": {
-                "text": "<p>Enjoy Every Moment</p><p> Under the Sun</p>",
+                "text": "<h1>Enjoy Every Moment</h1><h1>Under the Sun</h1>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -155,7 +211,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Shop All Products",
-                    "link": "shopify://pages/shop",
+                    "link": "shopify://collections/shoreline-brands",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -188,83 +244,14 @@
           },
           "block_order": [
             "logo_tiE3UA",
-            "icon_3aLJLc",
             "text_HtUjNw",
             "group_7NtEiy"
-          ]
-        },
-        "group_eHGc68": {
-          "type": "group",
-          "name": "Menu-Group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_id": "menu-group"
-          },
-          "blocks": {
-            "menu_QJjtpc": {
-              "type": "menu",
-              "name": "t:names.menu",
-              "settings": {
-                "menu": "main-menu",
-                "heading": "",
-                "menu_spacing": 0,
-                "show_as_accordion": false,
-                "accordion_icon": "caret",
-                "accordion_dividers": false,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "heading_preset": "h3",
-                "link_preset": "paragraph",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "main_menu": true
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "menu_QJjtpc"
           ]
         }
       },
       "block_order": [
-        "group_g7EQCJ",
-        "group_eHGc68"
+        "group_eHGc68",
+        "group_g7EQCJ"
       ],
       "custom_css": [
         "h1 {font-family: \"League Spartan\";}"
@@ -302,13 +289,16 @@
     },
     "best_sellers_story_TfmKg8": {
       "type": "best-sellers-story",
-      "custom_css": [],
+      "custom_css": [
+        "img {object-fit: cover;}"
+      ],
       "name": "Best Sellers with Story",
       "settings": {
         "heading": "BEST SELLERS",
         "products": [
-          "carbon-fiber-telescoping-shade-poles",
-          "athletic-fit-t-shirt-white"
+          "wake-tower-mounted-universal-bimini-extension",
+          "2015-2025-malibu-boats-bimini-mounted-shade-extension",
+          "pontoon-boat-bimini-extension-kit"
         ],
         "bg_image_left": "shopify://shop_images/Shoreline_Website_Mockup.png",
         "bg_image_right": "shopify://shop_images/IMG_2826.jpg",
@@ -514,25 +504,33 @@
         "category_6FPBDT": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/IMG_5029.jpg",
-            "title": "Shade Solutions",
-            "link": "shopify://pages/category-page-shade-extension-kits"
+            "image": "shopify://shop_images/2016_Nautique_G25.jpg",
+            "title": "Wake Boat Bimini Extensions",
+            "link": "shopify://collections/shade-extension-kits-best-sellers-all-products"
           }
         },
         "category_UrLgW6": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/att.dg0gpxFADVXbp2bTkvkjTlgl1fc2I0pWMLLNgLMAcyY.jpg",
-            "title": "Watersports Gear",
-            "link": "shopify://pages/category-page-wakesurf"
+            "image": "shopify://shop_images/b95c6930-45d221_99795f339ac74ffcb2187f7e1f1a7276_mv2.jpg",
+            "title": "Center Console Shade Sails",
+            "link": "shopify://collections/shade-extension-kits-all-products"
+          }
+        },
+        "category_Mr9GH8": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/12.11.25ShorelineBrandsProductPhotos-9.jpg",
+            "title": "Pontoon boat bimini extensions",
+            "link": "shopify://collections/pontoon-boat-bimini-extensions"
           }
         },
         "category_j3kEcK": {
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/Photoroom_20250227_092724.jpg",
-            "title": "Shoreline Apparel",
-            "link": "shopify://pages/category-page-apparel"
+            "title": "Accessories & apparel",
+            "link": "shopify://collections/accessories-and-apparel"
           }
         }
       },
@@ -542,10 +540,12 @@
         "feature_MfUikD",
         "category_6FPBDT",
         "category_UrLgW6",
+        "category_Mr9GH8",
         "category_j3kEcK"
       ],
       "custom_css": [
-        "p {color: white !important;}"
+        "p {color: white !important;}",
+        ".category-title {position: absolute; left: 0rem; right: 0rem; bottom: 0rem; top: auto; z-index: 1; color: white; font-size: 1.5rem; text-align: center; padding: 0; text-shadow: 1px 2px 3px black;}"
       ],
       "name": "Features & Categories",
       "settings": {

@@ -39,9 +39,34 @@
 
           <!-- PRODUCT DETAILS -->
           <div class="product-content">
-            {% if product.price %}
-              <p class="product-price">{{ product.price | money }}</p>
-            {% endif %}
+            {% liquid
+              # 1. Get the specific variant so we can access metafields
+              assign current_variant = product.selected_or_first_available_variant
+              assign regular_price = current_variant.price
+              assign final_price = regular_price
+              assign is_discounted = false
+
+              # 2. Check for Distributor Tag + Metafield existence
+              if customer and customer.tags contains 'distributor'
+                assign dist_price = current_variant.metafields.custom.distributor_price.value
+                if dist_price != blank
+                  assign final_price = dist_price
+                  assign is_discounted = true
+                endif
+              endif
+            %}
+
+            <p class="product-price">
+              {% if is_discounted %}
+                <span style="text-decoration: line-through; opacity: 0.6; font-size: 0.9em; margin-right: 5px;">
+                  {{ regular_price | money }}
+                </span>
+                <span style="color: #e76c3c;"> {{ final_price | money }}
+                </span>
+              {% else %}
+                {{ regular_price | money }}
+              {% endif %}
+            </p>
 
             <div class="product-stars">
               {% for i in (1..5) %}
@@ -250,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 .product-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -381,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Grid becomes 1 column */
   .products-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:  repeat(2, 1fr);
     padding: 0;
     gap: 1.75rem;
   }

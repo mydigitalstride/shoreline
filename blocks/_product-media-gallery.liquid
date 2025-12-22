@@ -733,6 +733,23 @@ button.deferred-media__poster-button,
   border-radius: 25px;
 }
 
+/* Remove top padding from media gallery carousel */
+.media-gallery--carousel {
+  padding-block-start: 0 !important;
+}
+
+/* Hide zoom dialog and functionality on mobile and tablet */
+@media screen and (max-width: 1023px) {
+  zoom-dialog,
+  .product-media-container__zoom-button {
+    display: none !important;
+  }
+
+  .product-media-container--zoomable.product-media-container--image {
+    cursor: default !important;
+  }
+}
+
 {% endstylesheet %}
 
 {% schema %}

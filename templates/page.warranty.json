@@ -137,7 +137,7 @@
             "text_eJbYDF": {
               "type": "text",
               "settings": {
-                "text": "<p>Shoreline Brands Warranty Policy</p>",
+                "text": "<h1>Shoreline Brands Warranty Policy</h1>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -303,7 +303,8 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "main_menu": true
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
               },
               "blocks": {}
             }

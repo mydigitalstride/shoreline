@@ -137,7 +137,7 @@
             "text_CcxHKH": {
               "type": "text",
               "settings": {
-                "text": "<p>SHADE EXTENSION KITS</p>",
+                "text": "<h1>Shade Extension Kits</h1>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -205,7 +205,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Shop All Products",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://collections/shoreline-brands",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -220,7 +220,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Find My Shade Sail",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://pages/shade-solutions",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",

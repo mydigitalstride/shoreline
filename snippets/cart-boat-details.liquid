@@ -1,0 +1,66 @@
+<cart-boat-details style="display: flex;">
+  <div class="cart-boat-details">
+    <label
+      for="cart-boat-details"
+      class="cart-boat-details__label h4"
+    >
+      Boat Year, Make, Model
+    </label>
+    <p class="cart-boat-details__description">
+      To ensure proper fit, please provide your boat year, make, and model
+    </p>
+    <input
+      form="cart-form"
+      id="cart-boat-details"
+      class="cart-boat-details__input field__input"
+      name="attributes[Boat Year, Make, Model]"
+      type="text"
+      value="{{ cart.attributes['Boat Year, Make, Model'] }}"
+      placeholder="e.g., 2025 Malibu M220"
+    />
+  </div>
+</cart-boat-details>
+
+{% stylesheet %}
+  cart-boat-details {
+    display: block;
+    width: 100%;
+  }
+
+  .cart-boat-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+  }
+
+  .cart-boat-details__label {
+    margin: 0;
+  }
+
+  .cart-boat-details__description {
+    margin: 0;
+    font-size: var(--font-size--sm);
+    color: #000 !important;
+    line-height: 1.5;
+  }
+
+  .cart-boat-details__input {
+    width: 100%;
+    padding: var(--input-padding);
+    background-color: var(--color-input-background);
+    color: var(--color-input-text);
+    border: var(--style-border-width-inputs) solid var(--color-input-border);
+    border-radius: var(--style-border-radius-inputs);
+    font-size: var(--font-paragraph--size);
+    transition: border-color var(--animation-speed) ease;
+  }
+
+  .cart-boat-details__input:focus {
+    outline-color: var(--color-input-background);
+    border-color: var(--color-input-border);
+  }
+
+  .cart-boat-details__input::placeholder {
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text));
+  }
+{% endstylesheet %}

@@ -63,7 +63,18 @@ export class MediaGallery extends Component {
    * @param {PointerEvent} event - The pointer event.
    */
   zoom(index, event) {
-    this.refs.zoomDialogComponent?.open(index, event);
+    // On mobile and tablet (max-width: 1023px), cycle to next image instead of zooming
+    // This matches the CSS media query that hides the zoom dialog on mobile
+    const isMobileOrTablet = window.innerWidth <= 1023;
+
+    if (isMobileOrTablet) {
+      event?.preventDefault();
+      // Cycle to the next image in the slideshow
+      this.slideshow?.next(event);
+    } else {
+      // On desktop, open the zoom dialog
+      this.refs.zoomDialogComponent?.open(index, event);
+    }
   }
 
   get slideshow() {
