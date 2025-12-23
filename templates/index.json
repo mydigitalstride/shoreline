@@ -587,7 +587,7 @@
           "type": "faq",
           "settings": {
             "question": "Can I use my bimini extension while wakesurfing and wakeboarding?",
-            "answer": "<p>Yes, our bimini extension products can be used while wakesurfing.</p><p>We recommend taking the shade system down while wakeboarding or waterskiing.</p>"
+            "answer": "<p>Yes, our bimini extension products can be used while wakesurfing. Simply pass your rope beneath the shade</p><p>We recommend taking the shade system down while wakeboarding or waterskiing.</p>"
           }
         },
         "faq_zLcWyc": {
@@ -618,13 +618,6 @@
             "answer": "<p>Setting up the shade is a breeze. With the included mounting hardware, you can complete the initial setup in 10 minutes. Once in position, deploying or disassembling the shade and telescoping poles takes less than a minute.</p>"
           }
         },
-        "faq_tHhyJz": {
-          "type": "faq",
-          "settings": {
-            "question": "Can I use the Bimini Shade Extension while wakesurfing?",
-            "answer": "<p>Yes, the product can be used while surfing. The rope will be passed underneath to attach to your tow point. The maximum recommended speed is 15mph.</p>"
-          }
-        },
         "faq_6kVLk6": {
           "type": "faq",
           "settings": {
@@ -648,7 +641,6 @@
         "faq_h3Gq3P",
         "faq_hPrEXx",
         "faq_MWKxtG",
-        "faq_tHhyJz",
         "faq_6kVLk6",
         "faq_Ny6T9H"
       ],
