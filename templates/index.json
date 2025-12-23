@@ -576,6 +576,20 @@
             "answer": "<p>We have over 18 different variations of shade extensions to fit most makes and models. Use our search tool to find yours. If you still cannot locate the correct kit, please reach out for team member assistance. </p><p>Find what you're looking for <a href=\"/pages/shade-solutions\" title=\"Shade Solutions\">here</a></p>"
           }
         },
+        "faq_mzwrJN": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use my bimini extension while driving?",
+            "answer": "<p>Yes. Shoreline Brands Bimini Extensions are rated for use at speeds up to <strong>15 mph</strong>. This rating accounts for typical wind and weather conditions you may encounter on the lake.</p><p>In calm conditions, many customers find they can operate at slightly higher speeds. That said, conditions vary, so we always recommend using good judgment and reducing speed if winds pick up or water conditions change.</p>"
+          }
+        },
+        "faq_3cKmTY": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use my bimini extension while wakesurfing and wakeboarding?",
+            "answer": "<p>Yes, our bimini extension products can be used while wakesurfing.</p><p>We recommend taking the shade system down while wakeboarding or waterskiing.</p>"
+          }
+        },
         "faq_zLcWyc": {
           "type": "faq",
           "settings": {
@@ -628,6 +642,8 @@
       },
       "block_order": [
         "faq_67EwzV",
+        "faq_mzwrJN",
+        "faq_3cKmTY",
         "faq_zLcWyc",
         "faq_h3Gq3P",
         "faq_hPrEXx",
