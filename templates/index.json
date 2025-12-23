@@ -210,7 +210,7 @@
                 "button_wAJfVL": {
                   "type": "button",
                   "settings": {
-                    "label": "Shop All Products",
+                    "label": "Shop All Shade Products",
                     "link": "shopify://collections/shoreline-brands",
                     "open_in_new_tab": false,
                     "style_class": "button",
