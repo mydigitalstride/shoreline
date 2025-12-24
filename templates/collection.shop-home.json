@@ -143,7 +143,7 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Shop All Products",
+                    "label": "Shop All Shade Products",
                     "link": "#jump",
                     "open_in_new_tab": false,
                     "style_class": "button",
@@ -158,7 +158,7 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Find My Shade",
+                    "label": "Find My Shade Sail",
                     "link": "shopify://pages/shade-solutions",
                     "open_in_new_tab": false,
                     "style_class": "button",
@@ -447,7 +447,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/Axis_A24_with_XL_Bimini.jpg",
-            "title": "wake tower bimini extensions",
+            "title": "wake boat bimini extensions",
             "link": "shopify://collections/shade-extension-kits-best-sellers-all-products"
           }
         },
@@ -455,14 +455,14 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/b95c6930-45d221_99795f339ac74ffcb2187f7e1f1a7276_mv2.jpg",
-            "title": "Center Console Bimini Extensions",
+            "title": "Center Console Shade Sails",
             "link": "shopify://collections/shade-extension-kits-all-products"
           }
         },
         "category_jAhPzB": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/pontoon_shade.webp",
+            "image": "shopify://shop_images/12.11.25ShorelineBrandsProductPhotos-9.jpg",
             "title": "Pontoon boat bimini extensions",
             "link": "shopify://collections/pontoon-boat-bimini-extensions"
           }
