@@ -1677,7 +1677,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "View Instructions",
-                "link": "shopify://blogs/instructions",
+                "link": "shopify://blogs/instructions/how-to-install-the-shoreline-brands-pontoon-bimini-extension-kit",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
