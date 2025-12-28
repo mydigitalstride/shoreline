@@ -10,7 +10,7 @@
   {% if template == 'product' %}
     {% comment %} Add Shop link {% endcomment %}
     <span aria-hidden="true">&nbsp;›&nbsp;</span>
-    <a href="/collections/all" title="Shop">Shop</a>
+    <a href="/collections/shoreline-brands" title="Shop">Shop</a>
 
     {% comment %} Add Collection link if available {% endcomment %}
     {% if collection %}
@@ -27,7 +27,7 @@
 
   {% elsif template == 'collection' %}
     <span aria-hidden="true">&nbsp;›&nbsp;</span>
-    <a href="/collections/all" title="Shop">Shop</a>
+    <a href="/collections/shoreline-brands" title="Shop">Shop</a>
     <span aria-hidden="true">&nbsp;›&nbsp;</span>
     <span>{{ collection.title }}</span>
 
