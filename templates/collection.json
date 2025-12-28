@@ -122,15 +122,23 @@
             "custom_id": ""
           },
           "blocks": {
-            "icon_3AC3NL": {
-              "type": "icon",
-              "name": "t:names.icon",
+            "logo_BFJTjN": {
+              "type": "logo",
+              "name": "t:names.logo",
               "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png",
-                "width": 160,
-                "link": "https://shorelinebrands.com/",
-                "open_in_new_tab": false
+                "inverse": false,
+                "font": "heading",
+                "unit": "percent",
+                "percent_width": 100,
+                "pixel_height": 160,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -238,7 +246,7 @@
             }
           },
           "block_order": [
-            "icon_3AC3NL",
+            "logo_BFJTjN",
             "text_PEi8FP",
             "group_ULM9fP"
           ]
