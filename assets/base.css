@@ -4489,3 +4489,7 @@ product-price [ref="priceContainer"] {
   font-size: 1.5rem !important;
   color: #2C3C5E !important;
 }
+
+.govx-id-v2-full-wrapper p {
+    color: #2C3C5E !important
+}
