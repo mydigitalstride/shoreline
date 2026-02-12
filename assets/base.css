@@ -4493,3 +4493,7 @@ product-price [ref="priceContainer"] {
 .govx-id-v2-full-wrapper p {
     color: #2C3C5E !important
 }
+
+.govx-id-v1-full-wrapper p {
+    color: #2C3C5E !important
+}
