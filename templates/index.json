@@ -210,7 +210,7 @@
                 "button_wAJfVL": {
                   "type": "button",
                   "settings": {
-                    "label": "Shop All Shade Products",
+                    "label": "Shop All Products",
                     "link": "shopify://collections/shoreline-brands",
                     "open_in_new_tab": false,
                     "style_class": "button",
@@ -528,9 +528,9 @@
         "category_j3kEcK": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/Photoroom_20250227_092724.jpg",
-            "title": "Accessories & apparel",
-            "link": "shopify://collections/accessories-and-apparel"
+            "image": "shopify://shop_images/XLarge.avif",
+            "title": "Softshell covers",
+            "link": "shopify://collections/soft-shell-covers"
           }
         }
       },
