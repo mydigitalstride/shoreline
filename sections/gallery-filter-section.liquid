@@ -1,0 +1,397 @@
+<section class="gallery-filter-section">
+  <div class="gallery-filter-page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="gallery-filter-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="gallery-filter-controls">
+      <select id="galleryMakeSelect" class="gallery-filter-select">
+        <option value="">Select Make</option>
+      </select>
+
+      <select id="galleryModelSelect" class="gallery-filter-select" disabled>
+        <option value="">Select Model</option>
+      </select>
+
+      <select id="galleryYearSelect" class="gallery-filter-select" disabled>
+        <option value="">Select Year</option>
+      </select>
+
+      <div class="gallery-filter-buttons">
+        <button id="galleryClearBtn" class="gallery-clear-btn">CLEAR</button>
+        <button id="gallerySearchBtn" class="gallery-search-btn">SEARCH</button>
+      </div>
+    </div>
+
+    <p id="galleryFilterStatus" class="gallery-filter-status" style="display:none"></p>
+  </div>
+</section>
+
+<script>
+(function () {
+  // Canonical make names mapped to accepted aliases (handles title typos/variations)
+  var MAKE_ALIASES = {
+    'Axopar':      ['Axopar'],
+    'Axis':        ['Axis'],
+    'Centurion':   ['Centurion'],
+    'Chaparral':   ['Chaparral'],
+    'Cobalt':      ['Cobalt'],
+    'Heyday':      ['Heyday'],
+    'Malibu':      ['Malibu'],
+    'Mastercraft': ['Mastercraft', 'MasterCraft'],
+    'MB':          ['MB'],
+    'Moomba':      ['Moomba'],
+    'Nautique':    ['Nautique', 'Nautiqe'],
+    'Regal':       ['Regal'],
+    'Sanger':      ['Sanger'],
+    'Supreme':     ['Supreme'],
+    'Supra':       ['Supra'],
+    'Tige':        ['Tige', 'Tigue'],
+    'Yamaha':      ['Yamaha']
+  };
+
+  // Flat list sorted longest-first so longer aliases match before shorter ones
+  var MAKE_LIST = [];
+  Object.keys(MAKE_ALIASES).forEach(function (canonical) {
+    MAKE_ALIASES[canonical].forEach(function (alias) {
+      MAKE_LIST.push({ alias: alias, canonical: canonical });
+    });
+  });
+  MAKE_LIST.sort(function (a, b) { return b.alias.length - a.alias.length; });
+
+  function escapeRegex(s) {
+    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  }
+
+  function parseTitle(title) {
+    if (!title) return null;
+    title = title.trim();
+
+    // Skip multi-boat entries (e.g. "Centurion FI23 and Malibu 25LSV")
+    if (/ and /i.test(title)) return null;
+
+    // Extract leading year or year-range (e.g. "2013" or "2013-2015")
+    var year = '';
+    var rest = title;
+    var yearMatch = title.match(/^(\d{4}(?:\s*[-\u2013]\s*\d{4})?)\s+(.+)$/);
+    if (yearMatch) {
+      year = yearMatch[1].replace(/\s+/g, '');
+      rest = yearMatch[2].trim();
+    }
+
+    // Normalise year separator
+    year = year.replace(/\s*[\u2013]\s*/, '-');
+
+    // Try matching a make at the START of 'rest'
+    var canonicalMake = '';
+    var model = '';
+    for (var i = 0; i < MAKE_LIST.length; i++) {
+      var entry = MAKE_LIST[i];
+      var re = new RegExp('^' + escapeRegex(entry.alias) + '\\b', 'i');
+      if (re.test(rest)) {
+        canonicalMake = entry.canonical;
+        model = rest.slice(entry.alias.length).trim();
+        break;
+      }
+    }
+
+    // Fallback: make appears anywhere in 'rest' (e.g. "Super Air Nautique")
+    if (!canonicalMake) {
+      for (var j = 0; j < MAKE_LIST.length; j++) {
+        var fe = MAKE_LIST[j];
+        var fi = rest.toLowerCase().indexOf(fe.alias.toLowerCase());
+        if (fi !== -1) {
+          canonicalMake = fe.canonical;
+          model = rest.slice(fi + fe.alias.length).trim();
+          if (!model) model = rest.trim();
+          break;
+        }
+      }
+    }
+
+    model = model.replace(/\s+/g, ' ').trim();
+    return { year: year, make: canonicalMake, model: model };
+  }
+
+  function parseYearRange(yearStr) {
+    if (!yearStr) return { start: null, end: null };
+    var r = yearStr.match(/^(\d{4})-(\d{4})$/);
+    if (r) return { start: parseInt(r[1]), end: parseInt(r[2]) };
+    var s = yearStr.match(/^(\d{4})$/);
+    if (s) { var y = parseInt(s[1]); return { start: y, end: y }; }
+    return { start: null, end: null };
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var makeSelect   = document.getElementById('galleryMakeSelect');
+    var modelSelect  = document.getElementById('galleryModelSelect');
+    var yearSelect   = document.getElementById('galleryYearSelect');
+    var searchBtn    = document.getElementById('gallerySearchBtn');
+    var clearBtn     = document.getElementById('galleryClearBtn');
+    var statusEl     = document.getElementById('galleryFilterStatus');
+
+    // Gather every gallery card on the page and parse its title
+    var allCards = Array.from(document.querySelectorAll('.boat-gallery-card'));
+    var cardData = allCards.map(function (el) {
+      var title  = el.dataset.title || '';
+      var parsed = parseTitle(title);
+      return {
+        element: el,
+        title:   title,
+        make:    parsed ? parsed.make  : '',
+        model:   parsed ? parsed.model : '',
+        year:    parsed ? parsed.year  : ''
+      };
+    });
+
+    var filterableCards = cardData.filter(function (c) { return c.make; });
+
+    function uniqueSorted(arr) {
+      return Array.from(new Set(arr)).sort();
+    }
+
+    function getModels(make) {
+      return uniqueSorted(
+        filterableCards
+          .filter(function (c) { return !make || c.make === make; })
+          .map(function (c) { return c.model; })
+          .filter(Boolean)
+      );
+    }
+
+    function getYears(make, model) {
+      var years = new Set();
+      filterableCards
+        .filter(function (c) {
+          return (!make  || c.make  === make) &&
+                 (!model || c.model === model);
+        })
+        .forEach(function (c) {
+          var range = parseYearRange(c.year);
+          if (range.start && range.end) {
+            for (var y = range.start; y <= range.end; y++) years.add(y);
+          }
+        });
+      return Array.from(years).sort(function (a, b) { return a - b; });
+    }
+
+    function fillSelect(select, values, placeholder) {
+      select.innerHTML = '<option value="">' + placeholder + '</option>' +
+        values.map(function (v) {
+          return '<option value="' + v + '">' + v + '</option>';
+        }).join('');
+    }
+
+    // Populate make dropdown from all filterable cards
+    fillSelect(makeSelect, uniqueSorted(filterableCards.map(function (c) { return c.make; })), 'Select Make');
+
+    makeSelect.addEventListener('change', function () {
+      var make = makeSelect.value;
+      fillSelect(modelSelect, getModels(make), 'Select Model');
+      modelSelect.disabled = !make;
+      modelSelect.value = '';
+      yearSelect.innerHTML = '<option value="">Select Year</option>';
+      yearSelect.disabled = true;
+    });
+
+    modelSelect.addEventListener('change', function () {
+      var make  = makeSelect.value;
+      var model = modelSelect.value;
+      var years = getYears(make, model);
+      fillSelect(yearSelect, years, 'Select Year');
+      yearSelect.disabled = years.length === 0;
+    });
+
+    searchBtn.addEventListener('click', function () {
+      var make  = makeSelect.value;
+      var model = modelSelect.value;
+      var year  = yearSelect.value ? parseInt(yearSelect.value) : null;
+
+      if (!make && !model && !year) {
+        cardData.forEach(function (c) { c.element.style.display = ''; });
+        statusEl.style.display = 'none';
+        return;
+      }
+
+      var visibleCount = 0;
+      cardData.forEach(function (c) {
+        var show = false;
+        if (c.make) {
+          var makeOk  = !make  || c.make  === make;
+          var modelOk = !model || c.model === model;
+          var yearOk  = true;
+          if (year) {
+            var range = parseYearRange(c.year);
+            yearOk = range.start !== null && year >= range.start && year <= range.end;
+          }
+          show = makeOk && modelOk && yearOk;
+        }
+        c.element.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      statusEl.style.display = 'block';
+      statusEl.textContent = visibleCount > 0
+        ? 'Showing ' + visibleCount + ' result' + (visibleCount !== 1 ? 's' : '')
+        : 'No results found for your selection.';
+    });
+
+    clearBtn.addEventListener('click', function () {
+      makeSelect.value = '';
+      modelSelect.innerHTML = '<option value="">Select Model</option>';
+      modelSelect.disabled = true;
+      yearSelect.innerHTML  = '<option value="">Select Year</option>';
+      yearSelect.disabled  = true;
+      cardData.forEach(function (c) { c.element.style.display = ''; });
+      statusEl.style.display = 'none';
+    });
+  });
+})();
+</script>
+
+{% stylesheet %}
+.gallery-filter-section {
+  background: #1c2b47;
+  padding: 2rem 5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-filter-page-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.gallery-filter-heading {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.gallery-filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gallery-filter-select {
+  padding: 0.85rem 1rem;
+  border: 3px solid #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #fff;
+  color: #1c2b47;
+  cursor: pointer;
+  min-width: 160px;
+  flex: 1;
+  font-family: "Heebo", sans-serif;
+}
+
+.gallery-filter-select:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.gallery-filter-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.gallery-search-btn,
+.gallery-clear-btn {
+  padding: 0.85rem 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.gallery-search-btn {
+  background: #f15a29;
+}
+
+.gallery-search-btn:hover {
+  background: #d94e21;
+}
+
+.gallery-clear-btn {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.gallery-clear-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.gallery-filter-status {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Heebo", sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 989px) {
+  .gallery-filter-section {
+    padding: 1.5rem 2rem;
+  }
+
+  .gallery-filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-filter-select {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .gallery-filter-buttons {
+    width: 100%;
+  }
+
+  .gallery-search-btn,
+  .gallery-clear-btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-filter-section {
+    padding: 1.5rem 1.25rem;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Gallery Filter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Filter Heading",
+      "default": "Filter Gallery by Boat"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery Filter"
+    }
+  ]
+}
+{% endschema %}
