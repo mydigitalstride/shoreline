@@ -363,6 +363,12 @@
         "custom_section_id": ".template-page"
       }
     },
+    "gallery_filter_section_main": {
+      "type": "gallery-filter-section",
+      "settings": {
+        "heading": "Filter Gallery by Boat"
+      }
+    },
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
@@ -1127,6 +1133,7 @@
   "order": [
     "main",
     "section_nUpEf4",
+    "gallery_filter_section_main",
     "boat_gallery_section_JKCGQD",
     "boat_gallery_section_HEBRB4"
   ]

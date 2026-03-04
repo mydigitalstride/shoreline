@@ -9,7 +9,7 @@
     <div class="boat-gallery-grid">
       {% for block in section.blocks %}
         {% if block.settings.link != blank %}
-          <a href="{{ block.settings.link }}" class="boat-gallery-card" {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.link }}" class="boat-gallery-card" data-title="{{ block.settings.title | escape }}" {{ block.shopify_attributes }}>
             <div class="boat-gallery-image" style="background-image:url('{{ block.settings.image | image_url: width: 900 }}');">
               <div class="boat-gallery-overlay"></div>
               {% if block.settings.title != blank %}
@@ -18,7 +18,7 @@
             </div>
           </a>
         {% else %}
-          <div class="boat-gallery-card no-link" {{ block.shopify_attributes }}>
+          <div class="boat-gallery-card no-link" data-title="{{ block.settings.title | escape }}" {{ block.shopify_attributes }}>
             <div class="boat-gallery-image" style="background-image:url('{{ block.settings.image | image_url: width: 900 }}');">
               <div class="boat-gallery-overlay"></div>
               {% if block.settings.title != blank %}
