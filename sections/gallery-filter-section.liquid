@@ -9,14 +9,6 @@
         <option value="">Select Make</option>
       </select>
 
-      <select id="galleryModelSelect" class="gallery-filter-select" disabled>
-        <option value="">Select Model</option>
-      </select>
-
-      <select id="galleryYearSelect" class="gallery-filter-select" disabled>
-        <option value="">Select Year</option>
-      </select>
-
       <div class="gallery-filter-buttons">
         <button id="galleryClearBtn" class="gallery-clear-btn">CLEAR</button>
         <button id="gallerySearchBtn" class="gallery-search-btn">SEARCH</button>
@@ -63,172 +55,105 @@
     return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
   }
 
-  function parseTitle(title) {
-    if (!title) return null;
+  function parseMake(title) {
+    if (!title) return '';
     title = title.trim();
 
     // Skip multi-boat entries (e.g. "Centurion FI23 and Malibu 25LSV")
-    if (/ and /i.test(title)) return null;
+    if (/ and /i.test(title)) return '';
 
-    // Extract leading year or year-range (e.g. "2013" or "2013-2015")
-    var year = '';
-    var rest = title;
-    var yearMatch = title.match(/^(\d{4}(?:\s*[-\u2013]\s*\d{4})?)\s+(.+)$/);
-    if (yearMatch) {
-      year = yearMatch[1].replace(/\s+/g, '');
-      rest = yearMatch[2].trim();
-    }
+    // Strip leading year or year-range to get to the make
+    var rest = title.replace(/^\d{4}(?:\s*[-\u2013]\s*\d{4})?\s+/, '');
 
-    // Normalise year separator
-    year = year.replace(/\s*[\u2013]\s*/, '-');
-
-    // Try matching a make at the START of 'rest'
-    var canonicalMake = '';
-    var model = '';
+    // Try matching a make at the START of the remaining string
     for (var i = 0; i < MAKE_LIST.length; i++) {
       var entry = MAKE_LIST[i];
       var re = new RegExp('^' + escapeRegex(entry.alias) + '\\b', 'i');
-      if (re.test(rest)) {
-        canonicalMake = entry.canonical;
-        model = rest.slice(entry.alias.length).trim();
-        break;
+      if (re.test(rest)) return entry.canonical;
+    }
+
+    // Fallback: make appears anywhere (e.g. "Super Air Nautique")
+    for (var j = 0; j < MAKE_LIST.length; j++) {
+      if (rest.toLowerCase().indexOf(MAKE_LIST[j].alias.toLowerCase()) !== -1) {
+        return MAKE_LIST[j].canonical;
       }
     }
 
-    // Fallback: make appears anywhere in 'rest' (e.g. "Super Air Nautique")
-    if (!canonicalMake) {
-      for (var j = 0; j < MAKE_LIST.length; j++) {
-        var fe = MAKE_LIST[j];
-        var fi = rest.toLowerCase().indexOf(fe.alias.toLowerCase());
-        if (fi !== -1) {
-          canonicalMake = fe.canonical;
-          model = rest.slice(fi + fe.alias.length).trim();
-          if (!model) model = rest.trim();
-          break;
-        }
-      }
-    }
-
-    model = model.replace(/\s+/g, ' ').trim();
-    return { year: year, make: canonicalMake, model: model };
+    return '';
   }
 
-  function parseYearRange(yearStr) {
-    if (!yearStr) return { start: null, end: null };
-    var r = yearStr.match(/^(\d{4})-(\d{4})$/);
-    if (r) return { start: parseInt(r[1]), end: parseInt(r[2]) };
-    var s = yearStr.match(/^(\d{4})$/);
-    if (s) { var y = parseInt(s[1]); return { start: y, end: y }; }
-    return { start: null, end: null };
+  // Returns the max columns for the current viewport, matching the grid CSS breakpoints
+  function maxGridCols() {
+    var w = window.innerWidth;
+    if (w <= 989) return 2;
+    if (w <= 1200) return 3;
+    return 4;
+  }
+
+  // After show/hide changes, update each grid's column count so rows stay full
+  function rebalanceGrids(isFiltered) {
+    document.querySelectorAll('.boat-gallery-grid').forEach(function (grid) {
+      var section = grid.closest('.boat-gallery-section');
+
+      if (!isFiltered) {
+        grid.style.gridTemplateColumns = '';
+        if (section) section.style.display = '';
+        return;
+      }
+
+      var cards = Array.from(grid.querySelectorAll('.boat-gallery-card'));
+      var visible = cards.filter(function (c) { return c.style.display !== 'none'; }).length;
+
+      if (visible === 0) {
+        if (section) section.style.display = 'none';
+      } else {
+        if (section) section.style.display = '';
+        var cols = Math.min(visible, maxGridCols());
+        grid.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+      }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    var makeSelect   = document.getElementById('galleryMakeSelect');
-    var modelSelect  = document.getElementById('galleryModelSelect');
-    var yearSelect   = document.getElementById('galleryYearSelect');
-    var searchBtn    = document.getElementById('gallerySearchBtn');
-    var clearBtn     = document.getElementById('galleryClearBtn');
-    var statusEl     = document.getElementById('galleryFilterStatus');
+    var makeSelect = document.getElementById('galleryMakeSelect');
+    var searchBtn  = document.getElementById('gallerySearchBtn');
+    var clearBtn   = document.getElementById('galleryClearBtn');
+    var statusEl   = document.getElementById('galleryFilterStatus');
 
-    // Gather every gallery card on the page and parse its title
+    // Gather every gallery card and extract its make from the title
     var allCards = Array.from(document.querySelectorAll('.boat-gallery-card'));
     var cardData = allCards.map(function (el) {
-      var title  = el.dataset.title || '';
-      var parsed = parseTitle(title);
       return {
         element: el,
-        title:   title,
-        make:    parsed ? parsed.make  : '',
-        model:   parsed ? parsed.model : '',
-        year:    parsed ? parsed.year  : ''
+        make: parseMake(el.dataset.title || '')
       };
     });
 
     var filterableCards = cardData.filter(function (c) { return c.make; });
 
-    function uniqueSorted(arr) {
-      return Array.from(new Set(arr)).sort();
-    }
-
-    function getModels(make) {
-      return uniqueSorted(
-        filterableCards
-          .filter(function (c) { return !make || c.make === make; })
-          .map(function (c) { return c.model; })
-          .filter(Boolean)
-      );
-    }
-
-    function getYears(make, model) {
-      var years = new Set();
-      filterableCards
-        .filter(function (c) {
-          return (!make  || c.make  === make) &&
-                 (!model || c.model === model);
-        })
-        .forEach(function (c) {
-          var range = parseYearRange(c.year);
-          if (range.start && range.end) {
-            for (var y = range.start; y <= range.end; y++) years.add(y);
-          }
-        });
-      return Array.from(years).sort(function (a, b) { return a - b; });
-    }
-
-    function fillSelect(select, values, placeholder) {
-      select.innerHTML = '<option value="">' + placeholder + '</option>' +
-        values.map(function (v) {
-          return '<option value="' + v + '">' + v + '</option>';
-        }).join('');
-    }
-
-    // Populate make dropdown from all filterable cards
-    fillSelect(makeSelect, uniqueSorted(filterableCards.map(function (c) { return c.make; })), 'Select Make');
-
-    makeSelect.addEventListener('change', function () {
-      var make = makeSelect.value;
-      fillSelect(modelSelect, getModels(make), 'Select Model');
-      modelSelect.disabled = !make;
-      modelSelect.value = '';
-      yearSelect.innerHTML = '<option value="">Select Year</option>';
-      yearSelect.disabled = true;
-    });
-
-    modelSelect.addEventListener('change', function () {
-      var make  = makeSelect.value;
-      var model = modelSelect.value;
-      var years = getYears(make, model);
-      fillSelect(yearSelect, years, 'Select Year');
-      yearSelect.disabled = years.length === 0;
-    });
+    // Populate make dropdown with unique sorted makes
+    var makes = Array.from(new Set(filterableCards.map(function (c) { return c.make; }))).sort();
+    makeSelect.innerHTML = '<option value="">Select Make</option>' +
+      makes.map(function (m) { return '<option value="' + m + '">' + m + '</option>'; }).join('');
 
     searchBtn.addEventListener('click', function () {
-      var make  = makeSelect.value;
-      var model = modelSelect.value;
-      var year  = yearSelect.value ? parseInt(yearSelect.value) : null;
+      var make = makeSelect.value;
 
-      if (!make && !model && !year) {
+      if (!make) {
         cardData.forEach(function (c) { c.element.style.display = ''; });
+        rebalanceGrids(false);
         statusEl.style.display = 'none';
         return;
       }
 
       var visibleCount = 0;
       cardData.forEach(function (c) {
-        var show = false;
-        if (c.make) {
-          var makeOk  = !make  || c.make  === make;
-          var modelOk = !model || c.model === model;
-          var yearOk  = true;
-          if (year) {
-            var range = parseYearRange(c.year);
-            yearOk = range.start !== null && year >= range.start && year <= range.end;
-          }
-          show = makeOk && modelOk && yearOk;
-        }
+        var show = c.make === make;
         c.element.style.display = show ? '' : 'none';
         if (show) visibleCount++;
       });
+
+      rebalanceGrids(true);
 
       statusEl.style.display = 'block';
       statusEl.textContent = visibleCount > 0
@@ -238,11 +163,8 @@
 
     clearBtn.addEventListener('click', function () {
       makeSelect.value = '';
-      modelSelect.innerHTML = '<option value="">Select Model</option>';
-      modelSelect.disabled = true;
-      yearSelect.innerHTML  = '<option value="">Select Year</option>';
-      yearSelect.disabled  = true;
       cardData.forEach(function (c) { c.element.style.display = ''; });
+      rebalanceGrids(false);
       statusEl.style.display = 'none';
     });
   });
@@ -289,14 +211,9 @@
   background: #fff;
   color: #1c2b47;
   cursor: pointer;
-  min-width: 160px;
+  min-width: 200px;
   flex: 1;
   font-family: "Heebo", sans-serif;
-}
-
-.gallery-filter-select:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
 }
 
 .gallery-filter-buttons {
