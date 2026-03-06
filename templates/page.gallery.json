@@ -372,6 +372,14 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_dzWU9b": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2025_Barletta.webp",
+            "title": "2025 Barletta",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
         "boat_gallery_rFgTwW": {
           "type": "boat-gallery",
           "settings": {
@@ -519,7 +527,7 @@
         "boat_gallery_DPnLwQ": {
           "type": "boat-gallery",
           "settings": {
-            "image": "shopify://shop_images/2018_Mastercraft_X46_f41bc5ee-8818-48db-87b3-de8e53b4b5ff.jpg",
+            "image": "shopify://shop_images/2018MastercraftX46.jpg",
             "title": "2018 Mastercraft X46",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
@@ -782,6 +790,7 @@
         }
       },
       "block_order": [
+        "boat_gallery_dzWU9b",
         "boat_gallery_rFgTwW",
         "boat_gallery_tVmhJT",
         "boat_gallery_ingDPt",
