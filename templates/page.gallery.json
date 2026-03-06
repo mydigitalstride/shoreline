@@ -372,12 +372,12 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
-        "boat_gallery_aVnDzJ": {
+        "boat_gallery_rFgTwW": {
           "type": "boat-gallery",
           "settings": {
-            "image": "shopify://shop_images/2003-2008_Supra_24SSV.jpg",
-            "title": "2003-2008 Supra 24SSV",
-            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+            "image": "shopify://shop_images/2020_Centurion_Ri230.jpg",
+            "title": "2020 Centurion Ri230",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
           }
         },
         "boat_gallery_tVmhJT": {
@@ -385,6 +385,38 @@
           "settings": {
             "image": "shopify://shop_images/2014-2016_Super_Air_Nautique.jpg",
             "title": "2014-2016 Super Air Nautique",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_ingDPt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2017_Nautique_G25.jpg",
+            "title": "2017 nautique G25",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_zwiawD": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2015_Axis_T22.jpg",
+            "title": "2015 Axis T22",
+            "link": "shopify://products/axis-wake-boat-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_dcjKHV": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_ATX_22.jpg",
+            "title": "2022 ATX 22",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_aVnDzJ": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2003-2008_Supra_24SSV.jpg",
+            "title": "2003-2008 Supra 24SSV",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
@@ -484,11 +516,11 @@
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
-        "boat_gallery_ingDPt": {
+        "boat_gallery_DPnLwQ": {
           "type": "boat-gallery",
           "settings": {
-            "image": "shopify://shop_images/2017_Nautique_G25.jpg",
-            "title": "2017 nautique G25",
+            "image": "shopify://shop_images/2018_Mastercraft_X46_f41bc5ee-8818-48db-87b3-de8e53b4b5ff.jpg",
+            "title": "2018 Mastercraft X46",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
@@ -591,8 +623,8 @@
         "boat_gallery_fydtdA": {
           "type": "boat-gallery",
           "settings": {
-            "image": "shopify://shop_images/2018-2022_Crownline.jpg",
-            "title": "2022 Cobalt",
+            "image": "shopify://shop_images/2007_Mastercraft_x45_f42333e5-ec66-4226-9bd0-df009902336c.jpg",
+            "title": "2007 Mastercraft X45",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
@@ -633,7 +665,7 @@
           "settings": {
             "image": "shopify://shop_images/Axopar_25.jpg",
             "title": "Axopar 25",
-            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+            "link": "shopify://products/center-console-t-top-shade-extension"
           }
         },
         "boat_gallery_8ceKdW": {
@@ -750,8 +782,12 @@
         }
       },
       "block_order": [
-        "boat_gallery_aVnDzJ",
+        "boat_gallery_rFgTwW",
         "boat_gallery_tVmhJT",
+        "boat_gallery_ingDPt",
+        "boat_gallery_zwiawD",
+        "boat_gallery_dcjKHV",
+        "boat_gallery_aVnDzJ",
         "boat_gallery_c7WiwC",
         "boat_gallery_HyYRBp",
         "boat_gallery_WxjDxc",
@@ -764,7 +800,7 @@
         "boat_gallery_izfq8G",
         "boat_gallery_GE7Pzn",
         "boat_gallery_nfiGqt",
-        "boat_gallery_ingDPt",
+        "boat_gallery_DPnLwQ",
         "boat_gallery_7YmXxr",
         "boat_gallery_jzVTRi",
         "boat_gallery_Q76mUH",
@@ -806,6 +842,14 @@
     "boat_gallery_section_HEBRB4": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_jtpagi": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2008_Centurion_Avalanche.jpg",
+            "title": "2008 Centurion Avalanche",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_QX6Wr6": {
           "type": "boat-gallery",
           "settings": {
@@ -1088,6 +1132,7 @@
         }
       },
       "block_order": [
+        "boat_gallery_jtpagi",
         "boat_gallery_QX6Wr6",
         "boat_gallery_djrW9F",
         "boat_gallery_aY7YMC",
