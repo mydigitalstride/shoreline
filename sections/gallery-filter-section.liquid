@@ -84,21 +84,12 @@
     return '';
   }
 
-  // Returns the max columns for the current viewport, matching the grid CSS breakpoints
-  function maxGridCols() {
-    var w = window.innerWidth;
-    if (w <= 989) return 2;
-    if (w <= 1200) return 3;
-    return 4;
-  }
-
-  // After show/hide changes, update each grid's column count so rows stay full
+  // After show/hide changes, hide sections that have no visible cards
   function rebalanceGrids(isFiltered) {
     document.querySelectorAll('.boat-gallery-grid').forEach(function (grid) {
       var section = grid.closest('.boat-gallery-section');
 
       if (!isFiltered) {
-        grid.style.gridTemplateColumns = '';
         if (section) section.style.display = '';
         return;
       }
@@ -110,8 +101,7 @@
         if (section) section.style.display = 'none';
       } else {
         if (section) section.style.display = '';
-        var cols = Math.min(visible, maxGridCols());
-        grid.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+        // Leave gridTemplateColumns alone — CSS keeps cards at the 4-column size always
       }
     });
   }
