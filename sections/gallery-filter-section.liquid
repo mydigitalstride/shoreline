@@ -23,8 +23,10 @@
 (function () {
   // Canonical make names mapped to accepted aliases (handles title typos/variations)
   var MAKE_ALIASES = {
+    'ATX':         ['ATX'],
     'Axopar':      ['Axopar'],
     'Axis':        ['Axis'],
+    'Barletta':    ['Barletta'],
     'Centurion':   ['Centurion'],
     'Chaparral':   ['Chaparral'],
     'Cobalt':      ['Cobalt'],
@@ -220,6 +222,8 @@
   display: flex;
   gap: 0.75rem;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-search-btn,
@@ -234,6 +238,9 @@
   font-family: "League Spartan", sans-serif;
   font-size: 1rem;
   white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 .gallery-search-btn {
