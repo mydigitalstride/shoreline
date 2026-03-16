@@ -372,6 +372,22 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_e6X9yM": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8379.png",
+            "title": "Mastercraft X46",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_pJiPEx": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8381.jpg",
+            "title": "Supreme S240",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
         "boat_gallery_dzWU9b": {
           "type": "boat-gallery",
           "settings": {
@@ -628,6 +644,14 @@
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
+        "boat_gallery_8mqf77": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2008Mastercraftx35.png",
+            "title": "2008 Mastercraft X35",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_fydtdA": {
           "type": "boat-gallery",
           "settings": {
@@ -787,9 +811,19 @@
             "title": "Centurion RI245",
             "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
           }
+        },
+        "boat_gallery_FdaKpT": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8318.jpg",
+            "title": "Super Air Nautique 220",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
         }
       },
       "block_order": [
+        "boat_gallery_e6X9yM",
+        "boat_gallery_pJiPEx",
         "boat_gallery_dzWU9b",
         "boat_gallery_rFgTwW",
         "boat_gallery_tVmhJT",
@@ -822,6 +856,7 @@
         "boat_gallery_QiTNjD",
         "boat_gallery_Ed4iGa",
         "boat_gallery_3V4Rhi",
+        "boat_gallery_8mqf77",
         "boat_gallery_fydtdA",
         "boat_gallery_Eti8bE",
         "boat_gallery_h3T9eL",
@@ -841,7 +876,8 @@
         "boat_gallery_WFpf4T",
         "boat_gallery_TA6YiG",
         "boat_gallery_mj7t4t",
-        "boat_gallery_yC96CR"
+        "boat_gallery_yC96CR",
+        "boat_gallery_FdaKpT"
       ],
       "name": "Boat Gallery",
       "settings": {
