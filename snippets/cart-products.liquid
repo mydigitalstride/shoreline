@@ -209,19 +209,38 @@
                     {% endif %}
                   {%- endif -%}
 
+                  {%- assign is_distributor = false -%}
+                  {%- if customer and customer.tags contains 'distributor' -%}
+                    {%- assign is_distributor = true -%}
+                  {%- endif -%}
+
                   {% if item.line_level_discount_allocations.size > 0 %}
                     <ul
                       class="list-unstyled"
                       role="list"
                     >
                       {%- for discount in item.line_level_discount_allocations -%}
-                        <li>{{ discount.discount_application.title | escape }}</li>
+                        {%- assign discount_title_lower = discount.discount_application.title | downcase -%}
+                        {%- unless is_distributor and discount_title_lower contains 'tier' -%}
+                          <li>{{ discount.discount_application.title | escape }}</li>
+                        {%- endunless -%}
                       {%- endfor -%}
                     </ul>
                   {% endif %}
 
+                  {%- assign cart_dist_price = item.variant.metafields.custom.distributor_price.value -%}
                   <div>
-                    {% if item.original_price != item.final_price %}
+                    {%- if is_distributor and cart_dist_price != blank -%}
+                      {%- if item.variant.compare_at_price > cart_dist_price -%}
+                        <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
+                        <span>{{ cart_dist_price | money }}</span>
+                        <span class="visually-hidden">{{ 'content.price_regular' | t }}</span>
+                        <s class="compare-at-price">{{ item.variant.compare_at_price | money }}</s>
+                      {%- else -%}
+                        <span class="visually-hidden">{{ 'content.price' | t }}</span>
+                        <span>{{ cart_dist_price | money }}</span>
+                      {%- endif -%}
+                    {%- elsif item.original_price != item.final_price -%}
                       <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
                       <span>{{ item.final_price | money }}</span>
                       <span class="visually-hidden">{{ 'content.price_regular' | t }}</span>
@@ -232,7 +251,7 @@
                           {{ item.original_price | money }}
                         {% endif %}
                       </s>
-                    {% else %}
+                    {%- else -%}
                       {% if item.variant.compare_at_price > item.original_price %}
                         <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
                       {% else %}
@@ -245,7 +264,7 @@
                         <span class="visually-hidden">{{ 'content.price_regular' | t }}</span>
                         <s class="compare-at-price">{{ item.variant.compare_at_price | money }}</s>
                       {% endif %}
-                    {% endif %}
+                    {%- endif -%}
                   </div>
                 </td>
                 <td
@@ -305,7 +324,15 @@
                   headers="productTotal"
                 >
                   {%- liquid
-                    if settings.currency_code_enabled_cart_items
+                    assign cart_dist_price_line = item.variant.metafields.custom.distributor_price.value
+                    if is_distributor and cart_dist_price_line != blank
+                      assign dist_line_total = cart_dist_price_line | times: item.quantity
+                      if settings.currency_code_enabled_cart_items
+                        assign price = dist_line_total | money_with_currency
+                      else
+                        assign price = dist_line_total | money
+                      endif
+                    elsif settings.currency_code_enabled_cart_items
                       assign price = item.final_line_price | money_with_currency
                       assign unit_price = item.unit_price | money_with_currency
                     else

@@ -17,7 +17,11 @@
 
   if customer and customer.tags contains 'distributor'
     assign price = distributor_price
-    assign compare_at_price = selected_variant.price
+    if selected_variant.compare_at_price > selected_variant.price
+      assign compare_at_price = selected_variant.compare_at_price
+    else
+      assign compare_at_price = selected_variant.price
+    endif
   endif
 
   assign show_compare_price = false
