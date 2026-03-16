@@ -10,7 +10,17 @@
 
 {%- if customer and customer.tags contains 'distributor' and cart.item_count > 0 -%}
   {%- liquid
-    assign cart_total_cents = cart.total_price
+    # Calculate cart total using distributor prices so tiers are based on what distributors actually pay
+    assign cart_total_cents = 0
+    for item in cart.items
+      assign item_dist_p = item.variant.metafields.custom.distributor_price.value
+      if item_dist_p != blank
+        assign item_dist_p_line = item_dist_p | times: item.quantity
+      else
+        assign item_dist_p_line = item.original_line_price
+      endif
+      assign cart_total_cents = cart_total_cents | plus: item_dist_p_line
+    endfor
 
     # Tier thresholds in cents
     assign tier1_cents = 250000
@@ -41,7 +51,10 @@
     endif
 
     if current_discount > 0
+      # savings = the tier % off the distributor subtotal
       assign savings_cents = cart_total_cents | times: current_discount | divided_by: 100
+      # Show the discounted total in messaging
+      assign discounted_total_cents = cart_total_cents | minus: savings_cents
     endif
   -%}
 

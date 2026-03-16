@@ -96,6 +96,30 @@
           </thead>
 
           <tbody role="rowgroup">
+            {%- liquid
+              assign is_distributor = false
+              assign dist_tier_discount = 0
+              if customer and customer.tags contains 'distributor'
+                assign is_distributor = true
+                assign dist_cart_total = 0
+                for item in cart.items
+                  assign item_dist_p = item.variant.metafields.custom.distributor_price.value
+                  if item_dist_p != blank
+                    assign item_dist_p_line = item_dist_p | times: item.quantity
+                  else
+                    assign item_dist_p_line = item.original_line_price
+                  endif
+                  assign dist_cart_total = dist_cart_total | plus: item_dist_p_line
+                endfor
+                if dist_cart_total >= 1000000
+                  assign dist_tier_discount = 10
+                elsif dist_cart_total >= 500000
+                  assign dist_tier_discount = 7
+                elsif dist_cart_total >= 250000
+                  assign dist_tier_discount = 5
+                endif
+              endif
+            -%}
             {% for item in cart.items %}
               <tr
                 role="row"
@@ -209,11 +233,6 @@
                     {% endif %}
                   {%- endif -%}
 
-                  {%- assign is_distributor = false -%}
-                  {%- if customer and customer.tags contains 'distributor' -%}
-                    {%- assign is_distributor = true -%}
-                  {%- endif -%}
-
                   {% if item.line_level_discount_allocations.size > 0 %}
                     <ul
                       class="list-unstyled"
@@ -229,16 +248,27 @@
                   {% endif %}
 
                   {%- assign cart_dist_price = item.variant.metafields.custom.distributor_price.value -%}
+                  {%- if is_distributor and cart_dist_price != blank and dist_tier_discount > 0 -%}
+                    {%- assign tier_off = cart_dist_price | times: dist_tier_discount | divided_by: 100 -%}
+                    {%- assign final_dist_price = cart_dist_price | minus: tier_off -%}
+                  {%- elsif is_distributor and cart_dist_price != blank -%}
+                    {%- assign final_dist_price = cart_dist_price -%}
+                  {%- endif -%}
                   <div>
                     {%- if is_distributor and cart_dist_price != blank -%}
-                      {%- if item.variant.compare_at_price > cart_dist_price -%}
+                      {%- if dist_tier_discount > 0 -%}
                         <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
-                        <span>{{ cart_dist_price | money }}</span>
+                        <span>{{ final_dist_price | money }}</span>
+                        <span class="visually-hidden">{{ 'content.price_regular' | t }}</span>
+                        <s class="compare-at-price">{{ cart_dist_price | money }}</s>
+                      {%- elsif item.variant.compare_at_price > cart_dist_price -%}
+                        <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
+                        <span>{{ final_dist_price | money }}</span>
                         <span class="visually-hidden">{{ 'content.price_regular' | t }}</span>
                         <s class="compare-at-price">{{ item.variant.compare_at_price | money }}</s>
                       {%- else -%}
                         <span class="visually-hidden">{{ 'content.price' | t }}</span>
-                        <span>{{ cart_dist_price | money }}</span>
+                        <span>{{ final_dist_price | money }}</span>
                       {%- endif -%}
                     {%- elsif item.original_price != item.final_price -%}
                       <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
@@ -324,9 +354,8 @@
                   headers="productTotal"
                 >
                   {%- liquid
-                    assign cart_dist_price_line = item.variant.metafields.custom.distributor_price.value
-                    if is_distributor and cart_dist_price_line != blank
-                      assign dist_line_total = cart_dist_price_line | times: item.quantity
+                    if is_distributor and final_dist_price != blank
+                      assign dist_line_total = final_dist_price | times: item.quantity
                       if settings.currency_code_enabled_cart_items
                         assign price = dist_line_total | money_with_currency
                       else
