@@ -52,6 +52,10 @@
                 if dist_price != blank
                   assign final_price = dist_price
                   assign is_discounted = true
+                  # Use the true original price as the strikethrough, not the sale price
+                  if current_variant.compare_at_price > current_variant.price
+                    assign regular_price = current_variant.compare_at_price
+                  endif
                 endif
               endif
             %}
