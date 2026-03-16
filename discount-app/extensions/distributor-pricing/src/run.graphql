@@ -1,0 +1,28 @@
+query RunInput {
+  cart {
+    buyerIdentity {
+      customer {
+        tags
+      }
+    }
+    lines {
+      quantity
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          price {
+            amount
+          }
+          # distributor_price metafield stores the per-variant dealer price
+          metafields(
+            identifiers: [{ namespace: "custom", key: "distributor_price" }]
+          ) {
+            key
+            value
+          }
+        }
+      }
+    }
+  }
+}

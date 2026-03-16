@@ -1,0 +1,17 @@
+name = "Distributor Pricing"
+client_id = "492a383b9a79b754adf0554a0fc4e7d4"
+application_url = "https://example.com"
+embedded = false
+
+[access_scopes]
+# read_customers is required to access customer tags in Functions
+scopes = "read_customers,read_products"
+
+[auth]
+redirect_urls = ["https://example.com/auth/callback"]
+
+[webhooks]
+api_version = "2025-01"
+
+[pos]
+embedded = false

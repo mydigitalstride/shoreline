@@ -1,0 +1,11 @@
+api_version = "2025-01"
+
+[[extensions]]
+name = "Distributor Pricing Function"
+handle = "distributor-pricing-function"
+type = "function"
+
+[[extensions.targeting]]
+module = "./src/run.js"
+target = "purchase.product-discount.run"
+input_query = "./src/run.graphql"
