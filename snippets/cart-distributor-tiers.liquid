@@ -1,0 +1,158 @@
+{%- doc -%}
+  Renders distributor volume discount tier progress in the cart.
+  Only visible to logged-in customers with the 'distributor' tag.
+
+  Tiers (applied on top of existing dealer unit pricing):
+    Tier 1 — $2,500 order value → 5% discount
+    Tier 2 — $5,000 order value → 7% discount
+    Tier 3 — $10,000 order value → 10% discount
+{%- enddoc -%}
+
+{%- if customer and customer.tags contains 'distributor' and cart.item_count > 0 -%}
+  {%- liquid
+    assign cart_total_cents = cart.total_price
+
+    # Tier thresholds in cents
+    assign tier1_cents = 250000
+    assign tier2_cents = 500000
+    assign tier3_cents = 1000000
+
+    # Determine which tier the customer has reached
+    assign current_discount = 0
+    assign next_tier_cents = tier1_cents
+    assign next_tier_discount = 5
+
+    if cart_total_cents >= tier3_cents
+      assign current_discount = 10
+      assign next_tier_cents = 0
+      assign next_tier_discount = 0
+    elsif cart_total_cents >= tier2_cents
+      assign current_discount = 7
+      assign next_tier_cents = tier3_cents
+      assign next_tier_discount = 10
+    elsif cart_total_cents >= tier1_cents
+      assign current_discount = 5
+      assign next_tier_cents = tier2_cents
+      assign next_tier_discount = 7
+    endif
+
+    if next_tier_cents > 0
+      assign amount_to_next_cents = next_tier_cents | minus: cart_total_cents
+    endif
+
+    if current_discount > 0
+      assign savings_cents = cart_total_cents | times: current_discount | divided_by: 100
+    endif
+  -%}
+
+  <div class="distributor-tiers">
+    {%- if current_discount > 0 -%}
+      <div class="distributor-tiers__row distributor-tiers__current">
+        <span class="distributor-tiers__icon">
+          {{- 'icon-discount.svg' | inline_asset_content -}}
+        </span>
+        <span class="distributor-tiers__text">
+          <strong>{{ current_discount }}% Dealer Volume Discount</strong> applied — saving you
+          <strong>{{ savings_cents | money }}</strong> on this order
+        </span>
+      </div>
+    {%- endif -%}
+
+    {%- if next_tier_cents > 0 -%}
+      <div class="distributor-tiers__row distributor-tiers__next">
+        <span class="distributor-tiers__icon">
+          {{- 'icon-discount.svg' | inline_asset_content -}}
+        </span>
+        <span class="distributor-tiers__text">
+          Add <strong>{{ amount_to_next_cents | money }}</strong> more to unlock a
+          <strong>{{ next_tier_discount }}% Dealer Volume Discount</strong> on your entire order
+        </span>
+      </div>
+    {%- else -%}
+      <div class="distributor-tiers__row distributor-tiers__max">
+        <span class="distributor-tiers__icon">
+          {{- 'icon-discount.svg' | inline_asset_content -}}
+        </span>
+        <span class="distributor-tiers__text">
+          You've unlocked the maximum <strong>10% Dealer Volume Discount</strong> — great order!
+        </span>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .distributor-tiers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+    font-size: var(--cart-font-size--sm);
+  }
+
+  .distributor-tiers__row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap-xs);
+    padding: var(--padding-xs) var(--padding-sm);
+    border-radius: var(--style-border-radius-inputs);
+  }
+
+  .distributor-tiers__icon {
+    flex-shrink: 0;
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+    margin-block-start: 0.1em;
+  }
+
+  .distributor-tiers__icon .svg-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .distributor-tiers__text {
+    line-height: 1.4;
+  }
+
+  /* Current tier — success accent */
+  .distributor-tiers__current {
+    background-color: rgb(231 108 60 / 0.08);
+    border: 1px solid rgb(231 108 60 / 0.25);
+    color: var(--color-foreground);
+  }
+
+  .distributor-tiers__current .distributor-tiers__icon svg {
+    color: #e76c3c;
+    fill: #e76c3c;
+  }
+
+  .distributor-tiers__current strong {
+    color: #e76c3c;
+  }
+
+  /* Next tier — motivational / subdued */
+  .distributor-tiers__next {
+    background-color: rgb(var(--color-foreground-rgb) / 0.04);
+    border: 1px solid var(--color-border);
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-70));
+  }
+
+  .distributor-tiers__next strong {
+    color: var(--color-foreground);
+  }
+
+  /* Max tier — celebratory */
+  .distributor-tiers__max {
+    background-color: rgb(231 108 60 / 0.08);
+    border: 1px solid rgb(231 108 60 / 0.25);
+    color: var(--color-foreground);
+  }
+
+  .distributor-tiers__max .distributor-tiers__icon svg {
+    color: #e76c3c;
+    fill: #e76c3c;
+  }
+
+  .distributor-tiers__max strong {
+    color: #e76c3c;
+  }
+{% endstylesheet %}
