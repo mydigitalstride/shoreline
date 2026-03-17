@@ -6,7 +6,7 @@ handle = "distributor-pricing-function"
 type = "function"
 
 [extensions.build]
-command = "node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && npm exec -- javy compile src/run.js -o dist/index.wasm"
+command = "npm exec -- javy compile -d src/run.js -o dist/index.wasm"
 
 [[extensions.targeting]]
 module = "./src/run.js"
