@@ -62,13 +62,14 @@ export function run(input) {
     if (distPrice === null) continue; // no distributor price set, skip
 
     const regularPrice = parseFloat(line.cost.amountPerQuantity.amount);
-    if (distPrice >= regularPrice) continue; // metafield isn't cheaper, skip
 
-    // Final price = distributor price with tier % off on top
+    // Final price = distributor base price with volume tier applied on top.
+    // NOTE: we check finalPrice (not distPrice) against regularPrice so the
+    // tier discount still fires when distributor_price equals the retail price.
     const tierOff = distPrice * (tierPct / 100);
     const finalPrice = distPrice - tierOff;
 
-    if (finalPrice >= regularPrice) continue;
+    if (finalPrice >= regularPrice) continue; // final price not cheaper than retail, skip
 
     // Express as % off the regular Shopify price
     const discountPct = ((regularPrice - finalPrice) / regularPrice) * 100;
