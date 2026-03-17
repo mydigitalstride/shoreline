@@ -2,23 +2,21 @@ query RunInput {
   cart {
     buyerIdentity {
       customer {
-        tags
+        hasAnyTag(tags: ["distributor"])
       }
     }
     lines {
       quantity
+      cost {
+        amountPerQuantity {
+          amount
+        }
+      }
       merchandise {
         __typename
         ... on ProductVariant {
           id
-          price {
-            amount
-          }
-          # distributor_price metafield stores the per-variant dealer price
-          metafields(
-            identifiers: [{ namespace: "custom", key: "distributor_price" }]
-          ) {
-            key
+          metafield(namespace: "custom", key: "distributor_price") {
             value
           }
         }
