@@ -8,6 +8,7 @@
     "dev": "shopify app dev"
   },
   "devDependencies": {
-    "@shopify/cli": "^3.0.0"
+    "@shopify/cli": "^3.0.0",
+    "javy-cli": "^3.0.0"
   }
 }
