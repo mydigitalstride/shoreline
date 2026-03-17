@@ -20,13 +20,8 @@ async function shopifyGQL(shop, token, query, variables = {}) {
   return res.json();
 }
 
-/**
- * Ensures the Distributor Pricing automatic discount exists for this shop.
- * Returns an object: { status, discountId?, functionId?, error? }
- */
 async function ensureDiscount(shop, token) {
-  // 1. Find our product-discount function (match by apiType, not just title,
-  //    in case the partner dashboard name differs slightly from the toml name)
+  // 1. Find our product-discount function — try every possible field/format
   const fnResult = await shopifyGQL(
     shop,
     token,
@@ -34,24 +29,33 @@ async function ensureDiscount(shop, token) {
   );
 
   const allFunctions = fnResult?.data?.shopifyFunctions?.nodes ?? [];
+  const gqlErrors = fnResult?.errors;
 
-  // Match by title OR by apiType=product_discounts (our app only has one)
+  if (gqlErrors) {
+    return {
+      status: "error",
+      step: "shopifyFunctions",
+      error: JSON.stringify(gqlErrors),
+      allFunctions: [],
+    };
+  }
+
+  // Match by title, or fall back to any product-discounts-type function
   const fn =
     allFunctions.find((f) => f.title === "Distributor Pricing Function") ||
     allFunctions.find((f) =>
-      ["product_discounts", "PRODUCT_DISCOUNTS"].includes(f.apiType)
+      /product.?discount/i.test(f.apiType || "")
     );
 
   if (!fn) {
     return {
       status: "function_not_found",
-      error: `No product_discounts function found. All functions: ${JSON.stringify(
-        allFunctions.map((f) => ({ title: f.title, apiType: f.apiType }))
-      )}`,
+      error: `No product-discount function found.`,
+      allFunctions: allFunctions.map((f) => ({ title: f.title, apiType: f.apiType })),
     };
   }
 
-  // 2. Check whether the automatic discount already exists
+  // 2. Check for existing discount with same title
   const existingResult = await shopifyGQL(
     shop,
     token,
@@ -71,7 +75,6 @@ async function ensureDiscount(shop, token) {
   const duplicate = existing.find(
     (n) => n.automaticDiscount?.title === DISCOUNT_TITLE
   );
-
   if (duplicate) {
     return {
       status: "already_exists",
@@ -80,14 +83,14 @@ async function ensureDiscount(shop, token) {
     };
   }
 
-  // 3. Create the automatic discount linked to the function
+  // 3. Create the automatic discount
   const result = await shopifyGQL(
     shop,
     token,
     `mutation CreateDistributorDiscount($input: DiscountAutomaticAppInput!) {
       discountAutomaticAppCreate(automaticAppDiscount: $input) {
         automaticAppDiscount { discountId title }
-        userErrors { field message }
+        userErrors { field message code }
       }
     }`,
     {
@@ -99,12 +102,23 @@ async function ensureDiscount(shop, token) {
     }
   );
 
+  const createErrors = result?.errors;
   const userErrors =
     result?.data?.discountAutomaticAppCreate?.userErrors ?? [];
+
+  if (createErrors) {
+    return {
+      status: "error",
+      step: "discountAutomaticAppCreate",
+      error: JSON.stringify(createErrors),
+      functionId: fn.id,
+    };
+  }
   if (userErrors.length) {
     return {
       status: "error",
-      error: userErrors.map((e) => `${e.field}: ${e.message}`).join("; "),
+      step: "discountAutomaticAppCreate",
+      userErrors,
       functionId: fn.id,
     };
   }
@@ -125,7 +139,6 @@ module.exports = async function handler(req, res) {
     return res.status(400).send("Missing required parameters.");
   }
 
-  // Verify HMAC
   const message = Object.keys(params)
     .sort()
     .map((k) => `${k}=${params[k]}`)
@@ -140,7 +153,6 @@ module.exports = async function handler(req, res) {
   );
   if (!valid) return res.status(403).send("Invalid HMAC.");
 
-  // Exchange code for access token
   const tokenRes = await fetch(`https://${shop}/admin/oauth/access_token`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -151,32 +163,45 @@ module.exports = async function handler(req, res) {
     return res.status(500).send("Failed to exchange token.");
   }
 
-  const { access_token } = await tokenRes.json();
+  const tokenData = await tokenRes.json();
+  const { access_token, scope: grantedScope } = tokenData;
 
-  // Store token in a short-lived httpOnly cookie so /api/setup can use it
+  // Store token in httpOnly cookie (1 hour) so /setup can reuse it
   res.setHeader(
     "Set-Cookie",
-    `dist_token=${encodeURIComponent(
-      access_token
-    )}; Path=/; HttpOnly; SameSite=Lax; Max-Age=3600`
+    `dist_token=${encodeURIComponent(access_token)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=3600`
   );
 
-  // Try to create the Automatic Discount
-  let setupStatus = "unknown";
-  let setupDetail = "";
+  const qs = new URLSearchParams({ shop });
+
+  // Check that write_discounts was actually granted
+  const hasWriteDiscounts =
+    typeof grantedScope === "string" &&
+    grantedScope.split(",").includes("write_discounts");
+
+  if (!hasWriteDiscounts) {
+    // Scope was not granted — merchant needs to re-approve or Partner Dashboard
+    // needs to be updated. Redirect with a clear status so the dashboard shows
+    // specific instructions.
+    qs.set("setup", "missing_scope");
+    qs.set("granted_scope", grantedScope || "unknown");
+    return res.redirect(`${process.env.APP_URL}/dashboard?${qs.toString()}`);
+  }
+
+  // Scope is granted — try to create the discount automatically
+  let result = { status: "unknown" };
   try {
-    const result = await ensureDiscount(shop, access_token);
-    setupStatus = result.status;
-    setupDetail = result.error || "";
-    console.log(`[setup] shop=${shop} status=${result.status}`, result);
+    result = await ensureDiscount(shop, access_token);
+    console.log(`[setup] shop=${shop}`, JSON.stringify(result));
   } catch (err) {
-    setupStatus = "exception";
-    setupDetail = String(err);
+    result = { status: "exception", error: String(err) };
     console.error("[setup] exception:", err);
   }
 
-  // Redirect to dashboard with setup result so user can see what happened
-  const qs = new URLSearchParams({ shop, setup: setupStatus });
-  if (setupDetail) qs.set("detail", setupDetail.slice(0, 200));
+  qs.set("setup", result.status);
+  if (result.error) qs.set("detail", String(result.error).slice(0, 300));
+  if (result.allFunctions)
+    qs.set("fns", JSON.stringify(result.allFunctions).slice(0, 300));
+
   res.redirect(`${process.env.APP_URL}/dashboard?${qs.toString()}`);
 };
