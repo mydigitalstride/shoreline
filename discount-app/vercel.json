@@ -1,6 +1,6 @@
 {
   "buildCommand": "",
-  "outputDirectory": ".",
+  "outputDirectory": "public",
   "rewrites": [
     { "source": "/auth/callback", "destination": "/api/auth/callback" },
     { "source": "/", "destination": "/api/app" }
