@@ -4,16 +4,17 @@ const API_KEY = process.env.SHOPIFY_API_KEY;
 const API_SECRET = process.env.SHOPIFY_API_SECRET;
 
 module.exports = async function handler(req, res) {
-  const { shop, code, hmac, ...rest } = req.query;
+  const { hmac, ...params } = req.query;
+  const { shop, code } = params;
 
   if (!shop || !code || !hmac) {
     return res.status(400).send("Missing required parameters.");
   }
 
-  // Verify HMAC
-  const message = Object.keys(rest)
+  // Verify HMAC — message must include ALL params except hmac itself
+  const message = Object.keys(params)
     .sort()
-    .map((k) => `${k}=${rest[k]}`)
+    .map((k) => `${k}=${params[k]}`)
     .join("&");
   const digest = crypto
     .createHmac("sha256", API_SECRET)
