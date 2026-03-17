@@ -1,7 +1,62 @@
 module.exports = function handler(req, res) {
-  const { shop } = req.query;
+  const { shop, setup, detail } = req.query;
 
   const shopDisplay = shop || "your store";
+
+  // Determine setup banner config from ?setup= param
+  let setupBanner = "";
+  if (setup === "created") {
+    setupBanner = `<div class="banner banner-success">
+      &#10003; <strong>Discount created.</strong>
+      "Distributor Pricing" now appears in
+      <a href="https://${shop}/admin/discounts" target="_blank">Shopify Admin → Discounts</a>
+      and is active for all distributor customers.
+    </div>`;
+  } else if (setup === "already_exists") {
+    setupBanner = `<div class="banner banner-success">
+      &#10003; <strong>Discount already active.</strong>
+      "Distributor Pricing" is connected and running.
+    </div>`;
+  } else if (setup === "function_not_found") {
+    setupBanner = `<div class="banner banner-warn">
+      &#9888; <strong>Function not found.</strong>
+      The Shopify Function extension may not be deployed yet.
+      Make sure the app extension is pushed via <code>shopify app deploy</code>,
+      then use the button below to retry.
+      ${detail ? `<pre class="detail">${escHtml(detail)}</pre>` : ""}
+    </div>`;
+  } else if (setup === "error" || setup === "exception") {
+    setupBanner = `<div class="banner banner-error">
+      &#10007; <strong>Setup failed.</strong>
+      ${detail ? `<pre class="detail">${escHtml(detail)}</pre>` : ""}
+      Check that <code>write_discounts</code> scope is approved in the
+      <a href="https://partners.shopify.com" target="_blank">Partner Dashboard</a>,
+      then retry below.
+    </div>`;
+  } else {
+    // No setup param — prompt user to connect
+    setupBanner = `<div class="banner banner-warn">
+      &#9888; <strong>Discount function not yet connected.</strong>
+      Click <em>Connect Discount Function</em> below to create the Automatic Discount
+      in Shopify. This only needs to be done once.
+    </div>`;
+  }
+
+  const setupCard =
+    setup !== "created" && setup !== "already_exists"
+      ? `<div class="card" id="setup-card">
+          <h2>Connect Discount Function</h2>
+          <p style="font-size:.9rem;color:#6d7175;margin-bottom:1rem;">
+            Creates the "Distributor Pricing" Automatic Discount in Shopify Admin
+            and links it to the deployed Shopify Function. Run this once after
+            installation (or after re-deploying the function extension).
+          </p>
+          <button class="setup-btn" id="setupBtn" onclick="runSetup()">
+            Connect Discount Function
+          </button>
+          <div id="setupResult" style="margin-top:1rem;font-size:.85rem;"></div>
+        </div>`
+      : "";
 
   res.setHeader("Content-Type", "text/html");
   res.status(200).send(`<!DOCTYPE html>
@@ -21,16 +76,13 @@ module.exports = function handler(req, res) {
       padding: 2rem 1rem;
     }
 
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-    }
+    .container { max-width: 760px; margin: 0 auto; }
 
     .header {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     .badge {
@@ -45,16 +97,8 @@ module.exports = function handler(req, res) {
       border-radius: 999px;
     }
 
-    h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-
-    .subtitle {
-      color: #6d7175;
-      font-size: 0.95rem;
-      margin-top: 0.2rem;
-    }
+    h1 { font-size: 1.6rem; font-weight: 700; }
+    .subtitle { color: #6d7175; font-size: 0.95rem; margin-top: 0.2rem; }
 
     .card {
       background: #fff;
@@ -72,12 +116,29 @@ module.exports = function handler(req, res) {
       border-bottom: 1px solid #f1f2f3;
     }
 
-    .tier-table {
-      width: 100%;
-      border-collapse: collapse;
+    .banner {
+      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1.25rem;
       font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .banner a { color: inherit; }
+    .banner-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+    .banner-warn    { background: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+    .banner-error   { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+    .detail {
+      font-size: 0.78rem;
+      background: rgba(0,0,0,0.06);
+      padding: 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      white-space: pre-wrap;
+      word-break: break-all;
     }
 
+    .tier-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
     .tier-table th {
       text-align: left;
       padding: 0.5rem 0.75rem;
@@ -89,31 +150,15 @@ module.exports = function handler(req, res) {
       letter-spacing: 0.04em;
       border-bottom: 1px solid #e1e3e5;
     }
-
-    .tier-table td {
-      padding: 0.65rem 0.75rem;
-      border-bottom: 1px solid #f1f2f3;
-    }
-
+    .tier-table td { padding: 0.65rem 0.75rem; border-bottom: 1px solid #f1f2f3; }
     .tier-table tr:last-child td { border-bottom: none; }
 
-    .pill {
-      display: inline-block;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
+    .pill { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
     .pill-blue  { background: #dbeafe; color: #1e40af; }
     .pill-green { background: #d1fae5; color: #065f46; }
     .pill-gold  { background: #fef3c7; color: #92400e; }
 
-    .step-list {
-      list-style: none;
-      counter-reset: steps;
-    }
-
+    .step-list { list-style: none; counter-reset: steps; }
     .step-list li {
       counter-increment: steps;
       display: flex;
@@ -122,12 +167,10 @@ module.exports = function handler(req, res) {
       font-size: 0.9rem;
       line-height: 1.5;
     }
-
     .step-list li::before {
       content: counter(steps);
       flex-shrink: 0;
-      width: 1.6rem;
-      height: 1.6rem;
+      width: 1.6rem; height: 1.6rem;
       border-radius: 50%;
       background: #5c6ac4;
       color: #fff;
@@ -155,17 +198,24 @@ module.exports = function handler(req, res) {
       border-bottom: 1px solid #f1f2f3;
       font-size: 0.9rem;
     }
-
     .info-row:last-child { border-bottom: none; }
     .info-label { color: #6d7175; }
     .info-value { font-weight: 500; }
 
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #9ca3af;
-      margin-top: 2rem;
+    .setup-btn {
+      background: #5c6ac4;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
     }
+    .setup-btn:hover { background: #4959bd; }
+    .setup-btn:disabled { opacity: 0.6; cursor: default; }
+
+    footer { text-align: center; font-size: 0.8rem; color: #9ca3af; margin-top: 2rem; }
   </style>
 </head>
 <body>
@@ -177,6 +227,9 @@ module.exports = function handler(req, res) {
       </div>
       <span class="badge">&#10003; Installed</span>
     </div>
+
+    ${setupBanner}
+    ${setupCard}
 
     <!-- Status -->
     <div class="card">
@@ -246,21 +299,69 @@ module.exports = function handler(req, res) {
         <li>
           On each product variant, add a metafield:<br />
           Namespace &amp; key: <code>custom.distributor_price</code> &nbsp;|&nbsp; Type: <strong>Money</strong><br />
-          Set the wholesale price (e.g. <code>650.00</code>).
+          Set the wholesale base price (e.g. <code>650.00</code>).
         </li>
         <li>
-          Ensure the Shopify discount using this function is <strong>active</strong> in
-          <em>Discounts → Automatic discounts</em>.
+          Confirm "Distributor Pricing" appears in
+          <a href="https://${shop}/admin/discounts" target="_blank">Admin → Discounts → Automatic discounts</a>.
+          If not, use the <em>Connect Discount Function</em> button above.
         </li>
         <li>
-          Test by logging in as a distributor customer and adding products to the cart —
-          the discount label will appear as <em>"Distributor Pricing"</em> or
-          <em>"Distributor Pricing + X% Volume Discount"</em>.
+          Test by logging in as a distributor customer and adding products to the
+          cart — the discount label <em>"Distributor Pricing"</em> or
+          <em>"Distributor Pricing + X% Volume Discount"</em> will appear.
         </li>
       </ol>
     </div>
   </div>
+
   <footer>Shoreline Brands Co &mdash; Distributor Pricing App</footer>
+
+  <script>
+    async function runSetup() {
+      const btn = document.getElementById('setupBtn');
+      const result = document.getElementById('setupResult');
+      btn.disabled = true;
+      btn.textContent = 'Connecting…';
+      result.textContent = '';
+
+      try {
+        const shop = ${JSON.stringify(shop || "")};
+        const res = await fetch('/setup?shop=' + encodeURIComponent(shop), { method: 'POST' });
+        const data = await res.json();
+
+        if (data.status === 'created') {
+          result.innerHTML = '<span style="color:#155724">&#10003; Discount created! Reload to update this page.</span>';
+          setTimeout(() => location.reload(), 1500);
+        } else if (data.status === 'already_exists') {
+          result.innerHTML = '<span style="color:#155724">&#10003; Discount already exists and is active.</span>';
+          setTimeout(() => location.reload(), 1500);
+        } else if (data.status === 'function_not_found') {
+          result.innerHTML = '<span style="color:#856404">&#9888; Function not found. Make sure the extension is deployed.<br><pre style="font-size:.78rem;white-space:pre-wrap;margin-top:.5rem">' + JSON.stringify(data, null, 2) + '</pre></span>';
+          btn.disabled = false;
+          btn.textContent = 'Retry';
+        } else if (res.status === 401) {
+          result.innerHTML = '<span style="color:#721c24">&#10007; Session expired. <a href="/?shop=' + encodeURIComponent(shop) + '">Re-open the app</a> from Shopify admin to refresh your session, then try again.</span>';
+        } else {
+          result.innerHTML = '<span style="color:#721c24">&#10007; Error: <pre style="font-size:.78rem;white-space:pre-wrap;margin-top:.5rem">' + JSON.stringify(data, null, 2) + '</pre></span>';
+          btn.disabled = false;
+          btn.textContent = 'Retry';
+        }
+      } catch (err) {
+        result.innerHTML = '<span style="color:#721c24">&#10007; Network error: ' + err + '</span>';
+        btn.disabled = false;
+        btn.textContent = 'Retry';
+      }
+    }
+  </script>
 </body>
 </html>`);
 };
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
