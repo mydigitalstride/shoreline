@@ -1,6 +1,6 @@
 name = "Distributor Pricing"
 client_id = "492a383b9a79b754adf0554a0fc4e7d4"
-application_url = "https://shoreline-distributor-pricing.vercel.app"
+application_url = "https://shoreline-ochre.vercel.app"
 embedded = false
 
 [access_scopes]
@@ -8,7 +8,7 @@ embedded = false
 scopes = "read_customers,read_products"
 
 [auth]
-redirect_urls = ["https://shoreline-distributor-pricing.vercel.app/auth/callback"]
+redirect_urls = ["https://shoreline-ochre.vercel.app/auth/callback"]
 
 [webhooks]
 api_version = "2025-10"
