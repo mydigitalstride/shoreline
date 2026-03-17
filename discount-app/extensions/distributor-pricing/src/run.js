@@ -23,11 +23,7 @@ export function run(input) {
   // Only apply to logged-in distributor customers
   const customer = input.cart.buyerIdentity?.customer;
   if (!customer) return EMPTY;
-
-  const isDistributor = customer.tags.some(
-    (tag) => tag.toLowerCase() === "distributor"
-  );
-  if (!isDistributor) return EMPTY;
+  if (!customer.hasAnyTag) return EMPTY;
 
   const lines = input.cart.lines;
 
@@ -38,8 +34,8 @@ export function run(input) {
   for (const line of lines) {
     if (line.merchandise.__typename !== "ProductVariant") continue;
 
-    const distPrice = parseDistributorPrice(line.merchandise.metafields);
-    const regularPrice = parseFloat(line.merchandise.price.amount);
+    const distPrice = parseDistributorPrice(line.merchandise.metafield);
+    const regularPrice = parseFloat(line.cost.amountPerQuantity.amount);
 
     // Fall back to regular price if no metafield is set on this variant
     const linePrice = distPrice !== null ? distPrice : regularPrice;
@@ -57,17 +53,15 @@ export function run(input) {
   }
 
   // ─── Step 3: Build one discount per line item ─────────────────────────────
-  // Shopify Functions require a single percentage value per discount object,
-  // so we create a separate discount for each variant that has its own rate.
   const discounts = [];
 
   for (const line of lines) {
     if (line.merchandise.__typename !== "ProductVariant") continue;
 
-    const distPrice = parseDistributorPrice(line.merchandise.metafields);
+    const distPrice = parseDistributorPrice(line.merchandise.metafield);
     if (distPrice === null) continue; // no distributor price set, skip
 
-    const regularPrice = parseFloat(line.merchandise.price.amount);
+    const regularPrice = parseFloat(line.cost.amountPerQuantity.amount);
     if (distPrice >= regularPrice) continue; // metafield isn't cheaper, skip
 
     // Final price = distributor price with tier % off on top
@@ -119,16 +113,15 @@ export function run(input) {
  *
  * Falls back to plain numeric strings just in case.
  *
- * @param {Array<{key: string, value: string} | null>} metafields
+ * @param {{value: string} | null} metafield
  * @returns {number | null} price in dollars, or null if not found
  */
-function parseDistributorPrice(metafields) {
-  const field = metafields?.find((m) => m?.key === "distributor_price");
-  if (!field?.value) return null;
+function parseDistributorPrice(metafield) {
+  if (!metafield?.value) return null;
 
   // Try JSON money object first: {"amount":"650.00","currency_code":"USD"}
   try {
-    const parsed = JSON.parse(field.value);
+    const parsed = JSON.parse(metafield.value);
     if (parsed?.amount != null) {
       return parseFloat(parsed.amount);
     }
@@ -137,6 +130,6 @@ function parseDistributorPrice(metafields) {
   }
 
   // Plain decimal string (e.g. "650.00")
-  const num = parseFloat(field.value);
+  const num = parseFloat(metafield.value);
   return isNaN(num) ? null : num;
 }
