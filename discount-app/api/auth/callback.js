@@ -41,6 +41,6 @@ module.exports = async function handler(req, res) {
     return res.status(500).send("Failed to exchange token.");
   }
 
-  // Installation complete — redirect merchant to Shopify admin
-  res.redirect(`https://${shop}/admin`);
+  // Installation complete — redirect merchant to the app dashboard
+  res.redirect(`${process.env.APP_URL}/dashboard?shop=${shop}`);
 };
