@@ -3,6 +3,7 @@
   "rewrites": [
     { "source": "/auth/callback", "destination": "/api/auth/callback" },
     { "source": "/dashboard", "destination": "/api/dashboard" },
+    { "source": "/setup", "destination": "/api/setup" },
     { "source": "/", "destination": "/api/app" }
   ]
 }

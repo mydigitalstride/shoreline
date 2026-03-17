@@ -1,5 +1,5 @@
 const API_KEY = process.env.SHOPIFY_API_KEY;
-const SCOPES = "read_customers,read_products";
+const SCOPES = "read_customers,read_products,write_discounts";
 const REDIRECT_URI = `${process.env.APP_URL}/auth/callback`;
 
 module.exports = function handler(req, res) {
