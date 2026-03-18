@@ -57,10 +57,10 @@
         "padding-block-end": 80
       }
     },
-    "hero_Dngph7": {
+    "hero_DxyHyQ": {
       "type": "hero",
       "blocks": {
-        "group_P6QMqA": {
+        "group_Awhcjh": {
           "type": "group",
           "name": "t:names.group",
           "settings": {
@@ -128,43 +128,10 @@
             "menu_QaDqLt"
           ]
         },
-        "logo_V9RAa3": {
-          "type": "logo",
-          "name": "t:names.logo",
-          "settings": {
-            "inverse": false,
-            "font": "heading",
-            "unit": "percent",
-            "percent_width": 100,
-            "pixel_height": 48,
-            "custom_mobile_size": false,
-            "unit_mobile": "percent",
-            "percent_width_mobile": 100,
-            "pixel_height_mobile": 120,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "icon_cK6Dnj": {
-          "type": "icon",
-          "name": "t:names.icon",
-          "disabled": true,
-          "settings": {
-            "icon": "price_tag",
-            "image_upload": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png",
-            "width": 24,
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "text_N7TFrP": {
+        "text_zNiqhh": {
           "type": "text",
           "settings": {
-            "text": "<h1>Privacy Policy</h1>",
+            "text": "<h1>Store Locator</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -186,81 +153,44 @@
           },
           "blocks": {}
         },
-        "group_PmGkjE": {
-          "type": "group",
-          "name": "t:names.group",
+        "text_dBVMgj": {
+          "type": "text",
           "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
+            "text": "<p>Find the Shoreline Brands local retailer near you!</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 32,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_id": ""
+            "padding-inline-end": 0
           },
-          "blocks": {
-            "button_ePYWBN": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "button_ePYWBN"
-          ]
+          "blocks": {}
         }
       },
       "block_order": [
-        "group_P6QMqA",
-        "logo_V9RAa3",
-        "icon_cK6Dnj",
-        "text_N7TFrP",
-        "group_PmGkjE"
+        "group_Awhcjh",
+        "text_zNiqhh",
+        "text_dBVMgj"
       ],
       "name": "t:names.hero",
       "settings": {
-        "media_type_1": "video",
-        "image_1": "shopify://shop_images/2025_Centurion_Ri245_Predator_Tower.jpg",
-        "video_1": "shopify://files/videos/121 - SB24_Website_SunShade_1080x1080 (1).mp4",
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/pexels-lio-voo-262755153-13315535.jpg",
+        "video_1": "shopify://files/videos/SB24_Website_SunShade_1080x1080 (1).mp4",
         "media_type_2": "image",
+        "image_2": "shopify://shop_images/pexels-lio-voo-262755153-13315535.jpg",
         "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
@@ -333,7 +263,7 @@
   },
   "order": [
     "main",
-    "hero_Dngph7",
+    "hero_DxyHyQ",
     "section_be9qnT"
   ]
 }
