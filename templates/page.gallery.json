@@ -372,6 +372,22 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_6pJRBy": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Nautiqe_G23_resized.jpg",
+            "title": "2026 Nautique G23",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
+        "boat_gallery_FJcAjp": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8450_resized_20d4ed23-d407-4439-a2b6-77f922ccb1c4.jpg",
+            "title": "2008 Malibu 247 LSV",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_e6X9yM": {
           "type": "boat-gallery",
           "settings": {
@@ -822,6 +838,8 @@
         }
       },
       "block_order": [
+        "boat_gallery_6pJRBy",
+        "boat_gallery_FJcAjp",
         "boat_gallery_e6X9yM",
         "boat_gallery_pJiPEx",
         "boat_gallery_dzWU9b",
