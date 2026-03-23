@@ -265,18 +265,36 @@
           },
           "blocks": {}
         },
-        "custom_liquid_43kpEH": {
-          "type": "custom-liquid",
-          "name": "t:names.custom_liquid",
+        "text_mLcWxL": {
+          "type": "text",
+          "name": "t:names.text",
           "settings": {
-            "custom_liquid": "Find the Shoreline Brands Bimini Extension trusted by boating enthusiasts around the world at these fine retailers.\n<br><br>\nWant to see a retailer near you offer Shoreline Brands? Email us at <a href=\"mailto:info@shorelinebrands.com\">info@shorelinebrands.com</a>"
+            "text": "<p>Find the Shoreline Brands Bimini Extension trusted by boating enthusiasts around the world at these fine retailers.<br/><br/>Want to see a retailer near you offer Shoreline Brands? Email us at <a href=\"mailto:info@shorelinebrands.com\">info@shorelinebrands.com</a></p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
       },
       "block_order": [
         "text_AJ3Lnx",
-        "custom_liquid_43kpEH"
+        "text_mLcWxL"
       ],
       "name": "t:names.custom_section",
       "settings": {
