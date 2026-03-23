@@ -60,6 +60,26 @@
     "hero_DxyHyQ": {
       "type": "hero",
       "blocks": {
+        "logo_qRykLP": {
+          "type": "logo",
+          "name": "t:names.logo",
+          "settings": {
+            "inverse": false,
+            "font": "heading",
+            "unit": "pixel",
+            "percent_width": 100,
+            "pixel_height": 144,
+            "custom_mobile_size": false,
+            "unit_mobile": "percent",
+            "percent_width_mobile": 100,
+            "pixel_height_mobile": 120,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "group_Awhcjh": {
           "type": "group",
           "name": "t:names.group",
@@ -180,6 +200,7 @@
         }
       },
       "block_order": [
+        "logo_qRykLP",
         "group_Awhcjh",
         "text_zNiqhh",
         "text_dBVMgj"
@@ -255,8 +276,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0,
+        "padding-block-start": 48,
+        "padding-block-end": 48,
         "custom_section_id": ""
       }
     }
