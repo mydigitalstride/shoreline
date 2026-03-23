@@ -1,0 +1,562 @@
+[
+  {
+    "key": "group_lp_flexible_content",
+    "title": "Landing Page Sections",
+    "fields": [
+      {
+        "key": "field_lp_sections",
+        "label": "Page Sections",
+        "name": "page_sections",
+        "aria-label": "",
+        "type": "flexible_content",
+        "instructions": "Add, remove, and reorder sections on this page.",
+        "required": 0,
+        "button_label": "Add Section",
+        "min": "",
+        "max": "",
+        "layouts": [
+
+          {
+            "key": "layout_lp_hero",
+            "name": "hero_section",
+            "label": "Hero Section",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_lp_hero_badge",
+                "label": "Badge / Pre-headline Text",
+                "name": "badge_text",
+                "type": "text",
+                "default_value": "Digital Marketing for Home Builders",
+                "placeholder": "e.g. Digital Marketing for Home Builders"
+              },
+              {
+                "key": "field_lp_hero_headline",
+                "label": "Headline",
+                "name": "headline",
+                "type": "textarea",
+                "instructions": "Use line breaks to control how the headline wraps.",
+                "rows": 3,
+                "default_value": "You Build Homes,\nWe'll Build\nthe Pipeline"
+              },
+              {
+                "key": "field_lp_hero_description",
+                "label": "Description",
+                "name": "description",
+                "type": "textarea",
+                "rows": 4,
+                "default_value": "We create the digital engine that keeps leads coming in, especially when referrals slow down. From website design and SEO to paid ads, automated follow-up, and social content, we handle the full picture for custom home builders and residential developers across Central PA. One dedicated team, one strategy, and no gaps in your pipeline."
+              },
+              {
+                "key": "field_lp_hero_cta_text",
+                "label": "CTA Button Text",
+                "name": "cta_text",
+                "type": "text",
+                "default_value": "Get A FREE Audit"
+              },
+              {
+                "key": "field_lp_hero_cta_url",
+                "label": "CTA Button URL",
+                "name": "cta_url",
+                "type": "url",
+                "default_value": "#contact"
+              },
+              {
+                "key": "field_lp_hero_image",
+                "label": "Hero Image",
+                "name": "hero_image",
+                "type": "image",
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all"
+              }
+            ],
+            "min": "",
+            "max": ""
+          },
+
+          {
+            "key": "layout_lp_logo_carousel",
+            "name": "logo_carousel",
+            "label": "Logo Carousel",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_lp_logos",
+                "label": "Logos",
+                "name": "logos",
+                "type": "repeater",
+                "instructions": "Add partner or client logos for the carousel.",
+                "min": 1,
+                "max": 20,
+                "layout": "row",
+                "button_label": "Add Logo",
+                "sub_fields": [
+                  {
+                    "key": "field_lp_logo_image",
+                    "label": "Logo Image",
+                    "name": "logo_image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all"
+                  },
+                  {
+                    "key": "field_lp_logo_company",
+                    "label": "Company Name",
+                    "name": "company_name",
+                    "type": "text",
+                    "placeholder": "e.g. Hartstone"
+                  },
+                  {
+                    "key": "field_lp_logo_url",
+                    "label": "Link URL (optional)",
+                    "name": "logo_url",
+                    "type": "url"
+                  }
+                ]
+              }
+            ],
+            "min": "",
+            "max": ""
+          },
+
+          {
+            "key": "layout_lp_stats",
+            "name": "stats_section",
+            "label": "Stats Section",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_lp_stats_items",
+                "label": "Stats",
+                "name": "stats",
+                "type": "repeater",
+                "instructions": "Add key statistics to display.",
+                "min": 1,
+                "max": 6,
+                "layout": "row",
+                "button_label": "Add Stat",
+                "sub_fields": [
+                  {
+                    "key": "field_lp_stat_number",
+                    "label": "Number / Value",
+                    "name": "stat_number",
+                    "type": "text",
+                    "placeholder": "e.g. 97%"
+                  },
+                  {
+                    "key": "field_lp_stat_label",
+                    "label": "Label",
+                    "name": "stat_label",
+                    "type": "textarea",
+                    "rows": 2,
+                    "placeholder": "e.g. of buyers start their online search"
+                  }
+                ]
+              }
+            ],
+            "min": "",
+            "max": ""
+          },
+
+          {
+            "key": "layout_lp_services",
+            "name": "services_section",
+            "label": "Services Section",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_lp_services_title",
+                "label": "Section Title",
+                "name": "section_title",
+                "type": "text",
+                "default_value": "Services"
+              },
+              {
+                "key": "field_lp_services_items",
+                "label": "Services",
+                "name": "services",
+                "type": "repeater",
+                "instructions": "Add services. On hover the card reveals the description and CTA with an orange background.",
+                "min": 1,
+                "max": 12,
+                "layout": "row",
+                "button_label": "Add Service",
+                "sub_fields": [
+                  {
+                    "key": "field_lp_service_title",
+                    "label": "Service Title",
+                    "name": "service_title",
+                    "type": "text",
+                    "placeholder": "e.g. Website Design"
+                  },
+                  {
+                    "key": "field_lp_service_description",
+                    "label": "Description",
+                    "name": "service_description",
+                    "type": "textarea",
+                    "rows": 3,
+                    "placeholder": "Brief description shown on hover."
+                  },
+                  {
+                    "key": "field_lp_service_bg_image",
+                    "label": "Background Image",
+                    "name": "background_image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all"
+                  },
+                  {
+                    "key": "field_lp_service_cta_text",
+                    "label": "CTA Button Text",
+                    "name": "cta_text",
+                    "type": "text",
+                    "default_value": "View Service"
+                  },
+                  {
+                    "key": "field_lp_service_cta_url",
+                    "label": "CTA Button URL",
+                    "name": "cta_url",
+                    "type": "url"
+                  }
+                ]
+              }
+            ],
+            "min": "",
+            "max": ""
+          },
+
+          {
+            "key": "layout_lp_results",
+            "name": "results_section",
+            "label": "Results / Video Section",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_lp_results_media_type",
+                "label": "Media Type",
+                "name": "media_type",
+                "type": "radio",
+                "choices": {
+                  "video": "Video",
+                  "image": "Image"
+                },
+                "default_value": "video",
+                "layout": "horizontal"
+              },
+              {
+                "key": "field_lp_results_video_file",
+                "label": "Video File",
+                "name": "video_file",
+                "type": "file",
+                "instructions": "Upload an MP4 video file.",
+                "return_format": "array",
+                "library": "all",
+                "mime_types": "mp4,webm",
+                "conditional_logic": [
+                  [
+                    {
+                      "field": "field_lp_results_media_type",
+                      "operator": "==",
+                      "value": "video"
+                    }
+                  ]
+                ]
+              },
+              {
+                "key": "field_lp_results_video_poster",
+                "label": "Video Poster Image",
+                "name": "video_poster",
+                "type": "image",
+                "instructions": "Shown before the video loads.",
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "conditional_logic": [
+                  [
+                    {
+                      "field": "field_lp_results_media_type",
+                      "operator": "==",
+                      "value": "video"
+                    }
+                  ]
+                ]
+              },
+              {
+                "key": "field_lp_results_image",
+                "label": "Image",
+                "name": "results_image",
+                "type": "image",
+                "return_format": "array",
+                "preview_size": "large",
+                "library": "all",
+                "conditional_logic": [
+                  [
+                    {
+                      "field": "field_lp_results_media_type",
+                      "operator": "==",
+                      "value": "image"
+                    }
+                  ]
+                ]
+              },
+              {
+                "key": "field_lp_results_stats",
+                "label": "Result Stats",
+                "name": "result_stats",
+                "type": "repeater",
+                "min": 1,
+                "max": 6,
+                "layout": "row",
+                "button_label": "Add Stat",
+                "sub_fields": [
+                  {
+                    "key": "field_lp_result_icon",
+                    "label": "Icon Image",
+                    "name": "icon_image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all"
+                  },
+                  {
+                    "key": "field_lp_result_number",
+                    "label": "Number / Value",
+                    "name": "result_number",
+                    "type": "text",
+                    "placeholder": "e.g. 47"
+                  },
+                  {
+                    "key": "field_lp_result_label",
+                    "label": "Label",
+                    "name": "result_label",
+                    "type": "textarea",
+                    "rows": 2,
+                    "placeholder": "e.g. Qualified Leads in\n90 Days."
+                  }
+                ]
+              }
+            ],
+            "min": "",
+            "max": ""
+          },
+
+          {
+            "key": "layout_lp_testimonial",
+            "name": "testimonial_section",
+            "label": "Testimonial Section",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_lp_testimonial_quote",
+                "label": "Quote",
+                "name": "quote_text",
+                "type": "textarea",
+                "rows": 5,
+                "placeholder": "Enter the testimonial quote here..."
+              },
+              {
+                "key": "field_lp_testimonial_author",
+                "label": "Author Name",
+                "name": "author_name",
+                "type": "text",
+                "placeholder": "e.g. Kevin K."
+              },
+              {
+                "key": "field_lp_testimonial_title",
+                "label": "Author Title",
+                "name": "author_title",
+                "type": "text",
+                "placeholder": "e.g. Founder of Shoreline Brands"
+              }
+            ],
+            "min": "",
+            "max": ""
+          },
+
+          {
+            "key": "layout_lp_cta",
+            "name": "cta_section",
+            "label": "CTA Section",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_lp_cta_headline",
+                "label": "Headline",
+                "name": "headline",
+                "type": "text",
+                "default_value": "Ready to Build A Digital Presence?"
+              },
+              {
+                "key": "field_lp_cta_subheadline",
+                "label": "Subheadline",
+                "name": "subheadline",
+                "type": "text",
+                "default_value": "No pressure, no obligation. Just a conversation about what's the next stride you want to take for your business!"
+              },
+              {
+                "key": "field_lp_cta_button_text",
+                "label": "Button Text",
+                "name": "button_text",
+                "type": "text",
+                "default_value": "Schedule A Call"
+              },
+              {
+                "key": "field_lp_cta_button_url",
+                "label": "Button URL",
+                "name": "button_url",
+                "type": "url"
+              }
+            ],
+            "min": "",
+            "max": ""
+          }
+
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "front-page.php"
+        }
+      ],
+      [
+        {
+          "param": "page",
+          "operator": "==",
+          "value": "front_page"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Flexible content sections for the Digital Stride landing page.",
+    "show_in_rest": 0,
+    "modified": 1700000000
+  },
+
+  {
+    "key": "group_lp_site_settings",
+    "title": "Site Settings",
+    "fields": [
+      {
+        "key": "field_ss_nav_logo",
+        "label": "Navigation Logo",
+        "name": "nav_logo",
+        "type": "image",
+        "return_format": "array",
+        "preview_size": "thumbnail",
+        "library": "all"
+      },
+      {
+        "key": "field_ss_footer_logo",
+        "label": "Footer Logo",
+        "name": "footer_logo",
+        "type": "image",
+        "return_format": "array",
+        "preview_size": "thumbnail",
+        "library": "all"
+      },
+      {
+        "key": "field_ss_footer_email",
+        "label": "Footer Email",
+        "name": "footer_email",
+        "type": "email",
+        "default_value": "hello@mydigitalstride.com"
+      },
+      {
+        "key": "field_ss_footer_phone",
+        "label": "Footer Phone",
+        "name": "footer_phone",
+        "type": "text",
+        "default_value": "(717) 123-4567"
+      },
+      {
+        "key": "field_ss_footer_address",
+        "label": "Footer Address",
+        "name": "footer_address",
+        "type": "textarea",
+        "rows": 2,
+        "default_value": "618 Kings Mill Rd, Suite 101\nYork, PA 17403"
+      },
+      {
+        "key": "field_ss_footer_facebook",
+        "label": "Facebook URL",
+        "name": "facebook_url",
+        "type": "url"
+      },
+      {
+        "key": "field_ss_footer_instagram",
+        "label": "Instagram URL",
+        "name": "instagram_url",
+        "type": "url"
+      },
+      {
+        "key": "field_ss_footer_services_links",
+        "label": "Footer Services Links",
+        "name": "footer_services_links",
+        "type": "repeater",
+        "min": 0,
+        "max": 10,
+        "layout": "row",
+        "button_label": "Add Service Link",
+        "sub_fields": [
+          {
+            "key": "field_ss_footer_service_label",
+            "label": "Label",
+            "name": "label",
+            "type": "text"
+          },
+          {
+            "key": "field_ss_footer_service_url",
+            "label": "URL",
+            "name": "url",
+            "type": "url"
+          }
+        ]
+      },
+      {
+        "key": "field_ss_cta_button_text",
+        "label": "Header CTA Button Text",
+        "name": "header_cta_text",
+        "type": "text",
+        "default_value": "Book Your Consultation"
+      },
+      {
+        "key": "field_ss_cta_button_url",
+        "label": "Header CTA Button URL",
+        "name": "header_cta_url",
+        "type": "url"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "options_page",
+          "operator": "==",
+          "value": "ds-site-settings"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Global site settings: logos, footer info, social links.",
+    "show_in_rest": 0,
+    "modified": 1700000000
+  }
+]
