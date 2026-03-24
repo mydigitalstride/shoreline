@@ -243,7 +243,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Find your Shoreline Brand Retailer</h2>",
+            "text": "<h2>Find your Shoreline Brands Bimini Extension Retailer</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -269,7 +269,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Find the Shoreline Brands Bimini Extension trusted by boating enthusiasts around the world at these fine retailers.<br/><br/>Want to see a retailer near you offer Shoreline Brands? Email us at <a href=\"mailto:info@shorelinebrands.com\">info@shorelinebrands.com</a></p>",
+            "text": "<p>Find the Shoreline Brands Bimini Extension at one of our authorized retailers near you. Stop by a local dealer to get set up for your next day on the water.<br/><br/>Are you a dealer interested in carrying Shoreline Brands? Join our growing network and offer your customers a product they’ll love. Reach out to <a>info@shorelinebrands.com</a> to get started.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
