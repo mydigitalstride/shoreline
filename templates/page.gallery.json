@@ -372,6 +372,14 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_K4TRUb": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8542.jpg",
+            "title": "Mastercraft X46",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_6pJRBy": {
           "type": "boat-gallery",
           "settings": {
@@ -385,14 +393,6 @@
           "settings": {
             "image": "shopify://shop_images/IMG_8450_resized_20d4ed23-d407-4439-a2b6-77f922ccb1c4.jpg",
             "title": "2008 Malibu 247 LSV",
-            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
-          }
-        },
-        "boat_gallery_e6X9yM": {
-          "type": "boat-gallery",
-          "settings": {
-            "image": "shopify://shop_images/IMG_8379.png",
-            "title": "Mastercraft X46",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
@@ -473,6 +473,14 @@
           "settings": {
             "image": "shopify://shop_images/2008-2013_Sanger_V215.jpg",
             "title": "2008-2013 Sanger V215",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_e6X9yM": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8379.png",
+            "title": "Mastercraft X46",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
@@ -633,6 +641,14 @@
           "settings": {
             "image": "shopify://shop_images/2020-2026_Regal_LS4_Surf.jpg",
             "title": "2020-2026 Regal LS4 Surf",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_mrUzAa": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/att.RUYLFGREIewkZqM11FpwP2HVFcjNKwEiz5oiiL6rWIc.jpg",
+            "title": "Yamaha 212x",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
@@ -838,9 +854,9 @@
         }
       },
       "block_order": [
+        "boat_gallery_K4TRUb",
         "boat_gallery_6pJRBy",
         "boat_gallery_FJcAjp",
-        "boat_gallery_e6X9yM",
         "boat_gallery_pJiPEx",
         "boat_gallery_dzWU9b",
         "boat_gallery_rFgTwW",
@@ -851,6 +867,7 @@
         "boat_gallery_aVnDzJ",
         "boat_gallery_c7WiwC",
         "boat_gallery_HyYRBp",
+        "boat_gallery_e6X9yM",
         "boat_gallery_WxjDxc",
         "boat_gallery_cCLVFC",
         "boat_gallery_FMnQRD",
@@ -871,6 +888,7 @@
         "boat_gallery_zb4pDV",
         "boat_gallery_LGGfNN",
         "boat_gallery_rNqTMc",
+        "boat_gallery_mrUzAa",
         "boat_gallery_QiTNjD",
         "boat_gallery_Ed4iGa",
         "boat_gallery_3V4Rhi",
