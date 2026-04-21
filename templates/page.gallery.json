@@ -372,6 +372,14 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_R9yhzb": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Centurion_Fi23_Bimini_Extension.jpg",
+            "title": "2019 Centurion Fi23",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
         "boat_gallery_yYkiDk": {
           "type": "boat-gallery",
           "settings": {
@@ -530,6 +538,14 @@
             "image": "shopify://shop_images/2013-2015_Moomba_Mojo_2.5.jpg",
             "title": "2013-2015 Moomba Mojo 2.5",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_idniLg": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Key_West_Boat.jpg",
+            "title": "Key west",
+            "link": "shopify://products/center-console-t-top-shade-extension"
           }
         },
         "boat_gallery_FMnQRD": {
@@ -886,6 +902,7 @@
         }
       },
       "block_order": [
+        "boat_gallery_R9yhzb",
         "boat_gallery_yYkiDk",
         "boat_gallery_KaE6CW",
         "boat_gallery_cLC6gX",
@@ -906,6 +923,7 @@
         "boat_gallery_e6X9yM",
         "boat_gallery_WxjDxc",
         "boat_gallery_cCLVFC",
+        "boat_gallery_idniLg",
         "boat_gallery_FMnQRD",
         "boat_gallery_HFN3yt",
         "boat_gallery_RJ8JCb",
