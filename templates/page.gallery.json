@@ -372,6 +372,14 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_KDh7VT": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Supra_SL.jpg",
+            "title": "2026 Supra SL",
+            "link": ""
+          }
+        },
         "boat_gallery_R9yhzb": {
           "type": "boat-gallery",
           "settings": {
@@ -902,6 +910,7 @@
         }
       },
       "block_order": [
+        "boat_gallery_KDh7VT",
         "boat_gallery_R9yhzb",
         "boat_gallery_yYkiDk",
         "boat_gallery_KaE6CW",
