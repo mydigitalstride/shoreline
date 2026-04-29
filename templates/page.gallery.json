@@ -372,6 +372,14 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_EJGnmd": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/65CB892D-07AA-4ECD-A32F-4FC21A413CC0.jpg",
+            "title": "2005 Malibu 23LSV",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_KDh7VT": {
           "type": "boat-gallery",
           "settings": {
@@ -476,6 +484,14 @@
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
+        "boat_gallery_7gwK69": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Malibu_23LSV.jpg",
+            "title": "2008 Malibu 23LSV",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_zwiawD": {
           "type": "boat-gallery",
           "settings": {
@@ -498,6 +514,14 @@
             "image": "shopify://shop_images/2022_ATX_22.jpg",
             "title": "2022 ATX 22",
             "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_ziwYdh": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_4866.jpg",
+            "title": "2007 Malibu 247LSV",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
         },
         "boat_gallery_aVnDzJ": {
@@ -554,6 +578,14 @@
             "image": "shopify://shop_images/Key_West_Boat.jpg",
             "title": "Key west",
             "link": "shopify://products/center-console-t-top-shade-extension"
+          }
+        },
+        "boat_gallery_9cfhLA": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2022_MB_B52_Blue.jpg",
+            "title": "2022 MB B52",
+            "link": "shopify://products/2017-2025-mb-boats-bimini-shade-extension-kit"
           }
         },
         "boat_gallery_FMnQRD": {
@@ -910,6 +942,7 @@
         }
       },
       "block_order": [
+        "boat_gallery_EJGnmd",
         "boat_gallery_KDh7VT",
         "boat_gallery_R9yhzb",
         "boat_gallery_yYkiDk",
@@ -923,9 +956,11 @@
         "boat_gallery_rFgTwW",
         "boat_gallery_tVmhJT",
         "boat_gallery_ingDPt",
+        "boat_gallery_7gwK69",
         "boat_gallery_zwiawD",
         "boat_gallery_M9XpQD",
         "boat_gallery_dcjKHV",
+        "boat_gallery_ziwYdh",
         "boat_gallery_aVnDzJ",
         "boat_gallery_c7WiwC",
         "boat_gallery_HyYRBp",
@@ -933,6 +968,7 @@
         "boat_gallery_WxjDxc",
         "boat_gallery_cCLVFC",
         "boat_gallery_idniLg",
+        "boat_gallery_9cfhLA",
         "boat_gallery_FMnQRD",
         "boat_gallery_HFN3yt",
         "boat_gallery_RJ8JCb",
