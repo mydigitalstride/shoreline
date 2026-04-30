@@ -15,7 +15,7 @@
       "type": "page-marquee",
       "settings": {
         "enabled": true,
-        "text": "All orders ship the same day if placed before 4pm EST. FREE 4-day shipping on all orders",
+        "text": "Same Day Shipping if placed before 4pm EST     |      FREE 4-day shipping on all orders",
         "separator": "|",
         "bg_color": "#2c3c5e",
         "text_color": "#ffffff",
