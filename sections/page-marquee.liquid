@@ -1,0 +1,158 @@
+{% if section.settings.enabled %}
+<div
+  class="page-marquee"
+  style="--marquee-bg:{{ section.settings.bg_color }};--marquee-color:{{ section.settings.text_color }};--marquee-duration:{{ section.settings.speed }}s;--marquee-font-size:{{ section.settings.font_size }}px;--marquee-padding:{{ section.settings.padding_y }}px;"
+  aria-label="{{ section.settings.text }}"
+>
+  <div class="page-marquee__inner">
+    <div class="page-marquee__content">
+      {%- for i in (1..10) -%}
+        <span class="page-marquee__text">{{ section.settings.text }}</span>
+        {%- if section.settings.separator != blank -%}
+          <span class="page-marquee__sep" aria-hidden="true">{{ section.settings.separator }}</span>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    <div class="page-marquee__content" aria-hidden="true">
+      {%- for i in (1..10) -%}
+        <span class="page-marquee__text">{{ section.settings.text }}</span>
+        {%- if section.settings.separator != blank -%}
+          <span class="page-marquee__sep" aria-hidden="true">{{ section.settings.separator }}</span>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% stylesheet %}
+  .page-marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--marquee-bg, #f26522);
+    color: var(--marquee-color, #ffffff);
+    padding-block: var(--marquee-padding, 10px);
+    font-size: var(--marquee-font-size, 14px);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .page-marquee__inner {
+    display: flex;
+    width: max-content;
+  }
+
+  .page-marquee__content {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    white-space: nowrap;
+    animation: page-marquee-scroll var(--marquee-duration, 40s) linear infinite;
+  }
+
+  .page-marquee__text {
+    padding-inline: 0.5em;
+  }
+
+  .page-marquee__sep {
+    padding-inline: 0.75em;
+    opacity: 0.7;
+  }
+
+  @keyframes page-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .page-marquee__content {
+      animation-play-state: paused;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Page Marquee",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Show marquee",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Marquee text",
+      "default": "Free Shipping on Orders Over $50  ·  New Arrivals Just Dropped  ·  Sale Up to 40% Off  ·  "
+    },
+    {
+      "type": "text",
+      "id": "separator",
+      "label": "Separator between repeats",
+      "default": "⚓",
+      "info": "Leave blank for no separator"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#f26522"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Scroll speed",
+      "info": "Higher value = slower scroll",
+      "min": 10,
+      "max": 120,
+      "step": 5,
+      "unit": "s",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "padding_y",
+      "label": "Vertical padding",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Marquee"
+    }
+  ]
+}
+{% endschema %}
