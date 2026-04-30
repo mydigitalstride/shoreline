@@ -19,7 +19,7 @@
         "separator": "|",
         "bg_color": "#2c3c5e",
         "text_color": "#ffffff",
-        "speed": 65,
+        "speed": 90,
         "font_size": 14,
         "padding_y": 10
       }
