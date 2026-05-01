@@ -1,3 +1,5 @@
+{% assign marquee_hidden_templates = 'cart,customers/order,customers/account,customers/login,customers/register' | split: ',' %}
+{% unless marquee_hidden_templates contains template.name %}
 {% if section.settings.enabled %}
 <div
   class="page-marquee"
@@ -24,6 +26,7 @@
   </div>
 </div>
 {% endif %}
+{% endunless %}
 
 {% stylesheet %}
   .page-marquee {
