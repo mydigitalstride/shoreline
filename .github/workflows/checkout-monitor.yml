@@ -1,0 +1,65 @@
+# Runs every 10 minutes and verifies the storefront + cart are reachable.
+# On failure it sends a Slack alert (add a webhook secret) and can be
+# extended to send email via the GitHub notification settings.
+#
+# Required secrets:
+#   SHOPIFY_STORE_URL       – e.g. mystore.myshopify.com (no https://)
+#   SLACK_WEBHOOK_URL       – Slack incoming webhook URL (optional)
+name: Checkout Health Monitor
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'   # every 10 minutes
+  workflow_dispatch:          # allow manual runs
+
+jobs:
+  monitor:
+    name: Check storefront health
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check storefront homepage
+        id: check_home
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 15 \
+            "https://${{ secrets.SHOPIFY_STORE_URL }}")
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          if [ "$STATUS" != "200" ]; then
+            echo "Homepage returned $STATUS" >&2
+            exit 1
+          fi
+
+      - name: Check /cart page
+        id: check_cart
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 15 \
+            "https://${{ secrets.SHOPIFY_STORE_URL }}/cart")
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          if [ "$STATUS" != "200" ]; then
+            echo "/cart returned $STATUS" >&2
+            exit 1
+          fi
+
+      - name: Check /checkout redirect (expects 3xx or 200)
+        id: check_checkout
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 15 \
+            -L \
+            "https://${{ secrets.SHOPIFY_STORE_URL }}/checkout")
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          # Shopify redirects empty checkouts; anything ≥500 is a real error
+          if [ "$STATUS" -ge 500 ]; then
+            echo "/checkout returned $STATUS" >&2
+            exit 1
+          fi
+
+      - name: Alert Slack on failure
+        if: failure() && secrets.SLACK_WEBHOOK_URL != ''
+        run: |
+          curl -s -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-type: application/json' \
+            --data '{
+              "text": "🚨 *Shoreline storefront health check FAILED*\nHomepage: ${{ steps.check_home.outputs.status }}\nCart: ${{ steps.check_cart.outputs.status }}\nCheckout: ${{ steps.check_checkout.outputs.status }}\n<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+            }'

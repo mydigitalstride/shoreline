@@ -1,0 +1,41 @@
+# Deploys feature branches to a dedicated draft/preview theme.
+# Merge to main is the only path to the live theme.
+name: Deploy Preview Theme
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  deploy-preview:
+    name: Push to draft theme
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli@latest
+
+      - name: Push to draft theme
+        run: |
+          shopify theme push \
+            --store="${{ secrets.SHOPIFY_STORE_URL }}" \
+            --theme="${{ secrets.SHOPIFY_DRAFT_THEME_ID }}" \
+            --password="${{ secrets.SHOPIFY_THEME_ACCESS_PASSWORD }}" \
+            --allow-live
+
+      - name: Post preview link to PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const store = "${{ secrets.SHOPIFY_STORE_URL }}";
+            const themeId = "${{ secrets.SHOPIFY_DRAFT_THEME_ID }}";
+            const previewUrl = `https://${store}/?preview_theme_id=${themeId}`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `🔍 **Preview theme deployed**\n\n[View preview](${previewUrl})\n\n> Test thoroughly before merging to \`main\`.`,
+            });
