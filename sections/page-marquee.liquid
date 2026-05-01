@@ -29,6 +29,9 @@
   .page-marquee {
     width: 100%;
     overflow: hidden;
+    /* contain: layout prevents the wide inner element from causing horizontal
+       scroll on the body, which was breaking the cart drawer / checkout flow */
+    contain: layout;
     background-color: var(--marquee-bg, #f26522);
     color: var(--marquee-color, #ffffff);
     padding-block: var(--marquee-padding, 10px);
