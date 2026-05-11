@@ -372,6 +372,38 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_GDDVdR": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Bennington.jpg",
+            "title": "2026 Bennington",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_Hb3HDQ": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Cobalt_BImini_Extension.jpg",
+            "title": "2021 Cobalt 25SC",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_L7wyaE": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2008_Nautique_230.jpg",
+            "title": "2008 Nautique 230",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_g4rDXX": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8824.jpg",
+            "title": "2025 Centurion Ri245",
+            "link": "shopify://products/centurion-predator-tower-bimini-extension"
+          }
+        },
         "boat_gallery_EJGnmd": {
           "type": "boat-gallery",
           "settings": {
@@ -942,6 +974,10 @@
         }
       },
       "block_order": [
+        "boat_gallery_GDDVdR",
+        "boat_gallery_Hb3HDQ",
+        "boat_gallery_L7wyaE",
+        "boat_gallery_g4rDXX",
         "boat_gallery_EJGnmd",
         "boat_gallery_KDh7VT",
         "boat_gallery_R9yhzb",
