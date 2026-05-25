@@ -320,6 +320,80 @@
         "padding-block-end": 40
       }
     },
+    "section_UfTiz3": {
+      "type": "section",
+      "blocks": {
+        "text_aP8Yni": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2><strong>Real Reviews From Real Customers</strong></h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_aP8Yni"
+      ],
+      "name": "t:names.rich_text_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "custom_section_id": ""
+      }
+    },
+    "custom_liquid_Jdi9ap": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"scrolling-testimonial-wrapper\">\n    <div class=\"testimonial-scroll-container\">\n      \n      <div class=\"mobile-card video-card\">\n        <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n          <source src=\"https://nothrowss.com/cdn/shop/videos/c/vp/8f9d034bcd6e4421a9475f0881c08846/8f9d034bcd6e4421a9475f0881c08846.HD-1080p-3.3Mbps-82250454.mp4?v=0#t=0.001\" type=\"video/mp4\">\n        </video>\n        <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n        <div class=\"video-overlay\">EASY TO INSTALL!!!</div>\n      </div>\n\n      <div class=\"mobile-card video-card\">\n        <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n          <source src=\"https://nothrowss.com/cdn/shop/videos/c/vp/0e0f9a710651406e984e83c9dcc38ee7/0e0f9a710651406e984e83c9dcc38ee7.SD-480p-0.9Mbps-82250456.mp4?v=0\" type=\"video/mp4\">\n        </video>\n        <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n        <div class=\"video-overlay\">MORE TIME ON WATER!</div>\n      </div>\n  \n      <div class=\"mobile-card video-card\">\n        <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n          <source src=\"https://nothrowss.com/cdn/shop/videos/c/vp/b62aeda1f436461abafd5b7379b117a0/b62aeda1f436461abafd5b7379b117a0.HD-1080p-4.8Mbps-82250457.mp4?v=0\" type=\"video/mp4\">\n        </video>\n        <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n        <div class=\"video-overlay\">MUST HAVE!!</div>\n      </div>\n  \n  \n      <div class=\"mobile-card video-card\">\n        <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n          <source src=\"https://nothrowss.com/cdn/shop/videos/c/vp/621e5b1e157c4e85927490dd5f4d5d1b/621e5b1e157c4e85927490dd5f4d5d1b.SD-480p-0.9Mbps-82250455.mp4?v=0\" type=\"video/mp4\">\n        </video>\n        <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n        <div class=\"video-overlay\">FROM A WAKESURFING COACH</div>\n      </div>\n\n\n  \n    </div>\n  </div>\n  \n  <script>\n    function toggleMute(video) {\n      video.muted = !video.muted;\n      const btn = video.nextElementSibling;\n      if (video.muted) {\n        btn.innerHTML = \"Tap for Sound\";\n        btn.style.opacity = \"1\";\n      } else {\n        btn.innerHTML = \"Mute\";\n        btn.style.opacity = \"0.5\";\n      }\n    }\n  </script>\n  \n  <style>\n    /* Container Setup */\n    .scrolling-testimonial-wrapper {\n      width: 100%;\n      padding: 40px 20px;\n      background: #f9f9f9;\n      overflow: hidden;\n    }\n  \n    .testimonial-scroll-container {\n      display: flex;\n      gap: 15px;\n      overflow-x: auto;\n      scroll-snap-type: x mandatory;\n      padding-bottom: 20px;\n      -webkit-overflow-scrolling: touch;\n    }\n  \n    .testimonial-scroll-container::-webkit-scrollbar {\n      display: none;\n    }\n  \n    .mobile-card {\n      flex: 0 0 280px;\n      height: 500px;\n      background: white;\n      border-radius: 16px;\n      overflow: hidden;\n      position: relative;\n      scroll-snap-align: start;\n      box-shadow: 0 10px 20px rgba(0,0,0,0.08);\n    }\n  \n    .text-card {\n      display: flex;\n      flex-direction: column;\n      padding: 30px 20px;\n      justify-content: space-between;\n      text-align: center;\n    }\n  \n    .stars { color: #e7e668; font-size: 20px; margin-bottom: 10px; }\n    .text-card h3 { font-size: 1.1rem; margin-bottom: 15px; line-height: 1.3; }\n    .text-card p { font-size: 0.9rem; color: #444; line-height: 1.6; }\n    \n    .footer-logo { width: 40px; margin: 0 auto 5px; filter: grayscale(1); }\n    .author { font-weight: bold; font-size: 0.8rem; }\n  \n    .video-card video {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      background: #000;\n      cursor: pointer;\n    }\n  \n    /* Mute Button Overlay */\n    .mute-toggle {\n      position: absolute;\n      top: 15px;\n      right: 15px;\n      background: rgba(0,0,0,0.6);\n      color: white;\n      border: none;\n      padding: 5px 10px;\n      border-radius: 20px;\n      font-size: 10px;\n      text-transform: uppercase;\n      cursor: pointer;\n      z-index: 10;\n      transition: opacity 0.3s;\n    }\n  \n    .video-overlay {\n      position: absolute;\n      bottom: 40px;\n      left: 0;\n      right: 0;\n      color: white;\n      text-align: center;\n      font-weight: 800;\n      font-size: 1.2rem;\n      text-transform: uppercase;\n      text-shadow: 0 2px 10px rgba(0,0,0,0.5);\n      pointer-events: none;\n      padding: 0 10px;\n    }\n  \n    @media (max-width: 480px) {\n      .mobile-card {\n        flex: 0 0 250px;\n        height: 450px;\n      }\n    }\n  </style>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "section_QHJjfy": {
       "type": "section",
       "blocks": {
@@ -585,7 +659,7 @@
             "image_ratio": "square",
             "width": "fill",
             "custom_width": 100,
-            "width_mobile": "fill",
+            "width_mobile": "fit-content",
             "custom_width_mobile": 100,
             "height": "fit",
             "border": "none",
@@ -813,6 +887,174 @@
         "padding-block-end": 0
       }
     },
+    "section_QhCaV6": {
+      "type": "section",
+      "blocks": {
+        "image_XX8KXh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shoreline_Brands_Bimi_Extention_3.png",
+            "link": "",
+            "image_ratio": "square",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "group_E9zFcH": {
+          "type": "group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "text_wFhbfz": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2><strong>No Poles. No Holes.</strong></h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_7f3xxq": {
+              "type": "text",
+              "settings": {
+                "text": "<p>No bulky supports or complicated installs, designed to fit your boat beautifully.</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_wFhbfz",
+            "text_7f3xxq"
+          ]
+        }
+      },
+      "block_order": [
+        "image_XX8KXh",
+        "group_E9zFcH"
+      ],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "custom_section_id": ""
+      }
+    },
+    "custom_liquid_3dDcYA": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"centered-video-section\">\n  <div class=\"video-card-centered\">\n    <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n      <source src=\"https://nothrowss.com/cdn/shop/videos/c/vp/491253e944b24786a13c9a04ff8d5d71/491253e944b24786a13c9a04ff8d5d71.HD-1080p-4.8Mbps-82444941.mp4?v=0\" type=\"video/mp4\">\n    </video>\n    <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n    <div class=\"video-overlay\">EASY TO Use!!!</div>\n  </div>\n</div>\n\n<script>\n  function toggleMute(video) {\n    video.muted = !video.muted;\n    const btn = video.nextElementSibling;\n    if (video.muted) {\n      btn.innerHTML = \"Tap for Sound\";\n      btn.style.opacity = \"1\";\n    } else {\n      btn.innerHTML = \"Mute\";\n      btn.style.opacity = \"0.5\";\n    }\n  }\n</script>\n\n<style>\n  /* Centering Wrapper */\n  .centered-video-section {\n    width: 100%;\n    padding: 60px 20px;\n    background: #f9f9f9;\n    display: flex;\n    justify-content: center; /* Centers horizontally */\n    align-items: center;\n  }\n\n  /* Video Card Styling */\n  .video-card-centered {\n    width: 320px; /* Width on desktop */\n    height: 570px; /* Maintains 9:16 vertical ratio */\n    background: #000;\n    border-radius: 20px;\n    overflow: hidden;\n    position: relative;\n    box-shadow: 0 15px 35px rgba(0,0,0,0.15);\n  }\n\n  .video-card-centered video {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    cursor: pointer;\n    display: block;\n  }\n\n  /* Mute Button Overlay */\n  .mute-toggle {\n    position: absolute;\n    top: 20px;\n    right: 20px;\n    background: rgba(0,0,0,0.6);\n    color: white;\n    border: none;\n    padding: 6px 12px;\n    border-radius: 20px;\n    font-size: 11px;\n    font-weight: 700;\n    text-transform: uppercase;\n    cursor: pointer;\n    z-index: 10;\n    transition: opacity 0.3s;\n  }\n\n  /* Text Overlay */\n  .video-overlay {\n    position: absolute;\n    bottom: 40px;\n    left: 0;\n    right: 0;\n    color: white;\n    text-align: center;\n    font-weight: 800;\n    font-size: 1.4rem;\n    text-transform: uppercase;\n    text-shadow: 0 2px 12px rgba(0,0,0,0.6);\n    pointer-events: none;\n    padding: 0 15px;\n    line-height: 1.1;\n  }\n\n  /* Mobile adjustment */\n  @media (max-width: 480px) {\n    .centered-video-section {\n      padding: 40px 15px;\n    }\n    .video-card-centered {\n      width: 100%; /* Spans full width on small screens */\n      max-width: 300px;\n      height: 530px;\n    }\n    .video-overlay {\n      font-size: 1.2rem;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "video_section_MKWMF7": {
       "type": "video-section",
       "name": "Video Section",
@@ -827,11 +1069,15 @@
   "order": [
     "main",
     "hero_GPHQgB",
+    "section_UfTiz3",
+    "custom_liquid_Jdi9ap",
     "section_QHJjfy",
     "section_8CKjDj",
     "section_daKVdQ",
     "bimini_finder_gFPbqx",
     "custom_liquid_3GJebX",
+    "section_QhCaV6",
+    "custom_liquid_3dDcYA",
     "video_section_MKWMF7"
   ]
 }
