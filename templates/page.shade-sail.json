@@ -320,6 +320,15 @@
         "padding-block-end": 40
       }
     },
+    "bimini_finder_gFPbqx": {
+      "type": "bimini-finder",
+      "name": "Bimini Finder Section",
+      "settings": {
+        "heading": "Find Your Bimini Extension",
+        "clear_text": "Clear",
+        "search_text": "Search"
+      }
+    },
     "section_dNkbRa": {
       "type": "section",
       "blocks": {
@@ -459,6 +468,7 @@
   "order": [
     "main",
     "hero_GPHQgB",
+    "bimini_finder_gFPbqx",
     "section_dNkbRa",
     "section_be9qnT"
   ]
