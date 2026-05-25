@@ -259,7 +259,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Look for My Boat",
-                    "link": "shopify://pages/shade-sail",
+                    "link": "https://shorelinebrands.com/pages/shade-sail#bimini-finder",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
