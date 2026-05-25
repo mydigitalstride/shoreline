@@ -956,7 +956,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2><strong>No Poles. No Holes.</strong></h2>",
+                "text": "<h2>Trusted by Boaters for 4+ Years<br/></h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -981,7 +981,7 @@
             "text_7f3xxq": {
               "type": "text",
               "settings": {
-                "text": "<p>No bulky supports or complicated installs, designed to fit your boat beautifully.</p>",
+                "text": "<p>Boaters across the country have trusted Shoreline to keep their crew cool, covered, and out on the water longer.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
