@@ -681,7 +681,7 @@
       "name": "Image with text 2",
       "settings": {
         "content_direction": "row",
-        "vertical_on_mobile": false,
+        "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
@@ -1372,8 +1372,8 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Shop now",
-            "link": "shopify://collections/all",
+            "label": "Find Your Boat",
+            "link": "https://shorelinebrands.com/pages/shade-sail#bimini-finder",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
