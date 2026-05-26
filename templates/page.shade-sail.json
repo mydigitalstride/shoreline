@@ -538,6 +538,7 @@
         "image_eLa4MH",
         "group_HMmQgj"
       ],
+      "disabled": true,
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
@@ -589,155 +590,6 @@
         "section_width": "full-width",
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
-    },
-    "section_HwHWbM": {
-      "type": "section",
-      "blocks": {
-        "video_hPWpNP": {
-          "type": "video",
-          "name": "t:names.video",
-          "settings": {
-            "source": "uploaded",
-            "video": "shopify://files/videos/SHORELINES-easy instal(1).mp4",
-            "video_autoplay": false,
-            "video_loop": true,
-            "alt": "",
-            "custom_width": 100,
-            "custom_width_mobile": 100,
-            "aspect_ratio": "16/9",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_tKdyC3": {
-          "type": "group",
-          "name": "Caption",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_id": ""
-          },
-          "blocks": {
-            "text_ank6HR": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Take a look behind the scenes of our latest product launch.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_z6JApg": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Discover the collection",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_ank6HR",
-            "button_z6JApg"
-          ]
-        }
-      },
-      "block_order": [
-        "video_hPWpNP",
-        "group_tKdyC3"
-      ],
-      "name": "t:names.video_section",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 32,
-        "padding-block-end": 32,
-        "custom_section_id": ""
       }
     },
     "section_daKVdQ": {
@@ -1060,8 +912,9 @@
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "",
-        "background_media": "none",
+        "background_media": "image",
         "video_position": "cover",
+        "background_image": "shopify://shop_images/Shoreline_Website_Mockup.png",
         "background_image_position": "cover",
         "border": "none",
         "border_width": 1,
@@ -1080,7 +933,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<style>\n  /* This reverses the order of the flex items on mobile screens (typically under 768px) */\n  @media (max-width: 767px) {\n    .reverse-on-mobile {\n      flex-direction: column-reverse !important;\n    }\n  }\n</style>\n\n<div id=\"shopify-section-template--21865620603065__section_PKzBck\" class=\"shopify-section section-wrapper\">\n\n<div class=\"section-background color-scheme-1\"></div>\n<div class=\"section section--page-width color-scheme-1\" style=\" \">\n  <div class=\"custom-section-background\">\n    <div class=\"background-image-container\">\n    <img src=\"//shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=3840\" alt=\"\" srcset=\"//shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=832 832w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1200 1200w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1600 1600w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1920 1920w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=2560 2560w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=3840 3840w\" width=\"3840\" height=\"2159\" loading=\"lazy\" sizes=\"100vw\" fetchpriority=\"auto\">\n</div>\n  </div>\n\n  <div class=\"border-style custom-section-content\" style=\"--border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px;\">\n    \n    <div class=\"\n        spacing-style\n        layout-panel-flex\n        layout-panel-flex--row\n        section-content-wrapper\n        mobile-column\n        reverse-on-mobile\n      \" style=\"\n        --flex-direction: row; --flex-wrap: nowrap;\n        --gap: max(24px, calc(var(--gap-scale, 1.0) * 32px));\n        --horizontal-alignment: flex-start; --vertical-alignment: center;\n        --vertical-alignment-mobile: center;\n        --padding-block-start: max(20px, calc(var(--spacing-scale) * 40px));--padding-block-end: max(20px, calc(var(--spacing-scale) * 40px));\n      \" data-testid=\"section-content\">\n      \n<div class=\"\n    group-block\n    group-block--height-fit\n    group-block--width-custom\n    border-style\n    spacing-style\n    size-style\n  \" style=\"\n    --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n    --size-style-width:100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  \" data-testid=\"group-block\"><div class=\"group-block__media-wrapper\">\n    \n  </div>\n\n  <div class=\"\n      group-block-content\n      layout-panel-flex\n      layout-panel-flex--column\n       mobile-column\n    \" style=\"--flex-direction: column; --flex-wrap: nowrap;\n--gap: 12px;\n--horizontal-alignment: flex-start; --vertical-alignment: center;\n--vertical-alignment-mobile: center;\n\">\n  \n  <div class=\" spacing-style text-block text-block--AdVRMNVF3S3hHS1p3K__text_az847m h2\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n--color: var(--color-foreground);\n    --width: fit-content;\n    --max-width: var(--max-width--body-normal);\n  \">\n    <h2> Crafted in the USA</h2>\n  </div>\n\n  <rte-formatter class=\" spacing-style text-block text-block--AbG1WRmJDanlMeVZLb__text_3wd8MB rte\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-narrow);\n  \">\n    <p> Each bimini extension is hand-sewn and assembled in central Pennsylvania, ensuring unmatched quality, consistency, and attention to detail.\n\n </p>\n  </rte-formatter>\n\n</div>\n</div>\n\n  <div class=\"\n  image-block image-block--ARnV5VkdGamlhMFlsV__image_UKLzjY image-block--height-fit spacing-style size-style\n\" style=\"\n  --ratio: 1;\n  --size-style-width: 100%;--size-style-height: fit;--size-style-width-mobile: fit-content; --size-style-width-mobile-min: fit-content;\n  --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n\">\n    \n<img src=\"//shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=3840\" alt=\"Nautique GS22 with Shoreline Brands Bimini Extension and Shade Sails\" srcset=\"//shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=240 240w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=352 352w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=832 832w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=1200 1200w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=1600 1600w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=1920 1920w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=2560 2560w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=3840 3840w\" width=\"1440\" height=\"1799\" loading=\"lazy\" class=\"image-block__image border-style\" style=\"\n  --ratio: 1;\n  --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n\" sizes=\"auto, (min-width: 750px) 100vw, 100vw\">\n\n  </div>\n\n    </div>\n  </div>\n</div>\n\n</div>",
+        "custom_liquid": "<style>\n  /* This reverses the order of the flex items on mobile screens (typically under 768px) */\n  @media (max-width: 767px) {\n    .reverse-on-mobile {\n      flex-direction: column-reverse !important;\n    }\n  }\n\n  /* Force the solid blue background and hide the old image */\n  .solid-blue-section {\n    background-color: #1c2b47 !important;\n  }\n  .solid-blue-section .custom-section-background {\n    display: none !important;\n  }\n\n  /* Force ALL text inside this section to be white, overpowering Shopify's Rich Text Editor */\n  .solid-blue-section h2,\n  .solid-blue-section p,\n  .solid-blue-section .rte,\n  .solid-blue-section .rte p,\n  .solid-blue-section rte-formatter,\n  .solid-blue-section rte-formatter p {\n    color: #ffffff !important;\n  }\n</style>\n\n<div id=\"shopify-section-template--21865620603065__section_PKzBck\" class=\"shopify-section section-wrapper solid-blue-section\">\n\n<div class=\"section-background color-scheme-1\"></div>\n<div class=\"section section--page-width color-scheme-1\" style=\" \">\n  <div class=\"custom-section-background\">\n    <div class=\"background-image-container\">\n      <img src=\"//shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=3840\" alt=\"\" srcset=\"//shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=832 832w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1200 1200w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1600 1600w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1920 1920w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=2560 2560w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=3840 3840w\" width=\"3840\" height=\"2159\" loading=\"lazy\" sizes=\"100vw\" fetchpriority=\"auto\">\n    </div>\n  </div>\n\n  <div class=\"border-style custom-section-content\" style=\"--border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px;\">\n    \n    <div class=\"\n        spacing-style\n        layout-panel-flex\n        layout-panel-flex--row\n        section-content-wrapper\n        mobile-column\n        reverse-on-mobile\n      \" style=\"\n        --flex-direction: row; --flex-wrap: nowrap;\n        --gap: max(24px, calc(var(--gap-scale, 1.0) * 32px));\n        --horizontal-alignment: flex-start; --vertical-alignment: center;\n        --vertical-alignment-mobile: center;\n        --padding-block-start: max(20px, calc(var(--spacing-scale) * 40px));--padding-block-end: max(20px, calc(var(--spacing-scale) * 40px));\n      \" data-testid=\"section-content\">\n      \n<div class=\"\n    group-block\n    group-block--height-fit\n    group-block--width-custom\n    border-style\n    spacing-style\n    size-style\n  \" style=\"\n    --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n    --size-style-width:100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  \" data-testid=\"group-block\"><div class=\"group-block__media-wrapper\">\n    \n  </div>\n\n  <div class=\"\n      group-block-content\n      layout-panel-flex\n      layout-panel-flex--column\n       mobile-column\n    \" style=\"--flex-direction: column; --flex-wrap: nowrap;\n--gap: 12px;\n--horizontal-alignment: flex-start; --vertical-alignment: center;\n--vertical-alignment-mobile: center;\n\">\n  \n  <div class=\" spacing-style text-block text-block--AdVRMNVF3S3hHS1p3K__text_az847m h2\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-normal);\n  \">\n    <h2> Crafted in the USA</h2>\n  </div>\n\n  <rte-formatter class=\" spacing-style text-block text-block--AbG1WRmJDanlMeVZLb__text_3wd8MB rte\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-narrow);\n  \">\n    <p> Each bimini extension is hand-sewn and assembled in central Pennsylvania, ensuring unmatched quality, consistency, and attention to detail.</p>\n  </rte-formatter>\n\n</div>\n</div>\n\n  <div class=\"\n  image-block image-block--ARnV5VkdGamlhMFlsV__image_UKLzjY image-block--height-fit spacing-style size-style\n\" style=\"\n  --ratio: 1;\n  --size-style-width: 100%;--size-style-height: fit;--size-style-width-mobile: fit-content; --size-style-width-mobile-min: fit-content;\n  --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n\">\n    \n<img src=\"//shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=3840\" alt=\"Nautique GS22 with Shoreline Brands Bimini Extension and Shade Sails\" srcset=\"//shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=240 240w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=352 352w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=832 832w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=1200 1200w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=1600 1600w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=1920 1920w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=2560 2560w, //shorelinebrands.com/cdn/shop/files/2024_Nautique_GS22.jpg?v=1764067021&amp;width=3840 3840w\" width=\"1440\" height=\"1799\" loading=\"lazy\" class=\"image-block__image border-style\" style=\"\n  --ratio: 1;\n  --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n\" sizes=\"auto, (min-width: 750px) 100vw, 100vw\">\n\n  </div>\n\n    </div>\n  </div>\n</div>\n\n</div>",
         "color_scheme": "",
         "section_width": "full-width",
         "padding-block-start": 0,
@@ -1314,7 +1167,6 @@
     "section_QHJjfy",
     "custom_liquid_8weabE",
     "custom_liquid_xhq8jz",
-    "section_HwHWbM",
     "section_daKVdQ",
     "bimini_finder_gFPbqx",
     "custom_liquid_3GJebX",
