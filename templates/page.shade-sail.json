@@ -404,7 +404,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<div class=\"scrolling-testimonial-wrapper\">\n  <div class=\"testimonial-scroll-container\">\n    \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/3bfc6def4e5e4d2a8fdda09481dc5182/3bfc6def4e5e4d2a8fdda09481dc5182.HD-1080p-7.2Mbps-84909560.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">EASY TO INSTALL!!!</div>\n    </div>\n\n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/f9617a1550e849dbb7a90c82c1282bc3/f9617a1550e849dbb7a90c82c1282bc3.HD-1080p-7.2Mbps-84909559.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">GOES UP IN 60 SECONDS!</div>\n    </div>\n  \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/167a4c79a15a4f32b21c5abe36be1d60/167a4c79a15a4f32b21c5abe36be1d60.HD-720p-1.6Mbps-84909883.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">MUST HAVE!!</div>\n    </div>\n  \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/71933d7ec0cc41f588a9291ee2e3b484/71933d7ec0cc41f588a9291ee2e3b484.HD-1080p-7.2Mbps-84910251.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">PONTOON BOAT PARTY!</div>\n    </div>\n\n  </div>\n</div>\n\n<script>\n  function toggleMute(video) {\n    video.muted = !video.muted;\n    const btn = video.nextElementSibling;\n    if (video.muted) {\n      btn.innerHTML = \"Tap for Sound\";\n      btn.style.opacity = \"1\";\n    } else {\n      btn.innerHTML = \"Mute\";\n      btn.style.opacity = \"0.5\";\n    }\n  }\n</script>\n\n<style>\n  .scrolling-testimonial-wrapper {\n    width: 100vw !important;\n    position: relative !important;\n    left: 50% !important;\n    right: 50% !important;\n    margin-left: -50vw !important;\n    margin-right: -50vw !important;\n    padding: 40px 20px !important;\n    background: #2c3c5e !important;\n    overflow: hidden;\n  }\n\n  .testimonial-scroll-container {\n    display: flex;\n    gap: 15px;\n    overflow-x: auto;\n    scroll-snap-type: x mandatory;\n    padding-bottom: 20px;\n    -webkit-overflow-scrolling: touch;\n    max-width: 1400px;\n    margin: 0 auto;\n  }\n\n  .testimonial-scroll-container::-webkit-scrollbar {\n    display: none;\n  }\n\n  /* ✅ Cards scale down fluidly so all 4 always fit on desktop */\n  .mobile-card {\n    flex: 0 0 min(280px, calc((100vw - 130px) / 4)) !important;\n    height: min(500px, calc((100vw - 130px) / 4 * 1.75)) !important;\n    background: transparent !important;\n    border-radius: 16px !important;\n    overflow: hidden !important;\n    position: relative !important;\n    scroll-snap-align: start !important;\n    box-shadow: none !important;\n    padding: 0 !important;\n    border: none !important;\n    margin: 0 !important;\n  }\n\n  .video-card video {\n    position: absolute !important;\n    top: 0 !important;\n    left: 0 !important;\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n    background: transparent !important;\n    cursor: pointer !important;\n    padding: 0 !important;\n    margin: 0 !important;\n    border-radius: 16px !important;\n    display: block !important;\n  }\n\n  .mute-toggle {\n    position: absolute;\n    top: 15px;\n    right: 15px;\n    background: rgba(0,0,0,0.6);\n    color: white;\n    border: none;\n    padding: 5px 10px;\n    border-radius: 20px;\n    font-size: 10px;\n    text-transform: uppercase;\n    cursor: pointer;\n    z-index: 10;\n    transition: opacity 0.3s;\n  }\n\n  .video-overlay {\n    position: absolute;\n    bottom: 40px;\n    left: 0;\n    right: 0;\n    color: white;\n    text-align: center;\n    font-weight: 800;\n    font-size: 1.2rem;\n    text-transform: uppercase;\n    text-shadow: 0 2px 10px rgba(0,0,0,0.8);\n    pointer-events: none;\n    padding: 0 10px;\n    z-index: 5;\n  }\n\n  /* ✅ Mobile: one full-width card at a time */\n  @media (max-width: 480px) {\n    .scrolling-testimonial-wrapper {\n      padding: 30px 0 !important;\n    }\n\n    .testimonial-scroll-container {\n      gap: 12px;\n      padding: 0 20px 20px 20px;\n      scroll-padding-left: 20px;\n    }\n\n    .mobile-card {\n      flex: 0 0 calc(100vw - 40px) !important;\n      height: 480px !important;\n    }\n  }\n</style>",
+        "custom_liquid": "<div class=\"scrolling-testimonial-wrapper\">\n  <div class=\"testimonial-scroll-container\">\n    \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/3bfc6def4e5e4d2a8fdda09481dc5182/3bfc6def4e5e4d2a8fdda09481dc5182.HD-1080p-7.2Mbps-84909560.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">EASY TO INSTALL!!!</div>\n    </div>\n\n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/f9617a1550e849dbb7a90c82c1282bc3/f9617a1550e849dbb7a90c82c1282bc3.HD-1080p-7.2Mbps-84909559.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">GOES UP IN 60 SECONDS!</div>\n    </div>\n  \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/167a4c79a15a4f32b21c5abe36be1d60/167a4c79a15a4f32b21c5abe36be1d60.HD-720p-1.6Mbps-84909883.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">MUST HAVE!!</div>\n    </div>\n  \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/71933d7ec0cc41f588a9291ee2e3b484/71933d7ec0cc41f588a9291ee2e3b484.HD-1080p-7.2Mbps-84910251.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">PONTOON BOAT PARTY!</div>\n    </div>\n\n  </div>\n</div>\n  \n<script>\n  function toggleMute(video) {\n    video.muted = !video.muted;\n    const btn = video.nextElementSibling;\n    if (video.muted) {\n      btn.innerHTML = \"Tap for Sound\";\n      btn.style.opacity = \"1\";\n    } else {\n      btn.innerHTML = \"Mute\";\n      btn.style.opacity = \"0.5\";\n    }\n  }\n</script>\n  \n<style>\n  /* Container Setup */\n  .scrolling-testimonial-wrapper {\n    width: 100vw !important; \n    position: relative !important;\n    left: 50% !important;\n    right: 50% !important;\n    margin-left: -50vw !important;\n    margin-right: -50vw !important;\n    padding: 40px 20px !important;\n    background: #2c3c5e !important; /* Solid blue background */\n    overflow: hidden;\n  }\n  \n  .testimonial-scroll-container {\n    display: flex;\n    gap: 15px;\n    overflow-x: auto;\n    scroll-snap-type: x mandatory;\n    padding-bottom: 20px;\n    -webkit-overflow-scrolling: touch;\n    max-width: 1400px; \n    margin: 0 auto; \n  }\n  \n  .testimonial-scroll-container::-webkit-scrollbar {\n    display: none;\n  }\n  \n  /* Kill the Theme's White Card Styles */\n  .mobile-card {\n    flex: 0 0 280px !important;\n    height: 500px !important;\n    background: transparent !important; \n    border-radius: 16px !important;\n    overflow: hidden !important;\n    position: relative !important;\n    scroll-snap-align: start !important;\n    box-shadow: none !important; /* Removes default shadow */\n    padding: 0 !important; /* Forces the video to the edges */\n    border: none !important; /* Removes any white border */\n    margin: 0 !important;\n  }\n  \n  /* Force Video to Fill Completely */\n  .video-card video {\n    position: absolute !important;\n    top: 0 !important;\n    left: 0 !important;\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n    background: transparent !important; \n    cursor: pointer !important;\n    padding: 0 !important;\n    margin: 0 !important;\n    border-radius: 16px !important;\n    display: block !important;\n  }\n  \n  /* Mute Button Overlay */\n  .mute-toggle {\n    position: absolute;\n    top: 15px;\n    right: 15px;\n    background: rgba(0,0,0,0.6);\n    color: white;\n    border: none;\n    padding: 5px 10px;\n    border-radius: 20px;\n    font-size: 10px;\n    text-transform: uppercase;\n    cursor: pointer;\n    z-index: 10;\n    transition: opacity 0.3s;\n  }\n  \n  .video-overlay {\n    position: absolute;\n    bottom: 40px;\n    left: 0;\n    right: 0;\n    color: white;\n    text-align: center;\n    font-weight: 800;\n    font-size: 1.2rem;\n    text-transform: uppercase;\n    text-shadow: 0 2px 10px rgba(0,0,0,0.8); /* Darkened shadow so text pops more */\n    pointer-events: none;\n    padding: 0 10px;\n    z-index: 5;\n  }\n  \n  @media (max-width: 480px) {\n    .mobile-card {\n      flex: 0 0 250px !important;\n      height: 450px !important;\n    }\n  }\n</style>",
         "color_scheme": "scheme-1",
         "section_width": "full-width",
         "padding-block-start": 0,
@@ -567,6 +567,155 @@
         "gradient_direction": "to top",
         "padding-block-start": 40,
         "padding-block-end": 40,
+        "custom_section_id": ""
+      }
+    },
+    "section_mHnjqV": {
+      "type": "section",
+      "blocks": {
+        "video_PJpMjk": {
+          "type": "video",
+          "name": "t:names.video",
+          "settings": {
+            "source": "uploaded",
+            "video": "shopify://files/videos/Shoreline Brands Customer_807512c0-b186-4ddd-95a0-de04eb58448a.mp4",
+            "video_autoplay": false,
+            "video_loop": true,
+            "alt": "",
+            "custom_width": 100,
+            "custom_width_mobile": 100,
+            "aspect_ratio": "16/9",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "group_FRJaDi": {
+          "type": "group",
+          "name": "Caption",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "text_GggxTf": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Take a look behind the scenes of our latest product launch.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_b88Cq7": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Discover the collection",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_GggxTf",
+            "button_b88Cq7"
+          ]
+        }
+      },
+      "block_order": [
+        "video_PJpMjk",
+        "group_FRJaDi"
+      ],
+      "name": "t:names.video_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 32,
+        "padding-block-end": 32,
         "custom_section_id": ""
       }
     },
@@ -1165,6 +1314,7 @@
     "section_UfTiz3",
     "custom_liquid_Jdi9ap",
     "section_QHJjfy",
+    "section_mHnjqV",
     "custom_liquid_8weabE",
     "custom_liquid_xhq8jz",
     "section_daKVdQ",
