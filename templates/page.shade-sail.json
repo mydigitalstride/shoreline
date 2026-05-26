@@ -193,7 +193,7 @@
             "text_rhRf6t": {
               "type": "text",
               "settings": {
-                "text": "<h1>Less Sunburn, More Lake day</h1><p>Keep your crew cooler, longer, and more comfortable on the water.</p>",
+                "text": "<h1>Less Sunburn, More Lake Day</h1><p>Keep your crew cooler, longer, and more comfortable on the water.</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -463,7 +463,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Built for Fast, Hassle-Free Shade.</h2>",
+                "text": "<h2>Built for Fast, Hassle-Free Shade</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
