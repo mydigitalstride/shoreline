@@ -661,7 +661,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2><strong>No Poles. No Holes.</strong></h2>",
+                "text": "<h2><strong>Made for Your Bimini </strong></h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -686,7 +686,7 @@
             "text_a3V7cr": {
               "type": "text",
               "settings": {
-                "text": "<p>No bulky supports or complicated installs, designed to fit your boat beautifully.</p>",
+                "text": "<p>Each bimini extension sets up in under 60 seconds, no extra straps or bulky supports needed.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
