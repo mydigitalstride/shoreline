@@ -121,6 +121,7 @@
       "blocks": {
         "govx_id_exclusive_discounts_govx_id_button_i9TP4P": {
           "type": "shopify://apps/govx-id-exclusive-discounts/blocks/govx-id-button/2b41cbab-a2d3-48ab-85b4-09f16dcc4bf0",
+          "disabled": true,
           "settings": {
             "cta_layout": "full",
             "cta_prompt": "10% Discount available for Military and First Responders"
