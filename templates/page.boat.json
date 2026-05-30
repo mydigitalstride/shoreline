@@ -57,32 +57,12 @@
         "padding-block-end": 80
       }
     },
-    "hero_DxyHyQ": {
+    "hero_LrMYbw": {
       "type": "hero",
       "blocks": {
-        "logo_qRykLP": {
-          "type": "logo",
-          "name": "t:names.logo",
-          "settings": {
-            "inverse": false,
-            "font": "heading",
-            "unit": "pixel",
-            "percent_width": 100,
-            "pixel_height": 144,
-            "custom_mobile_size": false,
-            "unit_mobile": "percent",
-            "percent_width_mobile": 100,
-            "pixel_height_mobile": 120,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_Awhcjh": {
+        "group_F7qfi4": {
           "type": "group",
-          "name": "t:names.group",
+          "name": "Menu-Group",
           "settings": {
             "link": "",
             "open_in_new_tab": false,
@@ -121,13 +101,13 @@
             "custom_id": "menu-group"
           },
           "blocks": {
-            "menu_QaDqLt": {
+            "menu_kpfPmf": {
               "type": "menu",
               "name": "t:names.menu",
               "settings": {
                 "menu": "main-menu",
                 "heading": "",
-                "menu_spacing": 12,
+                "menu_spacing": 0,
                 "show_as_accordion": false,
                 "accordion_icon": "caret",
                 "accordion_dividers": false,
@@ -139,79 +119,198 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "main_menu": true
+                "main_menu": true,
+                "menu_logo": "shopify://shop_images/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "menu_QaDqLt"
+            "menu_kpfPmf"
           ]
         },
-        "text_zNiqhh": {
-          "type": "text",
+        "group_pP9KEm": {
+          "type": "group",
+          "name": "t:names.group",
           "settings": {
-            "text": "<h1>Store Locator</h1>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "h1",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
             "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-block-end": 98,
+            "padding-inline-start": 66,
+            "padding-inline-end": 0,
+            "custom_id": ""
           },
-          "blocks": {}
-        },
-        "text_jNA97X": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Find the Shoreline Brands local retailer near you!</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 32,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+          "blocks": {
+            "logo_aDeEht": {
+              "type": "logo",
+              "name": "t:names.logo",
+              "settings": {
+                "inverse": false,
+                "font": "heading",
+                "unit": "percent",
+                "percent_width": 100,
+                "pixel_height": 160,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_J3gQFr": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>Enjoy Every Moment</h1><h1>Under the Sun</h1>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "h1",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_dCwLzV": {
+              "type": "group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 18,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0,
+                "custom_id": ""
+              },
+              "blocks": {
+                "button_xNH4kf": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Shop All Products",
+                    "link": "shopify://collections/shoreline-brands",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_6Hm94p": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Find My Shade Sail",
+                    "link": "shopify://pages/shade-solutions",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_xNH4kf",
+                "button_6Hm94p"
+              ]
+            }
           },
-          "blocks": {}
+          "block_order": [
+            "logo_aDeEht",
+            "text_J3gQFr",
+            "group_dCwLzV"
+          ]
         }
       },
       "block_order": [
-        "logo_qRykLP",
-        "group_Awhcjh",
-        "text_zNiqhh",
-        "text_jNA97X"
+        "group_F7qfi4",
+        "group_pP9KEm"
+      ],
+      "custom_css": [
+        "h1 {font-family: \"League Spartan\";}"
       ],
       "name": "t:names.hero",
       "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/2023_Malibu_23LSV.jpg",
+        "media_type_1": "video",
+        "image_1": "shopify://shop_images/bd190a14-45d221_acf79b9ff6a64acf87ab3c7292f843ca_mv2.jpg",
         "video_1": "shopify://files/videos/SB24_Website_SunShade_1080x1080 (1).mp4",
         "media_type_2": "image",
-        "image_2": "shopify://shop_images/2023_Malibu_23LSV.jpg",
+        "video_2": "shopify://files/videos/123 - SB24_Website_SunShade_1280x400.mp4",
         "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
@@ -236,146 +335,225 @@
         "padding-block-end": 40
       }
     },
-    "section_dNkbRa": {
-      "type": "section",
+    "features_and_categories_eneykp": {
+      "type": "features-and-categories",
       "blocks": {
-        "text_AJ3Lnx": {
-          "type": "text",
-          "name": "t:names.heading",
+        "feature_qLRJxX": {
+          "type": "feature",
           "settings": {
-            "text": "<h2>Find your nearest Shoreline Brands Bimini Extension Retailer</h2>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "icon": "shopify://shop_images/Assets.png",
+            "title": "Wake Approved",
+            "text": "Use your Bimini Extension while driving up to 15 mph."
+          }
         },
-        "text_mLcWxL": {
-          "type": "text",
-          "name": "t:names.text",
+        "feature_wHH7WV": {
+          "type": "feature",
           "settings": {
-            "text": "<p>Find the Shoreline Brands Bimini Extension at one of our authorized retailers near you. Stop by a local dealer to get set up for your next day on the water.<br/><br/>Are you a dealer interested in carrying Shoreline Brands? Join our growing network and offer your customers a product they’ll love. Reach out to <a>info@shorelinebrands.com</a> to get started.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "icon": "shopify://shop_images/Near-Universal_Fit_e8417309-5312-4520-99c2-787770828f91.png",
+            "title": "Near-Universal Fit",
+            "text": "18+ variations to fit most makes and models."
+          }
+        },
+        "feature_fRYhfj": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Brezee_7685f228-82f1-4aaa-8387-d13f48080c82.png",
+            "title": "A Breeze to Install",
+            "text": "Deploys in under 60 seconds"
+          }
+        },
+        "category_qHXEqy": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/2016_Nautique_G25.jpg",
+            "title": "Wake Boat Bimini Extensions",
+            "link": "shopify://collections/shade-extension-kits-best-sellers-all-products"
+          }
+        },
+        "category_MYjRFx": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/b95c6930-45d221_99795f339ac74ffcb2187f7e1f1a7276_mv2.jpg",
+            "title": "Center Console Shade Sails",
+            "link": "shopify://collections/shade-extension-kits-all-products"
+          }
+        },
+        "category_MgEKLy": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/12.11.25ShorelineBrandsProductPhotos-9.jpg",
+            "title": "Pontoon boat bimini extensions",
+            "link": "shopify://collections/pontoon-boat-bimini-extensions"
+          }
+        },
+        "category_NfJtfD": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/XLarge.avif",
+            "title": "Softshell covers",
+            "link": "shopify://collections/soft-shell-covers"
+          }
         }
       },
       "block_order": [
-        "text_AJ3Lnx",
-        "text_mLcWxL"
+        "feature_qLRJxX",
+        "feature_wHH7WV",
+        "feature_fRYhfj",
+        "category_qHXEqy",
+        "category_MYjRFx",
+        "category_MgEKLy",
+        "category_NfJtfD"
       ],
-      "name": "t:names.custom_section",
+      "custom_css": [
+        "p {color: white !important;}",
+        ".category-title {position: absolute; left: 0rem; right: 0rem; bottom: 0rem; top: auto; z-index: 1; color: white; font-size: 1.5rem; text-align: center; padding: 0; text-shadow: 1px 2px 3px black;}"
+      ],
+      "name": "Features & Categories",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "flex-start",
-        "gap": 0,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 0,
-        "custom_section_id": ""
+        "heading": "Shop by Category"
       }
     },
-    "section_be9qnT": {
-      "type": "section",
+    "best_sellers_story_ExL6UU": {
+      "type": "best-sellers-story",
+      "custom_css": [
+        "img {object-fit: cover;}"
+      ],
+      "name": "Best Sellers with Story",
+      "settings": {
+        "heading": "FEATURED PRODUCTS",
+        "products": [
+          "wake-tower-mounted-universal-bimini-extension",
+          "2015-2025-malibu-boats-bimini-mounted-shade-extension",
+          "pontoon-boat-bimini-extension-kit"
+        ],
+        "bg_image_left": "shopify://shop_images/Shoreline_Website_Mockup.png",
+        "bg_image_right": "shopify://shop_images/IMG_2826.jpg",
+        "logo": "shopify://shop_images/SURFCRAFT-11.png",
+        "story_heading": "The Shoreline Story",
+        "button_text": "About Shoreline",
+        "button_link": "shopify://pages/about"
+      }
+    },
+    "review_BKMjJC": {
+      "type": "review",
+      "custom_css": [],
+      "name": "Shoreline Reviews",
+      "settings": {
+        "heading": "Shoreline Reviews",
+        "left_text": "Real feedback from real boaters who trust Shoreline Brands for lasting shade and performance.",
+        "right_text": "Great product! Their customer service worked directly with me to ensure I had the proper mounts for the sun shade ....I couldn't be happier!",
+        "author": "Bill G.",
+        "bg_image_left": "shopify://shop_images/DJI_0007.jpg",
+        "bg_image_right": "shopify://shop_images/Shoreline_Website_Mockup.png",
+        "star_logo": "shopify://shop_images/Shoreline_Website_Mockup_1.png"
+      }
+    },
+    "custom_liquid_ptPHTE": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"scrolling-testimonial-wrapper\">\n  <div class=\"testimonial-scroll-container\">\n    \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/3bfc6def4e5e4d2a8fdda09481dc5182/3bfc6def4e5e4d2a8fdda09481dc5182.HD-1080p-7.2Mbps-84909560.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">EASY TO INSTALL!!!</div>\n    </div>\n\n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/f9617a1550e849dbb7a90c82c1282bc3/f9617a1550e849dbb7a90c82c1282bc3.HD-1080p-7.2Mbps-84909559.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">GOES UP IN 60 SECONDS!</div>\n    </div>\n  \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/167a4c79a15a4f32b21c5abe36be1d60/167a4c79a15a4f32b21c5abe36be1d60.HD-720p-1.6Mbps-84909883.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">MUST HAVE!!</div>\n    </div>\n  \n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/71933d7ec0cc41f588a9291ee2e3b484/71933d7ec0cc41f588a9291ee2e3b484.HD-1080p-7.2Mbps-84910251.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">PONTOON BOAT PARTY!</div>\n\n\n    </div>\n    <div class=\"mobile-card video-card\">\n      <video playsinline muted loop autoplay preload=\"metadata\" onclick=\"toggleMute(this)\">\n        <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/d1db59523ee34ad3a92c6e74d0358922/d1db59523ee34ad3a92c6e74d0358922.HD-1080p-7.2Mbps-84988507.mp4?v=0\">\n      </video>\n      <button class=\"mute-toggle\" onclick=\"toggleMute(this.previousElementSibling)\">Tap for Sound</button>\n      <div class=\"video-overlay\">Fast to Set Up!</div>\n\n\n    </div>\n  </div>\n</div>\n  \n<script>\n  function toggleMute(video) {\n    video.muted = !video.muted;\n    const btn = video.nextElementSibling;\n    if (video.muted) {\n      btn.innerHTML = \"Tap for Sound\";\n      btn.style.opacity = \"1\";\n    } else {\n      btn.innerHTML = \"Mute\";\n      btn.style.opacity = \"0.5\";\n    }\n  }\n</script>\n  \n<style>\n  /* Container Setup */\n  .scrolling-testimonial-wrapper {\n    width: 100vw !important; \n    position: relative !important;\n    left: 50% !important;\n    right: 50% !important;\n    margin-left: -50vw !important;\n    margin-right: -50vw !important;\n    padding: 40px 20px !important;\n    background: #2c3c5e !important; /* Solid blue background */\n    overflow: hidden;\n  }\n  \n  .testimonial-scroll-container {\n    display: flex;\n    gap: 15px;\n    overflow-x: auto;\n    scroll-snap-type: x mandatory;\n    padding-bottom: 20px;\n    -webkit-overflow-scrolling: touch;\n    max-width: 1400px; \n    margin: 0 auto; \n  }\n  \n  .testimonial-scroll-container::-webkit-scrollbar {\n    display: none;\n  }\n  \n  /* Kill the Theme's White Card Styles */\n  .mobile-card {\n    flex: 0 0 280px !important;\n    height: 500px !important;\n    background: transparent !important; \n    border-radius: 16px !important;\n    overflow: hidden !important;\n    position: relative !important;\n    scroll-snap-align: start !important;\n    box-shadow: none !important; /* Removes default shadow */\n    padding: 0 !important; /* Forces the video to the edges */\n    border: none !important; /* Removes any white border */\n    margin: 0 !important;\n  }\n  \n  /* Force Video to Fill Completely */\n  .video-card video {\n    position: absolute !important;\n    top: 0 !important;\n    left: 0 !important;\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n    background: transparent !important; \n    cursor: pointer !important;\n    padding: 0 !important;\n    margin: 0 !important;\n    border-radius: 16px !important;\n    display: block !important;\n  }\n  \n  /* Mute Button Overlay */\n  .mute-toggle {\n    position: absolute;\n    top: 15px;\n    right: 15px;\n    background: rgba(0,0,0,0.6);\n    color: white;\n    border: none;\n    padding: 5px 10px;\n    border-radius: 20px;\n    font-size: 10px;\n    text-transform: uppercase;\n    cursor: pointer;\n    z-index: 10;\n    transition: opacity 0.3s;\n  }\n  \n  .video-overlay {\n    position: absolute;\n    bottom: 40px;\n    left: 0;\n    right: 0;\n    color: white;\n    text-align: center;\n    font-weight: 800;\n    font-size: 1.2rem;\n    text-transform: uppercase;\n    text-shadow: 0 2px 10px rgba(0,0,0,0.8); /* Darkened shadow so text pops more */\n    pointer-events: none;\n    padding: 0 10px;\n    z-index: 5;\n  }\n  \n  @media (max-width: 480px) {\n    .mobile-card {\n      flex: 0 0 250px !important;\n      height: 450px !important;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "faq_two_column_aE39j6": {
+      "type": "faq-two-column",
       "blocks": {
-        "custom_liquid_6YxrDp": {
-          "type": "custom-liquid",
-          "name": "t:names.custom_liquid",
+        "faq_BQyyL8": {
+          "type": "faq",
           "settings": {
-            "custom_liquid": "<!-- Start Stockist.co widget -->\n<stockist-store-locator data-stockist-widget-tag=\"map_9q94xk43\">\n  Loading store locator from <a href=\"https://stockist.co\">Stockist store locator</a>...\n</stockist-store-locator>\n<script async src=\"https://stockist.co/embed/v1/widget.min.js\"></script>\n<!-- End Stockist.co widget -->"
-          },
-          "blocks": {}
+            "question": "What Bimini Shade Extension will fit my boat?",
+            "answer": "<p>We have over 18 different variations of shade extensions to fit most makes and models. Use our search tool to find yours. If you still cannot locate the correct kit, please reach out for team member assistance. </p><p>Find what you're looking for <a href=\"/pages/shade-solutions\" title=\"Shade Solutions\">here</a></p>"
+          }
+        },
+        "faq_9qR83R": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use my bimini extension while driving?",
+            "answer": "<p>Yes. Shoreline Brands Bimini Extensions are rated for use at speeds up to <strong>15 mph</strong>. This rating accounts for typical wind and weather conditions you may encounter on the lake.</p><p>In calm conditions, many customers find they can operate at slightly higher speeds. That said, conditions vary, so we always recommend using good judgment and reducing speed if winds pick up or water conditions change.</p>"
+          }
+        },
+        "faq_mJNgJd": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use my bimini extension while wakesurfing and wakeboarding?",
+            "answer": "<p>Yes, our bimini extension products can be used while wakesurfing. Simply pass your rope beneath the shade</p><p>We recommend taking the shade system down while wakeboarding or waterskiing.</p>"
+          }
+        },
+        "faq_qeweKR": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I have an existing bimini top?",
+            "answer": "<p>Our versatile boat shade kits are designed to be used in addition to your factory Bimini tops. We intentionally provide telescopic poles that are longer than the sunshade provided to eliminate any overlap between your factory bimini and our bimini extension kit.</p>"
+          }
+        },
+        "faq_JnCQLw": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I don't have a wakeboard tower?",
+            "answer": "<p>We offer shade kits for virtually all makes and models. Visit our shade solutions page to learn more about our products.</p>"
+          }
+        },
+        "faq_ccNFcG": {
+          "type": "faq",
+          "settings": {
+            "question": "How do you store the bimini shade extension when it is not extended?",
+            "answer": "<p>The included mounting brackets will always remain on the tower. When not in use, the poles collapse down to 36\" and the shade folds up neatly. Both can be stored in the provided storage bag</p>"
+          }
+        },
+        "faq_YHmLYd": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does it take to set up the bimini shade extension?",
+            "answer": "<p>Setting up the shade is a breeze. With the included mounting hardware, you can complete the initial setup in 10 minutes. Once in position, deploying or disassembling the shade and telescoping poles takes less than a minute.</p>"
+          }
+        },
+        "faq_KKc8cG": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer custom colors for the bimini extension?",
+            "answer": "<p>We keep a black color shade in stock; customization is available for an additional fee. Please use the contact us form for general inquiry</p>"
+          }
+        },
+        "faq_BgP7G9": {
+          "type": "faq",
+          "settings": {
+            "question": "What is a Bimini Extension?",
+            "answer": "<p>A Bimini Extension is a sun shade device used on your boat to provide protection to passengers not covered by your factory Bimini. \n\nAlso Known As: Shade Sail, Boat Shade Extension, Transom Awning, Wake Shade, Sun Shade Canopy</p>"
+          }
         }
       },
       "block_order": [
-        "custom_liquid_6YxrDp"
+        "faq_BQyyL8",
+        "faq_9qR83R",
+        "faq_mJNgJd",
+        "faq_qeweKR",
+        "faq_JnCQLw",
+        "faq_ccNFcG",
+        "faq_YHmLYd",
+        "faq_KKc8cG",
+        "faq_BgP7G9"
       ],
-      "name": "t:names.custom_section",
+      "name": "FAQ Two Column",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 0,
-        "section_width": "page-width",
-        "section_height": "small",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 16,
-        "padding-block-end": 48,
-        "custom_section_id": ""
+        "bg_image": "shopify://shop_images/27b4087b-45d221_5f52bc2bfa58482598da328e3e1a7436_mv2.jpg",
+        "heading": "Frequently Asked Questions",
+        "subtext": "Find quick answers to common questions about Shoreline Brands products, including bimini top extensions, boat shade kits, and accessories. If you don’t see what you’re looking for, contact our support team for personalized help.",
+        "button_text": "Contact Us",
+        "button_link": "shopify://pages/contact"
       }
     }
   },
   "order": [
     "main",
-    "hero_DxyHyQ",
-    "section_dNkbRa",
-    "section_be9qnT"
+    "hero_LrMYbw",
+    "features_and_categories_eneykp",
+    "best_sellers_story_ExL6UU",
+    "review_BKMjJC",
+    "custom_liquid_ptPHTE",
+    "faq_two_column_aE39j6"
   ]
 }
