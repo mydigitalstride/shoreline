@@ -372,10 +372,18 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_HJ6RM8": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8888_1.jpg",
+            "title": "2026 Nautique G23",
+            "link": "shopify://products/nautique-power-tower-shade-extension"
+          }
+        },
         "boat_gallery_iXBNGB": {
           "type": "boat-gallery",
           "settings": {
-            "image": "shopify://shop_images/IMG_8966.jpg",
+            "image": "shopify://shop_images/2022Malibu23MXZ.jpg",
             "title": "2022 Malibu 23 MXZ",
             "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
           }
@@ -383,7 +391,7 @@
         "boat_gallery_DGcC6r": {
           "type": "boat-gallery",
           "settings": {
-            "image": "shopify://shop_images/IMG_8965.jpg",
+            "image": "shopify://shop_images/Supreme_220LS.jpg",
             "title": "1999 Supreme 220LS",
             "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
           }
@@ -998,6 +1006,7 @@
         }
       },
       "block_order": [
+        "boat_gallery_HJ6RM8",
         "boat_gallery_iXBNGB",
         "boat_gallery_DGcC6r",
         "boat_gallery_YwiiHw",
