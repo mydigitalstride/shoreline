@@ -423,13 +423,13 @@
         "padding-block-end": 0
       }
     },
-    "section_QHJjfy": {
+    "section_84dJAq": {
       "type": "section",
       "blocks": {
-        "image_eLa4MH": {
+        "image_Tka7zh": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/SHORELINES-easy_instal.gif",
+            "image": "shopify://shop_images/Centurion_Ri245_Surfing.jpg",
             "link": "",
             "image_ratio": "square",
             "width": "fill",
@@ -448,7 +448,7 @@
           },
           "blocks": {}
         },
-        "group_HMmQgj": {
+        "group_VqbE94": {
           "type": "group",
           "settings": {
             "link": "",
@@ -458,7 +458,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
             "width": "custom",
@@ -488,11 +488,11 @@
             "custom_id": ""
           },
           "blocks": {
-            "text_WWLeeC": {
+            "text_HNXtzC": {
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Built for Fast, Hassle-Free Shade</h2>",
+                "text": "<h2>Protect What Matters Most</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -514,10 +514,10 @@
               },
               "blocks": {}
             },
-            "text_fKtM6B": {
+            "text_c6zzpB": {
               "type": "text",
               "settings": {
-                "text": "<p>Set up in minutes and enjoy comfortable, reliable shade all day long.</p>",
+                "text": "<p>Because the best boat days aren't just about the water - they're about who you share them with. </p><p>The Shoreline bimini creates a comfortable space for making memories that last longer than any day on the water.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -541,14 +541,14 @@
             }
           },
           "block_order": [
-            "text_WWLeeC",
-            "text_fKtM6B"
+            "text_HNXtzC",
+            "text_c6zzpB"
           ]
         }
       },
       "block_order": [
-        "image_eLa4MH",
-        "group_HMmQgj"
+        "image_Tka7zh",
+        "group_VqbE94"
       ],
       "name": "t:names.image_with_text",
       "settings": {
@@ -579,6 +579,29 @@
         "padding-block-start": 40,
         "padding-block-end": 40,
         "custom_section_id": ""
+      }
+    },
+    "custom_liquid_8weabE": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  /* Force ALL text inside this section to be black */\n  .custom-black-text h2,\n  .custom-black-text p,\n  .custom-black-text .rte,\n  .custom-black-text .rte p,\n  .custom-black-text rte-formatter,\n  .custom-black-text rte-formatter p {\n    color: #000000 !important;\n  }\n  \n  /* Make sure the video fills the block perfectly */\n  .custom-video-fill {\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n    display: block;\n  }\n\n  /* --- MOBILE CENTERING OVERRIDES --- */\n  @media screen and (max-width: 768px) {\n    /* Target the flex container wrapping the text */\n    .custom-black-text .group-block-content {\n      align-items: center !important;\n      text-align: center !important;\n      --horizontal-alignment: center !important;\n    }\n    \n    /* Target the direct text blocks to override inline 'fit-content' */\n    .custom-black-text .group-block-content > div,\n    .custom-black-text .group-block-content > rte-formatter {\n      width: 100% !important;\n      max-width: 100% !important;\n      text-align: center !important;\n      display: flex !important;\n      justify-content: center !important;\n      --width: 100% !important;\n    }\n\n    /* Force the actual text elements to center */\n    .custom-black-text h2,\n    .custom-black-text p {\n      text-align: center !important;\n      margin-left: auto !important;\n      margin-right: auto !important;\n      width: 100% !important;\n    }\n  }\n</style>\n\n<div id=\"shopify-section-template--21865620603065__section_QHJjfy\" class=\"shopify-section section-wrapper custom-black-text\">\n\n<div class=\"section-background color-scheme-1\"></div>\n<div class=\"section section--page-width color-scheme-1\" style=\" \">\n  <div class=\"custom-section-background\">\n    <div class=\"background-image-container\">\n      <img src=\"//shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=3840\" alt=\"\" srcset=\"//shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=832 832w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=1200 1200w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=1600 1600w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=1920 1920w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=2560 2560w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=3840 3840w\" width=\"3840\" height=\"2043\" loading=\"lazy\" sizes=\"100vw\" fetchpriority=\"auto\">\n    </div>\n  </div>\n\n  <div class=\"border-style custom-section-content\" style=\"--border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px;\">\n    \n    <div class=\"\n        spacing-style\n        layout-panel-flex\n        layout-panel-flex--row\n        section-content-wrapper\n         mobile-column\n      \" style=\"\n        --flex-direction: row; --flex-wrap: nowrap;\n        --gap: max(24px, calc(var(--gap-scale, 1.0) * 32px));\n        --horizontal-alignment: flex-start; --vertical-alignment: center;\n        --vertical-alignment-mobile: center;\n        --padding-block-start: max(20px, calc(var(--spacing-scale) * 40px));--padding-block-end: max(20px, calc(var(--spacing-scale) * 40px));\n      \" data-testid=\"section-content\">\n      \n  <div class=\"\n  image-block image-block--ATEU1V1paeklRZWxrQ__image_eLa4MH image-block--height-fit spacing-style size-style\n\" style=\"\n  --ratio: 1;\n  --size-style-width: 100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n\">\n    \n    <video autoplay muted loop playsinline class=\"image-block__image border-style custom-video-fill\" style=\"\n      --ratio: 1;\n      --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    \">\n      <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/1bad1a05c3eb4e6394ad72ea2b629a40/1bad1a05c3eb4e6394ad72ea2b629a40.HD-1080p-7.2Mbps-84930517.mp4?v=0\" type=\"video/mp4\">\n    </video>\n    </div>\n\n<div class=\"\n    group-block\n    group-block--height-fit\n    group-block--width-custom\n    border-style\n    spacing-style\n    size-style\n  \" style=\"\n    --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n    --size-style-width:100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  \" data-testid=\"group-block\"><div class=\"group-block__media-wrapper\">\n    \n  </div>\n\n  <div class=\"\n      group-block-content\n      layout-panel-flex\n      layout-panel-flex--column\n       mobile-column\n    \" style=\"--flex-direction: column; --flex-wrap: nowrap;\n--gap: 12px;\n--horizontal-alignment: flex-start; --vertical-alignment: center;\n--vertical-alignment-mobile: center;\n\">\n  \n  <div class=\" spacing-style text-block text-block--AVEorQmsrcGJDbjF1R__text_WWLeeC h2\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-normal);\n  \">\n    <h2>Built for Fast, Hassle-Free Shade</h2>\n  </div>\n\n  <rte-formatter class=\" spacing-style text-block text-block--AdDM1bVRxazcwV1UxR__text_fKtM6B rte\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-narrow);\n  \">\n    <p>Set up in minutes and enjoy comfortable, reliable shade all day long.</p>\n  </rte-formatter>\n\n</div>\n</div>\n\n    </div>\n  </div>\n</div>\n\n</div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_xhq8jz": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  /* This reverses the order of the flex items on mobile screens (typically under 768px) */\n  @media (max-width: 767px) {\n    .reverse-on-mobile {\n      flex-direction: column-reverse !important;\n    }\n  }\n\n  /* Force the solid blue background and hide the old image */\n  .solid-blue-section {\n    background-color: #2c3c5e !important;\n  }\n  .solid-blue-section .custom-section-background {\n    display: none !important;\n  }\n\n  /* Force ALL text inside this section to be white, overpowering Shopify's Rich Text Editor */\n  .solid-blue-section h2,\n  .solid-blue-section p,\n  .solid-blue-section .rte,\n  .solid-blue-section .rte p,\n  .solid-blue-section rte-formatter,\n  .solid-blue-section rte-formatter p {\n    color: #ffffff !important;\n  }\n  \n  /* Make sure the video fills the block perfectly */\n  .custom-video-fill {\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n    display: block;\n  }\n\n  /* --- MOBILE CENTERING OVERRIDES --- */\n  @media screen and (max-width: 768px) {\n    /* Target the flex container wrapping the text */\n    .solid-blue-section .group-block-content {\n      align-items: center !important;\n      text-align: center !important;\n      --horizontal-alignment: center !important;\n    }\n    \n    /* Target the direct text blocks to override inline 'fit-content' */\n    .solid-blue-section .group-block-content > div,\n    .solid-blue-section .group-block-content > rte-formatter {\n      width: 100% !important;\n      max-width: 100% !important;\n      text-align: center !important;\n      display: flex !important;\n      justify-content: center !important;\n      --width: 100% !important;\n    }\n\n    /* Force the actual text elements to center */\n    .solid-blue-section h2,\n    .solid-blue-section p {\n      text-align: center !important;\n      margin-left: auto !important;\n      margin-right: auto !important;\n      width: 100% !important;\n    }\n  }\n</style>\n\n<div id=\"shopify-section-template--21865620603065__section_8CKjDj\" class=\"shopify-section section-wrapper solid-blue-section\">\n\n<div class=\"section-background color-scheme-1\"></div>\n<div class=\"section section--page-width color-scheme-1\" style=\" \">\n  <div class=\"custom-section-background\">\n    <div class=\"background-image-container\">\n      <img src=\"//shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=3840\" alt=\"\" srcset=\"//shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=832 832w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1200 1200w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1600 1600w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1920 1920w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=2560 2560w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=3840 3840w\" width=\"3840\" height=\"2159\" loading=\"lazy\" sizes=\"100vw\" fetchpriority=\"auto\">\n    </div>\n  </div>\n\n  <div class=\"border-style custom-section-content\" style=\"--border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px;\">\n    \n    <div class=\"\n        spacing-style\n        layout-panel-flex\n        layout-panel-flex--row\n        section-content-wrapper\n        mobile-column\n        reverse-on-mobile\n      \" style=\"\n        --flex-direction: row; --flex-wrap: nowrap;\n        --gap: max(24px, calc(var(--gap-scale, 1.0) * 32px));\n        --horizontal-alignment: flex-start; --vertical-alignment: center;\n        --vertical-alignment-mobile: center;\n        --padding-block-start: max(20px, calc(var(--spacing-scale) * 40px));--padding-block-end: max(20px, calc(var(--spacing-scale) * 40px));\n      \" data-testid=\"section-content\">\n      \n<div class=\"\n    group-block\n    group-block--height-fit\n    group-block--width-custom\n    border-style\n    spacing-style\n    size-style\n  \" style=\"\n    --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n    --size-style-width:100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  \" data-testid=\"group-block\"><div class=\"group-block__media-wrapper\">\n    \n  </div>\n\n  <div class=\"\n      group-block-content\n      layout-panel-flex\n      layout-panel-flex--column\n       mobile-column\n    \" style=\"--flex-direction: column; --flex-wrap: nowrap;\n--gap: 12px;\n--horizontal-alignment: flex-start; --vertical-alignment: center;\n--vertical-alignment-mobile: center;\n\">\n  \n  <div class=\" spacing-style text-block text-block--AbWRqRmNjYVpGclpkZ__text_MeaTB7 h2\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-normal);\n  \">\n    <h2>Shade That Rides With You</h2>\n  </div>\n\n  <rte-formatter class=\" spacing-style text-block text-block--AV09QUWh4MEdzaHpaa__text_E4dtL4 rte\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-narrow);\n  \">\n    <p>Keep the shade fully deployed while you surf. Ride and relax without ever needing to take the shade down.</p>\n  </rte-formatter>\n\n</div>\n</div>\n\n  <div class=\"\n  image-block image-block--AM3hCek9jNmlJNkQ1e__image_iiDfzT image-block--height-fit spacing-style size-style\n\" style=\"\n  --ratio: 1;\n  --size-style-width: 100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n\">\n    \n    <video autoplay muted loop playsinline class=\"image-block__image border-style custom-video-fill\" style=\"\n      --ratio: 1;\n      --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    \">\n      <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/0dbf56d4ff3e4f01b512c27bcfd998f5/0dbf56d4ff3e4f01b512c27bcfd998f5.HD-1080p-7.2Mbps-84929900.mp4?v=0\" type=\"video/mp4\">\n    </video>\n    </div>\n\n    </div>\n  </div>\n</div>\n\n</div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     },
     "section_daKVdQ": {
@@ -739,29 +762,6 @@
         "custom_section_id": ""
       }
     },
-    "custom_liquid_8weabE": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "<style>\n  /* Force ALL text inside this section to be black */\n  .custom-black-text h2,\n  .custom-black-text p,\n  .custom-black-text .rte,\n  .custom-black-text .rte p,\n  .custom-black-text rte-formatter,\n  .custom-black-text rte-formatter p {\n    color: #000000 !important;\n  }\n  \n  /* Make sure the video fills the block perfectly */\n  .custom-video-fill {\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n    display: block;\n  }\n\n  /* --- MOBILE CENTERING OVERRIDES --- */\n  @media screen and (max-width: 768px) {\n    /* Target the flex container wrapping the text */\n    .custom-black-text .group-block-content {\n      align-items: center !important;\n      text-align: center !important;\n      --horizontal-alignment: center !important;\n    }\n    \n    /* Target the direct text blocks to override inline 'fit-content' */\n    .custom-black-text .group-block-content > div,\n    .custom-black-text .group-block-content > rte-formatter {\n      width: 100% !important;\n      max-width: 100% !important;\n      text-align: center !important;\n      display: flex !important;\n      justify-content: center !important;\n      --width: 100% !important;\n    }\n\n    /* Force the actual text elements to center */\n    .custom-black-text h2,\n    .custom-black-text p {\n      text-align: center !important;\n      margin-left: auto !important;\n      margin-right: auto !important;\n      width: 100% !important;\n    }\n  }\n</style>\n\n<div id=\"shopify-section-template--21865620603065__section_QHJjfy\" class=\"shopify-section section-wrapper custom-black-text\">\n\n<div class=\"section-background color-scheme-1\"></div>\n<div class=\"section section--page-width color-scheme-1\" style=\" \">\n  <div class=\"custom-section-background\">\n    <div class=\"background-image-container\">\n      <img src=\"//shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=3840\" alt=\"\" srcset=\"//shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=832 832w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=1200 1200w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=1600 1600w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=1920 1920w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=2560 2560w, //shorelinebrands.com/cdn/shop/files/Shoreline_Website_Mockup.png?v=1760303507&amp;width=3840 3840w\" width=\"3840\" height=\"2043\" loading=\"lazy\" sizes=\"100vw\" fetchpriority=\"auto\">\n    </div>\n  </div>\n\n  <div class=\"border-style custom-section-content\" style=\"--border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px;\">\n    \n    <div class=\"\n        spacing-style\n        layout-panel-flex\n        layout-panel-flex--row\n        section-content-wrapper\n         mobile-column\n      \" style=\"\n        --flex-direction: row; --flex-wrap: nowrap;\n        --gap: max(24px, calc(var(--gap-scale, 1.0) * 32px));\n        --horizontal-alignment: flex-start; --vertical-alignment: center;\n        --vertical-alignment-mobile: center;\n        --padding-block-start: max(20px, calc(var(--spacing-scale) * 40px));--padding-block-end: max(20px, calc(var(--spacing-scale) * 40px));\n      \" data-testid=\"section-content\">\n      \n  <div class=\"\n  image-block image-block--ATEU1V1paeklRZWxrQ__image_eLa4MH image-block--height-fit spacing-style size-style\n\" style=\"\n  --ratio: 1;\n  --size-style-width: 100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n\">\n    \n    <video autoplay muted loop playsinline class=\"image-block__image border-style custom-video-fill\" style=\"\n      --ratio: 1;\n      --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    \">\n      <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/1bad1a05c3eb4e6394ad72ea2b629a40/1bad1a05c3eb4e6394ad72ea2b629a40.HD-1080p-7.2Mbps-84930517.mp4?v=0\" type=\"video/mp4\">\n    </video>\n    </div>\n\n<div class=\"\n    group-block\n    group-block--height-fit\n    group-block--width-custom\n    border-style\n    spacing-style\n    size-style\n  \" style=\"\n    --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n    --size-style-width:100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  \" data-testid=\"group-block\"><div class=\"group-block__media-wrapper\">\n    \n  </div>\n\n  <div class=\"\n      group-block-content\n      layout-panel-flex\n      layout-panel-flex--column\n       mobile-column\n    \" style=\"--flex-direction: column; --flex-wrap: nowrap;\n--gap: 12px;\n--horizontal-alignment: flex-start; --vertical-alignment: center;\n--vertical-alignment-mobile: center;\n\">\n  \n  <div class=\" spacing-style text-block text-block--AVEorQmsrcGJDbjF1R__text_WWLeeC h2\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-normal);\n  \">\n    <h2>Built for Fast, Hassle-Free Shade</h2>\n  </div>\n\n  <rte-formatter class=\" spacing-style text-block text-block--AdDM1bVRxazcwV1UxR__text_fKtM6B rte\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-narrow);\n  \">\n    <p>Set up in minutes and enjoy comfortable, reliable shade all day long.</p>\n  </rte-formatter>\n\n</div>\n</div>\n\n    </div>\n  </div>\n</div>\n\n</div>",
-        "color_scheme": "",
-        "section_width": "full-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "custom_liquid_xhq8jz": {
-      "type": "custom-liquid",
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "<style>\n  /* This reverses the order of the flex items on mobile screens (typically under 768px) */\n  @media (max-width: 767px) {\n    .reverse-on-mobile {\n      flex-direction: column-reverse !important;\n    }\n  }\n\n  /* Force the solid blue background and hide the old image */\n  .solid-blue-section {\n    background-color: #2c3c5e !important;\n  }\n  .solid-blue-section .custom-section-background {\n    display: none !important;\n  }\n\n  /* Force ALL text inside this section to be white, overpowering Shopify's Rich Text Editor */\n  .solid-blue-section h2,\n  .solid-blue-section p,\n  .solid-blue-section .rte,\n  .solid-blue-section .rte p,\n  .solid-blue-section rte-formatter,\n  .solid-blue-section rte-formatter p {\n    color: #ffffff !important;\n  }\n  \n  /* Make sure the video fills the block perfectly */\n  .custom-video-fill {\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n    display: block;\n  }\n\n  /* --- MOBILE CENTERING OVERRIDES --- */\n  @media screen and (max-width: 768px) {\n    /* Target the flex container wrapping the text */\n    .solid-blue-section .group-block-content {\n      align-items: center !important;\n      text-align: center !important;\n      --horizontal-alignment: center !important;\n    }\n    \n    /* Target the direct text blocks to override inline 'fit-content' */\n    .solid-blue-section .group-block-content > div,\n    .solid-blue-section .group-block-content > rte-formatter {\n      width: 100% !important;\n      max-width: 100% !important;\n      text-align: center !important;\n      display: flex !important;\n      justify-content: center !important;\n      --width: 100% !important;\n    }\n\n    /* Force the actual text elements to center */\n    .solid-blue-section h2,\n    .solid-blue-section p {\n      text-align: center !important;\n      margin-left: auto !important;\n      margin-right: auto !important;\n      width: 100% !important;\n    }\n  }\n</style>\n\n<div id=\"shopify-section-template--21865620603065__section_8CKjDj\" class=\"shopify-section section-wrapper solid-blue-section\">\n\n<div class=\"section-background color-scheme-1\"></div>\n<div class=\"section section--page-width color-scheme-1\" style=\" \">\n  <div class=\"custom-section-background\">\n    <div class=\"background-image-container\">\n      <img src=\"//shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=3840\" alt=\"\" srcset=\"//shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=832 832w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1200 1200w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1600 1600w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=1920 1920w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=2560 2560w, //shorelinebrands.com/cdn/shop/files/Background_-_Blue.png?v=1760976388&amp;width=3840 3840w\" width=\"3840\" height=\"2159\" loading=\"lazy\" sizes=\"100vw\" fetchpriority=\"auto\">\n    </div>\n  </div>\n\n  <div class=\"border-style custom-section-content\" style=\"--border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px;\">\n    \n    <div class=\"\n        spacing-style\n        layout-panel-flex\n        layout-panel-flex--row\n        section-content-wrapper\n        mobile-column\n        reverse-on-mobile\n      \" style=\"\n        --flex-direction: row; --flex-wrap: nowrap;\n        --gap: max(24px, calc(var(--gap-scale, 1.0) * 32px));\n        --horizontal-alignment: flex-start; --vertical-alignment: center;\n        --vertical-alignment-mobile: center;\n        --padding-block-start: max(20px, calc(var(--spacing-scale) * 40px));--padding-block-end: max(20px, calc(var(--spacing-scale) * 40px));\n      \" data-testid=\"section-content\">\n      \n<div class=\"\n    group-block\n    group-block--height-fit\n    group-block--width-custom\n    border-style\n    spacing-style\n    size-style\n  \" style=\"\n    --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n    --size-style-width:100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  \" data-testid=\"group-block\"><div class=\"group-block__media-wrapper\">\n    \n  </div>\n\n  <div class=\"\n      group-block-content\n      layout-panel-flex\n      layout-panel-flex--column\n       mobile-column\n    \" style=\"--flex-direction: column; --flex-wrap: nowrap;\n--gap: 12px;\n--horizontal-alignment: flex-start; --vertical-alignment: center;\n--vertical-alignment-mobile: center;\n\">\n  \n  <div class=\" spacing-style text-block text-block--AbWRqRmNjYVpGclpkZ__text_MeaTB7 h2\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-normal);\n  \">\n    <h2>Shade That Rides With You</h2>\n  </div>\n\n  <rte-formatter class=\" spacing-style text-block text-block--AV09QUWh4MEdzaHpaa__text_E4dtL4 rte\" style=\"\n    --padding-block-start: 0px; --padding-block-end:0px; \n--padding-inline-start:0px; --padding-inline-end:0px; \n    --width: fit-content;\n    --max-width: var(--max-width--body-narrow);\n  \">\n    <p>Keep the shade fully deployed while you surf. Ride and relax without ever needing to take the shade down.</p>\n  </rte-formatter>\n\n</div>\n</div>\n\n  <div class=\"\n  image-block image-block--AM3hCek9jNmlJNkQ1e__image_iiDfzT image-block--height-fit spacing-style size-style\n\" style=\"\n  --ratio: 1;\n  --size-style-width: 100%;--size-style-height: fit;--size-style-width-mobile: 100%; --size-style-width-mobile-min: 5rem;\n  --padding-block-start: 0px;--padding-block-end: 0px;--padding-inline-start: 0px;--padding-inline-end: 0px;\n\">\n    \n    <video autoplay muted loop playsinline class=\"image-block__image border-style custom-video-fill\" style=\"\n      --ratio: 1;\n      --border-width: 1px; --border-style: none; --border-color: rgb(var(--color-border-rgb) / 1.0); --border-radius: 0px; \n    \">\n      <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/0dbf56d4ff3e4f01b512c27bcfd998f5/0dbf56d4ff3e4f01b512c27bcfd998f5.HD-1080p-7.2Mbps-84929900.mp4?v=0\" type=\"video/mp4\">\n    </video>\n    </div>\n\n    </div>\n  </div>\n</div>\n\n</div>",
-        "color_scheme": "",
-        "section_width": "full-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "bimini_finder_gFPbqx": {
       "type": "bimini-finder",
       "name": "Bimini Finder Section",
@@ -783,13 +783,13 @@
         "padding-block-end": 0
       }
     },
-    "section_QhCaV6": {
+    "section_QHJjfy": {
       "type": "section",
       "blocks": {
-        "image_XX8KXh": {
+        "image_eLa4MH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Centurion_Ri245_Surfing.jpg",
+            "image": "shopify://shop_images/SHORELINES-easy_instal.gif",
             "link": "",
             "image_ratio": "square",
             "width": "fill",
@@ -808,7 +808,7 @@
           },
           "blocks": {}
         },
-        "group_E9zFcH": {
+        "group_HMmQgj": {
           "type": "group",
           "settings": {
             "link": "",
@@ -818,7 +818,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
             "width": "custom",
@@ -848,11 +848,11 @@
             "custom_id": ""
           },
           "blocks": {
-            "text_wFhbfz": {
+            "text_WWLeeC": {
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Trusted by Boaters for 4+ Years<br/></h2>",
+                "text": "<h2>Built for Fast, Hassle-Free Shade</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -874,10 +874,10 @@
               },
               "blocks": {}
             },
-            "text_7f3xxq": {
+            "text_fKtM6B": {
               "type": "text",
               "settings": {
-                "text": "<p>Boaters across the country have trusted Shoreline to keep their crew cool, covered, and out on the water longer.</p>",
+                "text": "<p>Set up in minutes and enjoy comfortable, reliable shade all day long.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -901,14 +901,14 @@
             }
           },
           "block_order": [
-            "text_wFhbfz",
-            "text_7f3xxq"
+            "text_WWLeeC",
+            "text_fKtM6B"
           ]
         }
       },
       "block_order": [
-        "image_XX8KXh",
-        "group_E9zFcH"
+        "image_eLa4MH",
+        "group_HMmQgj"
       ],
       "name": "t:names.image_with_text",
       "settings": {
@@ -1177,16 +1177,16 @@
     "custom_liquid_brfYGV",
     "section_UfTiz3",
     "custom_liquid_Jdi9ap",
+    "section_84dJAq",
     "custom_liquid_8weabE",
-    "section_daKVdQ",
     "custom_liquid_xhq8jz",
+    "section_daKVdQ",
     "bimini_finder_gFPbqx",
     "custom_liquid_3GJebX",
     "section_QHJjfy",
     "custom_liquid_fagW3C",
     "section_XXk7kx",
     "custom_liquid_3dDcYA",
-    "section_QhCaV6",
     "custom_liquid_HyTXhU",
     "section_zMB3PN"
   ]
