@@ -341,160 +341,11 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<section class=\"shoreline-hero-custom\">\n  <div class=\"shoreline-hero-video-wrap\">\n    <video \n      playsinline \n      autoplay \n      loop \n      muted \n      class=\"shoreline-hero-video\" \n      preload=\"metadata\" \n      poster=\"//shorelinebrands.com/cdn/shop/files/preview_images/d9cf7d8f4a824f8e90d2f46f0cd83fc3.thumbnail.0000000000_small.jpg?v=1762972007\">\n      <source src=\"//shorelinebrands.com/cdn/shop/videos/c/vp/d9cf7d8f4a824f8e90d2f46f0cd83fc3/d9cf7d8f4a824f8e90d2f46f0cd83fc3.HD-1080p-7.2Mbps-62489053.mp4?v=0\" type=\"video/mp4\">\n    </video>\n  </div>\n\n  <div class=\"shoreline-hero-overlay\"></div>\n\n  <div class=\"shoreline-hero-content\">\n    <img \n      class=\"shoreline-hero-logo\" \n      src=\"//shorelinebrands.com/cdn/shop/files/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png?v=1763324436&width=700\" \n      alt=\"Shoreline Brands Co\">\n\n    <div class=\"hero-review-review_E6Jxcx\">\n      <div class=\"hero-stars-review_E6Jxcx\">\n        {% for i in (1..5) %}\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"21\" viewBox=\"0 0 20 19\" fill=\"none\">\n            <path d=\"M10 0L12.9389 5.95492L19.5106 6.90983L14.7553 11.5451L15.8779 18.0902L10 15L4.12215 18.0902L5.24472 11.5451L0.489435 6.90983L7.06107 5.95492L10 0Z\" fill=\"#fd8900\"></path>\n          </svg>\n        {% endfor %}\n      </div>\n\n      <p class=\"hero-review-text-review_E6Jxcx\">100,000+ Summers Upgraded.</p>\n    </div>\n\n    <h1>Less Sunburn,<br>More Lake Day</h1>\n\n    <p class=\"shoreline-hero-subtext\">\n      Keep your family and friends cool, comfortable, and out on the water all day long.\n    </p>\n\n    <div class=\"shoreline-hero-line\"></div>\n\n    <div class=\"shoreline-hero-buttons\">\n      <a href=\"/collections/shoreline-brands\" class=\"shoreline-btn shoreline-btn-primary\">\n        Shop All Products\n      </a>\n\n      <a href=\"https://shorelinebrands.com/pages/shade-sail#bimini-finder\" class=\"shoreline-btn shoreline-btn-secondary\">\n        Look For My Boat\n      </a>\n    </div>\n  </div>\n</section>\n\n<style>\n  .shoreline-hero-custom {\n    position: relative;\n    width: 100%;\n    min-height: 760px;\n    height: 82vh;\n    max-height: 820px;\n    overflow: hidden;\n    display: flex;\n    align-items: center;\n    color: #ffffff;\n    background: #20364a;\n  }\n\n  .shoreline-hero-video-wrap {\n    position: absolute;\n    inset: 0;\n    z-index: 1;\n  }\n\n  .shoreline-hero-video {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    display: block;\n  }\n\n  .shoreline-hero-overlay {\n    position: absolute;\n    inset: 0;\n    background: rgba(16, 37, 55, 0.45);\n    z-index: 2;\n  }\n\n  .shoreline-hero-content {\n    position: relative;\n    z-index: 3;\n    width: 100%;\n    max-width: 640px;\n    padding: 50px 7vw 45px;\n    text-align: left;\n  }\n\n  .shoreline-hero-logo {\n    width: min(370px, 70vw);\n    height: auto;\n    display: block;\n    margin-bottom: 22px;\n  }\n\n  .hero-review-review_E6Jxcx {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin: 0 0 14px 0;\n  }\n\n  .hero-stars-review_E6Jxcx {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n  }\n\n  .hero-stars-review_E6Jxcx svg {\n    width: 22px;\n    height: 21px;\n    display: block;\n    flex-shrink: 0;\n  }\n\n  .hero-review-text-review_E6Jxcx {\n    margin: 0 !important;\n    color: #ffffff !important;\n    font-size: 1.1rem !important;\n    font-weight: 900 !important;\n    line-height: 1 !important;\n    letter-spacing: 0.02em;\n    text-shadow: 0 2px 8px rgba(0,0,0,0.35);\n  }\n\n  .shoreline-hero-content h1 {\n    margin: 0 0 14px;\n    color: #ffffff !important;\n    font-family: \"League Spartan\", sans-serif;\n    font-size: clamp(2.8rem, 5vw, 4.7rem);\n    font-weight: 900;\n    line-height: 0.9;\n    letter-spacing: 0.07em;\n    text-shadow: 0 3px 10px rgba(0,0,0,0.35);\n  }\n\n  .shoreline-hero-subtext {\n    max-width: 540px;\n    margin: 0 0 10px;\n    color: #ffffff !important;\n    font-size: clamp(0.95rem, 1.35vw, 1.2rem) !important;\n    font-weight: 800 !important;\n    line-height: 1.25 !important;\n    letter-spacing: 0.04em;\n    text-shadow: 0 2px 8px rgba(0,0,0,0.35);\n  }\n\n  .shoreline-hero-line {\n    width: 100%;\n    max-width: 450px;\n    height: 3px;\n    background: #ffffff;\n    margin: 12px 0 24px;\n  }\n\n  .shoreline-hero-buttons {\n    display: flex;\n    flex-direction: column;\n    gap: 18px;\n    width: 100%;\n    max-width: 310px;\n    margin-left: 70px;\n  }\n\n  .shoreline-btn {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    min-height: 50px;\n    padding: 12px 20px;\n    text-decoration: none;\n    font-size: 0.9rem;\n    font-weight: 800;\n    line-height: 1;\n    letter-spacing: 0.03em;\n  }\n\n  .shoreline-btn-primary {\n    background: #f15a24;\n    color: #ffffff;\n    border: 2px solid #f15a24;\n  }\n\n  .shoreline-btn-secondary {\n    background: transparent;\n    color: #ffffff;\n    border: 3px solid #ffffff;\n  }\n\n  @media screen and (max-width: 749px) {\n    .shoreline-hero-custom {\n      min-height: 680px;\n      height: 78vh;\n      max-height: 740px;\n      align-items: flex-start;\n    }\n\n    .shoreline-hero-content {\n      padding: 80px 7vw 40px;\n      max-width: 100%;\n    }\n\n    .shoreline-hero-logo {\n      width: 68vw;\n      max-width: 350px;\n      margin-bottom: 22px;\n    }\n\n    .hero-review-review_E6Jxcx {\n      margin-bottom: 12px;\n      gap: 9px;\n      flex-wrap: wrap;\n    }\n\n    .hero-stars-review_E6Jxcx {\n      gap: 3px;\n    }\n\n    .hero-stars-review_E6Jxcx svg {\n      width: 18px;\n      height: 17px;\n    }\n\n    .hero-review-text-review_E6Jxcx {\n      font-size: 0.95rem !important;\n    }\n\n    .shoreline-hero-content h1 {\n      font-size: clamp(2.25rem, 8.7vw, 3.35rem);\n      line-height: 0.95;\n      letter-spacing: 0.07em;\n      margin-bottom: 14px;\n    }\n\n    .shoreline-hero-subtext {\n      max-width: 95%;\n      font-size: 0.9rem !important;\n      line-height: 1.25 !important;\n    }\n\n    .shoreline-hero-line {\n      max-width: 100%;\n      margin: 10px 0 24px;\n    }\n\n    .shoreline-hero-buttons {\n      max-width: 300px;\n      margin: 0 auto;\n      gap: 22px;\n    }\n\n    .shoreline-btn {\n      min-height: 50px;\n      font-size: 0.9rem;\n      padding: 12px 18px;\n    }\n  }\n\n  @media screen and (min-width: 1200px) {\n    .shoreline-hero-content {\n      padding-left: 80px;\n    }\n\n    .shoreline-hero-logo {\n      width: 370px;\n    }\n\n    .shoreline-hero-content h1 {\n      font-size: 4.6rem;\n    }\n\n    .shoreline-hero-buttons {\n      max-width: 310px;\n    }\n  }\n</style>",
+        "custom_liquid": "<section class=\"shoreline-hero-custom\">\n  <div class=\"shoreline-hero-video-wrap\">\n    <video \n      playsinline \n      autoplay \n      loop \n      muted \n      class=\"shoreline-hero-video\" \n      preload=\"metadata\" >\n      <source src=\"https://shorelinebrands.com/cdn/shop/videos/c/vp/9d6efc2dfda945f2b2008cd507ba0167/9d6efc2dfda945f2b2008cd507ba0167.HD-1080p-7.2Mbps-85477427.mp4?v=0\" type=\"video/mp4\">\n    </video>\n  </div>\n\n  <div class=\"shoreline-hero-overlay\"></div>\n\n  <div class=\"shoreline-hero-content\">\n    <img \n      class=\"shoreline-hero-logo\" \n      src=\"//shorelinebrands.com/cdn/shop/files/shoreline-logo_e10c045d-661e-4d6c-b64b-04b59e4afe3c.png?v=1763324436&width=700\" \n      alt=\"Shoreline Brands Co\">\n\n    <div class=\"hero-review-review_E6Jxcx\">\n      <div class=\"hero-stars-review_E6Jxcx\">\n        {% for i in (1..5) %}\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"21\" viewBox=\"0 0 20 19\" fill=\"none\">\n            <path d=\"M10 0L12.9389 5.95492L19.5106 6.90983L14.7553 11.5451L15.8779 18.0902L10 15L4.12215 18.0902L5.24472 11.5451L0.489435 6.90983L7.06107 5.95492L10 0Z\" fill=\"#fd8900\"></path>\n          </svg>\n        {% endfor %}\n      </div>\n\n      <p class=\"hero-review-text-review_E6Jxcx\">100,000+ Summers Upgraded.</p>\n    </div>\n\n    <h1>Less Sunburn,<br>More Lake Day</h1>\n\n    <p class=\"shoreline-hero-subtext\">\n      Keep your family and friends cool, comfortable, and out on the water all day long.\n    </p>\n\n    <div class=\"shoreline-hero-line\"></div>\n\n    <div class=\"shoreline-hero-buttons\">\n      <a href=\"/collections/shoreline-brands\" class=\"shoreline-btn shoreline-btn-primary\">\n        Shop All Products\n      </a>\n\n      <a href=\"https://shorelinebrands.com/pages/shade-sail#bimini-finder\" class=\"shoreline-btn shoreline-btn-secondary\">\n        Look For My Boat\n      </a>\n    </div>\n  </div>\n</section>\n\n<style>\n  .shoreline-hero-custom {\n    position: relative;\n    width: 100%;\n    min-height: 760px;\n    height: 82vh;\n    max-height: 820px;\n    overflow: hidden;\n    display: flex;\n    align-items: center;\n    color: #ffffff;\n    background: #20364a;\n  }\n\n  .shoreline-hero-video-wrap {\n    position: absolute;\n    inset: 0;\n    z-index: 1;\n  }\n\n  .shoreline-hero-video {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    display: block;\n  }\n\n  .shoreline-hero-overlay {\n    position: absolute;\n    inset: 0;\n    background: rgba(16, 37, 55, 0.45);\n    z-index: 2;\n  }\n\n  .shoreline-hero-content {\n    position: relative;\n    z-index: 3;\n    width: 100%;\n    max-width: 640px;\n    padding: 50px 7vw 45px;\n    text-align: left;\n  }\n\n  .shoreline-hero-logo {\n    width: min(370px, 70vw);\n    height: auto;\n    display: block;\n    margin-bottom: 22px;\n  }\n\n  .hero-review-review_E6Jxcx {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin: 0 0 14px 0;\n  }\n\n  .hero-stars-review_E6Jxcx {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n  }\n\n  .hero-stars-review_E6Jxcx svg {\n    width: 22px;\n    height: 21px;\n    display: block;\n    flex-shrink: 0;\n  }\n\n  .hero-review-text-review_E6Jxcx {\n    margin: 0 !important;\n    color: #ffffff !important;\n    font-size: 1.1rem !important;\n    font-weight: 900 !important;\n    line-height: 1 !important;\n    letter-spacing: 0.02em;\n    text-shadow: 0 2px 8px rgba(0,0,0,0.35);\n  }\n\n  .shoreline-hero-content h1 {\n    margin: 0 0 14px;\n    color: #ffffff !important;\n    font-family: \"League Spartan\", sans-serif;\n    font-size: clamp(2.8rem, 5vw, 4.7rem);\n    font-weight: 900;\n    line-height: 0.9;\n    letter-spacing: 0.07em;\n    text-shadow: 0 3px 10px rgba(0,0,0,0.35);\n  }\n\n  .shoreline-hero-subtext {\n    max-width: 540px;\n    margin: 0 0 10px;\n    color: #ffffff !important;\n    font-size: clamp(0.95rem, 1.35vw, 1.2rem) !important;\n    font-weight: 800 !important;\n    line-height: 1.25 !important;\n    letter-spacing: 0.04em;\n    text-shadow: 0 2px 8px rgba(0,0,0,0.35);\n  }\n\n  .shoreline-hero-line {\n    width: 100%;\n    max-width: 450px;\n    height: 3px;\n    background: #ffffff;\n    margin: 12px 0 24px;\n  }\n\n  .shoreline-hero-buttons {\n    display: flex;\n    flex-direction: column;\n    gap: 18px;\n    width: 100%;\n    max-width: 310px;\n    margin-left: 70px;\n  }\n\n  .shoreline-btn {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    min-height: 50px;\n    padding: 12px 20px;\n    text-decoration: none;\n    font-size: 0.9rem;\n    font-weight: 800;\n    line-height: 1;\n    letter-spacing: 0.03em;\n  }\n\n  .shoreline-btn-primary {\n    background: #f15a24;\n    color: #ffffff;\n    border: 2px solid #f15a24;\n  }\n\n  .shoreline-btn-secondary {\n    background: transparent;\n    color: #ffffff;\n    border: 3px solid #ffffff;\n  }\n\n  @media screen and (max-width: 749px) {\n    .shoreline-hero-custom {\n      min-height: 680px;\n      height: 78vh;\n      max-height: 740px;\n      align-items: flex-start;\n    }\n\n    .shoreline-hero-content {\n      padding: 80px 7vw 40px;\n      max-width: 100%;\n    }\n\n    .shoreline-hero-logo {\n      width: 68vw;\n      max-width: 350px;\n      margin-bottom: 22px;\n    }\n\n    .hero-review-review_E6Jxcx {\n      margin-bottom: 12px;\n      gap: 9px;\n      flex-wrap: wrap;\n    }\n\n    .hero-stars-review_E6Jxcx {\n      gap: 3px;\n    }\n\n    .hero-stars-review_E6Jxcx svg {\n      width: 18px;\n      height: 17px;\n    }\n\n    .hero-review-text-review_E6Jxcx {\n      font-size: 0.95rem !important;\n    }\n\n    .shoreline-hero-content h1 {\n      font-size: clamp(2.25rem, 8.7vw, 3.35rem);\n      line-height: 0.95;\n      letter-spacing: 0.07em;\n      margin-bottom: 14px;\n    }\n\n    .shoreline-hero-subtext {\n      max-width: 95%;\n      font-size: 0.9rem !important;\n      line-height: 1.25 !important;\n    }\n\n    .shoreline-hero-line {\n      max-width: 100%;\n      margin: 10px 0 24px;\n    }\n\n    .shoreline-hero-buttons {\n      max-width: 300px;\n      margin: 0 auto;\n      gap: 22px;\n    }\n\n    .shoreline-btn {\n      min-height: 50px;\n      font-size: 0.9rem;\n      padding: 12px 18px;\n    }\n  }\n\n  @media screen and (min-width: 1200px) {\n    .shoreline-hero-content {\n      padding-left: 80px;\n    }\n\n    .shoreline-hero-logo {\n      width: 370px;\n    }\n\n    .shoreline-hero-content h1 {\n      font-size: 4.6rem;\n    }\n\n    .shoreline-hero-buttons {\n      max-width: 310px;\n    }\n  }\n</style>",
         "color_scheme": "",
         "section_width": "full-width",
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
-    },
-    "section_FRA3zP": {
-      "type": "section",
-      "blocks": {
-        "video_NbjUJ8": {
-          "type": "video",
-          "name": "t:names.video",
-          "settings": {
-            "source": "uploaded",
-            "video": "shopify://files/videos/ShorelineBrands-comp.mp4",
-            "video_autoplay": false,
-            "video_loop": true,
-            "alt": "",
-            "custom_width": 100,
-            "custom_width_mobile": 100,
-            "aspect_ratio": "16/9",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_irbJdN": {
-          "type": "group",
-          "name": "Caption",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_id": ""
-          },
-          "blocks": {
-            "text_TJ7qJP": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Take a look behind the scenes of our latest product launch.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_Q34pfK": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Discover the collection",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_TJ7qJP",
-            "button_Q34pfK"
-          ]
-        }
-      },
-      "block_order": [
-        "video_NbjUJ8",
-        "group_irbJdN"
-      ],
-      "name": "t:names.video_section",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 32,
-        "padding-block-end": 32,
-        "custom_section_id": ""
       }
     },
     "section_UfTiz3": {
@@ -1325,7 +1176,6 @@
     "main",
     "hero_GPHQgB",
     "custom_liquid_brfYGV",
-    "section_FRA3zP",
     "section_UfTiz3",
     "custom_liquid_Jdi9ap",
     "section_QHJjfy",
