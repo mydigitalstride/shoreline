@@ -355,7 +355,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2><strong>Real Reviews From Real Customers</strong></h2>",
+            "text": "<h2><strong>\"Goodbye, cutting the day short.\"</strong><br/><strong> </strong></h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
