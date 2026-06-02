@@ -372,6 +372,30 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_iXBNGB": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8966.jpg",
+            "title": "2022 Malibu 23 MXZ",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_DGcC6r": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8965.jpg",
+            "title": "1999 Supreme 220LS",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_YwiiHw": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/shoreline_shade_2026.jpg",
+            "title": "2025 Yamaha 222S",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_GDDVdR": {
           "type": "boat-gallery",
           "settings": {
@@ -974,6 +998,9 @@
         }
       },
       "block_order": [
+        "boat_gallery_iXBNGB",
+        "boat_gallery_DGcC6r",
+        "boat_gallery_YwiiHw",
         "boat_gallery_GDDVdR",
         "boat_gallery_Hb3HDQ",
         "boat_gallery_L7wyaE",
