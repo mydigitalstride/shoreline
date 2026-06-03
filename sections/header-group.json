@@ -13,6 +13,7 @@
   "sections": {
     "page_marquee": {
       "type": "page-marquee",
+      "disabled": true,
       "settings": {
         "enabled": false,
         "text": "Same Day Shipping if placed before 4pm EST     |      FREE 4-day shipping on all orders",
