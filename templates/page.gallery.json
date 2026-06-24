@@ -372,6 +372,30 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_JmhAtd": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Mastercraft_NXT.jpg",
+            "title": "2019 Mastercraft NXT22",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_QRjA4U": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Tige_23ZX.jpg",
+            "title": "2019 Tige 23ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_NkmYRF": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Bennington_23LX.heic",
+            "title": "2018 Bennington 23LX",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
         "boat_gallery_HJ6RM8": {
           "type": "boat-gallery",
           "settings": {
@@ -1006,6 +1030,9 @@
         }
       },
       "block_order": [
+        "boat_gallery_JmhAtd",
+        "boat_gallery_QRjA4U",
+        "boat_gallery_NkmYRF",
         "boat_gallery_HJ6RM8",
         "boat_gallery_iXBNGB",
         "boat_gallery_DGcC6r",
