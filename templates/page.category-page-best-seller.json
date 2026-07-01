@@ -1,1 +1,473 @@
-{"sections":{"main":{"type":"main-page","blocks":{"heading":{"type":"text","name":"Title","settings":{"text":"<h1>{{ closest.page.title }}<\/h1>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h2","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"page-content":{"type":"page-content","settings":{},"blocks":{}}},"block_order":["heading","page-content"],"disabled":true,"settings":{"content_direction":"column","gap":32,"color_scheme":"","padding-block-start":40,"padding-block-end":80}},"hero_Dngph7":{"type":"hero","blocks":{"group_fiqpyi":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0,"custom_id":"menu-group"},"blocks":{"menu_rtKFBg":{"type":"menu","name":"t:names.menu","settings":{"menu":"main-menu","heading":"","menu_spacing":12,"show_as_accordion":false,"accordion_icon":"caret","accordion_dividers":false,"inherit_color_scheme":true,"color_scheme":"","heading_preset":"h3","link_preset":"paragraph","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0,"main_menu":true},"blocks":{}}},"block_order":["menu_rtKFBg"]},"group_xPm7Jh":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":100,"padding-inline-end":0,"custom_id":""},"blocks":{"logo_8edpT8":{"type":"logo","name":"t:names.logo","settings":{"inverse":false,"font":"heading","unit":"pixel","percent_width":100,"pixel_height":160,"custom_mobile_size":false,"unit_mobile":"percent","percent_width_mobile":100,"pixel_height_mobile":120,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"icon_3tFwEi":{"type":"icon","name":"t:names.icon","disabled":true,"settings":{"icon":"price_tag","image_upload":"shopify:\/\/shop_images\/Made_In_USA_-_White_Version.png","width":24,"link":"","open_in_new_tab":false},"blocks":{}},"text_aGbNFe":{"type":"text","settings":{"text":"<p>Shoreline Best Sellers<\/p>","width":"100%","max_width":"none","alignment":"left","type_preset":"h1","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":20,"padding-inline-end":0},"blocks":{}},"group_waY6k3":{"type":"group","name":"t:names.group","settings":{"link":"","open_in_new_tab":false,"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":20,"padding-inline-end":0,"custom_id":""},"blocks":{"button_bjbH3V":{"type":"button","name":"t:names.button","settings":{"label":"Shop All Products","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}},"button_ePYWBN":{"type":"button","name":"t:names.button","settings":{"label":"Shop Best Sellers","link":"shopify:\/\/pages\/category-page-best-sellers","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["button_bjbH3V","button_ePYWBN"]}},"block_order":["logo_8edpT8","icon_3tFwEi","text_aGbNFe","group_waY6k3"]}},"block_order":["group_fiqpyi","group_xPm7Jh"],"custom_css":["h1 {font-family: \"League Spartan\";}"],"name":"t:names.hero","settings":{"media_type_1":"image","image_1":"shopify:\/\/shop_images\/IMG_2630.jpg","video_1":"shopify:\/\/files\/videos\/121 - SB24_Website_SunShade_1080x1080 (1).mp4","media_type_2":"image","link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":16,"section_width":"page-width","section_height":"large","section_height_custom":50,"color_scheme":"scheme-5","toggle_overlay":true,"overlay_color":"#00000026","overlay_style":"gradient","gradient_direction":"to top","blurred_reflection":false,"reflection_opacity":75,"padding-block-start":40,"padding-block-end":40}},"additional_resources_a4NEJq":{"type":"additional-resources","name":"Additional Resources","settings":{"heading":"Customer Favorites, Season After Season","text":"Not sure where to start? These best sellers are our most trusted products, chosen by boaters who want shade, comfort, and style on the water. \n\nShop the gear customers can’t get enough of.","right_image":"shopify:\/\/shop_images\/IMG_3155.jpg"}},"shop_the_collection_hNUCc9":{"type":"shop-the-collection","blocks":{"feature_UbVeQh":{"type":"feature","disabled":true,"settings":{"title":"","text_top":"","text_bottom":""}},"feature_nijK6g":{"type":"feature","disabled":true,"settings":{"title":"Sun Protection","text_top":"","text_bottom":""}},"feature_E3PqGC":{"type":"feature","disabled":true,"settings":{"title":"Relaxed Fit","text_top":"","text_bottom":""}}},"block_order":["feature_UbVeQh","feature_nijK6g","feature_E3PqGC"],"name":"Shop Collection","settings":{"background_image":"shopify:\/\/shop_images\/Background_-_Blue.png","heading":"Best Sellers","products":["centurion-predator-tower-bimini-extension","wake-tower-mounted-universal-bimini-extension","hardshell-wakesurf-board-case","2015-2025-malibu-boats-bimini-mounted-shade-extension","centurion-and-supreme-bimini-extension-kit"]}},"from_boat_to_shore_gR3Jei":{"type":"from-boat-to-shore","name":"Boat to Shore","settings":{"background_image":"shopify:\/\/shop_images\/IMG_7331.jpg","heading":"Find the Perfect Fit","description":"Whether you’re looking for extra shade, new apparel, or the latest accessories, Shoreline has you covered. \n\nExplore all categories to make the most of your time on the water.","badge_image":"shopify:\/\/shop_images\/Shoreline_Website_Mockup_2.png","button_label":"Shop All Products","button_link":"shopify:\/\/pages\/shop"}},"customer_reviews_KXwydd":{"type":"customer-reviews","blocks":{"review_BEVL8X":{"type":"review","settings":{"name":"Name","date":"Date","product_title":"Product Being Reviewed","text":"We are so happy this product was created. Install was very simple also putting the shade up and taking it down takes all of 1 min. Really helps create a nicer boating experience for the family on the back of the boat, especially in this Texas sun."}},"review_x6dhhF":{"type":"review","settings":{"name":"Name","date":"Date","product_title":"Product Being Reviewed","text":"We are so happy this product was created. Install was very simple also putting the shade up and taking it down takes all of 1 min. Really helps create a nicer boating experience for the family on the back of the boat, especially in this Texas sun."}},"review_3gTPqr":{"type":"review","settings":{"name":"Name","date":"Date","product_title":"Product Being Reviewed","text":"We are so happy this product was created. Install was very simple also putting the shade up and taking it down takes all of 1 min. Really helps create a nicer boating experience for the family on the back of the boat, especially in this Texas sun."}}},"block_order":["review_BEVL8X","review_x6dhhF","review_3gTPqr"],"name":"Customer Reviews","settings":{"heading":"Reviews","bg_image":"shopify:\/\/shop_images\/Assets_5424bf6f-c824-4998-9619-569a221e245b.png"}}},"order":["main","hero_Dngph7","additional_resources_a4NEJq","shop_the_collection_hNUCc9","from_boat_to_shore_gR3Jei","customer_reviews_KXwydd"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_Dngph7": {
+      "type": "hero",
+      "blocks": {
+        "group_fiqpyi": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_id": "menu-group"
+          },
+          "blocks": {
+            "menu_rtKFBg": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "main-menu",
+                "heading": "",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "main_menu": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_rtKFBg"
+          ]
+        },
+        "group_xPm7Jh": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 100,
+            "padding-inline-end": 0,
+            "custom_id": ""
+          },
+          "blocks": {
+            "logo_8edpT8": {
+              "type": "logo",
+              "name": "t:names.logo",
+              "settings": {
+                "inverse": false,
+                "font": "heading",
+                "unit": "pixel",
+                "percent_width": 100,
+                "pixel_height": 160,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "icon_3tFwEi": {
+              "type": "icon",
+              "name": "t:names.icon",
+              "disabled": true,
+              "settings": {
+                "icon": "price_tag",
+                "image_upload": "shopify://shop_images/Made_In_USA_-_White_Version.png",
+                "width": 24,
+                "link": "",
+                "open_in_new_tab": false
+              },
+              "blocks": {}
+            },
+            "text_aGbNFe": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Shoreline Best Sellers</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "h1",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_waY6k3": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 20,
+                "padding-inline-end": 0,
+                "custom_id": ""
+              },
+              "blocks": {
+                "button_bjbH3V": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop All Products",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_ePYWBN": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop Best Sellers",
+                    "link": "shopify://pages/category-page-best-sellers",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_bjbH3V",
+                "button_ePYWBN"
+              ]
+            }
+          },
+          "block_order": [
+            "logo_8edpT8",
+            "icon_3tFwEi",
+            "text_aGbNFe",
+            "group_waY6k3"
+          ]
+        }
+      },
+      "block_order": [
+        "group_fiqpyi",
+        "group_xPm7Jh"
+      ],
+      "custom_css": [
+        "h1 {font-family: \"League Spartan\";}"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "video_1": "shopify://files/videos/121 - SB24_Website_SunShade_1080x1080 (1).mp4",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "additional_resources_a4NEJq": {
+      "type": "additional-resources",
+      "name": "Additional Resources",
+      "settings": {
+        "heading": "Customer Favorites, Season After Season",
+        "text": "Not sure where to start? These best sellers are our most trusted products, chosen by boaters who want shade, comfort, and style on the water. \n\nShop the gear customers can’t get enough of.",
+        "right_image": "shopify://shop_images/wipeout-wakesurf.jpg"
+      }
+    },
+    "shop_the_collection_hNUCc9": {
+      "type": "shop-the-collection",
+      "blocks": {
+        "feature_UbVeQh": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "text_top": "",
+            "text_bottom": ""
+          }
+        },
+        "feature_nijK6g": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "title": "Sun Protection",
+            "text_top": "",
+            "text_bottom": ""
+          }
+        },
+        "feature_E3PqGC": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "title": "Relaxed Fit",
+            "text_top": "",
+            "text_bottom": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_UbVeQh",
+        "feature_nijK6g",
+        "feature_E3PqGC"
+      ],
+      "name": "Shop Collection",
+      "settings": {
+        "background_image": "shopify://shop_images/Background_-_Blue.png",
+        "heading": "Best Sellers",
+        "products": [
+          "centurion-predator-tower-bimini-extension",
+          "wake-tower-mounted-universal-bimini-extension",
+          "hardshell-wakesurf-board-case",
+          "2015-2025-malibu-boats-bimini-mounted-shade-extension",
+          "centurion-and-supreme-bimini-extension-kit"
+        ]
+      }
+    },
+    "from_boat_to_shore_gR3Jei": {
+      "type": "from-boat-to-shore",
+      "name": "Boat to Shore",
+      "settings": {
+        "background_image": "shopify://shop_images/IMG_7331.jpg",
+        "heading": "Find the Perfect Fit",
+        "description": "Whether you’re looking for extra shade, new apparel, or the latest accessories, Shoreline has you covered. \n\nExplore all categories to make the most of your time on the water.",
+        "badge_image": "shopify://shop_images/Shoreline_Website_Mockup_2.png",
+        "button_label": "Shop All Products",
+        "button_link": "shopify://pages/shop"
+      }
+    },
+    "customer_reviews_KXwydd": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_BEVL8X": {
+          "type": "review",
+          "settings": {
+            "name": "Name",
+            "date": "Date",
+            "product_title": "Product Being Reviewed",
+            "text": "We are so happy this product was created. Install was very simple also putting the shade up and taking it down takes all of 1 min. Really helps create a nicer boating experience for the family on the back of the boat, especially in this Texas sun."
+          }
+        },
+        "review_x6dhhF": {
+          "type": "review",
+          "settings": {
+            "name": "Name",
+            "date": "Date",
+            "product_title": "Product Being Reviewed",
+            "text": "We are so happy this product was created. Install was very simple also putting the shade up and taking it down takes all of 1 min. Really helps create a nicer boating experience for the family on the back of the boat, especially in this Texas sun."
+          }
+        },
+        "review_3gTPqr": {
+          "type": "review",
+          "settings": {
+            "name": "Name",
+            "date": "Date",
+            "product_title": "Product Being Reviewed",
+            "text": "We are so happy this product was created. Install was very simple also putting the shade up and taking it down takes all of 1 min. Really helps create a nicer boating experience for the family on the back of the boat, especially in this Texas sun."
+          }
+        }
+      },
+      "block_order": [
+        "review_BEVL8X",
+        "review_x6dhhF",
+        "review_3gTPqr"
+      ],
+      "name": "Customer Reviews",
+      "settings": {
+        "heading": "Reviews",
+        "bg_image": "shopify://shop_images/Assets_5424bf6f-c824-4998-9619-569a221e245b.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_Dngph7",
+    "additional_resources_a4NEJq",
+    "shop_the_collection_hNUCc9",
+    "from_boat_to_shore_gR3Jei",
+    "customer_reviews_KXwydd"
+  ]
+}
