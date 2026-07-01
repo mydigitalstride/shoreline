@@ -360,7 +360,6 @@
         "category_RiqhdU": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/IMG_2826.jpg",
             "title": "Hats",
             "link": ""
           }
@@ -373,7 +372,7 @@
       "name": "Shop by Category",
       "settings": {
         "heading": "Shop by Category",
-        "right_image": "shopify://shop_images/IMG_2465.jpg"
+        "right_image": "shopify://shop_images/bimini-top-extender-installation-sunset.jpg"
       }
     },
     "shop_the_collection_BHP39W": {
