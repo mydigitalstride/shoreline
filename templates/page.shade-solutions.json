@@ -583,7 +583,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h4>1 / Mounts Directly to Your Wakeboard Tower </h4><p>Compatible with <span style=\"text-decoration:underline\"><strong>all</strong></span> wakeboard towers from 2 - 2.5 inches in diameter without any modification to your boat. </p><h4>2 / Easy To Use</h4><p>No More Fumbling around. Our Shade system deploys in only a minute</p><h4>3 / Wake Surf Rated</h4><p>Use Up to 15mph. Simply pass the rope underneath the shade to begin surfing</p>",
+                    "text": "<h4>1 / Mounts Directly to Your Wakeboard Tower </h4><p>Compatible with <span style=\"text-decoration:underline\"><strong>all</strong></span> wakeboard towers built from round tubing measuring 1.75 - 3.0 inches in diameter without any modification to your boat. </p><h4>2 / Easy To Use</h4><p>No More Fumbling around. Our Shade system deploys in only a minute</p><h4>3 / Wake Surf Rated</h4><p>Use Up to 15mph. Simply pass the rope underneath the shade to begin surfing</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -806,7 +806,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h4>1 / Full Coverage UV Protection</h4><p>Offer all your passengers shade coverage with our custom Bimini Extension designed specifically for pontoon boats</p><h4>2 / Easy To Use</h4><p>No More Fumbling around. Our Shade system deploys in only a minute</p><h4>3 / Speed Rating</h4><p>Rated for use up to 5 mph. Stay comfortable and protected all day on the water</p>",
+                    "text": "<h4>1 / Full Coverage UV Protection</h4><p>Offer all your passengers shade coverage with our custom Bimini Extension designed specifically for pontoon boats. Our CNC Machined mounting hardware attaches directly to the floor of your boat with a flush mount appearance. </p><h4>2 / Easy To Use</h4><p>No More Fumbling around. Our Shade system deploys in only a minute without the need for secondary ropes or rigging. Simply strap the shade to your factory bimini and hook the shoreline shade to the end of the provided carbon fiber poles. </p><h4>3 / Speed Rating</h4><p>Rated for use up to 5 mph. Stay comfortable and protected all day on the water</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2363,7 +2363,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h4>1 / Mounts to the tubing on your Center Console T-Top</h4><p>Mounts to your center console tubing. Options available for tubing sizes from .875\" - 2.0\"</p><h4>2 / Compatibility</h4><p>Compatible with all Center Console boats that have round tubing available for mounting the provided hardware. Custom shade sizes available to achieve the perfect fit</p><h4>3 / Speed Rating</h4><p>Use Up to 15mph. </p>",
+                    "text": "<h4>1 / Mounts to the tubing on your Center Console T-Top</h4><p>Mounts to your center console tubing. Options available for tubing sizes from .875\" - 2.5\"</p><h4>2 / Compatibility</h4><p>Compatible with all Center Console boats that have round tubing available for mounting the provided hardware. Custom shade sizes available to achieve the perfect fit</p><h4>3 / Speed Rating</h4><p>Use Up to 15mph. </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
