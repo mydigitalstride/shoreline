@@ -372,6 +372,14 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_ihpFin": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Yamaha_195s.jpg",
+            "title": "Yamaha 195S",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_XbDF8t": {
           "type": "boat-gallery",
           "settings": {
@@ -1046,6 +1054,7 @@
         }
       },
       "block_order": [
+        "boat_gallery_ihpFin",
         "boat_gallery_XbDF8t",
         "boat_gallery_tDC8Hi",
         "boat_gallery_JmhAtd",
