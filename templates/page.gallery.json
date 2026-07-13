@@ -372,6 +372,14 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_XbDF8t": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Cobalt_25_SC.jpg",
+            "title": "Cobalt 25SC Surf",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
         "boat_gallery_tDC8Hi": {
           "type": "boat-gallery",
           "settings": {
@@ -1038,6 +1046,7 @@
         }
       },
       "block_order": [
+        "boat_gallery_XbDF8t",
         "boat_gallery_tDC8Hi",
         "boat_gallery_JmhAtd",
         "boat_gallery_QRjA4U",
