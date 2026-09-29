@@ -372,6 +372,78 @@
     "boat_gallery_section_JKCGQD": {
       "type": "boat-gallery-section",
       "blocks": {
+        "boat_gallery_F7CVHY": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9626.jpg",
+            "title": "2023 Centurion Ri230",
+            "link": ""
+          }
+        },
+        "boat_gallery_GTBgJi": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-09-29_101026.png",
+            "title": "2024 Centurion RI230",
+            "link": "shopify://products/centurion-and-supreme-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_GUwe9x": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9574_1.jpg",
+            "title": "2024 Bennington",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "boat_gallery_PmxawN": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/675EDB61-12FC-4ACA-9227-B1D7DA98145F.jpg",
+            "title": "2002 Mastercraft X30",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_FtHqBH": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9237.jpg",
+            "title": "2021 TIge ZX",
+            "link": "shopify://products/2017-2025-tige-bimini-shade-extension-kit"
+          }
+        },
+        "boat_gallery_f3yHmt": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/Sanger.jpg",
+            "title": "2020 Sanger V230",
+            "link": "shopify://products/2015-2025-malibu-boats-bimini-mounted-shade-extension"
+          }
+        },
+        "boat_gallery_krxqnY": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9215.jpg",
+            "title": "2025 Tige Ultre",
+            "link": "shopify://products/tige-ultre-shade-extension"
+          }
+        },
+        "boat_gallery_we6aRP": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/2016_Moomba_Craz.jpg",
+            "title": "2016 Moomba Craz",
+            "link": "shopify://products/wake-tower-mounted-universal-bimini-extension"
+          }
+        },
+        "boat_gallery_8nq83W": {
+          "type": "boat-gallery",
+          "settings": {
+            "image": "shopify://shop_images/A50F693B-BCDC-4F7A-BD2C-AB13D00A44E4.jpg",
+            "title": "Sea Fox",
+            "link": "shopify://products/center-console-t-top-shade-extension"
+          }
+        },
         "boat_gallery_ihpFin": {
           "type": "boat-gallery",
           "settings": {
@@ -1054,6 +1126,15 @@
         }
       },
       "block_order": [
+        "boat_gallery_F7CVHY",
+        "boat_gallery_GTBgJi",
+        "boat_gallery_GUwe9x",
+        "boat_gallery_PmxawN",
+        "boat_gallery_FtHqBH",
+        "boat_gallery_f3yHmt",
+        "boat_gallery_krxqnY",
+        "boat_gallery_we6aRP",
+        "boat_gallery_8nq83W",
         "boat_gallery_ihpFin",
         "boat_gallery_XbDF8t",
         "boat_gallery_tDC8Hi",
