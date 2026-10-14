@@ -153,6 +153,10 @@
         "logo_qRykLP",
         "group_Awhcjh"
       ],
+      "custom_css": [
+        "img,video {max-height: 550px; object-fit: cover;}",
+        "* {min-height: 0 !important;}"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -183,10 +187,22 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "custom_liquid_MiJHFT": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "{{ page.content }}",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
     "main",
-    "hero_DxyHyQ"
+    "hero_DxyHyQ",
+    "custom_liquid_MiJHFT"
   ]
 }
