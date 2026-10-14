@@ -193,7 +193,7 @@
       "name": "t:names.custom_liquid",
       "settings": {
         "custom_liquid": "{{ page.content }}",
-        "color_scheme": "",
+        "color_scheme": "scheme-5c8b9182-4952-4d80-8723-cf5e26c67cac",
         "section_width": "page-width",
         "padding-block-start": 0,
         "padding-block-end": 0
