@@ -597,13 +597,31 @@
             "title": "",
             "link": "shopify://collections/mastercraft-bimini-extensions"
           }
+        },
+        "category_6arQgp": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/unnamed.png",
+            "title": "",
+            "link": "shopify://collections/yamaha-boat-bimini-extensions"
+          }
+        },
+        "category_8trzHh": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/unnamed.png",
+            "title": "",
+            "link": "shopify://collections/yamaha-boat-bimini-extensions"
+          }
         }
       },
       "block_order": [
         "category_eKU7Dh",
         "category_FPEeGY",
         "category_kH4hhy",
-        "category_jji8tx"
+        "category_jji8tx",
+        "category_6arQgp",
+        "category_8trzHh"
       ],
       "custom_css": [
         "p {color: white !important;}",
