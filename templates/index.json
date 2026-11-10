@@ -656,7 +656,112 @@
       ],
       "name": "Shop by Model",
       "settings": {
-        "heading": "Shop by Boat Model"
+        "heading": "Shop by Wake Boat Model"
+      }
+    },
+    "features_and_categories_J9K7eX": {
+      "type": "features-and-categories",
+      "blocks": {
+        "category_3NGijc": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/bennington-pontoon-boats-logo-png_seeklogo-445897.png",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_YWWzmE": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/images.png",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_HwW4bU": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/barletta_logo_square_1200.png",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_JxfgRT": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/manitou_logo_square_1200.png",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_3wgj6y": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/harris-300-logo.jpg",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_9rjbQE": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/images_1.png",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_zEThbd": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/images_1.jpg",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_pgFTye": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/avalon_logo_square_1200.png",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_BhyNKU": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/images_2.jpg",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        },
+        "category_fYXbyY": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/images_3.jpg",
+            "title": "",
+            "link": "shopify://products/pontoon-boat-bimini-extension-kit"
+          }
+        }
+      },
+      "block_order": [
+        "category_3NGijc",
+        "category_YWWzmE",
+        "category_HwW4bU",
+        "category_JxfgRT",
+        "category_3wgj6y",
+        "category_9rjbQE",
+        "category_zEThbd",
+        "category_pgFTye",
+        "category_BhyNKU",
+        "category_fYXbyY"
+      ],
+      "custom_css": [
+        "p {color: white !important;}",
+        ".category-title {position: absolute; left: 0rem; right: 0rem; bottom: 0rem; top: auto; z-index: 1; color: white; font-size: 1.5rem; text-align: center; padding: 0; text-shadow: 1px 2px 3px black;}"
+      ],
+      "name": "Shop by Model",
+      "settings": {
+        "heading": "Shop by Pontoon Boat Model"
       }
     },
     "review_CY6f4Y": {
@@ -768,6 +873,7 @@
     "custom_liquid_DdBALU",
     "features_and_categories_xJrtNN",
     "features_and_categories_6nNe3C",
+    "features_and_categories_J9K7eX",
     "review_CY6f4Y",
     "faq_two_column_HXpqrH"
   ]
