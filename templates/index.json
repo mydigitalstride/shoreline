@@ -609,9 +609,33 @@
         "category_8trzHh": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/unnamed.png",
+            "image": "shopify://shop_images/cobalt_logo_square_1200.png",
             "title": "",
-            "link": "shopify://collections/yamaha-boat-bimini-extensions"
+            "link": "shopify://collections/cobalt-boats-bimini-extension"
+          }
+        },
+        "category_mVmB7H": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/mb_logo_square_1200.png",
+            "title": "",
+            "link": "shopify://collections/mb-boats-bimini-extensions"
+          }
+        },
+        "category_EzLA6b": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/supra_moomba_logo_square_1200.png",
+            "title": "",
+            "link": "shopify://collections/supra-and-moomba-boats"
+          }
+        },
+        "category_eKx8Qe": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/tige_logo_square_1200.png",
+            "title": "",
+            "link": "shopify://collections/tige-boats-bimini-extension"
           }
         }
       },
@@ -621,7 +645,10 @@
         "category_kH4hhy",
         "category_jji8tx",
         "category_6arQgp",
-        "category_8trzHh"
+        "category_8trzHh",
+        "category_mVmB7H",
+        "category_EzLA6b",
+        "category_eKx8Qe"
       ],
       "custom_css": [
         "p {color: white !important;}",
