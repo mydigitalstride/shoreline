@@ -296,9 +296,9 @@
       "settings": {
         "heading": "FEATURED PRODUCTS",
         "products": [
-          "wake-tower-mounted-universal-bimini-extension",
           "2015-2025-malibu-boats-bimini-mounted-shade-extension",
-          "pontoon-boat-bimini-extension-kit"
+          "pontoon-boat-bimini-extension-kit",
+          "universal-wake-tower-bimini-extension"
         ],
         "bg_image_left": "shopify://shop_images/Shoreline_Website_Mockup.png",
         "bg_image_right": "shopify://shop_images/wake-tower-bimini-boats-dock.jpg",
@@ -560,7 +560,7 @@
       ],
       "name": "Features & Categories",
       "settings": {
-        "heading": "Shop by BOat Style"
+        "heading": "Shop by Boat Style"
       }
     },
     "review_CY6f4Y": {
