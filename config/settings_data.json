@@ -99,6 +99,11 @@
         "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
+      },
+      "9722070057798483667": {
+        "type": "shopify://apps/multivariants-bulk-order-b2b/blocks/app-embed/e556349f-fd26-4006-9dd9-dcbf70aa55b3",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
@@ -416,7 +421,7 @@
       },
       "scheme-e794c6e2-4cb0-44be-8355-13d3bb2a3952": {
         "settings": {
-          "background": "#5D90CB",
+          "background": "#5d90cb",
           "foreground_heading": "#2c3c5e",
           "foreground": "#000000cf",
           "primary": "#000000cf",
